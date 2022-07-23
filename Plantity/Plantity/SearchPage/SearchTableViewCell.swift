@@ -8,7 +8,15 @@
 import UIKit
 
 class SearchTableViewCell: UITableViewCell {
-
+    // MARK: - Properties
+    @IBOutlet weak var todayPlantImageView: UIImageView!
+    
+    @IBOutlet weak var todayPlantLabel: UILabel!
+    
+    @IBOutlet weak var todayPlantInfoLabel: UILabel!
+    
+    @IBOutlet weak var likeButton: UIButton!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -19,5 +27,16 @@ class SearchTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    // MARK: - Action
+    @IBAction func actionIsLike(_ sender: Any) {
+        if likeButton.isSelected {
+        likeButton.isSelected = false
+        } else {
+            likeButton.isSelected = true
+        }
+    }
+    
+    
     
 }

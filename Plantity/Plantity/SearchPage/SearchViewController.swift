@@ -13,10 +13,20 @@ class SearchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        // Delegate
         searchTableView.delegate = self
         searchTableView.dataSource = self
+        
+        // Register Nib
+        let searchNib = UINib(nibName: "SearchTableViewCell", bundle: nil)
+        searchTableView.register(searchNib, forCellReuseIdentifier: "SearchTableViewCell")
+        
+        setupAttribute()
     }
 
+    private func setupAttribute() {
+        searchTableView.separatorStyle = .none
+    }
 }
 
 extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
@@ -25,16 +35,14 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
+        guard let cell = searchTableView.dequeueReusableCell(withIdentifier: "SearchTableViewCell", for: indexPath) as? SearchTableViewCell else { return SearchTableViewCell() }
         
-        if indexPath.section == 0 {
-            
-        } else {
-            
-        }
+        cell.selectionStyle = .none
         
         return cell
     }
     
-    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 480
+    }
 }
