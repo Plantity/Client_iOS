@@ -22,7 +22,7 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_today_plant" translatesAutoresizingMaskIntoConstraints="NO" id="bQQ-Sm-HE3">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_plant_today" translatesAutoresizingMaskIntoConstraints="NO" id="bQQ-Sm-HE3">
                         <rect key="frame" x="18" y="52.5" width="324" height="324"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="bQQ-Sm-HE3" secondAttribute="height" multiplier="1:1" id="PZ8-id-5OJ"/>
@@ -81,6 +81,6 @@
     </objects>
     <resources>
         <image name="icon_heart" width="35" height="34"/>
-        <image name="image_today_plant" width="326" height="287.5"/>
+        <image name="image_plant_today" width="326" height="287.5"/>
     </resources>
 </document>
