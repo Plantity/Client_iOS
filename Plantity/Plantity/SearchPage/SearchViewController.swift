@@ -88,7 +88,7 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
         if indexPath.row == 0 {
             return 140
         } else {
-            return 480
+            return 600
         }
     }
 }
