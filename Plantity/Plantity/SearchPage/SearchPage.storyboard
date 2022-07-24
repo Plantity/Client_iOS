@@ -51,6 +51,7 @@
                     <navigationItem key="navigationItem" id="QZJ-5C-JrE"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="searchBar" destination="WnI-xz-Wtu" id="JUU-n7-wk2"/>
                         <outlet property="searchTableView" destination="BjR-UM-nPq" id="0QD-Wj-mCT"/>
                     </connections>
                 </viewController>

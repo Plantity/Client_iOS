@@ -10,12 +10,33 @@ import UIKit
 class SearchViewController: UIViewController {
     @IBOutlet weak var searchTableView: UITableView!
     
+    @IBOutlet weak var searchBar: UISearchBar!
+    
+    var searchController = UISearchController()
+    var resultVC = UITableViewController()
+    
+    var fileteredData: [String] = []
+    var dataArray: [String] = ["One", "Two", "Three"]
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Delegate
         searchTableView.delegate = self
+        
         searchTableView.dataSource = self
+        searchBar.delegate = self
+        searchController.delegate = self
+        
+        searchController = UISearchController(searchResultsController: resultVC)
+        //usally good to set the presentation context
+        self.definesPresentationContext = true
+        searchController.searchBar.delegate = self
+        searchController.delegate = self
+        
+        resultVC.tableView.delegate = self
+        resultVC.tableView.dataSource = self
         
         // Register Nib
             // for Table View
@@ -29,11 +50,34 @@ class SearchViewController: UIViewController {
     }
 
     private func setupAttribute() {
-        searchTableView.separatorStyle = .none
+        //searchTableView.separatorStyle = .none
     }
+    
+    
+    
 }
 
 // MARK: - Extension
+// for searchBar
+extension SearchViewController:
+    UISearchBarDelegate,
+    UISearchControllerDelegate {
+    
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        searchBar.barTintColor = .searchBarOnClickColor
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        searchBar.text = searchText
+        fileteredData = dataArray.filter({ (data:String) -> Bool in
+            return data.lowercased().contains(searchBar.text!.lowercased())
+            })
+            resultVC.tableView.reloadData()
+        searchTableView.reloadData()
+    }
+}
+
+// for collectionView
 extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 4
@@ -53,6 +97,7 @@ extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSo
     }
 }
 
+// for tableView
 extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         guard let tableViewCell = cell as? TagTableViewCell else { return }
@@ -63,10 +108,21 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        if searchBar.text?.count != 0 {
+            return fileteredData.count
+        } else {
+            return 2
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if searchBar.text?.count != 0 {
+            let cell = UITableViewCell()
+            cell.textLabel?.text = (tableView == resultVC.tableView ? fileteredData[indexPath.row] : dataArray[indexPath.row])
+            
+            return cell
+        }
+        
         if indexPath.row == 0 {
             // 인덱스 0번 셀일 경우 tag CollectionView
             guard let cell = searchTableView.dequeueReusableCell(
@@ -85,6 +141,10 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if searchBar.text?.count != 0 {
+            return 50
+        }
+        
         if indexPath.row == 0 {
             return 140
         } else {

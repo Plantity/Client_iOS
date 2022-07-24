@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F4864507288CC34B00956C4C /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4864506288CC34B00956C4C /* Color+Extension.swift */; };
 		F4BE4BDE288ADBFF00CF276D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BE4BDD288ADBFF00CF276D /* AppDelegate.swift */; };
 		F4BE4BE0288ADBFF00CF276D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BE4BDF288ADBFF00CF276D /* SceneDelegate.swift */; };
 		F4BE4BE2288ADBFF00CF276D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BE4BE1288ADBFF00CF276D /* ViewController.swift */; };
@@ -28,6 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F4864506288CC34B00956C4C /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		F4BE4BDA288ADBFF00CF276D /* Plantity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Plantity.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4BE4BDD288ADBFF00CF276D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4BE4BDF288ADBFF00CF276D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 				F4BE4BEB288ADBFF00CF276D /* LaunchScreen.storyboard */,
 				F4BE4BEE288ADBFF00CF276D /* Info.plist */,
 				F4BE4BE6288ADBFF00CF276D /* Plantity.xcdatamodeld */,
+				F4864506288CC34B00956C4C /* Color+Extension.swift */,
 			);
 			path = Plantity;
 			sourceTree = "<group>";
@@ -238,6 +241,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4BE4BF9288ADFEC00CF276D /* SearchViewController.swift in Sources */,
+				F4864507288CC34B00956C4C /* Color+Extension.swift in Sources */,
 				F4D8C935288B94140019B6BC /* TagCollectionViewCell.swift in Sources */,
 				F4BE4BE2288ADBFF00CF276D /* ViewController.swift in Sources */,
 				F4BE4BDE288ADBFF00CF276D /* AppDelegate.swift in Sources */,
