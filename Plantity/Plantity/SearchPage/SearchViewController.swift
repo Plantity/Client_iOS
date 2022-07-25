@@ -122,8 +122,12 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
             //let cell = UITableViewCell()
             //cell.textLabel?.text = (tableView == searchTableView ? fileteredData[indexPath.row] : dataArray[indexPath.row])
             
-            guard let cell = searchTableView.dequeueReusableCell(withIdentifier: "ResultTableViewCell", for: indexPath) as? ResultTableViewCell
+            guard let cell = searchTableView.dequeueReusableCell(
+                withIdentifier: "ResultTableViewCell",
+                for: indexPath) as? ResultTableViewCell
             else { return UITableViewCell() }
+            
+            // let resultCell = 
             
             return cell
         }

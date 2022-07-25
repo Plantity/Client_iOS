@@ -67,6 +67,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F4B3722E288E7381002215F1 /* ResultDataManager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ResultDataManager;
+			sourceTree = "<group>";
+		};
 		F4BE4BD1288ADBFF00CF276D = {
 			isa = PBXGroup;
 			children = (
@@ -130,6 +137,7 @@
 		F4BE4BF7288ADFC900CF276D /* SearchPage */ = {
 			isa = PBXGroup;
 			children = (
+				F4B3722E288E7381002215F1 /* ResultDataManager */,
 				F4D8C92C288B8FE00019B6BC /* Cell */,
 				F4BE4BF8288ADFEC00CF276D /* SearchViewController.swift */,
 				F4BE4BFA288AE00100CF276D /* SearchPage.storyboard */,
