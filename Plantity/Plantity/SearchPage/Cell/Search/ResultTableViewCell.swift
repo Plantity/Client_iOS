@@ -25,7 +25,7 @@ class ResultTableViewCell: UITableViewCell {
         // Initialization code
     }
     
-    func setupData(_ imageURLStr: String?, name: String?, level: Int?, intro: String?, tag: String?) {
+    func setupData(name: String?, level: Int?, intro: String?, tag: String?) {
         // setImage
         // guard let imageURLString = imageURLStr else { return }
         // if let url = URL(string: imageURLString) {

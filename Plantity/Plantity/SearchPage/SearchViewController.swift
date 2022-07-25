@@ -15,8 +15,14 @@ class SearchViewController: UIViewController {
     var searchController = UISearchController()
     var resultVC = UITableViewController()
     
-    var fileteredData: [String] = []
-    var dataArray: [String] = ["One", "Two", "Three"]
+    var fileteredData: [SearchResultModel] = []
+    var dataArray: [SearchResultModel] = [
+        SearchResultModel(
+        name: "몬스테라",
+        level: 3,
+        intro: "몬스테라 소개",
+        tag: "# 플랜테리어")
+    ]
     
     
     override func viewDidLoad() {
@@ -42,6 +48,8 @@ class SearchViewController: UIViewController {
             // for Table View
         let searchNib = UINib(nibName: "SearchTableViewCell", bundle: nil)
         searchTableView.register(searchNib, forCellReuseIdentifier: "SearchTableViewCell")
+        let resultNib = UINib(nibName: "ResultTableViewCell", bundle: nil)
+        searchTableView.register(resultNib, forCellReuseIdentifier: "ResultTableViewCell")
             // for Collection View
         let tagNib = UINib(nibName: "TagTableViewCell", bundle: nil)
         searchTableView.register(tagNib, forCellReuseIdentifier: "TagTableViewCell")
@@ -69,8 +77,8 @@ extension SearchViewController:
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         searchBar.text = searchText
-        fileteredData = dataArray.filter({ (data:String) -> Bool in
-            return data.lowercased().contains(searchBar.text!.lowercased())
+        fileteredData = dataArray.filter({ (data: SearchResultModel) -> Bool in
+            return data.name?.lowercased().contains(searchBar.text!.lowercased()) ?? false
             })
         
         searchTableView.reloadData()
@@ -127,7 +135,24 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
                 for: indexPath) as? ResultTableViewCell
             else { return UITableViewCell() }
             
-            // let resultCell = 
+            if tableView == searchTableView {
+                cell.setupData(
+                    name:
+                    fileteredData[indexPath.row].name,
+                    level: fileteredData[indexPath.row].level,
+                    intro: fileteredData[indexPath.row].intro,
+                    tag: fileteredData[indexPath.row].tag
+                )
+            } else {
+                cell.setupData(
+                    name:
+                        dataArray[indexPath.row].name,
+                    level: dataArray[indexPath.row].level,
+                    intro: dataArray[indexPath.row].intro,
+                    tag: dataArray[indexPath.row].tag
+                )
+            }
+            
             
             return cell
         }

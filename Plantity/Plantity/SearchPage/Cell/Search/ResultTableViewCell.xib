@@ -30,37 +30,38 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="난이도: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dsh-Io-Tho">
-                        <rect key="frame" x="132" y="26" width="23" height="9"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="7"/>
+                        <rect key="frame" x="132" y="26" width="32" height="12"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
                         <color key="textColor" name="text_gray"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="⭐️⭐️⭐️" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hJh-CM-fV6">
-                        <rect key="frame" x="155" y="26" width="30" height="9"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="7"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="⭐️⭐️⭐️" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hJh-CM-fV6">
+                        <rect key="frame" x="164" y="26" width="42" height="12"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="식물소개" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NcB-CE-uBd">
-                        <rect key="frame" x="132" y="45" width="180" height="50"/>
+                        <rect key="frame" x="132" y="48" width="180" height="50"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="50" id="LVx-Gc-EyO"/>
                             <constraint firstAttribute="width" constant="180" id="Qti-dQ-DBA"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="7"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
                         <color key="textColor" name="text_gray"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="# 태그" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="El8-XG-d2v">
-                        <rect key="frame" x="132" y="108" width="19" height="9"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="7"/>
+                        <rect key="frame" x="132" y="111" width="27" height="12"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
                         <color key="textColor" name="text_gray"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iN3-y7-mrn">
-                        <rect key="frame" x="294" y="103" width="17.5" height="17.5"/>
+                        <rect key="frame" x="291.5" y="100.5" width="20" height="20"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="17.5" id="XF7-Dt-Xr7"/>
+                            <constraint firstAttribute="width" constant="20" id="XF7-Dt-Xr7"/>
                             <constraint firstAttribute="width" secondItem="iN3-y7-mrn" secondAttribute="height" multiplier="1:1" id="fwC-as-JFJ"/>
                         </constraints>
                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -72,21 +73,19 @@
                     </button>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="hJh-CM-fV6" firstAttribute="leading" secondItem="dsh-Io-Tho" secondAttribute="trailing" id="1uH-X9-vRQ"/>
-                    <constraint firstItem="NcB-CE-uBd" firstAttribute="leading" secondItem="KwH-Ay-ovo" secondAttribute="leading" id="ARb-71-w4m"/>
                     <constraint firstAttribute="trailing" secondItem="iN3-y7-mrn" secondAttribute="trailing" constant="8.5" id="EPz-gK-7Lp"/>
-                    <constraint firstItem="NcB-CE-uBd" firstAttribute="top" secondItem="dsh-Io-Tho" secondAttribute="bottom" constant="10" id="HyZ-Dv-Ub1"/>
                     <constraint firstItem="El8-XG-d2v" firstAttribute="top" secondItem="NcB-CE-uBd" secondAttribute="bottom" constant="13" id="KSr-be-SN9"/>
-                    <constraint firstItem="hJh-CM-fV6" firstAttribute="centerY" secondItem="dsh-Io-Tho" secondAttribute="centerY" id="T11-pL-ncy"/>
-                    <constraint firstItem="El8-XG-d2v" firstAttribute="leading" secondItem="KwH-Ay-ovo" secondAttribute="leading" id="Xze-SG-G8K"/>
-                    <constraint firstItem="KwH-Ay-ovo" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="6" id="Yte-6z-qzS"/>
+                    <constraint firstItem="KwH-Ay-ovo" firstAttribute="leading" secondItem="45o-YO-STC" secondAttribute="trailing" constant="19" id="Omc-7k-gDA"/>
+                    <constraint firstItem="KwH-Ay-ovo" firstAttribute="top" secondItem="45o-YO-STC" secondAttribute="top" id="WfU-nn-Xbt"/>
+                    <constraint firstItem="dsh-Io-Tho" firstAttribute="leading" secondItem="KwH-Ay-ovo" secondAttribute="leading" id="X1l-Pd-I3Q"/>
                     <constraint firstAttribute="bottom" secondItem="45o-YO-STC" secondAttribute="bottom" constant="8" id="bMG-Cf-Ymm"/>
                     <constraint firstItem="45o-YO-STC" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="f2w-m1-gb1"/>
-                    <constraint firstItem="KwH-Ay-ovo" firstAttribute="leading" secondItem="45o-YO-STC" secondAttribute="trailing" constant="19" id="gHD-Ld-a1x"/>
                     <constraint firstAttribute="bottom" secondItem="iN3-y7-mrn" secondAttribute="bottom" constant="8.5" id="hqM-dL-Y15"/>
                     <constraint firstItem="45o-YO-STC" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="6" id="igq-7e-aaS"/>
-                    <constraint firstItem="dsh-Io-Tho" firstAttribute="leading" secondItem="KwH-Ay-ovo" secondAttribute="leading" id="nSe-Cd-bpO"/>
-                    <constraint firstItem="dsh-Io-Tho" firstAttribute="top" secondItem="KwH-Ay-ovo" secondAttribute="bottom" constant="3" id="q6T-nf-KX9"/>
+                    <constraint firstItem="El8-XG-d2v" firstAttribute="leading" secondItem="KwH-Ay-ovo" secondAttribute="leading" id="kc8-CD-aK1"/>
+                    <constraint firstItem="dsh-Io-Tho" firstAttribute="top" secondItem="KwH-Ay-ovo" secondAttribute="bottom" constant="3" id="rN8-xN-HQ9"/>
+                    <constraint firstItem="NcB-CE-uBd" firstAttribute="top" secondItem="dsh-Io-Tho" secondAttribute="bottom" constant="10" id="tOy-gj-AYS"/>
+                    <constraint firstItem="NcB-CE-uBd" firstAttribute="leading" secondItem="KwH-Ay-ovo" secondAttribute="leading" id="uqT-Yl-Uu6"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

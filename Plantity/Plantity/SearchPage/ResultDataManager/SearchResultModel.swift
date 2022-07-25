@@ -8,9 +8,9 @@
 import Foundation
 
 struct SearchResultModel {
-    let imageUrl: String?
+    // let imageUrl: String?
     let name: String?
     let level: Int?
-    let Intro: String?
-    let Tag: String?
+    let intro: String?
+    let tag: String?
 }
