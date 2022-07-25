@@ -72,7 +72,7 @@ extension SearchViewController:
         fileteredData = dataArray.filter({ (data:String) -> Bool in
             return data.lowercased().contains(searchBar.text!.lowercased())
             })
-            resultVC.tableView.reloadData()
+        
         searchTableView.reloadData()
     }
 }
@@ -117,9 +117,9 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if searchBar.text?.count != 0 {
+            // 검색창 텍스트 입력시
             let cell = UITableViewCell()
-            cell.textLabel?.text = (tableView == resultVC.tableView ? fileteredData[indexPath.row] : dataArray[indexPath.row])
-            
+            cell.textLabel?.text = (tableView == searchTableView ? fileteredData[indexPath.row] : dataArray[indexPath.row])
             return cell
         }
         
