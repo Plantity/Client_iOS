@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ResultTableViewCell" id="KGk-i7-Jjw" customClass="ResultTableViewCell" customModule="Plantity" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="129"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="129"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_plant_ex" translatesAutoresizingMaskIntoConstraints="NO" id="45o-YO-STC">
+                        <rect key="frame" x="8" y="6" width="105" height="115"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="105" id="3tf-dR-duG"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="식물명" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KwH-Ay-ovo">
+                        <rect key="frame" x="132" y="6" width="36.5" height="17"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="난이도: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dsh-Io-Tho">
+                        <rect key="frame" x="132" y="26" width="32" height="12"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                        <color key="textColor" name="text_gray"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="⭐️⭐️⭐️" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hJh-CM-fV6">
+                        <rect key="frame" x="164" y="26" width="42" height="12"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="식물소개" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NcB-CE-uBd">
+                        <rect key="frame" x="132" y="48" width="180" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="LVx-Gc-EyO"/>
+                            <constraint firstAttribute="width" constant="180" id="Qti-dQ-DBA"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                        <color key="textColor" name="text_gray"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="# 태그" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="El8-XG-d2v">
+                        <rect key="frame" x="132" y="111" width="27" height="12"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                        <color key="textColor" name="text_gray"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iN3-y7-mrn">
+                        <rect key="frame" x="291.5" y="100.5" width="20" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="20" id="XF7-Dt-Xr7"/>
+                            <constraint firstAttribute="width" secondItem="iN3-y7-mrn" secondAttribute="height" multiplier="1:1" id="fwC-as-JFJ"/>
+                        </constraints>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal" title="Button" image="icon_heart"/>
+                        <state key="selected" image="icon_heart_fill"/>
+                        <connections>
+                            <action selector="actionIsResultLike:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="aj6-WE-wZE"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="iN3-y7-mrn" secondAttribute="trailing" constant="8.5" id="EPz-gK-7Lp"/>
+                    <constraint firstItem="El8-XG-d2v" firstAttribute="top" secondItem="NcB-CE-uBd" secondAttribute="bottom" constant="13" id="KSr-be-SN9"/>
+                    <constraint firstItem="KwH-Ay-ovo" firstAttribute="leading" secondItem="45o-YO-STC" secondAttribute="trailing" constant="19" id="Omc-7k-gDA"/>
+                    <constraint firstItem="KwH-Ay-ovo" firstAttribute="top" secondItem="45o-YO-STC" secondAttribute="top" id="WfU-nn-Xbt"/>
+                    <constraint firstItem="dsh-Io-Tho" firstAttribute="leading" secondItem="KwH-Ay-ovo" secondAttribute="leading" id="X1l-Pd-I3Q"/>
+                    <constraint firstAttribute="bottom" secondItem="45o-YO-STC" secondAttribute="bottom" constant="8" id="bMG-Cf-Ymm"/>
+                    <constraint firstItem="45o-YO-STC" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="f2w-m1-gb1"/>
+                    <constraint firstAttribute="bottom" secondItem="iN3-y7-mrn" secondAttribute="bottom" constant="8.5" id="hqM-dL-Y15"/>
+                    <constraint firstItem="45o-YO-STC" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="6" id="igq-7e-aaS"/>
+                    <constraint firstItem="El8-XG-d2v" firstAttribute="leading" secondItem="KwH-Ay-ovo" secondAttribute="leading" id="kc8-CD-aK1"/>
+                    <constraint firstItem="dsh-Io-Tho" firstAttribute="top" secondItem="KwH-Ay-ovo" secondAttribute="bottom" constant="3" id="rN8-xN-HQ9"/>
+                    <constraint firstItem="NcB-CE-uBd" firstAttribute="top" secondItem="dsh-Io-Tho" secondAttribute="bottom" constant="10" id="tOy-gj-AYS"/>
+                    <constraint firstItem="NcB-CE-uBd" firstAttribute="leading" secondItem="KwH-Ay-ovo" secondAttribute="leading" id="uqT-Yl-Uu6"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="resultImageView" destination="45o-YO-STC" id="P8h-WM-M6L"/>
+                <outlet property="resultIntroLabel" destination="NcB-CE-uBd" id="laW-Fb-JYq"/>
+                <outlet property="resultLikeButton" destination="iN3-y7-mrn" id="8FV-CF-RBf"/>
+                <outlet property="resultLvLabel" destination="hJh-CM-fV6" id="GEd-dE-PO6"/>
+                <outlet property="resultNameLabel" destination="KwH-Ay-ovo" id="hGe-PO-KE3"/>
+                <outlet property="resultTagLabel" destination="El8-XG-d2v" id="tNj-LE-ElP"/>
+            </connections>
+            <point key="canvasLocation" x="131.8840579710145" y="92.745535714285708"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="icon_heart" width="35" height="34"/>
+        <image name="icon_heart_fill" width="18.5" height="15.5"/>
+        <image name="image_plant_ex" width="105" height="115"/>
+        <namedColor name="text_gray">
+            <color red="0.51764705882352946" green="0.51764705882352946" blue="0.51764705882352946" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

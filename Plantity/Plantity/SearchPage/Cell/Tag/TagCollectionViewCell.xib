@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="TagCollectionViewCell" customModule="Plantity" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fwT-OJ-l9R">
+                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_plant_tag" translatesAutoresizingMaskIntoConstraints="NO" id="4c6-kO-23n">
+                                <rect key="frame" x="14.5" y="5" width="71" height="71"/>
+                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="4c6-kO-23n" secondAttribute="height" multiplier="1:1" id="Cb4-Ec-rnH"/>
+                                    <constraint firstAttribute="width" constant="71" id="QjL-G9-peI"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="초보집사 추천" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wsO-kT-l6C">
+                                <rect key="frame" x="22.5" y="84" width="55" height="12"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="wsO-kT-l6C" firstAttribute="centerX" secondItem="4c6-kO-23n" secondAttribute="centerX" id="4tj-ix-8id"/>
+                            <constraint firstItem="wsO-kT-l6C" firstAttribute="top" secondItem="4c6-kO-23n" secondAttribute="bottom" constant="8" id="N3L-NO-4Qq"/>
+                            <constraint firstItem="4c6-kO-23n" firstAttribute="top" secondItem="fwT-OJ-l9R" secondAttribute="top" constant="5" id="awH-I7-ikn"/>
+                            <constraint firstItem="4c6-kO-23n" firstAttribute="centerX" secondItem="fwT-OJ-l9R" secondAttribute="centerX" id="wDo-tg-e9l"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="fwT-OJ-l9R" secondAttribute="trailing" id="0Pi-sd-kwZ"/>
+                <constraint firstAttribute="bottom" secondItem="fwT-OJ-l9R" secondAttribute="bottom" id="6D5-bG-Kwh"/>
+                <constraint firstItem="fwT-OJ-l9R" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="f76-Wo-5vQ"/>
+                <constraint firstItem="fwT-OJ-l9R" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="zbO-Cd-7rJ"/>
+            </constraints>
+            <connections>
+                <outlet property="tagImageView" destination="4c6-kO-23n" id="DPV-U8-C3X"/>
+            </connections>
+            <point key="canvasLocation" x="131.8840579710145" y="87.723214285714278"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="image_plant_tag" width="71" height="71"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

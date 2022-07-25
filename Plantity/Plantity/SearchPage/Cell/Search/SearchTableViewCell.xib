@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" restorationIdentifier="SearchTableViewCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="SearchTableViewCell" id="KGk-i7-Jjw" customClass="SearchTableViewCell" customModule="Plantity" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="360" height="480"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="360" height="480"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="오늘의 식물" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aGe-iO-b5t">
+                        <rect key="frame" x="20" y="20" width="78" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_plant_today" translatesAutoresizingMaskIntoConstraints="NO" id="bQQ-Sm-HE3">
+                        <rect key="frame" x="18" y="52.5" width="324" height="324"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="bQQ-Sm-HE3" secondAttribute="height" multiplier="1:1" id="PZ8-id-5OJ"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="몬스테라" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X6V-mY-HpF">
+                        <rect key="frame" x="16" y="392.5" width="77" height="27"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="식물소개" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PeP-d9-9KU">
+                        <rect key="frame" x="19" y="427.5" width="322" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" red="0.51764705882352935" green="0.51764705882352935" blue="0.51764705882352935" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0cd-5i-QwD">
+                        <rect key="frame" x="298" y="386.5" width="35" height="35"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="35" id="9fl-sw-RJz"/>
+                            <constraint firstAttribute="width" secondItem="0cd-5i-QwD" secondAttribute="height" multiplier="1:1" id="F4b-o1-F6E"/>
+                        </constraints>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal" image="icon_heart"/>
+                        <state key="selected" image="icon_heart"/>
+                        <connections>
+                            <action selector="actionIsLike:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Y5q-ne-oDo"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="0cd-5i-QwD" secondAttribute="trailing" constant="27" id="6Sj-Q0-LHp"/>
+                    <constraint firstItem="PeP-d9-9KU" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="19" id="95w-Gj-n1a"/>
+                    <constraint firstAttribute="trailing" secondItem="PeP-d9-9KU" secondAttribute="trailing" constant="19" id="APq-0t-t2T"/>
+                    <constraint firstItem="0cd-5i-QwD" firstAttribute="top" secondItem="bQQ-Sm-HE3" secondAttribute="bottom" constant="10" id="CAs-yT-eMG"/>
+                    <constraint firstItem="aGe-iO-b5t" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="DIL-NX-loO"/>
+                    <constraint firstItem="X6V-mY-HpF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="IeO-4T-ANU"/>
+                    <constraint firstItem="PeP-d9-9KU" firstAttribute="top" secondItem="X6V-mY-HpF" secondAttribute="bottom" constant="8" id="J8J-le-Pyp"/>
+                    <constraint firstItem="X6V-mY-HpF" firstAttribute="top" secondItem="bQQ-Sm-HE3" secondAttribute="bottom" constant="16" id="UR4-j6-dLs"/>
+                    <constraint firstItem="bQQ-Sm-HE3" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="18" id="crq-KX-cyX"/>
+                    <constraint firstItem="aGe-iO-b5t" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="lkY-GQ-akt"/>
+                    <constraint firstItem="bQQ-Sm-HE3" firstAttribute="top" secondItem="aGe-iO-b5t" secondAttribute="bottom" constant="12" id="tAb-FM-3EA"/>
+                    <constraint firstItem="bQQ-Sm-HE3" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="wn4-hc-QvE"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="likeButton" destination="0cd-5i-QwD" id="YkG-Gu-6b2"/>
+                <outlet property="todayPlantImageView" destination="bQQ-Sm-HE3" id="125-Be-Fm3"/>
+                <outlet property="todayPlantInfoLabel" destination="PeP-d9-9KU" id="szs-ox-qgJ"/>
+                <outlet property="todayPlantLabel" destination="X6V-mY-HpF" id="yUx-sA-ffo"/>
+            </connections>
+            <point key="canvasLocation" x="131.8840579710145" y="106.47321428571428"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="icon_heart" width="35" height="34"/>
+        <image name="image_plant_today" width="326" height="287.5"/>
+    </resources>
+</document>
