@@ -109,6 +109,7 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if searchBar.text?.count != 0 {
+            // 검색 결과
             return fileteredData.count
         } else {
             return 2
@@ -117,9 +118,13 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if searchBar.text?.count != 0 {
-            // 검색창 텍스트 입력시
-            let cell = UITableViewCell()
-            cell.textLabel?.text = (tableView == searchTableView ? fileteredData[indexPath.row] : dataArray[indexPath.row])
+            // 검색 결과
+            //let cell = UITableViewCell()
+            //cell.textLabel?.text = (tableView == searchTableView ? fileteredData[indexPath.row] : dataArray[indexPath.row])
+            
+            guard let cell = searchTableView.dequeueReusableCell(withIdentifier: "ResultTableViewCell", for: indexPath) as? ResultTableViewCell
+            else { return UITableViewCell() }
+            
             return cell
         }
         
@@ -142,7 +147,8 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if searchBar.text?.count != 0 {
-            return 50
+            // 검색 결과
+            return 150
         }
         
         if indexPath.row == 0 {

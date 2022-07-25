@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		F4864507288CC34B00956C4C /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4864506288CC34B00956C4C /* Color+Extension.swift */; };
+		F4B3722C288E5E2F002215F1 /* ResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B3722A288E5E2F002215F1 /* ResultTableViewCell.swift */; };
+		F4B3722D288E5E2F002215F1 /* ResultTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4B3722B288E5E2F002215F1 /* ResultTableViewCell.xib */; };
 		F4BE4BDE288ADBFF00CF276D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BE4BDD288ADBFF00CF276D /* AppDelegate.swift */; };
 		F4BE4BE0288ADBFF00CF276D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BE4BDF288ADBFF00CF276D /* SceneDelegate.swift */; };
 		F4BE4BE2288ADBFF00CF276D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BE4BE1288ADBFF00CF276D /* ViewController.swift */; };
@@ -30,6 +32,8 @@
 
 /* Begin PBXFileReference section */
 		F4864506288CC34B00956C4C /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
+		F4B3722A288E5E2F002215F1 /* ResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultTableViewCell.swift; sourceTree = "<group>"; };
+		F4B3722B288E5E2F002215F1 /* ResultTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultTableViewCell.xib; sourceTree = "<group>"; };
 		F4BE4BDA288ADBFF00CF276D /* Plantity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Plantity.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4BE4BDD288ADBFF00CF276D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4BE4BDF288ADBFF00CF276D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -147,6 +151,8 @@
 			children = (
 				F4D8C927288B866F0019B6BC /* SearchTableViewCell.swift */,
 				F4D8C928288B866F0019B6BC /* SearchTableViewCell.xib */,
+				F4B3722A288E5E2F002215F1 /* ResultTableViewCell.swift */,
+				F4B3722B288E5E2F002215F1 /* ResultTableViewCell.xib */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -223,6 +229,7 @@
 				F4D8C932288B90230019B6BC /* TagTableViewCell.xib in Resources */,
 				F4BE4BFF288AE01600CF276D /* GuidelinePage.storyboard in Resources */,
 				F4D8C92A288B866F0019B6BC /* SearchTableViewCell.xib in Resources */,
+				F4B3722D288E5E2F002215F1 /* ResultTableViewCell.xib in Resources */,
 				F4BE4BED288ADBFF00CF276D /* LaunchScreen.storyboard in Resources */,
 				F4BE4C01288AE02000CF276D /* MainPage.storyboard in Resources */,
 				F4BE4BFD288AE00C00CF276D /* MyPage.storyboard in Resources */,
@@ -248,6 +255,7 @@
 				F4D8C931288B90230019B6BC /* TagTableViewCell.swift in Sources */,
 				F4D8C929288B866F0019B6BC /* SearchTableViewCell.swift in Sources */,
 				F4BE4BE8288ADBFF00CF276D /* Plantity.xcdatamodeld in Sources */,
+				F4B3722C288E5E2F002215F1 /* ResultTableViewCell.swift in Sources */,
 				F4BE4BE0288ADBFF00CF276D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
