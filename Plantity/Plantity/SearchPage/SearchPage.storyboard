@@ -38,11 +38,10 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="WnI-xz-Wtu" secondAttribute="trailing" id="hmh-9l-xaQ"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" id="KCB-eJ-8OI">
-                        <color key="badgeColor" red="0.35294117650000001" green="0.89019607840000003" blue="0.76862745099999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <tabBarItem key="tabBarItem" title="" image="magnifyingglass" catalog="system" id="KCB-eJ-8OI">
                         <imageReference key="selectedImage" image="magnifyingglass" catalog="system" renderingMode="hierarchical">
                             <hierarchicalColors>
-                                <color white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color red="0.35294117650000001" green="0.89019607840000003" blue="0.76862745099999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color systemColor="secondaryLabelColor"/>
                                 <color systemColor="tertiaryLabelColor"/>
                             </hierarchicalColors>

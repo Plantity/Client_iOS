@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F431BC66288F730A00E4E614 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F431BC65288F730A00E4E614 /* MyPageViewController.swift */; };
 		F4864507288CC34B00956C4C /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4864506288CC34B00956C4C /* Color+Extension.swift */; };
 		F4B3722C288E5E2F002215F1 /* ResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B3722A288E5E2F002215F1 /* ResultTableViewCell.swift */; };
 		F4B3722D288E5E2F002215F1 /* ResultTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4B3722B288E5E2F002215F1 /* ResultTableViewCell.xib */; };
@@ -32,6 +33,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F431BC65288F730A00E4E614 /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
 		F4864506288CC34B00956C4C /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		F4B3722A288E5E2F002215F1 /* ResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultTableViewCell.swift; sourceTree = "<group>"; };
 		F4B3722B288E5E2F002215F1 /* ResultTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultTableViewCell.xib; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				F4BE4BFC288AE00C00CF276D /* MyPage.storyboard */,
+				F431BC65288F730A00E4E614 /* MyPageViewController.swift */,
 			);
 			path = MyPage;
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 				F4BE4BE2288ADBFF00CF276D /* ViewController.swift in Sources */,
 				F4BE4BDE288ADBFF00CF276D /* AppDelegate.swift in Sources */,
 				F4D8C931288B90230019B6BC /* TagTableViewCell.swift in Sources */,
+				F431BC66288F730A00E4E614 /* MyPageViewController.swift in Sources */,
 				F4D8C929288B866F0019B6BC /* SearchTableViewCell.swift in Sources */,
 				F4BE4BE8288ADBFF00CF276D /* Plantity.xcdatamodeld in Sources */,
 				F4B3722C288E5E2F002215F1 /* ResultTableViewCell.swift in Sources */,

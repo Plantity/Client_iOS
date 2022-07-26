@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -12,7 +13,7 @@
         <!--마이페이지-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MyPageViewController" id="Y6W-OH-hqX" customClass="MyPageViewController" customModule="Plantity" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -146,6 +147,15 @@
                             <constraint firstItem="Tov-KS-mZF" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="wRL-GA-Prd"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="" image="person" catalog="system" id="rSn-Sw-rfu">
+                        <imageReference key="selectedImage" image="person" catalog="system" renderingMode="hierarchical">
+                            <hierarchicalColors>
+                                <color red="0.35294117650000001" green="0.89019607840000003" blue="0.76862745099999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color systemColor="secondaryLabelColor"/>
+                                <color systemColor="tertiaryLabelColor"/>
+                            </hierarchicalColors>
+                        </imageReference>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="마이페이지" id="bHM-q8-yBj">
                         <rightBarButtonItems>
@@ -153,7 +163,15 @@
                             <barButtonItem title="Item" image="image_notifications" width="24" id="xQc-Nm-FbM"/>
                         </rightBarButtonItems>
                     </navigationItem>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="myCardView" destination="eJ2-kg-FxI" id="1YO-C5-oGY"/>
+                        <outlet property="myImageView" destination="AW1-Zl-82k" id="dVY-yI-fpt"/>
+                        <outlet property="myLevelLabel" destination="clZ-lo-T2R" id="KRL-g9-yIC"/>
+                        <outlet property="myMedalImageView" destination="cl7-Fw-bAA" id="GWF-ha-jYI"/>
+                        <outlet property="myNameLabel" destination="nAH-4O-Veq" id="qrP-pA-jID"/>
+                        <outlet property="myProgressView" destination="OiG-4k-WDj" id="gmq-PJ-OKO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -166,6 +184,7 @@
         <image name="image_medal_silver" width="375" height="375"/>
         <image name="image_notifications" width="24" height="24"/>
         <image name="image_settings" width="32" height="32"/>
+        <image name="person" catalog="system" width="128" height="117"/>
         <namedColor name="background_card">
             <color red="0.83921568627450982" green="0.92549019607843142" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
@@ -175,8 +194,14 @@
         <namedColor name="tint_progress">
             <color red="0.99215686274509807" green="0.65098039215686276" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tertiaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
