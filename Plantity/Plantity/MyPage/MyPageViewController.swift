@@ -33,8 +33,8 @@ class MyPageViewController: UIViewController {
         myTableView.dataSource = self
         
         // Registers
-        let myNib = UINib(nibName: "MyTableViewCell", bundle: nil)
-        myTableView.register(myNib, forCellReuseIdentifier: "MyTableViewCell")
+        let myTableNib = UINib(nibName: "MyTableViewCell", bundle: nil)
+        myTableView.register(myTableNib, forCellReuseIdentifier: "MyTableViewCell")
 
         setupAttribute()
     }
@@ -83,7 +83,31 @@ extension MyPageViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        guard let tableViewCell = cell as? MyTableViewCell else { return }
+
+        tableViewCell.setCollectionViewDataSourceDelegate(dataSourceDelegate: self, forRow: indexPath.row)
+    }
+    
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        // 섹션 간 간격
         return " "
+    }
+}
+
+extension MyPageViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 10
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MyCollectionViewCell", for: indexPath) as? MyCollectionViewCell else { return UICollectionViewCell() }
+
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 105, height: 105
+)
     }
 }

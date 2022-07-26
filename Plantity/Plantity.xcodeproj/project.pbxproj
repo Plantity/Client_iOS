@@ -16,6 +16,8 @@
 		F431BC77288FCDA800E4E614 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F431BC76288FCDA800E4E614 /* MyPageViewController.swift */; };
 		F431BC7B288FCF8100E4E614 /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F431BC79288FCF8100E4E614 /* MyTableViewCell.swift */; };
 		F431BC7C288FCF8100E4E614 /* MyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F431BC7A288FCF8100E4E614 /* MyTableViewCell.xib */; };
+		F431BC7F288FD2B500E4E614 /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F431BC7D288FD2B500E4E614 /* MyCollectionViewCell.swift */; };
+		F431BC80288FD2B500E4E614 /* MyCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F431BC7E288FD2B500E4E614 /* MyCollectionViewCell.xib */; };
 		F4864507288CC34B00956C4C /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4864506288CC34B00956C4C /* Color+Extension.swift */; };
 		F4B3722C288E5E2F002215F1 /* ResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B3722A288E5E2F002215F1 /* ResultTableViewCell.swift */; };
 		F4B3722D288E5E2F002215F1 /* ResultTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4B3722B288E5E2F002215F1 /* ResultTableViewCell.xib */; };
@@ -50,6 +52,8 @@
 		F431BC76288FCDA800E4E614 /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
 		F431BC79288FCF8100E4E614 /* MyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
 		F431BC7A288FCF8100E4E614 /* MyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyTableViewCell.xib; sourceTree = "<group>"; };
+		F431BC7D288FD2B500E4E614 /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell.swift; sourceTree = "<group>"; };
+		F431BC7E288FD2B500E4E614 /* MyCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCollectionViewCell.xib; sourceTree = "<group>"; };
 		F4864506288CC34B00956C4C /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		F4B3722A288E5E2F002215F1 /* ResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultTableViewCell.swift; sourceTree = "<group>"; };
 		F4B3722B288E5E2F002215F1 /* ResultTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultTableViewCell.xib; sourceTree = "<group>"; };
@@ -113,6 +117,8 @@
 			children = (
 				F431BC79288FCF8100E4E614 /* MyTableViewCell.swift */,
 				F431BC7A288FCF8100E4E614 /* MyTableViewCell.xib */,
+				F431BC7D288FD2B500E4E614 /* MyCollectionViewCell.swift */,
+				F431BC7E288FD2B500E4E614 /* MyCollectionViewCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -294,6 +300,7 @@
 				F4B3722D288E5E2F002215F1 /* ResultTableViewCell.xib in Resources */,
 				F4BE4BED288ADBFF00CF276D /* LaunchScreen.storyboard in Resources */,
 				5506067F288EC87F00B717DE /* CardTableViewCell.xib in Resources */,
+				F431BC80288FD2B500E4E614 /* MyCollectionViewCell.xib in Resources */,
 				F4BE4C01288AE02000CF276D /* MainPage.storyboard in Resources */,
 				F4BE4BFD288AE00C00CF276D /* MyPage.storyboard in Resources */,
 				F4BE4BEA288ADBFF00CF276D /* Assets.xcassets in Resources */,
@@ -326,6 +333,7 @@
 				5506067E288EC87F00B717DE /* CardTableViewCell.swift in Sources */,
 				F431BC77288FCDA800E4E614 /* MyPageViewController.swift in Sources */,
 				F4D8C929288B866F0019B6BC /* SearchTableViewCell.swift in Sources */,
+				F431BC7F288FD2B500E4E614 /* MyCollectionViewCell.swift in Sources */,
 				F4BE4BE8288ADBFF00CF276D /* Plantity.xcdatamodeld in Sources */,
 				F4B3722C288E5E2F002215F1 /* ResultTableViewCell.swift in Sources */,
 				F4BE4BE0288ADBFF00CF276D /* SceneDelegate.swift in Sources */,
