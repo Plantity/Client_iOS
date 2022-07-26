@@ -26,6 +26,17 @@ class MyPageViewController: UIViewController {
     }
 
     private func setupAttribute() {
+        // Corner Radius
+        myCardView.clipsToBounds = true
+        myCardView.layer.cornerRadius = 20
 
+        myProgressView.clipsToBounds = true
+        myProgressView.layer.cornerRadius = 8
+        myProgressView.clipsToBounds = true
+        myProgressView.layer.sublayers![1].cornerRadius = 8// 뒤에 있는 회색 track
+        myProgressView.subviews[1].clipsToBounds = true
+
+        myImageView.clipsToBounds = true
+        myImageView.layer.cornerRadius = 82 / 2
     }
 }
