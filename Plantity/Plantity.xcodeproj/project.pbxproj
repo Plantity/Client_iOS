@@ -10,12 +10,6 @@
 		F431BC66288F730A00E4E614 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F431BC65288F730A00E4E614 /* MyPageViewController.swift */; };
 		F431BC6A288F7AC400E4E614 /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F431BC68288F7AC400E4E614 /* MyTableViewCell.swift */; };
 		F431BC6B288F7AC400E4E614 /* MyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F431BC69288F7AC400E4E614 /* MyTableViewCell.xib */; };
-		55060676288EA07100B717DE /* LogPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55060675288EA07100B717DE /* LogPage.storyboard */; };
-		5506067A288EC71F00B717DE /* LogPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55060679288EC71F00B717DE /* LogPageViewController.swift */; };
-		5506067E288EC87F00B717DE /* CardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5506067C288EC87F00B717DE /* CardTableViewCell.swift */; };
-		5506067F288EC87F00B717DE /* CardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5506067D288EC87F00B717DE /* CardTableViewCell.xib */; };
-		55060682288ECCB500B717DE /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55060680288ECCB500B717DE /* CardCollectionViewCell.swift */; };
-		55060683288ECCB500B717DE /* CardCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55060681288ECCB500B717DE /* CardCollectionViewCell.xib */; };
 		F4864507288CC34B00956C4C /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4864506288CC34B00956C4C /* Color+Extension.swift */; };
 		F4B3722C288E5E2F002215F1 /* ResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B3722A288E5E2F002215F1 /* ResultTableViewCell.swift */; };
 		F4B3722D288E5E2F002215F1 /* ResultTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4B3722B288E5E2F002215F1 /* ResultTableViewCell.xib */; };
@@ -44,12 +38,6 @@
 		F431BC65288F730A00E4E614 /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
 		F431BC68288F7AC400E4E614 /* MyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
 		F431BC69288F7AC400E4E614 /* MyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyTableViewCell.xib; sourceTree = "<group>"; };
-		55060675288EA07100B717DE /* LogPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LogPage.storyboard; sourceTree = "<group>"; };
-		55060679288EC71F00B717DE /* LogPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogPageViewController.swift; sourceTree = "<group>"; };
-		5506067C288EC87F00B717DE /* CardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTableViewCell.swift; sourceTree = "<group>"; };
-		5506067D288EC87F00B717DE /* CardTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardTableViewCell.xib; sourceTree = "<group>"; };
-		55060680288ECCB500B717DE /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
-		55060681288ECCB500B717DE /* CardCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardCollectionViewCell.xib; sourceTree = "<group>"; };
 		F4864506288CC34B00956C4C /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		F4B3722A288E5E2F002215F1 /* ResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultTableViewCell.swift; sourceTree = "<group>"; };
 		F4B3722B288E5E2F002215F1 /* ResultTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultTableViewCell.xib; sourceTree = "<group>"; };
@@ -92,23 +80,6 @@
 			children = (
 				F431BC68288F7AC400E4E614 /* MyTableViewCell.swift */,
 				F431BC69288F7AC400E4E614 /* MyTableViewCell.xib */,
-		55060674288EA01F00B717DE /* LogPage */ = {
-			isa = PBXGroup;
-			children = (
-				5506067B288EC85000B717DE /* Cell */,
-				55060675288EA07100B717DE /* LogPage.storyboard */,
-				55060679288EC71F00B717DE /* LogPageViewController.swift */,
-			);
-			path = LogPage;
-			sourceTree = "<group>";
-		};
-		5506067B288EC85000B717DE /* Cell */ = {
-			isa = PBXGroup;
-			children = (
-				5506067C288EC87F00B717DE /* CardTableViewCell.swift */,
-				5506067D288EC87F00B717DE /* CardTableViewCell.xib */,
-				55060680288ECCB500B717DE /* CardCollectionViewCell.swift */,
-				55060681288ECCB500B717DE /* CardCollectionViewCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -140,7 +111,6 @@
 		F4BE4BDC288ADBFF00CF276D /* Plantity */ = {
 			isa = PBXGroup;
 			children = (
-				55060674288EA01F00B717DE /* LogPage */,
 				F4BE4BF7288ADFC900CF276D /* SearchPage */,
 				F4BE4BF6288ADFC200CF276D /* MyPage */,
 				F4BE4BF5288ADFB400CF276D /* GuidelinePage */,
@@ -290,14 +260,11 @@
 				F4D8C92A288B866F0019B6BC /* SearchTableViewCell.xib in Resources */,
 				F4B3722D288E5E2F002215F1 /* ResultTableViewCell.xib in Resources */,
 				F4BE4BED288ADBFF00CF276D /* LaunchScreen.storyboard in Resources */,
-				5506067F288EC87F00B717DE /* CardTableViewCell.xib in Resources */,
 				F4BE4C01288AE02000CF276D /* MainPage.storyboard in Resources */,
 				F4BE4BFD288AE00C00CF276D /* MyPage.storyboard in Resources */,
 				F4BE4BEA288ADBFF00CF276D /* Assets.xcassets in Resources */,
-				55060676288EA07100B717DE /* LogPage.storyboard in Resources */,
 				F4D8C936288B94140019B6BC /* TagCollectionViewCell.xib in Resources */,
 				F4BE4BE5288ADBFF00CF276D /* Main.storyboard in Resources */,
-				55060683288ECCB500B717DE /* CardCollectionViewCell.xib in Resources */,
 				F4BE4BFB288AE00100CF276D /* SearchPage.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -309,18 +276,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5506067A288EC71F00B717DE /* LogPageViewController.swift in Sources */,
 				F4BE4BF9288ADFEC00CF276D /* SearchViewController.swift in Sources */,
 				F4864507288CC34B00956C4C /* Color+Extension.swift in Sources */,
 				F4B37230288E73C6002215F1 /* SearchResultModel.swift in Sources */,
-				55060682288ECCB500B717DE /* CardCollectionViewCell.swift in Sources */,
 				F4D8C935288B94140019B6BC /* TagCollectionViewCell.swift in Sources */,
 				F4BE4BE2288ADBFF00CF276D /* ViewController.swift in Sources */,
 				F4BE4BDE288ADBFF00CF276D /* AppDelegate.swift in Sources */,
 				F431BC6A288F7AC400E4E614 /* MyTableViewCell.swift in Sources */,
 				F4D8C931288B90230019B6BC /* TagTableViewCell.swift in Sources */,
 				F431BC66288F730A00E4E614 /* MyPageViewController.swift in Sources */,
-				5506067E288EC87F00B717DE /* CardTableViewCell.swift in Sources */,
 				F4D8C929288B866F0019B6BC /* SearchTableViewCell.swift in Sources */,
 				F4BE4BE8288ADBFF00CF276D /* Plantity.xcdatamodeld in Sources */,
 				F4B3722C288E5E2F002215F1 /* ResultTableViewCell.swift in Sources */,
@@ -478,7 +442,6 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -506,7 +469,6 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
