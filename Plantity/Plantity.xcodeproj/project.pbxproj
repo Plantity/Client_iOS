@@ -14,6 +14,9 @@
 		55060682288ECCB500B717DE /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55060680288ECCB500B717DE /* CardCollectionViewCell.swift */; };
 		55060683288ECCB500B717DE /* CardCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55060681288ECCB500B717DE /* CardCollectionViewCell.xib */; };
 		5527D3AC28900A1C00D33242 /* LogPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5527D3AB28900A1C00D33242 /* LogPage.storyboard */; };
+		5527D3B62890187F00D33242 /* LogPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5527D3B52890187F00D33242 /* LogPageViewController.swift */; };
+		5527D3BB2890243300D33242 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5527D3B92890243300D33242 /* CollectionViewCell.swift */; };
+		5527D3BC2890243300D33242 /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5527D3BA2890243300D33242 /* CollectionViewCell.xib */; };
 		F4864507288CC34B00956C4C /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4864506288CC34B00956C4C /* Color+Extension.swift */; };
 		F4B3722C288E5E2F002215F1 /* ResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B3722A288E5E2F002215F1 /* ResultTableViewCell.swift */; };
 		F4B3722D288E5E2F002215F1 /* ResultTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4B3722B288E5E2F002215F1 /* ResultTableViewCell.xib */; };
@@ -45,6 +48,9 @@
 		55060680288ECCB500B717DE /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
 		55060681288ECCB500B717DE /* CardCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardCollectionViewCell.xib; sourceTree = "<group>"; };
 		5527D3AB28900A1C00D33242 /* LogPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LogPage.storyboard; sourceTree = "<group>"; };
+		5527D3B52890187F00D33242 /* LogPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogPageViewController.swift; sourceTree = "<group>"; };
+		5527D3B92890243300D33242 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		5527D3BA2890243300D33242 /* CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
 		F4864506288CC34B00956C4C /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		F4B3722A288E5E2F002215F1 /* ResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultTableViewCell.swift; sourceTree = "<group>"; };
 		F4B3722B288E5E2F002215F1 /* ResultTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultTableViewCell.xib; sourceTree = "<group>"; };
@@ -85,6 +91,9 @@
 			isa = PBXGroup;
 			children = (
 				5527D3AB28900A1C00D33242 /* LogPage.storyboard */,
+				5527D3B52890187F00D33242 /* LogPageViewController.swift */,
+				5527D3B92890243300D33242 /* CollectionViewCell.swift */,
+				5527D3BA2890243300D33242 /* CollectionViewCell.xib */,
 			);
 			path = LogPage;
 			sourceTree = "<group>";
@@ -285,6 +294,7 @@
 				F4BE4BE5288ADBFF00CF276D /* Main.storyboard in Resources */,
 				55060683288ECCB500B717DE /* CardCollectionViewCell.xib in Resources */,
 				F4BE4BFB288AE00100CF276D /* SearchPage.storyboard in Resources */,
+				5527D3BC2890243300D33242 /* CollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,6 +305,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5527D3B62890187F00D33242 /* LogPageViewController.swift in Sources */,
 				5506067A288EC71F00B717DE /* MainPageViewController.swift in Sources */,
 				F4BE4BF9288ADFEC00CF276D /* SearchViewController.swift in Sources */,
 				F4864507288CC34B00956C4C /* Color+Extension.swift in Sources */,
@@ -304,6 +315,7 @@
 				F4BE4BE2288ADBFF00CF276D /* ViewController.swift in Sources */,
 				F4BE4BDE288ADBFF00CF276D /* AppDelegate.swift in Sources */,
 				F4D8C931288B90230019B6BC /* TagTableViewCell.swift in Sources */,
+				5527D3BB2890243300D33242 /* CollectionViewCell.swift in Sources */,
 				5506067E288EC87F00B717DE /* CardTableViewCell.swift in Sources */,
 				F4D8C929288B866F0019B6BC /* SearchTableViewCell.swift in Sources */,
 				F4BE4BE8288ADBFF00CF276D /* Plantity.xcdatamodeld in Sources */,
