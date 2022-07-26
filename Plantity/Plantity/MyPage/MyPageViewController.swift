@@ -8,6 +8,7 @@
 import UIKit
 
 class MyPageViewController: UIViewController {
+    
     @IBOutlet weak var myCardView: UIView!
     
     @IBOutlet weak var myProgressView: UIProgressView!
@@ -20,9 +21,9 @@ class MyPageViewController: UIViewController {
     
     @IBOutlet weak var myLevelLabel: UILabel!
     
-    
-    
     @IBOutlet weak var myTableView: UITableView!
+    
+    var plants: [String] = ["몬스테라","몬스테라","몬스테라","몬스테라"]
     
     
     override func viewDidLoad() {
@@ -80,34 +81,17 @@ extension MyPageViewController: UITableViewDelegate, UITableViewDataSource {
         cell.clipsToBounds = true
         cell.layer.cornerRadius = 20
         
+        cell.configure(with: plants)
+        
         return cell
-    }
-    
-    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        guard let tableViewCell = cell as? MyTableViewCell else { return }
-
-        tableViewCell.setCollectionViewDataSourceDelegate(dataSourceDelegate: self, forRow: indexPath.row)
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         // 섹션 간 간격
         return " "
     }
-}
-
-extension MyPageViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
-    }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MyCollectionViewCell", for: indexPath) as? MyCollectionViewCell else { return UICollectionViewCell() }
-
-        return cell
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 105, height: 105
-)
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 220
     }
 }

@@ -10,13 +10,17 @@ import UIKit
 class MyCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var imageView: UIImageView!
     
+    public func configure(with data: [String]) {
+        print(data)
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
         setupAttribute()
     }
 
-    func setupAttribute() {
+    public func setupAttribute() {
         imageView.clipsToBounds = true
         imageView.layer.cornerRadius = 20
     }
