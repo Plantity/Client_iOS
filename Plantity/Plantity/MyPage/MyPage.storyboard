@@ -33,8 +33,11 @@
                                             <constraint firstAttribute="width" constant="24" id="MDO-qb-vAm"/>
                                             <constraint firstAttribute="height" constant="24" id="lJP-3z-eZs"/>
                                         </constraints>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" image="image_settings"/>
+                                        <state key="normal" image="image_settings">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oTW-4p-2Aq">
                                         <rect key="frame" x="340" y="12" width="24" height="24"/>
@@ -42,8 +45,11 @@
                                             <constraint firstAttribute="width" constant="24" id="OSh-m5-8xX"/>
                                             <constraint firstAttribute="height" constant="24" id="cvg-OP-sxx"/>
                                         </constraints>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" image="image_notifications"/>
+                                        <state key="normal" image="image_notifications">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
