@@ -132,12 +132,20 @@
                                             <constraint firstItem="AW1-Zl-82k" firstAttribute="top" secondItem="OiG-4k-WDj" secondAttribute="bottom" constant="30" id="siD-2y-MF0"/>
                                         </constraints>
                                     </view>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="zWu-Sd-Ekf">
+                                        <rect key="frame" x="12" y="191" width="390" height="516"/>
+                                        <color key="backgroundColor" name="background_gray"/>
+                                    </tableView>
                                 </subviews>
                                 <color key="backgroundColor" name="background_gray"/>
                                 <constraints>
+                                    <constraint firstItem="zWu-Sd-Ekf" firstAttribute="top" secondItem="eJ2-kg-FxI" secondAttribute="bottom" constant="12" id="Zcm-wV-7Hg"/>
                                     <constraint firstItem="eJ2-kg-FxI" firstAttribute="leading" secondItem="Tov-KS-mZF" secondAttribute="leading" constant="18" id="a9l-GQ-AI1"/>
+                                    <constraint firstItem="zWu-Sd-Ekf" firstAttribute="leading" secondItem="Tov-KS-mZF" secondAttribute="leading" constant="12" id="b9O-7A-fGj"/>
+                                    <constraint firstAttribute="bottom" secondItem="zWu-Sd-Ekf" secondAttribute="bottom" constant="12" id="nMi-Pi-zKP"/>
                                     <constraint firstAttribute="trailing" secondItem="eJ2-kg-FxI" secondAttribute="trailing" constant="18" id="r29-Tj-iyW"/>
                                     <constraint firstItem="eJ2-kg-FxI" firstAttribute="top" secondItem="Tov-KS-mZF" secondAttribute="top" constant="12" id="vmF-ap-dPf"/>
+                                    <constraint firstAttribute="trailing" secondItem="zWu-Sd-Ekf" secondAttribute="trailing" constant="12" id="vsx-vQ-WE7"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -177,6 +185,7 @@
                         <outlet property="myMedalImageView" destination="cl7-Fw-bAA" id="GWF-ha-jYI"/>
                         <outlet property="myNameLabel" destination="nAH-4O-Veq" id="qrP-pA-jID"/>
                         <outlet property="myProgressView" destination="OiG-4k-WDj" id="gmq-PJ-OKO"/>
+                        <outlet property="myTableView" destination="zWu-Sd-Ekf" id="NzK-Cf-Jjs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

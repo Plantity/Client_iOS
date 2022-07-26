@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		F431BC66288F730A00E4E614 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F431BC65288F730A00E4E614 /* MyPageViewController.swift */; };
+		F431BC6A288F7AC400E4E614 /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F431BC68288F7AC400E4E614 /* MyTableViewCell.swift */; };
+		F431BC6B288F7AC400E4E614 /* MyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F431BC69288F7AC400E4E614 /* MyTableViewCell.xib */; };
 		F4864507288CC34B00956C4C /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4864506288CC34B00956C4C /* Color+Extension.swift */; };
 		F4B3722C288E5E2F002215F1 /* ResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B3722A288E5E2F002215F1 /* ResultTableViewCell.swift */; };
 		F4B3722D288E5E2F002215F1 /* ResultTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4B3722B288E5E2F002215F1 /* ResultTableViewCell.xib */; };
@@ -34,6 +36,8 @@
 
 /* Begin PBXFileReference section */
 		F431BC65288F730A00E4E614 /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
+		F431BC68288F7AC400E4E614 /* MyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
+		F431BC69288F7AC400E4E614 /* MyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyTableViewCell.xib; sourceTree = "<group>"; };
 		F4864506288CC34B00956C4C /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		F4B3722A288E5E2F002215F1 /* ResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultTableViewCell.swift; sourceTree = "<group>"; };
 		F4B3722B288E5E2F002215F1 /* ResultTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultTableViewCell.xib; sourceTree = "<group>"; };
@@ -71,6 +75,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F431BC67288F789500E4E614 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F431BC68288F7AC400E4E614 /* MyTableViewCell.swift */,
+				F431BC69288F7AC400E4E614 /* MyTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		F4B3722E288E7381002215F1 /* ResultDataManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -134,6 +147,7 @@
 		F4BE4BF6288ADFC200CF276D /* MyPage */ = {
 			isa = PBXGroup;
 			children = (
+				F431BC67288F789500E4E614 /* Cell */,
 				F4BE4BFC288AE00C00CF276D /* MyPage.storyboard */,
 				F431BC65288F730A00E4E614 /* MyPageViewController.swift */,
 			);
@@ -241,6 +255,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4D8C932288B90230019B6BC /* TagTableViewCell.xib in Resources */,
+				F431BC6B288F7AC400E4E614 /* MyTableViewCell.xib in Resources */,
 				F4BE4BFF288AE01600CF276D /* GuidelinePage.storyboard in Resources */,
 				F4D8C92A288B866F0019B6BC /* SearchTableViewCell.xib in Resources */,
 				F4B3722D288E5E2F002215F1 /* ResultTableViewCell.xib in Resources */,
@@ -267,6 +282,7 @@
 				F4D8C935288B94140019B6BC /* TagCollectionViewCell.swift in Sources */,
 				F4BE4BE2288ADBFF00CF276D /* ViewController.swift in Sources */,
 				F4BE4BDE288ADBFF00CF276D /* AppDelegate.swift in Sources */,
+				F431BC6A288F7AC400E4E614 /* MyTableViewCell.swift in Sources */,
 				F4D8C931288B90230019B6BC /* TagTableViewCell.swift in Sources */,
 				F431BC66288F730A00E4E614 /* MyPageViewController.swift in Sources */,
 				F4D8C929288B866F0019B6BC /* SearchTableViewCell.swift in Sources */,
