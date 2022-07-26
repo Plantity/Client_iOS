@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LogPageViewController: UIViewController {
+class MainPageViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -31,7 +31,7 @@ class LogPageViewController: UIViewController {
 
 }
 
-extension LogPageViewController: UITableViewDelegate,UITableViewDataSource{
+extension MainPageViewController: UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
@@ -67,7 +67,7 @@ extension LogPageViewController: UITableViewDelegate,UITableViewDataSource{
 }
 
 
-extension LogPageViewController:UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
+extension MainPageViewController:UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
     //카드갯수
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 5

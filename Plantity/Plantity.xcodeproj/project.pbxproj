@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		55060676288EA07100B717DE /* LogPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55060675288EA07100B717DE /* LogPage.storyboard */; };
-		5506067A288EC71F00B717DE /* LogPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55060679288EC71F00B717DE /* LogPageViewController.swift */; };
+		55060676288EA07100B717DE /* MainPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55060675288EA07100B717DE /* MainPage.storyboard */; };
+		5506067A288EC71F00B717DE /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55060679288EC71F00B717DE /* MainPageViewController.swift */; };
 		5506067E288EC87F00B717DE /* CardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5506067C288EC87F00B717DE /* CardTableViewCell.swift */; };
 		5506067F288EC87F00B717DE /* CardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5506067D288EC87F00B717DE /* CardTableViewCell.xib */; };
 		55060682288ECCB500B717DE /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55060680288ECCB500B717DE /* CardCollectionViewCell.swift */; };
@@ -18,6 +18,7 @@
 		F431BC7C288FCF8100E4E614 /* MyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F431BC7A288FCF8100E4E614 /* MyTableViewCell.xib */; };
 		F431BC7F288FD2B500E4E614 /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F431BC7D288FD2B500E4E614 /* MyCollectionViewCell.swift */; };
 		F431BC80288FD2B500E4E614 /* MyCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F431BC7E288FD2B500E4E614 /* MyCollectionViewCell.xib */; };
+		5527D3AC28900A1C00D33242 /* LogPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5527D3AB28900A1C00D33242 /* LogPage.storyboard */; };
 		F4864507288CC34B00956C4C /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4864506288CC34B00956C4C /* Color+Extension.swift */; };
 		F4B3722C288E5E2F002215F1 /* ResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B3722A288E5E2F002215F1 /* ResultTableViewCell.swift */; };
 		F4B3722D288E5E2F002215F1 /* ResultTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4B3722B288E5E2F002215F1 /* ResultTableViewCell.xib */; };
@@ -33,7 +34,6 @@
 		F4BE4BFB288AE00100CF276D /* SearchPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4BE4BFA288AE00100CF276D /* SearchPage.storyboard */; };
 		F4BE4BFD288AE00C00CF276D /* MyPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4BE4BFC288AE00C00CF276D /* MyPage.storyboard */; };
 		F4BE4BFF288AE01600CF276D /* GuidelinePage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4BE4BFE288AE01600CF276D /* GuidelinePage.storyboard */; };
-		F4BE4C01288AE02000CF276D /* MainPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4BE4C00288AE02000CF276D /* MainPage.storyboard */; };
 		F4D8C929288B866F0019B6BC /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D8C927288B866F0019B6BC /* SearchTableViewCell.swift */; };
 		F4D8C92A288B866F0019B6BC /* SearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4D8C928288B866F0019B6BC /* SearchTableViewCell.xib */; };
 		F4D8C931288B90230019B6BC /* TagTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D8C92F288B90230019B6BC /* TagTableViewCell.swift */; };
@@ -43,8 +43,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		55060675288EA07100B717DE /* LogPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LogPage.storyboard; sourceTree = "<group>"; };
-		55060679288EC71F00B717DE /* LogPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogPageViewController.swift; sourceTree = "<group>"; };
+		55060675288EA07100B717DE /* MainPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainPage.storyboard; sourceTree = "<group>"; };
+		55060679288EC71F00B717DE /* MainPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
 		5506067C288EC87F00B717DE /* CardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTableViewCell.swift; sourceTree = "<group>"; };
 		5506067D288EC87F00B717DE /* CardTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardTableViewCell.xib; sourceTree = "<group>"; };
 		55060680288ECCB500B717DE /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -54,6 +54,7 @@
 		F431BC7A288FCF8100E4E614 /* MyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyTableViewCell.xib; sourceTree = "<group>"; };
 		F431BC7D288FD2B500E4E614 /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell.swift; sourceTree = "<group>"; };
 		F431BC7E288FD2B500E4E614 /* MyCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCollectionViewCell.xib; sourceTree = "<group>"; };
+		5527D3AB28900A1C00D33242 /* LogPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LogPage.storyboard; sourceTree = "<group>"; };
 		F4864506288CC34B00956C4C /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		F4B3722A288E5E2F002215F1 /* ResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultTableViewCell.swift; sourceTree = "<group>"; };
 		F4B3722B288E5E2F002215F1 /* ResultTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultTableViewCell.xib; sourceTree = "<group>"; };
@@ -71,7 +72,6 @@
 		F4BE4BFA288AE00100CF276D /* SearchPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SearchPage.storyboard; sourceTree = "<group>"; };
 		F4BE4BFC288AE00C00CF276D /* MyPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyPage.storyboard; sourceTree = "<group>"; };
 		F4BE4BFE288AE01600CF276D /* GuidelinePage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GuidelinePage.storyboard; sourceTree = "<group>"; };
-		F4BE4C00288AE02000CF276D /* MainPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainPage.storyboard; sourceTree = "<group>"; };
 		F4D8C927288B866F0019B6BC /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		F4D8C928288B866F0019B6BC /* SearchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchTableViewCell.xib; sourceTree = "<group>"; };
 		F4D8C92F288B90230019B6BC /* TagTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagTableViewCell.swift; sourceTree = "<group>"; };
@@ -94,9 +94,7 @@
 		55060674288EA01F00B717DE /* LogPage */ = {
 			isa = PBXGroup;
 			children = (
-				5506067B288EC85000B717DE /* Cell */,
-				55060675288EA07100B717DE /* LogPage.storyboard */,
-				55060679288EC71F00B717DE /* LogPageViewController.swift */,
+				5527D3AB28900A1C00D33242 /* LogPage.storyboard */,
 			);
 			path = LogPage;
 			sourceTree = "<group>";
@@ -171,7 +169,9 @@
 		F4BE4BF4288ADFA500CF276D /* MainPage */ = {
 			isa = PBXGroup;
 			children = (
-				F4BE4C00288AE02000CF276D /* MainPage.storyboard */,
+				5506067B288EC85000B717DE /* Cell */,
+				55060675288EA07100B717DE /* MainPage.storyboard */,
+				55060679288EC71F00B717DE /* MainPageViewController.swift */,
 			);
 			path = MainPage;
 			sourceTree = "<group>";
@@ -294,6 +294,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5527D3AC28900A1C00D33242 /* LogPage.storyboard in Resources */,
 				F4D8C932288B90230019B6BC /* TagTableViewCell.xib in Resources */,
 				F4BE4BFF288AE01600CF276D /* GuidelinePage.storyboard in Resources */,
 				F4D8C92A288B866F0019B6BC /* SearchTableViewCell.xib in Resources */,
@@ -306,6 +307,9 @@
 				F4BE4BEA288ADBFF00CF276D /* Assets.xcassets in Resources */,
 				55060676288EA07100B717DE /* LogPage.storyboard in Resources */,
 				F431BC7C288FCF8100E4E614 /* MyTableViewCell.xib in Resources */,
+				F4BE4BFD288AE00C00CF276D /* MyPage.storyboard in Resources */,
+				F4BE4BEA288ADBFF00CF276D /* Assets.xcassets in Resources */,
+				55060676288EA07100B717DE /* MainPage.storyboard in Resources */,
 				F4D8C936288B94140019B6BC /* TagCollectionViewCell.xib in Resources */,
 				F4BE4BE5288ADBFF00CF276D /* Main.storyboard in Resources */,
 				55060683288ECCB500B717DE /* CardCollectionViewCell.xib in Resources */,
@@ -320,7 +324,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5506067A288EC71F00B717DE /* LogPageViewController.swift in Sources */,
+				5506067A288EC71F00B717DE /* MainPageViewController.swift in Sources */,
 				F4BE4BF9288ADFEC00CF276D /* SearchViewController.swift in Sources */,
 				F4864507288CC34B00956C4C /* Color+Extension.swift in Sources */,
 				F4B37230288E73C6002215F1 /* SearchResultModel.swift in Sources */,
