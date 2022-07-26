@@ -13,6 +13,11 @@
 		5506067F288EC87F00B717DE /* CardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5506067D288EC87F00B717DE /* CardTableViewCell.xib */; };
 		55060682288ECCB500B717DE /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55060680288ECCB500B717DE /* CardCollectionViewCell.swift */; };
 		55060683288ECCB500B717DE /* CardCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55060681288ECCB500B717DE /* CardCollectionViewCell.xib */; };
+		F431BC77288FCDA800E4E614 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F431BC76288FCDA800E4E614 /* MyPageViewController.swift */; };
+		F431BC7B288FCF8100E4E614 /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F431BC79288FCF8100E4E614 /* MyTableViewCell.swift */; };
+		F431BC7C288FCF8100E4E614 /* MyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F431BC7A288FCF8100E4E614 /* MyTableViewCell.xib */; };
+		F431BC7F288FD2B500E4E614 /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F431BC7D288FD2B500E4E614 /* MyCollectionViewCell.swift */; };
+		F431BC80288FD2B500E4E614 /* MyCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F431BC7E288FD2B500E4E614 /* MyCollectionViewCell.xib */; };
 		5527D3AC28900A1C00D33242 /* LogPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5527D3AB28900A1C00D33242 /* LogPage.storyboard */; };
 		5527D3B62890187F00D33242 /* LogPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5527D3B52890187F00D33242 /* LogPageViewController.swift */; };
 		5527D3BB2890243300D33242 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5527D3B92890243300D33242 /* CollectionViewCell.swift */; };
@@ -47,6 +52,11 @@
 		5506067D288EC87F00B717DE /* CardTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardTableViewCell.xib; sourceTree = "<group>"; };
 		55060680288ECCB500B717DE /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
 		55060681288ECCB500B717DE /* CardCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardCollectionViewCell.xib; sourceTree = "<group>"; };
+		F431BC76288FCDA800E4E614 /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
+		F431BC79288FCF8100E4E614 /* MyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
+		F431BC7A288FCF8100E4E614 /* MyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyTableViewCell.xib; sourceTree = "<group>"; };
+		F431BC7D288FD2B500E4E614 /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell.swift; sourceTree = "<group>"; };
+		F431BC7E288FD2B500E4E614 /* MyCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCollectionViewCell.xib; sourceTree = "<group>"; };
 		5527D3AB28900A1C00D33242 /* LogPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LogPage.storyboard; sourceTree = "<group>"; };
 		5527D3B52890187F00D33242 /* LogPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogPageViewController.swift; sourceTree = "<group>"; };
 		5527D3B92890243300D33242 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
@@ -105,6 +115,17 @@
 				5506067D288EC87F00B717DE /* CardTableViewCell.xib */,
 				55060680288ECCB500B717DE /* CardCollectionViewCell.swift */,
 				55060681288ECCB500B717DE /* CardCollectionViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		F431BC78288FCF6900E4E614 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F431BC79288FCF8100E4E614 /* MyTableViewCell.swift */,
+				F431BC7A288FCF8100E4E614 /* MyTableViewCell.xib */,
+				F431BC7D288FD2B500E4E614 /* MyCollectionViewCell.swift */,
+				F431BC7E288FD2B500E4E614 /* MyCollectionViewCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -175,7 +196,9 @@
 		F4BE4BF6288ADFC200CF276D /* MyPage */ = {
 			isa = PBXGroup;
 			children = (
+				F431BC78288FCF6900E4E614 /* Cell */,
 				F4BE4BFC288AE00C00CF276D /* MyPage.storyboard */,
+				F431BC76288FCDA800E4E614 /* MyPageViewController.swift */,
 			);
 			path = MyPage;
 			sourceTree = "<group>";
@@ -287,6 +310,12 @@
 				F4B3722D288E5E2F002215F1 /* ResultTableViewCell.xib in Resources */,
 				F4BE4BED288ADBFF00CF276D /* LaunchScreen.storyboard in Resources */,
 				5506067F288EC87F00B717DE /* CardTableViewCell.xib in Resources */,
+				F431BC80288FD2B500E4E614 /* MyCollectionViewCell.xib in Resources */,
+				F4BE4C01288AE02000CF276D /* MainPage.storyboard in Resources */,
+				F4BE4BFD288AE00C00CF276D /* MyPage.storyboard in Resources */,
+				F4BE4BEA288ADBFF00CF276D /* Assets.xcassets in Resources */,
+				55060676288EA07100B717DE /* LogPage.storyboard in Resources */,
+				F431BC7C288FCF8100E4E614 /* MyTableViewCell.xib in Resources */,
 				F4BE4BFD288AE00C00CF276D /* MyPage.storyboard in Resources */,
 				F4BE4BEA288ADBFF00CF276D /* Assets.xcassets in Resources */,
 				55060676288EA07100B717DE /* MainPage.storyboard in Resources */,
@@ -315,9 +344,13 @@
 				F4BE4BE2288ADBFF00CF276D /* ViewController.swift in Sources */,
 				F4BE4BDE288ADBFF00CF276D /* AppDelegate.swift in Sources */,
 				F4D8C931288B90230019B6BC /* TagTableViewCell.swift in Sources */,
+
 				5527D3BB2890243300D33242 /* CollectionViewCell.swift in Sources */,
+
 				5506067E288EC87F00B717DE /* CardTableViewCell.swift in Sources */,
+				F431BC77288FCDA800E4E614 /* MyPageViewController.swift in Sources */,
 				F4D8C929288B866F0019B6BC /* SearchTableViewCell.swift in Sources */,
+				F431BC7F288FD2B500E4E614 /* MyCollectionViewCell.swift in Sources */,
 				F4BE4BE8288ADBFF00CF276D /* Plantity.xcdatamodeld in Sources */,
 				F4B3722C288E5E2F002215F1 /* ResultTableViewCell.swift in Sources */,
 				F4BE4BE0288ADBFF00CF276D /* SceneDelegate.swift in Sources */,
