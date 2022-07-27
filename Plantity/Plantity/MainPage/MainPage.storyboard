@@ -70,7 +70,7 @@
                                         </constraints>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" red="0.83946603539999998" green="0.97052663559999997" blue="0.53958594800000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="hLt-Rs-NsD" firstAttribute="top" secondItem="eoy-gi-K8F" secondAttribute="top" constant="10" id="0tH-cd-Fdc"/>
                                     <constraint firstItem="AhD-tk-3xA" firstAttribute="leading" secondItem="hLt-Rs-NsD" secondAttribute="leading" id="3gL-0P-Rh0"/>
@@ -95,7 +95,7 @@
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="i3C-0J-vde"/>
-                        <color key="backgroundColor" red="0.86377058080000002" green="1" blue="0.55496012930000005" alpha="0.96526892009999998" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="eoy-gi-K8F" firstAttribute="leading" secondItem="i3C-0J-vde" secondAttribute="leading" id="4nx-QT-pn4"/>
                             <constraint firstItem="i3C-0J-vde" firstAttribute="bottom" secondItem="9HV-tL-TsN" secondAttribute="bottom" constant="50" id="5Sa-Tl-kz8"/>

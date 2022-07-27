@@ -25,7 +25,7 @@
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="X1U-dz-8dc">
                                 <rect key="frame" x="20" y="139" width="374" height="200"/>
-                                <color key="backgroundColor" red="0.35556814139999998" green="0.67680983039999998" blue="0.93588917530000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="OJh-Eq-ihk"/>
                                 </constraints>
