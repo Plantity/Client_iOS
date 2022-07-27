@@ -17,6 +17,7 @@
 		5527D3B62890187F00D33242 /* LogPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5527D3B52890187F00D33242 /* LogPageViewController.swift */; };
 		5527D3BB2890243300D33242 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5527D3B92890243300D33242 /* CollectionViewCell.swift */; };
 		5527D3BC2890243300D33242 /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5527D3BA2890243300D33242 /* CollectionViewCell.xib */; };
+		B77A185B69A00583FF0855B7 /* Pods_Plantity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A5BB4544D9658449C93E75F /* Pods_Plantity.framework */; };
 		F4864507288CC34B00956C4C /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4864506288CC34B00956C4C /* Color+Extension.swift */; };
 		F4B3722C288E5E2F002215F1 /* ResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B3722A288E5E2F002215F1 /* ResultTableViewCell.swift */; };
 		F4B3722D288E5E2F002215F1 /* ResultTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4B3722B288E5E2F002215F1 /* ResultTableViewCell.xib */; };
@@ -41,6 +42,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		06B60FD27FBE249E2699CB15 /* Pods-Plantity.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Plantity.debug.xcconfig"; path = "Target Support Files/Pods-Plantity/Pods-Plantity.debug.xcconfig"; sourceTree = "<group>"; };
+		28B852B95900EA4E999DE176 /* Pods-Plantity.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Plantity.release.xcconfig"; path = "Target Support Files/Pods-Plantity/Pods-Plantity.release.xcconfig"; sourceTree = "<group>"; };
+		3A5BB4544D9658449C93E75F /* Pods_Plantity.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Plantity.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		55060675288EA07100B717DE /* MainPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainPage.storyboard; sourceTree = "<group>"; };
 		55060679288EC71F00B717DE /* MainPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
 		5506067C288EC87F00B717DE /* CardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTableViewCell.swift; sourceTree = "<group>"; };
@@ -81,12 +85,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B77A185B69A00583FF0855B7 /* Pods_Plantity.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		527CCFA9D7B88BA7809187AC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				06B60FD27FBE249E2699CB15 /* Pods-Plantity.debug.xcconfig */,
+				28B852B95900EA4E999DE176 /* Pods-Plantity.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		55060674288EA01F00B717DE /* LogPage */ = {
 			isa = PBXGroup;
 			children = (
@@ -109,6 +124,14 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		5863E4D5568D95492D10BDA6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3A5BB4544D9658449C93E75F /* Pods_Plantity.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F4B3722E288E7381002215F1 /* ResultDataManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -122,6 +145,8 @@
 			children = (
 				F4BE4BDC288ADBFF00CF276D /* Plantity */,
 				F4BE4BDB288ADBFF00CF276D /* Products */,
+				527CCFA9D7B88BA7809187AC /* Pods */,
+				5863E4D5568D95492D10BDA6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -229,9 +254,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F4BE4BF1288ADBFF00CF276D /* Build configuration list for PBXNativeTarget "Plantity" */;
 			buildPhases = (
+				A9C975089B332D8A974BF031 /* [CP] Check Pods Manifest.lock */,
 				F4BE4BD6288ADBFF00CF276D /* Sources */,
 				F4BE4BD7288ADBFF00CF276D /* Frameworks */,
 				F4BE4BD8288ADBFF00CF276D /* Resources */,
+				8D4DAB0584ED4AB893538745 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -299,6 +326,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8D4DAB0584ED4AB893538745 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Plantity/Pods-Plantity-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Plantity/Pods-Plantity-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Plantity/Pods-Plantity-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A9C975089B332D8A974BF031 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Plantity-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F4BE4BD6288ADBFF00CF276D /* Sources */ = {
@@ -462,6 +531,7 @@
 		};
 		F4BE4BF2288ADBFF00CF276D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 06B60FD27FBE249E2699CB15 /* Pods-Plantity.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -490,6 +560,7 @@
 		};
 		F4BE4BF3288ADBFF00CF276D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 28B852B95900EA4E999DE176 /* Pods-Plantity.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
