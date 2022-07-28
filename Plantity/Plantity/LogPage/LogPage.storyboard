@@ -131,30 +131,30 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sbd-X2-RkL">
-                                <rect key="frame" x="0.0" y="364" width="414" height="70"/>
+                                <rect key="frame" x="15" y="364" width="384" height="70"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5/22에 마지막으로 물 줬어요! 5/17에 분갈이 했어요!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jPW-9f-nVz">
-                                        <rect key="frame" x="118" y="17" width="178" height="36"/>
+                                        <rect key="frame" x="103" y="17" width="178" height="36"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" name="searchbar_onclick"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
                                 <constraints>
                                     <constraint firstItem="jPW-9f-nVz" firstAttribute="centerY" secondItem="Sbd-X2-RkL" secondAttribute="centerY" id="2sU-mG-sUQ"/>
                                     <constraint firstItem="jPW-9f-nVz" firstAttribute="centerX" secondItem="Sbd-X2-RkL" secondAttribute="centerX" id="qPT-Ea-1k1"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Crz-ce-rmH" customClass="FSCalendar">
-                                <rect key="frame" x="0.0" y="434" width="414" height="300"/>
+                                <rect key="frame" x="15" y="434" width="384" height="300"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="300" id="Sp4-ix-934"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PKE-vt-u8s">
-                                <rect key="frame" x="0.0" y="554" width="414" height="259"/>
+                                <rect key="frame" x="15" y="554" width="384" height="259"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uen-6t-I7e">
                                         <rect key="frame" x="40" y="39" width="21" height="21"/>
@@ -229,14 +229,14 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VAZ-kL-l34">
-                                        <rect key="frame" x="20" y="238" width="374" height="1"/>
+                                        <rect key="frame" x="20" y="238" width="344" height="1"/>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="ZTs-21-Lax"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NmG-G1-i0e">
-                                        <rect key="frame" x="20" y="10" width="374" height="1"/>
+                                        <rect key="frame" x="20" y="10" width="344" height="1"/>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="7uY-a6-J25"/>
@@ -281,22 +281,22 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Crz-ce-rmH" firstAttribute="top" secondItem="Xlq-Gn-VNy" secondAttribute="bottom" constant="70" id="91w-zs-miS"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Crz-ce-rmH" secondAttribute="trailing" id="AbW-iU-i81"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Crz-ce-rmH" secondAttribute="trailing" constant="15" id="AbW-iU-i81"/>
                             <constraint firstItem="Crz-ce-rmH" firstAttribute="top" secondItem="Sbd-X2-RkL" secondAttribute="bottom" id="BXh-uz-16H"/>
                             <constraint firstItem="Sbd-X2-RkL" firstAttribute="top" secondItem="Xlq-Gn-VNy" secondAttribute="bottom" id="GbE-hI-2vC"/>
                             <constraint firstItem="Xlq-Gn-VNy" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Iej-tD-Qwx"/>
                             <constraint firstItem="Xlq-Gn-VNy" firstAttribute="top" secondItem="UWj-MM-dTQ" secondAttribute="bottom" id="JnN-Ov-CGK"/>
-                            <constraint firstItem="Sbd-X2-RkL" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="KP6-B2-3ar"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="PKE-vt-u8s" secondAttribute="trailing" id="Pax-Hk-Fbb"/>
+                            <constraint firstItem="Sbd-X2-RkL" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="15" id="KP6-B2-3ar"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="PKE-vt-u8s" secondAttribute="trailing" constant="15" id="Pax-Hk-Fbb"/>
                             <constraint firstItem="UWj-MM-dTQ" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="T7e-ZY-1zP"/>
                             <constraint firstItem="UWj-MM-dTQ" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="XQG-yu-RGf"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="PKE-vt-u8s" secondAttribute="bottom" id="ZGK-vy-9Ag"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Sbd-X2-RkL" secondAttribute="trailing" id="aJ1-6j-hIT"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Sbd-X2-RkL" secondAttribute="trailing" constant="15" id="aJ1-6j-hIT"/>
                             <constraint firstItem="UWj-MM-dTQ" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="d97-DP-VeL"/>
                             <constraint firstItem="PKE-vt-u8s" firstAttribute="top" secondItem="Crz-ce-rmH" secondAttribute="bottom" constant="-180" id="jp3-Ik-4zD"/>
-                            <constraint firstItem="PKE-vt-u8s" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="l2K-Cr-ZLk"/>
+                            <constraint firstItem="PKE-vt-u8s" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="15" id="l2K-Cr-ZLk"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Xlq-Gn-VNy" secondAttribute="trailing" id="nWt-Al-Fld"/>
-                            <constraint firstItem="Crz-ce-rmH" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="rfB-fG-vpR"/>
+                            <constraint firstItem="Crz-ce-rmH" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="15" id="rfB-fG-vpR"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="calendar" catalog="system" id="o3d-hH-QuY">
@@ -330,9 +330,6 @@
         <image name="씻겨주기버튼" width="64" height="64"/>
         <namedColor name="background_card">
             <color red="0.83921568627450982" green="0.92549019607843142" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="searchbar_onclick">
-            <color red="0.91764705882352937" green="0.96470588235294119" blue="0.8901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="secondaryLabelColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>

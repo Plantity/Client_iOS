@@ -106,8 +106,8 @@ class CustomFlowLayout:UICollectionViewFlowLayout{
         scrollDirection = .horizontal
         
         
-        
-        minimumLineSpacing = 10 - (itemSize.width - itemSize.width*0.7)/2
+        //카드 떨어져 있는 정도 ->40
+        minimumLineSpacing = 40 - (itemSize.width - itemSize.width*0.7)/2
         
         
         
@@ -136,7 +136,8 @@ class CustomFlowLayout:UICollectionViewFlowLayout{
                 let dis = min(abs(collectionViewCenter-center), maxDis)
                 
                 let ratio = (maxDis - dis)/maxDis
-                let scale = ratio * (1-0.7) + 0.7
+                //크기변경 + 0.1
+                let scale = ratio * (1-0.7) + 0.7+0.1
                 
 //                collectionView.layer.cornerRadius=12
                 attributes.transform = CGAffineTransform(scaleX: scale, y: scale)
