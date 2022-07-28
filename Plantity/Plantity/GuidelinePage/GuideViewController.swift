@@ -10,10 +10,13 @@ import UIKit
 class GuideViewController: UIViewController {
     @IBOutlet weak var newsCollectionView: UICollectionView!
     
+    @IBOutlet weak var guideCollectionView: UICollectionView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupNews()
+        setupGuide()
     }
     
     func setupNews() {
@@ -31,6 +34,14 @@ class GuideViewController: UIViewController {
         newsCollectionView.collectionViewLayout = flowLayout
         
     }
+    
+    func setupGuide() {
+        guideCollectionView.dataSource = self
+        guideCollectionView.delegate = self
+        
+        let guideNib = UINib(nibName: "GuideCollectionViewCell", bundle: nil)
+        guideCollectionView.register(guideNib, forCellWithReuseIdentifier: "GuideCollectionViewCell")
+    }
 }
 
 extension GuideViewController: UICollectionViewDelegate, UICollectionViewDataSource,
@@ -41,12 +52,22 @@ extension GuideViewController: UICollectionViewDelegate, UICollectionViewDataSou
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "NewsCollectionViewCell", for: indexPath) as? NewsCollectionViewCell else { return UICollectionViewCell() }
-        
-        return cell
+        if collectionView == newsCollectionView {
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "NewsCollectionViewCell", for: indexPath) as? NewsCollectionViewCell else { return UICollectionViewCell() }
+            
+            return cell
+        } else {
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "GuideCollectionViewCell", for: indexPath) as? GuideCollectionViewCell else { return UICollectionViewCell() }
+            
+            return cell
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 326, height: 157)
+        if collectionView == newsCollectionView {
+            return CGSize(width: 326, height: 157)
+        } else {
+            return CGSize(width: collectionView.frame.width - 40, height: collectionView.frame.height / 3 - 20)
+        }
     }
 }

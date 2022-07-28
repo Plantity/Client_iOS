@@ -41,6 +41,8 @@
 		F4C829D928925314009AB584 /* GuideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C829D828925314009AB584 /* GuideViewController.swift */; };
 		F4C829E128925A7E009AB584 /* NewsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C829DF28925A7E009AB584 /* NewsCollectionViewCell.swift */; };
 		F4C829E228925A7E009AB584 /* NewsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4C829E028925A7E009AB584 /* NewsCollectionViewCell.xib */; };
+		F4C829E528926221009AB584 /* GuideCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C829E328926221009AB584 /* GuideCollectionViewCell.swift */; };
+		F4C829E628926221009AB584 /* GuideCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4C829E428926221009AB584 /* GuideCollectionViewCell.xib */; };
 		F4D8C929288B866F0019B6BC /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D8C927288B866F0019B6BC /* SearchTableViewCell.swift */; };
 		F4D8C92A288B866F0019B6BC /* SearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4D8C928288B866F0019B6BC /* SearchTableViewCell.xib */; };
 		F4D8C931288B90230019B6BC /* TagTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D8C92F288B90230019B6BC /* TagTableViewCell.swift */; };
@@ -91,6 +93,8 @@
 		F4C829D828925314009AB584 /* GuideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideViewController.swift; sourceTree = "<group>"; };
 		F4C829DF28925A7E009AB584 /* NewsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCollectionViewCell.swift; sourceTree = "<group>"; };
 		F4C829E028925A7E009AB584 /* NewsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsCollectionViewCell.xib; sourceTree = "<group>"; };
+		F4C829E328926221009AB584 /* GuideCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideCollectionViewCell.swift; sourceTree = "<group>"; };
+		F4C829E428926221009AB584 /* GuideCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GuideCollectionViewCell.xib; sourceTree = "<group>"; };
 		F4D8C927288B866F0019B6BC /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		F4D8C928288B866F0019B6BC /* SearchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchTableViewCell.xib; sourceTree = "<group>"; };
 		F4D8C92F288B90230019B6BC /* TagTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagTableViewCell.swift; sourceTree = "<group>"; };
@@ -265,6 +269,8 @@
 			children = (
 				F4C829DF28925A7E009AB584 /* NewsCollectionViewCell.swift */,
 				F4C829E028925A7E009AB584 /* NewsCollectionViewCell.xib */,
+				F4C829E328926221009AB584 /* GuideCollectionViewCell.swift */,
+				F4C829E428926221009AB584 /* GuideCollectionViewCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -366,6 +372,7 @@
 				F4B98A0128918A2A00807A14 /* MyPage.storyboard in Resources */,
 				F4B98A00289189FB00807A14 /* MainPage.storyboard in Resources */,
 				F4C829E228925A7E009AB584 /* NewsCollectionViewCell.xib in Resources */,
+				F4C829E628926221009AB584 /* GuideCollectionViewCell.xib in Resources */,
 				F4B989FF289189E700807A14 /* SearchPage.storyboard in Resources */,
 				5527D3AC28900A1C00D33242 /* LogPage.storyboard in Resources */,
 				F4D8C932288B90230019B6BC /* TagTableViewCell.xib in Resources */,
@@ -443,6 +450,7 @@
 				F4D8C931288B90230019B6BC /* TagTableViewCell.swift in Sources */,
 				5527D3BB2890243300D33242 /* CollectionViewCell.swift in Sources */,
 				5506067E288EC87F00B717DE /* CardTableViewCell.swift in Sources */,
+				F4C829E528926221009AB584 /* GuideCollectionViewCell.swift in Sources */,
 				F431BC77288FCDA800E4E614 /* MyPageViewController.swift in Sources */,
 				F4C829D928925314009AB584 /* GuideViewController.swift in Sources */,
 				F4B989FD2891828200807A14 /* MyTableViewCell.swift in Sources */,
