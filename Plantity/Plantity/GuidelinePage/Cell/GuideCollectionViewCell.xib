@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GuideCollectionViewCell" id="gTV-IL-0wX" customClass="GuideCollectionViewCell" customModule="Plantity" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="338" height="100"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="338" height="100"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I6A-vh-PaJ">
+                        <rect key="frame" x="0.0" y="0.0" width="338" height="100"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_news" translatesAutoresizingMaskIntoConstraints="NO" id="yKw-T4-YQD">
+                                <rect key="frame" x="17" y="10" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="yKw-T4-YQD" secondAttribute="height" multiplier="1:1" id="l3L-eO-9Rj"/>
+                                    <constraint firstAttribute="width" constant="80" id="sIn-wx-tO4"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="해외주식, 이젠 달러로 볼 수 있어요!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fnk-UQ-1vm">
+                                <rect key="frame" x="110" y="20" width="210.5" height="18"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="투자기초" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qX5-f2-UfO">
+                                <rect key="frame" x="110" y="46" width="49" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" name="background_card"/>
+                        <constraints>
+                            <constraint firstItem="yKw-T4-YQD" firstAttribute="leading" secondItem="I6A-vh-PaJ" secondAttribute="leading" constant="17" id="E5q-MG-JWH"/>
+                            <constraint firstItem="qX5-f2-UfO" firstAttribute="leading" secondItem="yKw-T4-YQD" secondAttribute="trailing" constant="13" id="Jyp-AC-Ymz"/>
+                            <constraint firstItem="fnk-UQ-1vm" firstAttribute="leading" secondItem="yKw-T4-YQD" secondAttribute="trailing" constant="13" id="PaS-Ia-EJH"/>
+                            <constraint firstItem="qX5-f2-UfO" firstAttribute="top" secondItem="fnk-UQ-1vm" secondAttribute="bottom" constant="8" id="TAc-7X-9pO"/>
+                            <constraint firstItem="fnk-UQ-1vm" firstAttribute="top" secondItem="I6A-vh-PaJ" secondAttribute="top" constant="20" id="csS-MO-rTy"/>
+                            <constraint firstItem="yKw-T4-YQD" firstAttribute="centerY" secondItem="I6A-vh-PaJ" secondAttribute="centerY" id="hgv-lI-baN"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="I6A-vh-PaJ" secondAttribute="bottom" id="Nud-yB-hwL"/>
+                <constraint firstItem="I6A-vh-PaJ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Nuv-zu-2d4"/>
+                <constraint firstItem="I6A-vh-PaJ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="shg-g9-aXX"/>
+                <constraint firstAttribute="trailing" secondItem="I6A-vh-PaJ" secondAttribute="trailing" id="zAr-Wn-Jkj"/>
+            </constraints>
+            <connections>
+                <outlet property="cardView" destination="I6A-vh-PaJ" id="ZjX-2D-sVC"/>
+                <outlet property="guideImageView" destination="yKw-T4-YQD" id="JzK-02-mGa"/>
+            </connections>
+            <point key="canvasLocation" x="131.8840579710145" y="106.47321428571428"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="image_news" width="326" height="157"/>
+        <namedColor name="background_card">
+            <color red="0.83921568627450982" green="0.92549019607843142" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

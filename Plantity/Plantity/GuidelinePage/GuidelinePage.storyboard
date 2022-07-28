@@ -1,32 +1,164 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BQD-vB-Jez">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--가이드라인-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GuideViewController" id="Y6W-OH-hqX" customClass="GuideViewController" customModule="Plantity" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GVU-T6-sDY">
+                                <rect key="frame" x="0.0" y="44" width="414" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="가이드라인" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DVr-GH-ESb">
+                                        <rect key="frame" x="23" y="18" width="104" height="29"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Iby-wK-Ie8"/>
+                                </constraints>
+                            </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="2oj-sl-efy">
+                                <rect key="frame" x="0.0" y="114" width="414" height="157"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="157" id="Y3H-XK-H4d"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="io5-Wo-e9n">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🌱 Editor's Pick" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6gY-7E-kPg">
+                                <rect key="frame" x="31" y="278" width="105" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" name="text_green"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="초보자도 쉽게할 수 있는 분갈이 방법을 알려드릴게요" lineBreakMode="tailTruncation" numberOfLines="0" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yxX-wN-F0h">
+                                <rect key="frame" x="47" y="295" width="277" height="54"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="BsQ-jO-mss"/>
+                                    <constraint firstAttribute="width" constant="277" id="mmr-kI-QiT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="‘국민주’ 삼성전자의 주가가 어떤 흐름을 보일지, 애널리스트의 솔직한 의견을 확인해보세요." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l2Q-Ug-o3H">
+                                <rect key="frame" x="48" y="349" width="271" height="38"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="Ret-iT-Dwa"/>
+                                    <constraint firstAttribute="width" constant="271" id="eXs-i4-31B"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="PrM-DK-eBi">
+                                <rect key="frame" x="0.0" y="401" width="414" height="412"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="n1I-Zf-S06">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="yxX-wN-F0h" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="47" id="9oR-1v-uJQ"/>
+                            <constraint firstItem="2oj-sl-efy" firstAttribute="top" secondItem="GVU-T6-sDY" secondAttribute="bottom" constant="20" id="F6x-6K-Nhn"/>
+                            <constraint firstItem="PrM-DK-eBi" firstAttribute="top" secondItem="l2Q-Ug-o3H" secondAttribute="bottom" constant="14" id="KjG-0b-Qil"/>
+                            <constraint firstItem="2oj-sl-efy" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="LXk-2C-uvP"/>
+                            <constraint firstItem="6gY-7E-kPg" firstAttribute="top" secondItem="2oj-sl-efy" secondAttribute="bottom" constant="7" id="SqG-A2-KUz"/>
+                            <constraint firstItem="l2Q-Ug-o3H" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="48" id="Tek-d6-Ge9"/>
+                            <constraint firstItem="l2Q-Ug-o3H" firstAttribute="top" secondItem="yxX-wN-F0h" secondAttribute="bottom" id="Z86-e3-nRu"/>
+                            <constraint firstItem="2oj-sl-efy" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="ZCu-62-DjV"/>
+                            <constraint firstItem="GVU-T6-sDY" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="aoO-9j-VZ5"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="PrM-DK-eBi" secondAttribute="bottom" id="d0T-Wt-ewx"/>
+                            <constraint firstItem="GVU-T6-sDY" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="h7u-mG-bZy"/>
+                            <constraint firstItem="yxX-wN-F0h" firstAttribute="top" secondItem="6gY-7E-kPg" secondAttribute="bottom" id="kTx-JP-1EI"/>
+                            <constraint firstItem="6gY-7E-kPg" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="31" id="lsr-kO-LSB"/>
+                            <constraint firstItem="GVU-T6-sDY" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="my9-qJ-B6T"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="PrM-DK-eBi" secondAttribute="trailing" id="tHq-Ys-dkI"/>
+                            <constraint firstItem="PrM-DK-eBi" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="vY3-2j-1qx"/>
+                        </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="" id="Nvi-09-P9i">
+                        <imageReference key="image" image="map" catalog="system"/>
+                        <imageReference key="selectedImage" image="map" catalog="system" renderingMode="hierarchical">
+                            <hierarchicalColors>
+                                <color red="0.35294117650000001" green="0.89019607840000003" blue="0.76862745099999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color systemColor="secondaryLabelColor"/>
+                                <color systemColor="tertiaryLabelColor"/>
+                            </hierarchicalColors>
+                        </imageReference>
+                    </tabBarItem>
+                    <navigationItem key="navigationItem" title="가이드라인" id="38s-IX-aVc"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="guideCollectionView" destination="PrM-DK-eBi" id="WRG-ay-gum"/>
+                        <outlet property="newsCollectionView" destination="2oj-sl-efy" id="rho-FO-vkF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="61" y="92"/>
+            <point key="canvasLocation" x="792.75362318840587" y="91.741071428571431"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="v6L-UG-lqh">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="BQD-vB-Jez" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ydo-EF-ddM">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="v4o-o6-bkx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FDO-Mj-eSc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="60.869565217391312" y="91.741071428571431"/>
         </scene>
     </scenes>
     <resources>
+        <image name="map" catalog="system" width="128" height="110"/>
+        <namedColor name="text_green">
+            <color red="0.1803921568627451" green="0.45490196078431372" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tertiaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

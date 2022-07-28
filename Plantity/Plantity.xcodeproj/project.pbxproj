@@ -38,6 +38,11 @@
 		F4BE4BED288ADBFF00CF276D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4BE4BEB288ADBFF00CF276D /* LaunchScreen.storyboard */; };
 		F4BE4BF9288ADFEC00CF276D /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BE4BF8288ADFEC00CF276D /* SearchViewController.swift */; };
 		F4BE4BFF288AE01600CF276D /* GuidelinePage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4BE4BFE288AE01600CF276D /* GuidelinePage.storyboard */; };
+		F4C829D928925314009AB584 /* GuideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C829D828925314009AB584 /* GuideViewController.swift */; };
+		F4C829E128925A7E009AB584 /* NewsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C829DF28925A7E009AB584 /* NewsCollectionViewCell.swift */; };
+		F4C829E228925A7E009AB584 /* NewsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4C829E028925A7E009AB584 /* NewsCollectionViewCell.xib */; };
+		F4C829E528926221009AB584 /* GuideCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C829E328926221009AB584 /* GuideCollectionViewCell.swift */; };
+		F4C829E628926221009AB584 /* GuideCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4C829E428926221009AB584 /* GuideCollectionViewCell.xib */; };
 		F4D8C929288B866F0019B6BC /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D8C927288B866F0019B6BC /* SearchTableViewCell.swift */; };
 		F4D8C92A288B866F0019B6BC /* SearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4D8C928288B866F0019B6BC /* SearchTableViewCell.xib */; };
 		F4D8C931288B90230019B6BC /* TagTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D8C92F288B90230019B6BC /* TagTableViewCell.swift */; };
@@ -85,6 +90,11 @@
 		F4BE4BFA288AE00100CF276D /* SearchPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SearchPage.storyboard; sourceTree = "<group>"; };
 		F4BE4BFC288AE00C00CF276D /* MyPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyPage.storyboard; sourceTree = "<group>"; };
 		F4BE4BFE288AE01600CF276D /* GuidelinePage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GuidelinePage.storyboard; sourceTree = "<group>"; };
+		F4C829D828925314009AB584 /* GuideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideViewController.swift; sourceTree = "<group>"; };
+		F4C829DF28925A7E009AB584 /* NewsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCollectionViewCell.swift; sourceTree = "<group>"; };
+		F4C829E028925A7E009AB584 /* NewsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsCollectionViewCell.xib; sourceTree = "<group>"; };
+		F4C829E328926221009AB584 /* GuideCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideCollectionViewCell.swift; sourceTree = "<group>"; };
+		F4C829E428926221009AB584 /* GuideCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GuideCollectionViewCell.xib; sourceTree = "<group>"; };
 		F4D8C927288B866F0019B6BC /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		F4D8C928288B866F0019B6BC /* SearchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchTableViewCell.xib; sourceTree = "<group>"; };
 		F4D8C92F288B90230019B6BC /* TagTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagTableViewCell.swift; sourceTree = "<group>"; };
@@ -226,7 +236,9 @@
 		F4BE4BF5288ADFB400CF276D /* GuidelinePage */ = {
 			isa = PBXGroup;
 			children = (
+				F4C829DA289259D4009AB584 /* Cell */,
 				F4BE4BFE288AE01600CF276D /* GuidelinePage.storyboard */,
+				F4C829D828925314009AB584 /* GuideViewController.swift */,
 			);
 			path = GuidelinePage;
 			sourceTree = "<group>";
@@ -250,6 +262,17 @@
 				F4BE4BFA288AE00100CF276D /* SearchPage.storyboard */,
 			);
 			path = SearchPage;
+			sourceTree = "<group>";
+		};
+		F4C829DA289259D4009AB584 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F4C829DF28925A7E009AB584 /* NewsCollectionViewCell.swift */,
+				F4C829E028925A7E009AB584 /* NewsCollectionViewCell.xib */,
+				F4C829E328926221009AB584 /* GuideCollectionViewCell.swift */,
+				F4C829E428926221009AB584 /* GuideCollectionViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		F4D8C92C288B8FE00019B6BC /* Cell */ = {
@@ -348,6 +371,8 @@
 				F4B98A0228918A3000807A14 /* MyCollectionViewCell.xib in Resources */,
 				F4B98A0128918A2A00807A14 /* MyPage.storyboard in Resources */,
 				F4B98A00289189FB00807A14 /* MainPage.storyboard in Resources */,
+				F4C829E228925A7E009AB584 /* NewsCollectionViewCell.xib in Resources */,
+				F4C829E628926221009AB584 /* GuideCollectionViewCell.xib in Resources */,
 				F4B989FF289189E700807A14 /* SearchPage.storyboard in Resources */,
 				5527D3AC28900A1C00D33242 /* LogPage.storyboard in Resources */,
 				F4D8C932288B90230019B6BC /* TagTableViewCell.xib in Resources */,
@@ -413,6 +438,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5527D3B62890187F00D33242 /* LogPageViewController.swift in Sources */,
+				F4C829E128925A7E009AB584 /* NewsCollectionViewCell.swift in Sources */,
 				5506067A288EC71F00B717DE /* MainPageViewController.swift in Sources */,
 				F4BE4BF9288ADFEC00CF276D /* SearchViewController.swift in Sources */,
 				F4864507288CC34B00956C4C /* Color+Extension.swift in Sources */,
@@ -424,7 +450,9 @@
 				F4D8C931288B90230019B6BC /* TagTableViewCell.swift in Sources */,
 				5527D3BB2890243300D33242 /* CollectionViewCell.swift in Sources */,
 				5506067E288EC87F00B717DE /* CardTableViewCell.swift in Sources */,
+				F4C829E528926221009AB584 /* GuideCollectionViewCell.swift in Sources */,
 				F431BC77288FCDA800E4E614 /* MyPageViewController.swift in Sources */,
+				F4C829D928925314009AB584 /* GuideViewController.swift in Sources */,
 				F4B989FD2891828200807A14 /* MyTableViewCell.swift in Sources */,
 				F4D8C929288B866F0019B6BC /* SearchTableViewCell.swift in Sources */,
 				F4B989F92891826C00807A14 /* MyCollectionViewCell.swift in Sources */,
