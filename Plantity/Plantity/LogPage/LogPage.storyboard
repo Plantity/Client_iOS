@@ -37,7 +37,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xlq-Gn-VNy">
-                                <rect key="frame" x="0.0" y="124" width="414" height="240"/>
+                                <rect key="frame" x="0.0" y="99" width="414" height="240"/>
                                 <subviews>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="X1U-dz-8dc">
                                         <rect key="frame" x="10" y="20" width="394" height="200"/>
@@ -131,7 +131,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sbd-X2-RkL">
-                                <rect key="frame" x="15" y="364" width="384" height="70"/>
+                                <rect key="frame" x="15" y="339" width="384" height="70"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5/22에 마지막으로 물 줬어요! 5/17에 분갈이 했어요!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jPW-9f-nVz">
                                         <rect key="frame" x="103" y="17" width="178" height="36"/>
@@ -147,14 +147,14 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Crz-ce-rmH" customClass="FSCalendar">
-                                <rect key="frame" x="15" y="434" width="384" height="300"/>
+                                <rect key="frame" x="15" y="409" width="384" height="300"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="300" id="Sp4-ix-934"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PKE-vt-u8s">
-                                <rect key="frame" x="15" y="554" width="384" height="259"/>
+                                <rect key="frame" x="15" y="529" width="384" height="284"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uen-6t-I7e">
                                         <rect key="frame" x="40" y="39" width="21" height="21"/>
@@ -229,7 +229,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VAZ-kL-l34">
-                                        <rect key="frame" x="20" y="238" width="344" height="1"/>
+                                        <rect key="frame" x="20" y="263" width="344" height="1"/>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="ZTs-21-Lax"/>
@@ -285,7 +285,7 @@
                             <constraint firstItem="Crz-ce-rmH" firstAttribute="top" secondItem="Sbd-X2-RkL" secondAttribute="bottom" id="BXh-uz-16H"/>
                             <constraint firstItem="Sbd-X2-RkL" firstAttribute="top" secondItem="Xlq-Gn-VNy" secondAttribute="bottom" id="GbE-hI-2vC"/>
                             <constraint firstItem="Xlq-Gn-VNy" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Iej-tD-Qwx"/>
-                            <constraint firstItem="Xlq-Gn-VNy" firstAttribute="top" secondItem="UWj-MM-dTQ" secondAttribute="bottom" id="JnN-Ov-CGK"/>
+                            <constraint firstItem="Xlq-Gn-VNy" firstAttribute="top" secondItem="UWj-MM-dTQ" secondAttribute="bottom" constant="-25" id="JnN-Ov-CGK"/>
                             <constraint firstItem="Sbd-X2-RkL" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="15" id="KP6-B2-3ar"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="PKE-vt-u8s" secondAttribute="trailing" constant="15" id="Pax-Hk-Fbb"/>
                             <constraint firstItem="UWj-MM-dTQ" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="T7e-ZY-1zP"/>

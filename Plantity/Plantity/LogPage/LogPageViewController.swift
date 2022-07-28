@@ -98,7 +98,7 @@ class CustomFlowLayout:UICollectionViewFlowLayout{
         guard let collectionView = self.collectionView else{return}
         
         let collectionViewSize = collectionView.bounds
-        itemSize = CGSize(width: collectionViewSize.width-50*2, height: 150)
+        itemSize = CGSize(width: collectionViewSize.width-50*2, height: 170)
         
         let xInset = (collectionViewSize.width-itemSize.width) / 2
         self.sectionInset = UIEdgeInsets(top: 0, left: xInset, bottom: 0, right: xInset)
