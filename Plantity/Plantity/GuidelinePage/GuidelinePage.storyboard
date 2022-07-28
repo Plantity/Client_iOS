@@ -36,7 +36,7 @@
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="2oj-sl-efy">
                                 <rect key="frame" x="0.0" y="114" width="414" height="157"/>
-                                <color key="backgroundColor" name="tint_progress"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="157" id="Y3H-XK-H4d"/>
                                 </constraints>
@@ -119,6 +119,9 @@
                     </tabBarItem>
                     <navigationItem key="navigationItem" title="가이드라인" id="38s-IX-aVc"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="newsCollectionView" destination="2oj-sl-efy" id="rho-FO-vkF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -149,9 +152,6 @@
         </namedColor>
         <namedColor name="text_green">
             <color red="0.1803921568627451" green="0.45490196078431372" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="tint_progress">
-            <color red="0.99215686274509807" green="0.65098039215686276" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="secondaryLabelColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
