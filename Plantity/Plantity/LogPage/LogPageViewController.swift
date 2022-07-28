@@ -6,12 +6,16 @@
 //
 
 import UIKit
+import FSCalendar
 
 
 
-class LogPageViewController: UIViewController {
+class LogPageViewController: UIViewController, FSCalendarDelegate, FSCalendarDataSource {
     
     @IBOutlet weak var collectionView: UICollectionView!
+
+    
+    @IBOutlet weak var calendarView: FSCalendar!
     
 
     override func viewDidLoad() {
@@ -20,7 +24,14 @@ class LogPageViewController: UIViewController {
         let customLayout = CustomFlowLayout()
         collectionView.collectionViewLayout = customLayout
         collectionView.dataSource = self
-//        collectionView.layer.cornerRadius=10
+        
+        
+        calendarView.delegate = self
+        calendarView.dataSource = self
+        //주간달력으로 변경
+        calendarView.scope = .week
+        //언어변경
+        calendarView.locale = Locale(identifier: "ko_KR")
 
 
         // Do any additional setup after loading the view.
