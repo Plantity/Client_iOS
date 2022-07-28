@@ -52,19 +52,13 @@ class MyPageViewController: UIViewController {
         
         myImageView.clipsToBounds = true
         myImageView.layer.cornerRadius = 82 / 2
-        
     }
-    
-    
 }
 
 extension MyPageViewController: UITableViewDelegate, UITableViewDataSource {
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
-    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return 2
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -74,7 +68,7 @@ extension MyPageViewController: UITableViewDelegate, UITableViewDataSource {
             for: indexPath) as? MyTableViewCell
         else { return UITableViewCell() }
         
-        cell.titleLabel?.text = (indexPath.section == 0 ? "나의 식물" : "찜한 식물")
+        cell.titleLabel?.text = (indexPath.row == 0 ? "나의 식물" : "찜한 식물")
         
         cell.selectionStyle = .none
         
@@ -86,12 +80,7 @@ extension MyPageViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        // 섹션 간 간격
-        return " "
-    }
-    
-    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 220
     }
 }
