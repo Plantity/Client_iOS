@@ -70,4 +70,13 @@ extension GuideViewController: UICollectionViewDelegate, UICollectionViewDataSou
             return CGSize(width: collectionView.frame.width - 40, height: collectionView.frame.height / 3 - 20)
         }
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name: "GuidelinePage", bundle: nil)
+        
+        let guideDetailVC = storyboard.instantiateViewController(withIdentifier: "GuideDetailViewController") as! GuideDetailViewController
+
+        
+        self.navigationController?.pushViewController(guideDetailVC, animated: true)
+    }
 }
