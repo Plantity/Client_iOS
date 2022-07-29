@@ -11,19 +11,22 @@ class TestStartViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
 
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func testStartButton(_ sender: Any) {
+        //화면전환
+        //스토리보트 생성
+        let storyboard = UIStoryboard(name: "TestViewController", bundle: nil)
+        
+        //뷰컨생성
+        let TestViewController = storyboard.instantiateViewController(withIdentifier: "TestViewController")as! TestViewController
+        //화면전환메소드 이용
+        self.present(TestViewController, animated: true, completion: nil)
     }
-    */
+    
+
 
 }
