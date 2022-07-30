@@ -36,6 +36,8 @@ class MainPageViewController: UIViewController {
         //layout.spacingMode = UPCarouselFlowLayoutSpacingMode.overlap(visibleOffset: 150)
         
         cardCollectionView.collectionViewLayout = layout
+        
+        cardCollectionView.backgroundColor = .none
     }
 
 }
