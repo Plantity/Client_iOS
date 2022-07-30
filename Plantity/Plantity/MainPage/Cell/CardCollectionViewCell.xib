@@ -61,7 +61,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="glG-Lm-gtC">
-                                <rect key="frame" x="68.5" y="391" width="152" height="24"/>
+                                <rect key="frame" x="68.5" y="380.5" width="152" height="24"/>
                                 <color key="backgroundColor" name="background_card"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="152" id="Or4-sL-H80"/>
@@ -89,9 +89,9 @@
                             <constraint firstItem="ihS-Ze-oRj" firstAttribute="leading" secondItem="JVd-eY-scA" secondAttribute="leading" constant="10" id="CGW-xg-hTd"/>
                             <constraint firstItem="2bk-mj-WpB" firstAttribute="top" secondItem="Esi-GZ-2Hc" secondAttribute="bottom" constant="10" id="N0Z-eO-7E6"/>
                             <constraint firstItem="ihS-Ze-oRj" firstAttribute="centerX" secondItem="fEr-px-UK7" secondAttribute="centerX" id="UMB-Jc-aTr"/>
+                            <constraint firstItem="glG-Lm-gtC" firstAttribute="top" secondItem="ihS-Ze-oRj" secondAttribute="bottom" id="ZZR-D3-ftY"/>
                             <constraint firstItem="fEr-px-UK7" firstAttribute="centerX" secondItem="Esi-GZ-2Hc" secondAttribute="centerX" id="bkW-O3-pLe"/>
                             <constraint firstAttribute="trailing" secondItem="fEr-px-UK7" secondAttribute="trailing" constant="30" id="e1n-nC-uTH"/>
-                            <constraint firstAttribute="bottom" secondItem="glG-Lm-gtC" secondAttribute="bottom" constant="17" id="gia-i8-pnK"/>
                             <constraint firstAttribute="trailing" secondItem="ihS-Ze-oRj" secondAttribute="trailing" constant="10" id="uL1-DL-9Pg"/>
                             <constraint firstItem="Esi-GZ-2Hc" firstAttribute="top" secondItem="fEr-px-UK7" secondAttribute="bottom" constant="10" id="uSE-YA-dZz"/>
                             <constraint firstItem="Esi-GZ-2Hc" firstAttribute="centerX" secondItem="2bk-mj-WpB" secondAttribute="centerX" id="xDH-o4-KR5"/>
