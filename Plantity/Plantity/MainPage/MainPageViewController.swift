@@ -33,7 +33,7 @@ class MainPageViewController: UIViewController {
         
         layout.sideItemAlpha = 0.3
         
-        layout.spacingMode = UPCarouselFlowLayoutSpacingMode.overlap(visibleOffset: 150)
+        //layout.spacingMode = UPCarouselFlowLayoutSpacingMode.overlap(visibleOffset: 150)
         
         cardCollectionView.collectionViewLayout = layout
     }
