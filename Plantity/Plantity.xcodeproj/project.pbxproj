@@ -21,6 +21,7 @@
 		55436ED12893B3870045B8EE /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55436ED02893B3870045B8EE /* TestViewController.swift */; };
 		B77A185B69A00583FF0855B7 /* Pods_Plantity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A5BB4544D9658449C93E75F /* Pods_Plantity.framework */; };
 		F431BC77288FCDA800E4E614 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F431BC76288FCDA800E4E614 /* MyPageViewController.swift */; };
+		F45D9D912894D39C00EFA5A7 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45D9D902894D39C00EFA5A7 /* SettingsViewController.swift */; };
 		F4864507288CC34B00956C4C /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4864506288CC34B00956C4C /* Color+Extension.swift */; };
 		F4AE4A7928937236008E7A82 /* GuideDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AE4A7828937236008E7A82 /* GuideDetailViewController.swift */; };
 		F4B3722C288E5E2F002215F1 /* ResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B3722A288E5E2F002215F1 /* ResultTableViewCell.swift */; };
@@ -76,6 +77,7 @@
 		F431BC7A288FCF8100E4E614 /* MyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyTableViewCell.xib; sourceTree = "<group>"; };
 		F431BC7D288FD2B500E4E614 /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell.swift; sourceTree = "<group>"; };
 		F431BC7E288FD2B500E4E614 /* MyCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCollectionViewCell.xib; sourceTree = "<group>"; };
+		F45D9D902894D39C00EFA5A7 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		F4864506288CC34B00956C4C /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		F4AE4A7828937236008E7A82 /* GuideDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideDetailViewController.swift; sourceTree = "<group>"; };
 		F4B3722A288E5E2F002215F1 /* ResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultTableViewCell.swift; sourceTree = "<group>"; };
@@ -269,6 +271,7 @@
 				F4B989F62891825200807A14 /* Cell */,
 				F4BE4BFC288AE00C00CF276D /* MyPage.storyboard */,
 				F431BC76288FCDA800E4E614 /* MyPageViewController.swift */,
+				F45D9D902894D39C00EFA5A7 /* SettingsViewController.swift */,
 			);
 			path = MyPage;
 			sourceTree = "<group>";
@@ -481,6 +484,7 @@
 				F4D8C929288B866F0019B6BC /* SearchTableViewCell.swift in Sources */,
 				F4B989F92891826C00807A14 /* MyCollectionViewCell.swift in Sources */,
 				F4BE4BE8288ADBFF00CF276D /* Plantity.xcdatamodeld in Sources */,
+				F45D9D912894D39C00EFA5A7 /* SettingsViewController.swift in Sources */,
 				F4B3722C288E5E2F002215F1 /* ResultTableViewCell.swift in Sources */,
 				F4BE4BE0288ADBFF00CF276D /* SceneDelegate.swift in Sources */,
 			);

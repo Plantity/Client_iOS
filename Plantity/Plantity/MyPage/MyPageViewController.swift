@@ -53,6 +53,15 @@ class MyPageViewController: UIViewController {
         myImageView.clipsToBounds = true
         myImageView.layer.cornerRadius = 82 / 2
     }
+    
+    @IBAction func setButtonClicked(_ sender: UIButton) {
+        let storyboard = UIStoryboard(name: "MyPage", bundle: nil)
+        
+        let setVC = storyboard.instantiateViewController(withIdentifier: "SettingsViewController") as! SettingsViewController
+
+        
+        self.navigationController?.pushViewController(setVC, animated: true)
+    }
 }
 
 extension MyPageViewController: UITableViewDelegate, UITableViewDataSource {
