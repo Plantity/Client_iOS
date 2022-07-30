@@ -1,16 +1,20 @@
 PODS:
   - FSCalendar (2.8.4)
+  - UPCarouselFlowLayout (1.1.2)
 
 DEPENDENCIES:
   - FSCalendar
+  - UPCarouselFlowLayout
 
 SPEC REPOS:
   trunk:
     - FSCalendar
+    - UPCarouselFlowLayout
 
 SPEC CHECKSUMS:
   FSCalendar: 2d1d0d9398f12d439f55c1fe0f01525b151b8260
+  UPCarouselFlowLayout: 4c7d2c43a10ebb1597bde502a53699d378341dad
 
-PODFILE CHECKSUM: 130ef3fa24c6a088e4ae7aa5f8fc51d4b61c7490
+PODFILE CHECKSUM: 456d64bcf4462adcde60ea8d4864b9b9f48b9e42
 
 COCOAPODS: 1.11.3
