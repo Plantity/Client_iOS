@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import UPCarouselFlowLayout
 
 class GuideViewController: UIViewController {
     @IBOutlet weak var newsCollectionView: UICollectionView!
@@ -15,7 +16,9 @@ class GuideViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // 상단 Carousel
         setupNews()
+        // 하단 글 목록
         setupGuide()
     }
     
@@ -26,13 +29,12 @@ class GuideViewController: UIViewController {
         let newsNib = UINib(nibName: "NewsCollectionViewCell", bundle: nil)
         newsCollectionView.register(newsNib, forCellWithReuseIdentifier: "NewsCollectionViewCell")
         
-        let flowLayout = UICollectionViewFlowLayout()
-        flowLayout.scrollDirection = .horizontal
-        flowLayout.sectionInset = UIEdgeInsets(top: 0, left: 30, bottom: 0, right: 0)
-
-
-        newsCollectionView.collectionViewLayout = flowLayout
-        
+        // Carousel 적용
+        let layout = UPCarouselFlowLayout()
+        layout.itemSize = CGSize(width: newsCollectionView.frame.width, height: 157)
+        layout.scrollDirection = .horizontal
+        layout.sideItemAlpha = 0.3
+        newsCollectionView.collectionViewLayout = layout
     }
     
     func setupGuide() {

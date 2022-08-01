@@ -7,5 +7,5 @@ target 'Plantity' do
 
   # Pods for Plantity
   pod 'FSCalendar'
-
+  pod "UPCarouselFlowLayout"
 end

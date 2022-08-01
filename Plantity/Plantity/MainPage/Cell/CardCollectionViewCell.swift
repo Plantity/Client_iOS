@@ -8,10 +8,16 @@
 import UIKit
 
 class CardCollectionViewCell: UICollectionViewCell {
-
+    @IBOutlet weak var pushLogButton: UIButton!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        setupAttribute()
     }
 
+    func setupAttribute() {
+        pushLogButton.layer.cornerRadius = 10
+        pushLogButton.clipsToBounds = true
+    }
 }

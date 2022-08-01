@@ -7,6 +7,7 @@
 
 import UIKit
 import FSCalendar
+import UPCarouselFlowLayout
 
 //데이트포멧터 선언
 let dateFormatter = DateFormatter()
@@ -27,10 +28,10 @@ class LogPageViewController: UIViewController, FSCalendarDelegate, FSCalendarDat
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let customLayout = CustomFlowLayout()
-        collectionView.collectionViewLayout = customLayout
+        // let customLayout = CustomFlowLayout()
+        // collectionView.collectionViewLayout = customLayout
         collectionView.dataSource = self
-        
+        collectionView.delegate = self
         
         
         
@@ -62,11 +63,21 @@ class LogPageViewController: UIViewController, FSCalendarDelegate, FSCalendarDat
 
         // Do any additional setup after loading the view.
 
-        
+        // Carousel 적용
+        setupCard()
     }
     
-
-
+    func setupCard() {
+        let layout = UPCarouselFlowLayout()
+        layout.itemSize = CGSize(width: collectionView.frame.width-50*2, height: 170)
+        layout.scrollDirection = .horizontal
+        
+        layout.sideItemAlpha = 0.3
+        
+        layout.spacingMode = UPCarouselFlowLayoutSpacingMode.fixed(spacing: 10)
+        
+        collectionView.collectionViewLayout = layout
+    }
 }
 
 
@@ -150,7 +161,7 @@ class CustomFlowLayout:UICollectionViewFlowLayout{
 
 
 
-extension LogPageViewController : UICollectionViewDataSource{
+extension LogPageViewController : UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout{
     
     //collection view의 cell 을 10개 생성
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
