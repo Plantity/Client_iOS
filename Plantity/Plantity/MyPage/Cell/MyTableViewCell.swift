@@ -27,6 +27,14 @@ class MyTableViewCell: UITableViewCell {
         setupCollectionView()
     }
     
+    override func layoutSubviews() {
+        // 셀 간 간격
+        contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 10, left: 0, bottom: 10, right: 0))
+        contentView.backgroundColor = .white
+        contentView.layer.cornerRadius = 20
+        contentView.clipsToBounds = true
+    }
+    
     public func setupCollectionView() {
         myCollectionView.delegate = self
         myCollectionView.dataSource = self
@@ -39,19 +47,13 @@ class MyTableViewCell: UITableViewCell {
         let flowLayout = UICollectionViewFlowLayout()
         flowLayout.scrollDirection = .horizontal
         // 여백 구현
-        flowLayout.sectionInset = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
+        flowLayout.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
         flowLayout.minimumLineSpacing = 12
 
         myCollectionView.collectionViewLayout = flowLayout
         
         // collectionView 등록되면 재부팅
         myCollectionView.reloadData()
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
 }
 
@@ -69,6 +71,6 @@ extension MyTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource,
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 105, height: 105)
+        return CGSize(width: myCollectionView.frame.height - 10, height: myCollectionView.frame.height - 10)
     }
 }
