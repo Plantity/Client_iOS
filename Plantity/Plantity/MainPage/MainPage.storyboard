@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PkE-Nd-1wo">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PkE-Nd-1wo">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="teststartbackground" translatesAutoresizingMaskIntoConstraints="NO" id="4gC-YU-U8U">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eoy-gi-K8F">
                                 <rect key="frame" x="0.0" y="44" width="414" height="220"/>
@@ -110,7 +110,7 @@
                             <constraint firstItem="3vd-8v-1bz" firstAttribute="leading" secondItem="i3C-0J-vde" secondAttribute="leading" id="NXH-7v-ry3"/>
                             <constraint firstItem="3vd-8v-1bz" firstAttribute="top" secondItem="eoy-gi-K8F" secondAttribute="bottom" id="U0n-xu-ufE"/>
                             <constraint firstItem="4gC-YU-U8U" firstAttribute="leading" secondItem="i3C-0J-vde" secondAttribute="leading" id="UIh-mi-kxq"/>
-                            <constraint firstItem="4gC-YU-U8U" firstAttribute="bottom" secondItem="i3C-0J-vde" secondAttribute="bottom" id="VB0-C1-86c"/>
+                            <constraint firstItem="4gC-YU-U8U" firstAttribute="bottom" secondItem="i3C-0J-vde" secondAttribute="bottom" constant="83" id="VB0-C1-86c"/>
                             <constraint firstItem="eoy-gi-K8F" firstAttribute="top" secondItem="i3C-0J-vde" secondAttribute="top" id="aPf-4N-ufx"/>
                             <constraint firstItem="i3C-0J-vde" firstAttribute="bottom" secondItem="3vd-8v-1bz" secondAttribute="bottom" id="qhl-Ko-bxg"/>
                             <constraint firstItem="i3C-0J-vde" firstAttribute="trailing" secondItem="3vd-8v-1bz" secondAttribute="trailing" id="rxl-gX-SY4"/>

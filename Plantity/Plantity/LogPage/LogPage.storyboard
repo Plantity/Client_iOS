@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -312,7 +312,12 @@
                     <connections>
                         <outlet property="calendarView" destination="Crz-ce-rmH" id="Lod-qr-tT8"/>
                         <outlet property="collectionView" destination="X1U-dz-8dc" id="Izo-7E-Pyu"/>
+                        <outlet property="dateMessageView" destination="PKE-vt-u8s" id="xee-aI-QlV"/>
+                        <outlet property="lookingyesLabel" destination="adq-Wb-Ygq" id="NAg-nz-T8b"/>
                         <outlet property="messageView" destination="Sbd-X2-RkL" id="nQ1-2h-P8M"/>
+                        <outlet property="showeringyesLabel" destination="EYm-dm-Uxe" id="MCI-vc-e1K"/>
+                        <outlet property="soilingyesLabel" destination="FK3-i9-KB5" id="OGR-o1-xgg"/>
+                        <outlet property="wateringyesLabel" destination="O2z-JV-nve" id="2P7-56-UAI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
