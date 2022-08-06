@@ -64,5 +64,7 @@ extension MainPageViewController: UICollectionViewDelegate,UICollectionViewDataS
         return CGSize(width: 300, height: 450)
     }
 
-
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 0, left: 50, bottom: 0, right: 50)
+    }
 }

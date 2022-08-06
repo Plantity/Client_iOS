@@ -35,6 +35,7 @@ class GuideViewController: UIViewController {
         layout.scrollDirection = .horizontal
         layout.sideItemAlpha = 0.3
         newsCollectionView.collectionViewLayout = layout
+        
     }
     
     func setupGuide() {
@@ -80,5 +81,13 @@ extension GuideViewController: UICollectionViewDelegate, UICollectionViewDataSou
 
         
         self.navigationController?.pushViewController(guideDetailVC, animated: true)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        if collectionView == newsCollectionView {
+            return UIEdgeInsets(top: 0, left: 40, bottom: 0, right: 40)
+        } else {
+            return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        }
     }
 }
