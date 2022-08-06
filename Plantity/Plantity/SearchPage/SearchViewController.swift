@@ -15,9 +15,9 @@ class SearchViewController: UIViewController {
     var searchController = UISearchController()
     var resultVC = UITableViewController()
     
-    var fileteredData: [SearchResultModel] = []
-    var dataArray: [SearchResultModel] = [
-        SearchResultModel(
+    var fileteredData: [SearchPlantModel] = []
+    var dataArray: [SearchPlantModel] = [
+        SearchPlantModel(
         name: "몬스테라",
         level: 3,
         intro: "몬스테라 소개",
@@ -77,7 +77,7 @@ extension SearchViewController:
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         searchBar.text = searchText
-        fileteredData = dataArray.filter({ (data: SearchResultModel) -> Bool in
+        fileteredData = dataArray.filter({ (data: SearchPlantModel) -> Bool in
             return data.name?.lowercased().contains(searchBar.text!.lowercased()) ?? false
             })
         

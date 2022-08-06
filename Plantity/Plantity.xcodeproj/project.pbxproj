@@ -52,6 +52,9 @@
 		F4D8C932288B90230019B6BC /* TagTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4D8C930288B90230019B6BC /* TagTableViewCell.xib */; };
 		F4D8C935288B94140019B6BC /* TagCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D8C933288B94140019B6BC /* TagCollectionViewCell.swift */; };
 		F4D8C936288B94140019B6BC /* TagCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4D8C934288B94140019B6BC /* TagCollectionViewCell.xib */; };
+		F4DDD508289E2380004F6932 /* GuideModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DDD507289E2380004F6932 /* GuideModel.swift */; };
+		F4DDD50B289E24F5004F6932 /* MyDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DDD50A289E24F5004F6932 /* MyDataModel.swift */; };
+		F4DDD511289E274B004F6932 /* SearchDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DDD510289E274B004F6932 /* SearchDataModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -107,6 +110,9 @@
 		F4D8C930288B90230019B6BC /* TagTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TagTableViewCell.xib; sourceTree = "<group>"; };
 		F4D8C933288B94140019B6BC /* TagCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagCollectionViewCell.swift; sourceTree = "<group>"; };
 		F4D8C934288B94140019B6BC /* TagCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TagCollectionViewCell.xib; sourceTree = "<group>"; };
+		F4DDD507289E2380004F6932 /* GuideModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideModel.swift; sourceTree = "<group>"; };
+		F4DDD50A289E24F5004F6932 /* MyDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDataModel.swift; sourceTree = "<group>"; };
+		F4DDD510289E274B004F6932 /* SearchDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDataModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -251,6 +257,7 @@
 		F4BE4BF5288ADFB400CF276D /* GuidelinePage */ = {
 			isa = PBXGroup;
 			children = (
+				F4DDD506289E2266004F6932 /* GuideDataManager */,
 				F4C829DA289259D4009AB584 /* Cell */,
 				F4BE4BFE288AE01600CF276D /* GuidelinePage.storyboard */,
 				F4C829D828925314009AB584 /* GuideViewController.swift */,
@@ -262,6 +269,7 @@
 		F4BE4BF6288ADFC200CF276D /* MyPage */ = {
 			isa = PBXGroup;
 			children = (
+				F4DDD509289E24C2004F6932 /* MyDataManager */,
 				F4B989F62891825200807A14 /* Cell */,
 				F4BE4BFC288AE00C00CF276D /* MyPage.storyboard */,
 				F431BC76288FCDA800E4E614 /* MyPageViewController.swift */,
@@ -273,6 +281,7 @@
 		F4BE4BF7288ADFC900CF276D /* SearchPage */ = {
 			isa = PBXGroup;
 			children = (
+				F4DDD50F289E2739004F6932 /* SearchDataManager */,
 				F4B3722E288E7381002215F1 /* ResultDataManager */,
 				F4D8C92C288B8FE00019B6BC /* Cell */,
 				F4BE4BF8288ADFEC00CF276D /* SearchViewController.swift */,
@@ -321,6 +330,30 @@
 				F4D8C934288B94140019B6BC /* TagCollectionViewCell.xib */,
 			);
 			path = Tag;
+			sourceTree = "<group>";
+		};
+		F4DDD506289E2266004F6932 /* GuideDataManager */ = {
+			isa = PBXGroup;
+			children = (
+				F4DDD507289E2380004F6932 /* GuideModel.swift */,
+			);
+			path = GuideDataManager;
+			sourceTree = "<group>";
+		};
+		F4DDD509289E24C2004F6932 /* MyDataManager */ = {
+			isa = PBXGroup;
+			children = (
+				F4DDD50A289E24F5004F6932 /* MyDataModel.swift */,
+			);
+			path = MyDataManager;
+			sourceTree = "<group>";
+		};
+		F4DDD50F289E2739004F6932 /* SearchDataManager */ = {
+			isa = PBXGroup;
+			children = (
+				F4DDD510289E274B004F6932 /* SearchDataModel.swift */,
+			);
+			path = SearchDataManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -460,14 +493,17 @@
 				F4BE4BF9288ADFEC00CF276D /* SearchViewController.swift in Sources */,
 				F4864507288CC34B00956C4C /* Color+Extension.swift in Sources */,
 				55436ECD2893B33D0045B8EE /* TestStartViewController.swift in Sources */,
+				F4DDD50B289E24F5004F6932 /* MyDataModel.swift in Sources */,
 				F4B37230288E73C6002215F1 /* SearchResultModel.swift in Sources */,
 				55060682288ECCB500B717DE /* CardCollectionViewCell.swift in Sources */,
 				F4D8C935288B94140019B6BC /* TagCollectionViewCell.swift in Sources */,
 				F4BE4BE2288ADBFF00CF276D /* ViewController.swift in Sources */,
 				55436ED12893B3870045B8EE /* TestViewController.swift in Sources */,
 				F4AE4A7928937236008E7A82 /* GuideDetailViewController.swift in Sources */,
+				F4DDD511289E274B004F6932 /* SearchDataModel.swift in Sources */,
 				F4BE4BDE288ADBFF00CF276D /* AppDelegate.swift in Sources */,
 				F4D8C931288B90230019B6BC /* TagTableViewCell.swift in Sources */,
+				F4DDD508289E2380004F6932 /* GuideModel.swift in Sources */,
 				5527D3BB2890243300D33242 /* CollectionViewCell.swift in Sources */,
 				F4C829E528926221009AB584 /* GuideCollectionViewCell.swift in Sources */,
 				F431BC77288FCDA800E4E614 /* MyPageViewController.swift in Sources */,
