@@ -13,6 +13,7 @@ import Foundation
  *  난이도
  *  식물소개
  *  물주기
+ *  햇빛
  *  (태그)
  */
 
@@ -29,5 +30,6 @@ struct SearchPlantModel: Decodable {
     let level: Int?
     let intro: String?
     // let water: Int?
+    // let sunshine: Int?
     let tag: String?
 }
