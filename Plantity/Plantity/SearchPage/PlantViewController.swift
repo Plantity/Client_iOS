@@ -8,6 +8,7 @@
 import UIKit
 
 class PlantViewController: UIViewController {
+    @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var likeButton: UIButton!
     @IBOutlet weak var addButton: UIButton!
     
@@ -16,6 +17,7 @@ class PlantViewController: UIViewController {
     @IBOutlet weak var plantLevel: UILabel!
     @IBOutlet weak var plantIntro: UILabel!
     
+    @IBOutlet weak var wsBackground: UIView!
     @IBOutlet weak var plantWater: UILabel!
     @IBOutlet weak var plantSun: UILabel!
     
@@ -24,8 +26,19 @@ class PlantViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        setupAttribute()
+    }
+    
+    func setupAttribute() {
+        wsBackground.clipsToBounds = true
+        wsBackground.layer.cornerRadius = 20
         
+        addButton.clipsToBounds = true
+        addButton.layer.cornerRadius = 10
+    }
+    
+    @IBAction func backButtonClicked(_ sender: UIButton) {
+        navigationController?.popViewController(animated: true)
     }
     
     @IBAction func LikeButtonClicked(_ sender: UIButton) {
