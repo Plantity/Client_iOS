@@ -153,7 +153,6 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
                 )
             }
             
-            
             return cell
         }
         
@@ -171,6 +170,16 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
             cell.selectionStyle = .none
             
             return cell
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if searchBar.text?.count != 0 {
+            let storyboard = UIStoryboard(name: "SearchPage", bundle: nil)
+            
+            let plantViewController = storyboard.instantiateViewController(withIdentifier: "PlantViewController") as! PlantViewController
+            
+            self.navigationController?.pushViewController(plantViewController, animated: true)
         }
     }
     

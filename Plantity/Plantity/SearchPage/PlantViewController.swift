@@ -20,10 +20,12 @@ class PlantViewController: UIViewController {
     @IBOutlet weak var plantSun: UILabel!
     
     @IBOutlet weak var plantDetail: UIStackView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
     }
     
     @IBAction func LikeButtonClicked(_ sender: UIButton) {
