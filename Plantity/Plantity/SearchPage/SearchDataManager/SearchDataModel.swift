@@ -29,7 +29,9 @@ struct SearchPlantModel: Decodable {
     let name: String?
     let level: Int?
     let intro: String?
-    // let water: Int?
-    // let sunshine: Int?
+    let water: String?
+    let sun: String?
+    var isUserLiked: Bool?
+    // let details: PlantDetailModel?
     let tag: String?
 }

@@ -17,11 +17,7 @@ class SearchViewController: UIViewController {
     
     var fileteredData: [SearchPlantModel] = []
     var dataArray: [SearchPlantModel] = [
-        SearchPlantModel(
-        name: "몬스테라",
-        level: 3,
-        intro: "몬스테라 소개",
-        tag: "# 플랜테리어")
+        SearchPlantModel(name: "몬스테라", level: 1, intro: "자라면서 잎에 구멍이 생기는 것으로 유명한 인테리어 식물", water: "물을 7일에 한 번씩 흙이 마르면 주세요.", sun: "햇빛이 적당한 것을 좋아해요", isUserLiked: false, tag: "# 플렌테리어")
     ]
     
     
@@ -175,9 +171,12 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if searchBar.text?.count != 0 {
+            // 검색결과 선택시 식물 상세보기 페이지로 이동
             let storyboard = UIStoryboard(name: "SearchPage", bundle: nil)
             
             let plantViewController = storyboard.instantiateViewController(withIdentifier: "PlantViewController") as! PlantViewController
+            
+            plantViewController.searchPlant = fileteredData[indexPath.row]
             
             self.navigationController?.pushViewController(plantViewController, animated: true)
         }
