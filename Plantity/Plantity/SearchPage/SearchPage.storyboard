@@ -23,7 +23,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="BjR-UM-nPq">
-                                <rect key="frame" x="0.0" y="95" width="414" height="718"/>
+                                <rect key="frame" x="0.0" y="95" width="414" height="669"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
@@ -62,7 +62,7 @@
         <!--Plant View Controller-->
         <scene sceneID="3wj-1w-Z6T">
             <objects>
-                <viewController storyboardIdentifier="PlantViewController" id="zm2-X2-8AE" customClass="PlantViewController" customModule="Plantity" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PlantViewController" hidesBottomBarWhenPushed="YES" id="zm2-X2-8AE" customClass="PlantViewController" customModule="Plantity" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="e3H-Du-Qb3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -309,6 +309,7 @@
                             <constraint firstItem="oy3-BP-cKs" firstAttribute="centerX" secondItem="o7m-Jo-YQz" secondAttribute="centerX" id="vC2-6y-fHP"/>
                         </constraints>
                     </view>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="addButton" destination="OAy-gE-EZ8" id="98M-Wg-C0O"/>
                         <outlet property="backButton" destination="9KZ-v8-6SB" id="aJD-fh-0Dx"/>
@@ -330,7 +331,7 @@
         <!--Navigation Controller-->
         <scene sceneID="idp-Of-Per">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="cG2-jQ-bp0" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" toolbarHidden="NO" id="cG2-jQ-bp0" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="CGJ-RD-LmV">
                         <autoresizingMask key="autoresizingMask"/>
