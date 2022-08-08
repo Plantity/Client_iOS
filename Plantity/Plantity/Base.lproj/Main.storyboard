@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lqI-fM-G3Y">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lqI-fM-G3Y">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -67,11 +67,11 @@
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
-                        <segue destination="xDh-5Q-shu" kind="relationship" relationship="viewControllers" id="C6L-7z-n9g"/>
-                        <segue destination="S8p-X5-hVc" kind="relationship" relationship="viewControllers" id="Dy6-sg-Mkb"/>
-                        <segue destination="i1k-2I-LtK" kind="relationship" relationship="viewControllers" id="Aas-KD-VQj"/>
-                        <segue destination="Umf-je-7e3" kind="relationship" relationship="viewControllers" id="AIf-lR-WZM"/>
-                        <segue destination="uRJ-uQ-g9m" kind="relationship" relationship="viewControllers" id="3rN-E4-Fda"/>
+                        <segue destination="i1k-2I-LtK" kind="relationship" relationship="viewControllers" id="qys-4X-XbC"/>
+                        <segue destination="xDh-5Q-shu" kind="relationship" relationship="viewControllers" id="WBR-LU-0ji"/>
+                        <segue destination="S8p-X5-hVc" kind="relationship" relationship="viewControllers" id="Z1Z-Ix-lgV"/>
+                        <segue destination="uRJ-uQ-g9m" kind="relationship" relationship="viewControllers" id="IYO-eX-ckj"/>
+                        <segue destination="Umf-je-7e3" kind="relationship" relationship="viewControllers" id="SrI-Pz-8j3"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Qv-B1-68y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
