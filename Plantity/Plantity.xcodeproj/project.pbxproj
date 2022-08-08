@@ -33,6 +33,7 @@
 		F4B98A0228918A3000807A14 /* MyCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4B989F82891826C00807A14 /* MyCollectionViewCell.xib */; };
 		F4B98A0328918A3400807A14 /* MyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4B989FC2891828200807A14 /* MyTableViewCell.xib */; };
 		F4B98A0428918A5400807A14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4BE4BE9288ADBFF00CF276D /* Assets.xcassets */; };
+		F4BE056B28A0D22700E800D2 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BE056A28A0D22700E800D2 /* MainViewController.swift */; };
 		F4BE4BDE288ADBFF00CF276D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BE4BDD288ADBFF00CF276D /* AppDelegate.swift */; };
 		F4BE4BE0288ADBFF00CF276D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BE4BDF288ADBFF00CF276D /* SceneDelegate.swift */; };
 		F4BE4BE2288ADBFF00CF276D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BE4BE1288ADBFF00CF276D /* ViewController.swift */; };
@@ -86,6 +87,7 @@
 		F4B989F82891826C00807A14 /* MyCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCollectionViewCell.xib; sourceTree = "<group>"; };
 		F4B989FB2891828200807A14 /* MyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
 		F4B989FC2891828200807A14 /* MyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyTableViewCell.xib; sourceTree = "<group>"; };
+		F4BE056A28A0D22700E800D2 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		F4BE4BDA288ADBFF00CF276D /* Plantity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Plantity.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4BE4BDD288ADBFF00CF276D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4BE4BDF288ADBFF00CF276D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -232,6 +234,7 @@
 				F4BE4BEE288ADBFF00CF276D /* Info.plist */,
 				F4BE4BE6288ADBFF00CF276D /* Plantity.xcdatamodeld */,
 				F4864506288CC34B00956C4C /* Color+Extension.swift */,
+				F4BE056A28A0D22700E800D2 /* MainViewController.swift */,
 			);
 			path = Plantity;
 			sourceTree = "<group>";
@@ -492,6 +495,7 @@
 				55436ED12893B3870045B8EE /* TestViewController.swift in Sources */,
 				F4AE4A7928937236008E7A82 /* GuideDetailViewController.swift in Sources */,
 				F4DDD511289E274B004F6932 /* SearchDataModel.swift in Sources */,
+				F4BE056B28A0D22700E800D2 /* MainViewController.swift in Sources */,
 				F4BE4BDE288ADBFF00CF276D /* AppDelegate.swift in Sources */,
 				F4D8C931288B90230019B6BC /* TagTableViewCell.swift in Sources */,
 				F4DDD508289E2380004F6932 /* GuideModel.swift in Sources */,

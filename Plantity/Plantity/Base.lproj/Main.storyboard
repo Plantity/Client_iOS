@@ -56,10 +56,10 @@
             </objects>
             <point key="canvasLocation" x="768" y="598"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Main View Controller-->
         <scene sceneID="yCC-Kd-GYV">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="lqI-fM-G3Y" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="MainViewController" automaticallyAdjustsScrollViewInsets="NO" id="lqI-fM-G3Y" customClass="MainViewController" customModule="Plantity" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cr9-YX-FgO">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
