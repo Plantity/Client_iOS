@@ -153,12 +153,10 @@ class LogPageViewController: UIViewController, FSCalendarDelegate, FSCalendarDat
             soilingyesLabel.text="분갈이하지 않았어요"
         }
         
-        
-
-        
-
-        
     }
+    
+    
+    
     // 날짜 선택 해제 시 콜백 메소드
     public func calendar(_ calendar: FSCalendar, didDeselect date: Date, at monthPosition: FSCalendarMonthPosition) {
         formatter.dateFormat="yyyy-MM-dd"

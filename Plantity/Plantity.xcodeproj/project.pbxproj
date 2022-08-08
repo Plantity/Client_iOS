@@ -10,6 +10,8 @@
 		5506067A288EC71F00B717DE /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55060679288EC71F00B717DE /* MainPageViewController.swift */; };
 		55060682288ECCB500B717DE /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55060680288ECCB500B717DE /* CardCollectionViewCell.swift */; };
 		55060683288ECCB500B717DE /* CardCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55060681288ECCB500B717DE /* CardCollectionViewCell.xib */; };
+		5516AEE928A11B5100458259 /* LogDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5516AEE828A11B5100458259 /* LogDataModel.swift */; };
+		5516AEEC28A11BB700458259 /* MainDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5516AEEB28A11BB700458259 /* MainDataModel.swift */; };
 		5527D3AC28900A1C00D33242 /* LogPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5527D3AB28900A1C00D33242 /* LogPage.storyboard */; };
 		5527D3B62890187F00D33242 /* LogPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5527D3B52890187F00D33242 /* LogPageViewController.swift */; };
 		5527D3BB2890243300D33242 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5527D3B92890243300D33242 /* CollectionViewCell.swift */; };
@@ -66,6 +68,8 @@
 		55060679288EC71F00B717DE /* MainPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
 		55060680288ECCB500B717DE /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
 		55060681288ECCB500B717DE /* CardCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardCollectionViewCell.xib; sourceTree = "<group>"; };
+		5516AEE828A11B5100458259 /* LogDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogDataModel.swift; sourceTree = "<group>"; };
+		5516AEEB28A11BB700458259 /* MainDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainDataModel.swift; sourceTree = "<group>"; };
 		5527D3AB28900A1C00D33242 /* LogPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LogPage.storyboard; sourceTree = "<group>"; };
 		5527D3B52890187F00D33242 /* LogPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogPageViewController.swift; sourceTree = "<group>"; };
 		5527D3B92890243300D33242 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
@@ -141,6 +145,7 @@
 		55060674288EA01F00B717DE /* LogPage */ = {
 			isa = PBXGroup;
 			children = (
+				5516AEE728A11B3400458259 /* LogDataManager */,
 				5527D3AB28900A1C00D33242 /* LogPage.storyboard */,
 				5527D3B52890187F00D33242 /* LogPageViewController.swift */,
 				5527D3B92890243300D33242 /* CollectionViewCell.swift */,
@@ -156,6 +161,22 @@
 				55060681288ECCB500B717DE /* CardCollectionViewCell.xib */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		5516AEE728A11B3400458259 /* LogDataManager */ = {
+			isa = PBXGroup;
+			children = (
+				5516AEE828A11B5100458259 /* LogDataModel.swift */,
+			);
+			path = LogDataManager;
+			sourceTree = "<group>";
+		};
+		5516AEEA28A11B6C00458259 /* MainDataManager */ = {
+			isa = PBXGroup;
+			children = (
+				5516AEEB28A11BB700458259 /* MainDataModel.swift */,
+			);
+			path = MainDataManager;
 			sourceTree = "<group>";
 		};
 		55436EC72893A1B20045B8EE /* TestPage */ = {
@@ -242,6 +263,7 @@
 		F4BE4BF4288ADFA500CF276D /* MainPage */ = {
 			isa = PBXGroup;
 			children = (
+				5516AEEA28A11B6C00458259 /* MainDataManager */,
 				5506067B288EC85000B717DE /* Cell */,
 				55060675288EA07100B717DE /* MainPage.storyboard */,
 				55060679288EC71F00B717DE /* MainPageViewController.swift */,
@@ -502,9 +524,11 @@
 				5527D3BB2890243300D33242 /* CollectionViewCell.swift in Sources */,
 				F4C829E528926221009AB584 /* GuideCollectionViewCell.swift in Sources */,
 				F431BC77288FCDA800E4E614 /* MyPageViewController.swift in Sources */,
+				5516AEE928A11B5100458259 /* LogDataModel.swift in Sources */,
 				F4C829D928925314009AB584 /* GuideViewController.swift in Sources */,
 				F4B989FD2891828200807A14 /* MyTableViewCell.swift in Sources */,
 				F4D8C929288B866F0019B6BC /* SearchTableViewCell.swift in Sources */,
+				5516AEEC28A11BB700458259 /* MainDataModel.swift in Sources */,
 				F4B989F92891826C00807A14 /* MyCollectionViewCell.swift in Sources */,
 				F4987E8D289F9ED90067B178 /* PlantViewController.swift in Sources */,
 				F4BE4BE8288ADBFF00CF276D /* Plantity.xcdatamodeld in Sources */,
