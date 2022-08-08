@@ -14,10 +14,21 @@ let formatter = DateFormatter()
 
 
 
+
+var CardData:[LogDataCardModel]=[]
+var arrayCard:[LogDataCardModel]=[LogDataCardModel(plantName: "치치", plantType: "몬스테라", cardMemo: "물은 하루에 한번 주세요!")]
+
+var CalendarData:[LogDataCalendar]=[]
+var arrayCalendar:[LogDataCalendar]=[LogDataCalendar(watering: true, watching: false, showering: false, soiling: true)]
+
+
 class LogPageViewController: UIViewController, FSCalendarDelegate, FSCalendarDataSource,FSCalendarDelegateAppearance {
+
     
+    //collectionView
     @IBOutlet weak var collectionView: UICollectionView!
 
+    //calendar 요소
     @IBOutlet weak var messageView: UIView!
     
     @IBOutlet weak var calendarView: FSCalendar!
@@ -33,32 +44,28 @@ class LogPageViewController: UIViewController, FSCalendarDelegate, FSCalendarDat
     @IBOutlet weak var soilingyesLabel: UILabel!
     //    var selectedDate:Date=Date()
     
+    
 
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // let customLayout = CustomFlowLayout()
-        // collectionView.collectionViewLayout = customLayout
+
         collectionView.dataSource = self
         collectionView.delegate = self
         
         
         
-        //메세지
+        //메세지(카드)
         messageView.clipsToBounds = true
         messageView.layer.cornerRadius = 30
         messageView.layer.maskedCorners = CACornerMask(arrayLiteral: .layerMinXMinYCorner,.layerMaxXMinYCorner)
         
         
         //달력
-       
-        
         calendarView.delegate = self
         calendarView.dataSource = self
-        
-        
         //주간달력으로 변경
         calendarView.scope = .week
         //언어변경
@@ -92,6 +99,8 @@ class LogPageViewController: UIViewController, FSCalendarDelegate, FSCalendarDat
         
         collectionView.collectionViewLayout = layout
     }
+    
+
     
     //이벤트 배열 선언-예시
     var events=[Date]()
@@ -166,7 +175,7 @@ class LogPageViewController: UIViewController, FSCalendarDelegate, FSCalendarDat
 
 }
 
-
+//달력
 extension ViewController:FSCalendarDelegate,FSCalendarDataSource,FSCalendarDelegateAppearance{
 
 
@@ -184,71 +193,8 @@ extension ViewController:FSCalendarDelegate,FSCalendarDataSource,FSCalendarDeleg
 }
 
 
-/*
-class CustomFlowLayout:UICollectionViewFlowLayout{
-    private var isInit: Bool = false
 
-    prepare에서 collectionviewLayout의 초기세팅을 진행한다
-    override func prepare() {
-        super.prepare()
-        //collectionview의 bounds가 변화할때마다 메소드 호출
-        guard !isInit else{return}
-
-        guard let collectionView = self.collectionView else{return}
-
-        let collectionViewSize = collectionView.bounds
-        itemSize = CGSize(width: collectionViewSize.width-50*2, height: 170)
-
-        let xInset = (collectionViewSize.width-itemSize.width) / 2
-        self.sectionInset = UIEdgeInsets(top: 0, left: xInset, bottom: 0, right: xInset)
-
-        scrollDirection = .horizontal
-
-
-        //카드 떨어져 있는 정도 ->40
-        minimumLineSpacing = 40 - (itemSize.width - itemSize.width*0.7)/2
-
-
-
-
-        isInit = true
-            }
-
-            override func shouldInvalidateLayout(forBoundsChange newBounds: CGRect) -> Bool {
-                return true
-
-    }
-
-
-
-    override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
-            let superAttributes = super.layoutAttributesForElements(in: rect)
-
-            superAttributes?.forEach { attributes in
-                guard let collectionView = self.collectionView else { return }
-
-                let collectionViewCenter = collectionView.frame.size.width / 2
-                let offsetX = collectionView.contentOffset.x
-                let center = attributes.center.x - offsetX
-
-                let maxDis = self.itemSize.width + self.minimumLineSpacing
-                let dis = min(abs(collectionViewCenter-center), maxDis)
-
-                let ratio = (maxDis - dis)/maxDis
-                //크기변경 + 0.1
-                let scale = ratio * (1-0.7) + 0.7+0.1
-
-//                collectionView.layer.cornerRadius=12
-                attributes.transform = CGAffineTransform(scaleX: scale, y: scale)
-            }
-
-            return superAttributes
-       }
-
-}
-
- */
-
+//카드
 extension LogPageViewController : UICollectionViewDataSource, UICollectionViewDelegate{
 
     //collection view의 cell 을 10개 생성
@@ -262,6 +208,8 @@ extension LogPageViewController : UICollectionViewDataSource, UICollectionViewDe
         guard let customCell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as? CollectionViewCell else { return UICollectionViewCell() }
 
         customCell.layer.cornerRadius=10
+        
+
 
 
                 return customCell
