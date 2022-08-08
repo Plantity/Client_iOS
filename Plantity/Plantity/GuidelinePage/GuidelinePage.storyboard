@@ -131,7 +131,7 @@
         <!--Guide Detail View Controller-->
         <scene sceneID="vhe-rx-YJb">
             <objects>
-                <viewController storyboardIdentifier="GuideDetailViewController" id="xTU-Xw-fNk" customClass="GuideDetailViewController" customModule="Plantity" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GuideDetailViewController" hidesBottomBarWhenPushed="YES" id="xTU-Xw-fNk" customClass="GuideDetailViewController" customModule="Plantity" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ucj-vq-PCr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

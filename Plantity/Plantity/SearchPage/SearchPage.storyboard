@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -22,7 +23,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="BjR-UM-nPq">
-                                <rect key="frame" x="0.0" y="95" width="414" height="718"/>
+                                <rect key="frame" x="0.0" y="95" width="414" height="669"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
@@ -58,10 +59,279 @@
             </objects>
             <point key="canvasLocation" x="871.01449275362324" y="91.741071428571431"/>
         </scene>
+        <!--Plant View Controller-->
+        <scene sceneID="3wj-1w-Z6T">
+            <objects>
+                <viewController storyboardIdentifier="PlantViewController" hidesBottomBarWhenPushed="YES" id="zm2-X2-8AE" customClass="PlantViewController" customModule="Plantity" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="e3H-Du-Qb3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uPZ-Hg-Gip">
+                                <rect key="frame" x="0.0" y="44" width="414" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9KZ-v8-6SB">
+                                        <rect key="frame" x="25" y="14" width="22" height="22"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="9KZ-v8-6SB" secondAttribute="height" multiplier="1:1" id="9hs-Lg-Kiy"/>
+                                            <constraint firstAttribute="width" constant="22" id="Ogg-2h-0JQ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="arrow.left" catalog="system"/>
+                                        <connections>
+                                            <action selector="backButtonClicked:" destination="zm2-X2-8AE" eventType="touchUpInside" id="dYh-ua-ggM"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pcL-fq-bBr">
+                                        <rect key="frame" x="355" y="8" width="34" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="34" id="7HL-Vo-soR"/>
+                                            <constraint firstAttribute="width" secondItem="pcL-fq-bBr" secondAttribute="height" multiplier="1:1" id="imB-ZM-dUr"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="icon_heart"/>
+                                        <state key="selected" image="icon_heart_fill"/>
+                                        <connections>
+                                            <action selector="LikeButtonClicked:" destination="zm2-X2-8AE" eventType="touchUpInside" id="KHJ-lV-Jea"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="9KZ-v8-6SB" firstAttribute="leading" secondItem="uPZ-Hg-Gip" secondAttribute="leading" constant="25" id="995-Wh-3R5"/>
+                                    <constraint firstItem="pcL-fq-bBr" firstAttribute="centerY" secondItem="uPZ-Hg-Gip" secondAttribute="centerY" id="CrS-RE-Ije"/>
+                                    <constraint firstAttribute="trailing" secondItem="pcL-fq-bBr" secondAttribute="trailing" constant="25" id="WN5-rY-xby"/>
+                                    <constraint firstItem="9KZ-v8-6SB" firstAttribute="centerY" secondItem="uPZ-Hg-Gip" secondAttribute="centerY" id="jfo-c5-Jar"/>
+                                    <constraint firstAttribute="height" constant="50" id="srC-jq-gnn"/>
+                                </constraints>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_plant_ex" translatesAutoresizingMaskIntoConstraints="NO" id="oy3-BP-cKs">
+                                <rect key="frame" x="123.5" y="114" width="167" height="167"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="167" id="ljx-IX-vcA"/>
+                                    <constraint firstAttribute="width" secondItem="oy3-BP-cKs" secondAttribute="height" multiplier="1:1" id="qNq-Vv-Je0"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="몬스테라" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TXX-pi-40J">
+                                <rect key="frame" x="170.5" y="291" width="73" height="25.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="OaN-3i-SUa">
+                                <rect key="frame" x="162" y="319.5" width="90" height="14.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="난이도:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nWh-Ui-YNQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="35" height="14.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <color key="textColor" name="text_gray"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="⭐️⭐️⭐️" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C6T-Ry-OwJ">
+                                        <rect key="frame" x="39" y="0.0" width="51" height="14.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="C6T-Ry-OwJ" firstAttribute="centerY" secondItem="nWh-Ui-YNQ" secondAttribute="centerY" id="U6g-zR-iar"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="자라면서 잎에 구멍이 생기는 것으로 유명한 인테리어 식물" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Voj-dA-XCj">
+                                <rect key="frame" x="72" y="340" width="270" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Y1R-mZ-n29"/>
+                                    <constraint firstAttribute="width" constant="270" id="fqA-rX-zFw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BZQ-HT-xMc">
+                                <rect key="frame" x="30" y="410" width="354" height="100"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="76I-LT-vvY">
+                                        <rect key="frame" x="15" y="5" width="250.5" height="50"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="button_water" translatesAutoresizingMaskIntoConstraints="NO" id="Yxo-KP-LDm">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="Yxo-KP-LDm" secondAttribute="height" multiplier="1:1" id="2CX-wT-qj1"/>
+                                                    <constraint firstAttribute="width" constant="50" id="IE9-GI-PkN"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="물을 7일에 한 번씩 흙이 마르면 주세요." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ewG-hV-OH8">
+                                                <rect key="frame" x="50" y="17" width="200.5" height="16"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="13"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="HAN-Q9-DIy">
+                                        <rect key="frame" x="15" y="45" width="199" height="50"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="button_shower" translatesAutoresizingMaskIntoConstraints="NO" id="RjC-mL-H1h">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="3FM-C9-NzG"/>
+                                                    <constraint firstAttribute="width" secondItem="RjC-mL-H1h" secondAttribute="height" multiplier="1:1" id="Win-dz-mGL"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="햇빛이 적당한 것을 좋아해요." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8i5-ND-fGL">
+                                                <rect key="frame" x="50" y="17" width="149" height="16"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="13"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" name="background_card"/>
+                                <constraints>
+                                    <constraint firstItem="76I-LT-vvY" firstAttribute="top" secondItem="BZQ-HT-xMc" secondAttribute="top" constant="5" id="6we-d9-9Yl"/>
+                                    <constraint firstItem="76I-LT-vvY" firstAttribute="leading" secondItem="BZQ-HT-xMc" secondAttribute="leading" constant="15" id="8Lu-5v-ykp"/>
+                                    <constraint firstAttribute="height" constant="100" id="Svn-93-7mU"/>
+                                    <constraint firstAttribute="bottom" secondItem="HAN-Q9-DIy" secondAttribute="bottom" constant="5" id="phe-9w-StJ"/>
+                                    <constraint firstItem="HAN-Q9-DIy" firstAttribute="leading" secondItem="BZQ-HT-xMc" secondAttribute="leading" constant="15" id="qkN-tl-jHG"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="더 자세히 알려드릴게요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w6S-kO-IM4">
+                                <rect key="frame" x="40" y="530" width="155.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="DBV-NE-VNM">
+                                <rect key="frame" x="45" y="560.5" width="198.5" height="171"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="학명: Monstera deliciosa Liebm." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="az2-15-uXY">
+                                        <rect key="frame" x="0.0" y="0.0" width="198.5" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="영문명: Monstera" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QVW-qZ-Fsx">
+                                        <rect key="frame" x="0.0" y="22" width="104" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="원산지: 멕시코" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Flx-CL-ku0">
+                                        <rect key="frame" x="0.0" y="44" width="80.5" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cec-ZV-1V7">
+                                        <rect key="frame" x="0.0" y="66" width="80.5" height="17"/>
+                                        <string key="text">목명: 천남성목
+</string>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fFC-ek-XEQ">
+                                        <rect key="frame" x="0.0" y="88" width="80.5" height="17"/>
+                                        <string key="text">과명: 천남성과
+</string>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iLy-dC-nwV">
+                                        <rect key="frame" x="0.0" y="110" width="100" height="17"/>
+                                        <string key="text">개화시기: 9~10월
+</string>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uC0-Ht-vmX">
+                                        <rect key="frame" x="0.0" y="132" width="68.5" height="17"/>
+                                        <string key="text">꽃색깔: 흰색
+</string>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="꽃말: 웅장한 계획" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pbq-7H-du7">
+                                        <rect key="frame" x="0.0" y="154" width="96" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OAy-gE-EZ8">
+                                <rect key="frame" x="30" y="787" width="354" height="60"/>
+                                <color key="backgroundColor" name="text_green"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="M5H-Lf-ca3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="내 식물로 추가하기">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="addButtonClicked:" destination="zm2-X2-8AE" eventType="touchUpInside" id="b7c-Pl-b8o"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="o7m-Jo-YQz"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="TXX-pi-40J" firstAttribute="top" secondItem="oy3-BP-cKs" secondAttribute="bottom" constant="10" id="2Pk-7q-JiK"/>
+                            <constraint firstItem="OAy-gE-EZ8" firstAttribute="centerX" secondItem="o7m-Jo-YQz" secondAttribute="centerX" id="2ws-Q6-L1r"/>
+                            <constraint firstItem="w6S-kO-IM4" firstAttribute="leading" secondItem="BZQ-HT-xMc" secondAttribute="leading" constant="10" id="54S-d2-EzG"/>
+                            <constraint firstItem="BZQ-HT-xMc" firstAttribute="leading" secondItem="o7m-Jo-YQz" secondAttribute="leading" constant="30" id="Beb-Id-KZ4"/>
+                            <constraint firstItem="uPZ-Hg-Gip" firstAttribute="top" secondItem="o7m-Jo-YQz" secondAttribute="top" id="Cxe-j3-zpP"/>
+                            <constraint firstItem="Voj-dA-XCj" firstAttribute="top" secondItem="OaN-3i-SUa" secondAttribute="bottom" constant="6" id="E3G-Eq-VkA"/>
+                            <constraint firstItem="OaN-3i-SUa" firstAttribute="top" secondItem="TXX-pi-40J" secondAttribute="bottom" constant="3" id="En2-HH-mai"/>
+                            <constraint firstItem="DBV-NE-VNM" firstAttribute="leading" secondItem="w6S-kO-IM4" secondAttribute="leading" constant="5" id="FPo-Zx-HbM"/>
+                            <constraint firstItem="w6S-kO-IM4" firstAttribute="top" secondItem="BZQ-HT-xMc" secondAttribute="bottom" constant="20" id="GgL-uh-zjU"/>
+                            <constraint firstItem="o7m-Jo-YQz" firstAttribute="bottom" secondItem="OAy-gE-EZ8" secondAttribute="bottom" constant="15" id="Io5-bn-wpJ"/>
+                            <constraint firstItem="OAy-gE-EZ8" firstAttribute="width" secondItem="BZQ-HT-xMc" secondAttribute="width" id="NTq-j8-bA1"/>
+                            <constraint firstItem="Voj-dA-XCj" firstAttribute="centerX" secondItem="o7m-Jo-YQz" secondAttribute="centerX" id="Oub-Z7-Tdu"/>
+                            <constraint firstItem="DBV-NE-VNM" firstAttribute="top" secondItem="w6S-kO-IM4" secondAttribute="bottom" constant="10" id="Pjo-Wy-65i"/>
+                            <constraint firstItem="uPZ-Hg-Gip" firstAttribute="trailing" secondItem="o7m-Jo-YQz" secondAttribute="trailing" id="Tea-B9-iR5"/>
+                            <constraint firstItem="oy3-BP-cKs" firstAttribute="top" secondItem="uPZ-Hg-Gip" secondAttribute="bottom" constant="20" id="cLG-dg-b2f"/>
+                            <constraint firstItem="o7m-Jo-YQz" firstAttribute="trailing" secondItem="BZQ-HT-xMc" secondAttribute="trailing" constant="30" id="eIK-7T-xRW"/>
+                            <constraint firstItem="TXX-pi-40J" firstAttribute="centerX" secondItem="o7m-Jo-YQz" secondAttribute="centerX" id="mjS-f9-GJD"/>
+                            <constraint firstItem="uPZ-Hg-Gip" firstAttribute="leading" secondItem="o7m-Jo-YQz" secondAttribute="leading" id="pZK-Oc-SNi"/>
+                            <constraint firstItem="BZQ-HT-xMc" firstAttribute="top" secondItem="Voj-dA-XCj" secondAttribute="bottom" constant="20" id="qv2-5r-8eN"/>
+                            <constraint firstItem="OaN-3i-SUa" firstAttribute="centerX" secondItem="o7m-Jo-YQz" secondAttribute="centerX" id="ue0-Gr-JXH"/>
+                            <constraint firstItem="oy3-BP-cKs" firstAttribute="centerX" secondItem="o7m-Jo-YQz" secondAttribute="centerX" id="vC2-6y-fHP"/>
+                        </constraints>
+                    </view>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="addButton" destination="OAy-gE-EZ8" id="98M-Wg-C0O"/>
+                        <outlet property="backButton" destination="9KZ-v8-6SB" id="aJD-fh-0Dx"/>
+                        <outlet property="likeButton" destination="pcL-fq-bBr" id="WVZ-fB-LOu"/>
+                        <outlet property="plantDetail" destination="DBV-NE-VNM" id="XWE-Kk-Avo"/>
+                        <outlet property="plantImageView" destination="oy3-BP-cKs" id="wWM-6n-kLX"/>
+                        <outlet property="plantIntro" destination="Voj-dA-XCj" id="u9h-TJ-AHh"/>
+                        <outlet property="plantLevel" destination="C6T-Ry-OwJ" id="N66-zb-nvw"/>
+                        <outlet property="plantName" destination="TXX-pi-40J" id="uGZ-NC-DSK"/>
+                        <outlet property="plantSun" destination="8i5-ND-fGL" id="d9j-6p-1bz"/>
+                        <outlet property="plantWater" destination="ewG-hV-OH8" id="r25-Qu-6B5"/>
+                        <outlet property="wsBackground" destination="BZQ-HT-xMc" id="ZXL-dO-wso"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cci-jr-n0V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1634.7826086956522" y="91.741071428571431"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="idp-Of-Per">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="cG2-jQ-bp0" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" toolbarHidden="NO" id="cG2-jQ-bp0" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="CGJ-RD-LmV">
                         <autoresizingMask key="autoresizingMask"/>
@@ -77,7 +347,22 @@
         </scene>
     </scenes>
     <resources>
+        <image name="arrow.left" catalog="system" width="128" height="98"/>
+        <image name="button_shower" width="83" height="83"/>
+        <image name="button_water" width="83" height="83"/>
+        <image name="icon_heart" width="35" height="34"/>
+        <image name="icon_heart_fill" width="18.5" height="15.5"/>
+        <image name="image_plant_ex" width="105" height="115"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <namedColor name="background_card">
+            <color red="0.83921568627450982" green="0.92549019607843142" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="text_gray">
+            <color red="0.51764705882352946" green="0.51764705882352946" blue="0.51764705882352946" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="text_green">
+            <color red="0.1803921568627451" green="0.45490196078431372" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="secondaryLabelColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

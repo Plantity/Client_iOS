@@ -65,6 +65,4 @@ class ResultTableViewCell: UITableViewCell {
             resultLikeButton.isSelected = true
         }
     }
-    
-    
 }
