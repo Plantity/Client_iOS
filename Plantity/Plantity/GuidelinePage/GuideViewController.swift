@@ -13,6 +13,13 @@ class GuideViewController: UIViewController {
     
     @IBOutlet weak var guideCollectionView: UICollectionView!
     
+    // dummies
+    var guides: [GuideModelResult] = [
+        GuideModelResult(title: "초보자도 쉽게할 수 있는 분갈이 방법", subtitle: "분갈이", imageUrl: "urlSample", content: "곽윤기 쇼트트랙 선수는 늘 동료들과 더치페이를 한다고 해요. “짜게구는 이유가 있다고 하는데 저는 정말 공감했거든요. 왜 내 식물만 맨날 죽어가는걸까요? 이런 사람들에게는 문제가 있어요", summary: "식물 🌲 을 키우면 좋은점 : 내 수익/ 손해 액수가 얼마인지 파악하기 쉽다."),
+        GuideModelResult(title: "해외주식, 이젠 달러로 볼수 있어요!", subtitle: "투자기초", imageUrl: "urlSample", content: "", summary: ""),
+        GuideModelResult(title: "워렌버핏이 이와중에 키우고 있는 식물 🌳", subtitle: "투자기초", imageUrl: "urlSample", content: "", summary: ""),
+    ]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -51,7 +58,7 @@ extension GuideViewController: UICollectionViewDelegate, UICollectionViewDataSou
     UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3 + 2
+        return guides.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -61,6 +68,10 @@ extension GuideViewController: UICollectionViewDelegate, UICollectionViewDataSou
             return cell
         } else {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "GuideCollectionViewCell", for: indexPath) as? GuideCollectionViewCell else { return UICollectionViewCell() }
+            
+            let data = guides[indexPath.row]
+            
+            cell.setupData(imageUrl: data.imageUrl, title: data.title, subtitle: data.subtitle)
             
             return cell
         }
@@ -78,7 +89,8 @@ extension GuideViewController: UICollectionViewDelegate, UICollectionViewDataSou
         let storyboard = UIStoryboard(name: "GuidelinePage", bundle: nil)
         
         let guideDetailVC = storyboard.instantiateViewController(withIdentifier: "GuideDetailViewController") as! GuideDetailViewController
-
+        
+        guideDetailVC.guideData = guides[indexPath.row]
         
         self.navigationController?.pushViewController(guideDetailVC, animated: true)
     }
