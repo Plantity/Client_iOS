@@ -34,7 +34,7 @@
             <connections>
                 <outlet property="uiView" destination="fFm-qK-7Io" id="ZK5-8x-rmw"/>
             </connections>
-            <point key="canvasLocation" x="158" y="132"/>
+            <point key="canvasLocation" x="119" y="65"/>
         </collectionViewCell>
     </objects>
     <resources>
