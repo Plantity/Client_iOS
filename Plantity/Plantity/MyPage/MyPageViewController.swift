@@ -89,6 +89,6 @@ extension MyPageViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return myTableView.frame.height / 2
+        return myTableView.frame.height / 2 - 20
     }
 }
