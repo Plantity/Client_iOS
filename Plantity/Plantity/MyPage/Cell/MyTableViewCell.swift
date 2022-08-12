@@ -11,6 +11,8 @@ class MyTableViewCell: UITableViewCell {
     
     // 임시 Data
     var data: [String] = []
+    // subviews 한번만 호출하기 위한 변수
+    var didLayoutSubviews: Bool = false
     
     public func configure(with plants: [String]) {
         self.data = plants
@@ -29,10 +31,14 @@ class MyTableViewCell: UITableViewCell {
     
     override func layoutSubviews() {
         // 셀 간 간격
-        contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 10, left: 0, bottom: 10, right: 0))
-        contentView.backgroundColor = .white
-        contentView.layer.cornerRadius = 20
-        contentView.clipsToBounds = true
+        if !didLayoutSubviews{
+            contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 10, left: 0, bottom: 10, right: 0))
+            contentView.backgroundColor = .white
+            contentView.layer.cornerRadius = 20
+            contentView.clipsToBounds = true
+            
+            didLayoutSubviews = true
+        }
     }
     
     public func setupCollectionView() {
@@ -46,8 +52,6 @@ class MyTableViewCell: UITableViewCell {
         
         let flowLayout = UICollectionViewFlowLayout()
         flowLayout.scrollDirection = .horizontal
-        // 여백 구현
-        flowLayout.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
         flowLayout.minimumLineSpacing = 12
 
         myCollectionView.collectionViewLayout = flowLayout
@@ -65,12 +69,12 @@ extension MyTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource,
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MyCollectionViewCell", for: indexPath) as? MyCollectionViewCell else { return UICollectionViewCell() }
         
-        cell.configure(with: data)
+        // cell.configure(with: data)
         
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: myCollectionView.frame.height - 10, height: myCollectionView.frame.height - 10)
+        return CGSize(width: 105, height: 105)
     }
 }

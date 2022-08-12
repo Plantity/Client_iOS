@@ -31,8 +31,8 @@ struct MyModel : Decodable {
 
 struct MyModelResult: Decodable {
     let myInfo: MyInfo?
-    let myPlants: MyPlantModel?
-    let myLikes: SearchPlantModel?
+    let myPlants: [MyPlantModel?]
+    let myLikes: [SearchPlantModel?]
 }
 
 struct MyInfo: Decodable {

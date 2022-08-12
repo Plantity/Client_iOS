@@ -271,8 +271,12 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
+                        <outlet property="contentLabel" destination="b0J-l0-Xss" id="Vk7-br-7dh"/>
                         <outlet property="detailView" destination="lQk-Gm-fzJ" id="p9n-Qe-q2J"/>
+                        <outlet property="subtitleLabel" destination="Lcs-ij-WEv" id="keD-fk-tuq"/>
+                        <outlet property="summaryLabel" destination="vPu-hk-bcG" id="ZM6-nh-DuO"/>
                         <outlet property="summaryView" destination="y8W-hF-kYu" id="6i4-ld-nXH"/>
+                        <outlet property="titleLabel" destination="dMx-BH-vZi" id="wc0-yj-WBB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ka3-sw-MGb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
