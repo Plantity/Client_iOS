@@ -26,13 +26,13 @@ class MyPageViewController: UIViewController {
     // tmp
     var plants: [String] = ["몬스테라","몬스테라","몬스테라","몬스테라"]
     // response
-    var myData : MyDataModel
+    // var myData : MyDataModel
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // To Server
-        let input = MyDataInput(limit: 10, page: 0)
-        MyDataManager().feedDataManager(input, self)
+        // let input = MyDataInput(limit: 10, page: 0)
+        // MyDataManager().feedDataManager(input, self)
         
         // Delegates
         myTableView.delegate = self
@@ -46,7 +46,7 @@ class MyPageViewController: UIViewController {
     }
     
     func successAPI(_ result: MyDataModel) {
-        myData = result
+        // myData = result
         // tableView.reloadData()
     }
     
