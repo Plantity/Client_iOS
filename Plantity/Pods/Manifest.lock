@@ -1,20 +1,24 @@
 PODS:
+  - Alamofire (5.6.2)
   - FSCalendar (2.8.4)
   - UPCarouselFlowLayout (1.1.2)
 
 DEPENDENCIES:
+  - Alamofire
   - FSCalendar
   - UPCarouselFlowLayout
 
 SPEC REPOS:
   trunk:
+    - Alamofire
     - FSCalendar
     - UPCarouselFlowLayout
 
 SPEC CHECKSUMS:
+  Alamofire: d368e1ff8a298e6dde360e35a3e68e6c610e7204
   FSCalendar: 2d1d0d9398f12d439f55c1fe0f01525b151b8260
   UPCarouselFlowLayout: 4c7d2c43a10ebb1597bde502a53699d378341dad
 
-PODFILE CHECKSUM: 456d64bcf4462adcde60ea8d4864b9b9f48b9e42
+PODFILE CHECKSUM: bb36438b819605cd7871c9c651bdc824ed4ba898
 
 COCOAPODS: 1.11.3

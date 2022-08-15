@@ -8,4 +8,5 @@ target 'Plantity' do
   # Pods for Plantity
   pod 'FSCalendar'
   pod "UPCarouselFlowLayout"
+  pod 'Alamofire'
 end
