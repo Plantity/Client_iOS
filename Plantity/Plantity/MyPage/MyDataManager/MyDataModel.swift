@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Alamofire
 
 /**  받는 데이터 : 마이페이지 유저 정보
  *  나의 정보
@@ -22,7 +23,7 @@ import Foundation
  *      검색모델 재탕
  */
 
-struct MyModel : Decodable {
+struct MyDataModel : Decodable {
     let isSuccess : Bool
     let code: Int
     let message: String
