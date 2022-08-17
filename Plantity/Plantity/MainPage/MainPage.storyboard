@@ -276,6 +276,70 @@
             </objects>
             <point key="canvasLocation" x="650.72463768115949" y="12.723214285714285"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="lkK-kH-bLa">
+            <objects>
+                <viewController id="Sfv-vX-qTI" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Bvz-G4-Jhj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fo2-Dw-RcI">
+                                <rect key="frame" x="0.0" y="44" width="414" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="식물종류 검색" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jfN-9L-00b">
+                                        <rect key="frame" x="24" y="11" width="125" height="28"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="jfN-9L-00b" firstAttribute="leading" secondItem="fo2-Dw-RcI" secondAttribute="leading" constant="24" id="8fa-RN-gWO"/>
+                                    <constraint firstItem="jfN-9L-00b" firstAttribute="centerY" secondItem="fo2-Dw-RcI" secondAttribute="centerY" id="mxA-ev-dZ3"/>
+                                    <constraint firstAttribute="height" constant="50" id="ybA-X1-5iq"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aRf-Ew-fRW">
+                                <rect key="frame" x="372.5" y="58" width="17.5" height="22"/>
+                                <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="xmark" catalog="system">
+                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="1hC-s0-Waa">
+                                <rect key="frame" x="10" y="94" width="394" height="51"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="G3Y-cy-MwQ">
+                                <rect key="frame" x="0.0" y="145" width="414" height="717"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="tqu-fN-H04"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="tqu-fN-H04" firstAttribute="trailing" secondItem="fo2-Dw-RcI" secondAttribute="trailing" id="4Y4-aQ-d5H"/>
+                            <constraint firstItem="G3Y-cy-MwQ" firstAttribute="leading" secondItem="tqu-fN-H04" secondAttribute="leading" id="9L4-ZI-bFc"/>
+                            <constraint firstItem="fo2-Dw-RcI" firstAttribute="top" secondItem="tqu-fN-H04" secondAttribute="top" id="I1a-ua-sPH"/>
+                            <constraint firstItem="tqu-fN-H04" firstAttribute="trailing" secondItem="aRf-Ew-fRW" secondAttribute="trailing" constant="24" id="N6j-kL-fKu"/>
+                            <constraint firstItem="aRf-Ew-fRW" firstAttribute="centerY" secondItem="fo2-Dw-RcI" secondAttribute="centerY" id="PbB-cf-W1k"/>
+                            <constraint firstItem="1hC-s0-Waa" firstAttribute="top" secondItem="fo2-Dw-RcI" secondAttribute="bottom" id="dbh-xR-p7j"/>
+                            <constraint firstItem="G3Y-cy-MwQ" firstAttribute="top" secondItem="1hC-s0-Waa" secondAttribute="bottom" id="dte-iC-tYH"/>
+                            <constraint firstAttribute="trailing" secondItem="1hC-s0-Waa" secondAttribute="trailing" constant="10" id="k3K-tB-ugc"/>
+                            <constraint firstItem="1hC-s0-Waa" firstAttribute="leading" secondItem="tqu-fN-H04" secondAttribute="leading" constant="10" id="mo8-Hs-icJ"/>
+                            <constraint firstItem="fo2-Dw-RcI" firstAttribute="leading" secondItem="tqu-fN-H04" secondAttribute="leading" id="mrO-H6-WW5"/>
+                            <constraint firstItem="tqu-fN-H04" firstAttribute="trailing" secondItem="G3Y-cy-MwQ" secondAttribute="trailing" id="qIe-rY-2sw"/>
+                            <constraint firstItem="tqu-fN-H04" firstAttribute="bottom" secondItem="G3Y-cy-MwQ" secondAttribute="bottom" id="yHe-4q-SaZ"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="33e-Hi-gAg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1354" y="13"/>
+        </scene>
     </scenes>
     <resources>
         <image name="PLANTITY2x" width="344" height="50"/>
