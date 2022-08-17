@@ -207,7 +207,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="DBV-NE-VNM">
-                                <rect key="frame" x="45" y="560.5" width="198.5" height="171"/>
+                                <rect key="frame" x="45" y="560.5" width="198.5" height="127"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="학명: Monstera deliciosa Liebm." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="az2-15-uXY">
                                         <rect key="frame" x="0.0" y="0.0" width="198.5" height="17"/>
@@ -227,24 +227,8 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cec-ZV-1V7">
-                                        <rect key="frame" x="0.0" y="66" width="80.5" height="17"/>
-                                        <string key="text">목명: 천남성목
-</string>
-                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fFC-ek-XEQ">
-                                        <rect key="frame" x="0.0" y="88" width="80.5" height="17"/>
-                                        <string key="text">과명: 천남성과
-</string>
-                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iLy-dC-nwV">
-                                        <rect key="frame" x="0.0" y="110" width="100" height="17"/>
+                                        <rect key="frame" x="0.0" y="66" width="100" height="17"/>
                                         <string key="text">개화시기: 9~10월
 </string>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
@@ -252,7 +236,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uC0-Ht-vmX">
-                                        <rect key="frame" x="0.0" y="132" width="68.5" height="17"/>
+                                        <rect key="frame" x="0.0" y="88" width="68.5" height="17"/>
                                         <string key="text">꽃색깔: 흰색
 </string>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
@@ -260,7 +244,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="꽃말: 웅장한 계획" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pbq-7H-du7">
-                                        <rect key="frame" x="0.0" y="154" width="96" height="17"/>
+                                        <rect key="frame" x="0.0" y="110" width="96" height="17"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
