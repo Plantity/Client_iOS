@@ -138,10 +138,10 @@
             </objects>
             <point key="canvasLocation" x="-149.27536231884059" y="13.392857142857142"/>
         </scene>
-        <!--View Controller-->
+        <!--Add Plant View Controller-->
         <scene sceneID="8YY-jF-YPs">
             <objects>
-                <viewController id="MSd-JG-XFj" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddPlantViewController" id="MSd-JG-XFj" customClass="AddPlantViewController" customModule="Plantity" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="O5F-f5-OPe">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -277,6 +277,9 @@
                             <constraint firstItem="clH-xf-3L3" firstAttribute="leading" secondItem="rTr-5Z-GvV" secondAttribute="leading" id="x1a-N6-Cy3"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="addImageView" destination="rTr-5Z-GvV" id="sKC-lN-c0r"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="msc-WD-WFY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
