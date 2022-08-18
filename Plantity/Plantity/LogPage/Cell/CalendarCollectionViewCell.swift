@@ -10,7 +10,7 @@ import FSCalendar
 import UPCarouselFlowLayout
 
 ////데이트포멧터 선언
-//let formatter = DateFormatter()
+let formatter = DateFormatter()
 
 class CalendarCollectionViewCell: UICollectionViewCell,FSCalendarDelegate, FSCalendarDataSource,FSCalendarDelegateAppearance {
     
@@ -22,7 +22,12 @@ class CalendarCollectionViewCell: UICollectionViewCell,FSCalendarDelegate, FSCal
     @IBOutlet weak var calendarView: FSCalendar!
     @IBOutlet weak var todoView: UIView!
     
-    //요소
+    
+    //요소-날짜
+    @IBOutlet weak var selectedDate: UILabel!
+    @IBOutlet weak var selectedDay: UILabel!
+    
+    //요소-todo
     @IBOutlet weak var didWaterLabel: UILabel!
     @IBOutlet weak var didLookLabel: UILabel!
     @IBOutlet weak var didSunLabel: UILabel!
@@ -33,7 +38,9 @@ class CalendarCollectionViewCell: UICollectionViewCell,FSCalendarDelegate, FSCal
         super.awakeFromNib()
         // Initialization code
         setUpLog()
-//        setUpEvents()
+        setUpEvents()
+        //주간달력일때 -> 아래 메모 나오게
+        //월간달력일때 -> 달력만 전체 나오게
     }
     
     func setUpLog() {
@@ -48,6 +55,7 @@ class CalendarCollectionViewCell: UICollectionViewCell,FSCalendarDelegate, FSCal
         //달력
         calendarView.delegate = self
         calendarView.dataSource = self
+        
         //주간달력으로 변경
         calendarView.scope = .week
         //언어변경
@@ -96,8 +104,46 @@ class CalendarCollectionViewCell: UICollectionViewCell,FSCalendarDelegate, FSCal
     
     // 날짜 선택 시 할일을 지정
     func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
+        
+
+        //월 전달
+        formatter.dateFormat="MM"
+        let selectMonth:String
+        selectMonth=formatter.string(from: date)
+        print(selectMonth)
+        
+        //날짜 전달
+        formatter.dateFormat="dd"
+        let selectDate:String
+        selectDate=formatter.string(from: date)
+        print(selectDate)
+        selectedDate.text=selectDate
+        
+        //요일 전달
+        formatter.dateFormat="EEEE"
+        let selectday:String
+        selectday=formatter.string(from: date)
+        selectedDay.text=selectday
+        print(selectday)
+        
+        //전체 출력
         formatter.dateFormat="yyyy-MM-dd"
         print(formatter.string(from: date) + " 선택됨")
+        
+      
+        
+        if calendarView.scope == .week{
+            //주간->월간달력
+            calendarView.scope = .month
+            //메모 사라지기
+            todoView.isHidden=true
+            
+        }else{
+            //월간->주간달력
+            calendarView.scope = .week
+            //메모 나오기
+            todoView.isHidden=false
+        }
         //물주기
         if(self.events.contains(date)){
             didWaterLabel.text="물 주기 완료!"

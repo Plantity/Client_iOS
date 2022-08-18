@@ -10,7 +10,7 @@ import FSCalendar
 import UPCarouselFlowLayout
 
 //데이트포멧터 선언
-let formatter = DateFormatter()
+
 
 
 
