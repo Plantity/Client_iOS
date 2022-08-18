@@ -23,11 +23,16 @@ class MyPageViewController: UIViewController {
     
     @IBOutlet weak var myTableView: UITableView!
     
+    // tmp
     var plants: [String] = ["몬스테라","몬스테라","몬스테라","몬스테라"]
-    
+    // response
+    // var myData : MyDataModel
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // To Server
+        // let input = MyDataInput(limit: 10, page: 0)
+        // MyDataManager().feedDataManager(input, self)
         
         // Delegates
         myTableView.delegate = self
@@ -39,6 +44,12 @@ class MyPageViewController: UIViewController {
 
         setupAttribute()
     }
+    
+    func successAPI(_ result: MyDataModel) {
+        // myData = result
+        // tableView.reloadData()
+    }
+    
     private func setupAttribute() {
         // Corner Radius
         myCardView.clipsToBounds = true

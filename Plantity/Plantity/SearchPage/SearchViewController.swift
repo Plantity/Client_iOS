@@ -23,6 +23,10 @@ class SearchViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // To Server
+        // let input = SearchDataInput(limit: 10, page: 0)
+        // SearchDataManager().feedDataManager(input, self)
 
         // Delegate
         searchTableView.delegate = self
@@ -50,7 +54,12 @@ class SearchViewController: UIViewController {
         let tagNib = UINib(nibName: "TagTableViewCell", bundle: nil)
         searchTableView.register(tagNib, forCellReuseIdentifier: "TagTableViewCell")
         
-        setupAttribute()
+        // setupAttribute()
+    }
+    
+    func successAPI(_ result: SearchDataModel) {
+        // dataArray = result
+        // tableView.reloadData()
     }
 
     private func setupAttribute() {
