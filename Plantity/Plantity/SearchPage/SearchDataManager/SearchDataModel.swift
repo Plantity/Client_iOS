@@ -17,7 +17,7 @@ import Foundation
  *  (태그)
  */
 
-struct SearchModel : Decodable {
+struct SearchDataModel : Decodable {
     let isSuccess : Bool
     let code: Int
     let message: String
