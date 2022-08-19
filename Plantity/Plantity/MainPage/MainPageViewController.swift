@@ -115,6 +115,8 @@ extension MainPageViewController: UICollectionViewDelegate,UICollectionViewDataS
             }
             cell.layer.cornerRadius = 12
             
+            
+            
             return cell
 
         }
@@ -131,5 +133,20 @@ extension MainPageViewController: UICollectionViewDelegate,UICollectionViewDataS
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: 0, left: 50, bottom: 0, right: 50)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        
+        let storyboard=UIStoryboard(name: "MainPage", bundle: nil)
+        
+        guard let viewController = storyboard.instantiateViewController(identifier: "AddPlantViewController") as? AddPlantViewController else { return }
+
+        self.modalPresentationStyle = UIModalPresentationStyle.fullScreen
+
+        
+        self.present(viewController, animated: true, completion: nil)
+//        self.navigationController?.pushViewController(viewController, animated: true)
+        
     }
 }
