@@ -31,7 +31,7 @@ import Foundation
 
 
 
-//사용자정보
+//사용자정보 -> 받을거
 struct UserInfo: Decodable {
     let username : String?
     let level : Int?
@@ -39,16 +39,16 @@ struct UserInfo: Decodable {
     
 }
 
-//유저식물정보
+//유저식물정보 -> 받을거
 struct UserPlant : Decodable {
     let imageUrl : String?
     let type: String?
     let nickname: String?
     let adoptDate: Date?
-    let todo: [Todo?]
 }
 
-//과제
+
+//과제 -> 보낼거
 struct Todo:Decodable {
     let water: Bool?
     let sun : Bool?

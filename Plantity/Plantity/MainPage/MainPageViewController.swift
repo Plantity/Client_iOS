@@ -9,7 +9,27 @@ import UIKit
 import UPCarouselFlowLayout
 
 class MainPageViewController: UIViewController {
+    
+    //사용자항목들
+    
+    
+    //카드뷰
     @IBOutlet weak var cardCollectionView: UICollectionView!
+    
+    //dummies
+    var userInfo:[UserInfo]=[
+        UserInfo(username: "hailey", level: 2, progress: 49)
+    ]
+    
+    var userPlant:[UserPlant]=[
+        UserPlant(imageUrl: "", type: "a", nickname: "a", adoptDate: Date()),
+        UserPlant(imageUrl: "", type: "b", nickname: "b", adoptDate: Date()),
+        UserPlant(imageUrl: "", type: "c", nickname: "c", adoptDate: Date()),
+        UserPlant(imageUrl: "", type: "d", nickname: "d", adoptDate: Date())
+    ]
+
+
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,21 +78,49 @@ class MainPageViewController: UIViewController {
 extension MainPageViewController: UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
     //카드갯수
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        
+        
+        if userPlant.count != 0{
+            //식물이 하나라도 있으면 -> 식물개수만큼
+            return userPlant.count
+        }else{
+            //식물이 하나도 없으면 1개
+            return 1
+        }
+
+        
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        //if 식물이 하나라도 있으면
-        
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CardCollectionViewCell", for: indexPath) as? CardCollectionViewCell else{
-            return UICollectionViewCell()
+    
+        if userPlant.count != 0{
+            
+            //if 식물이 하나라도 있으면
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CardCollectionViewCell", for: indexPath) as? CardCollectionViewCell else{
+                return UICollectionViewCell()
+            }
+            cell.layer.cornerRadius = 12
+            
+            let data=userPlant[indexPath.row]
+            cell.setupCardData(imageUrl:data.imageUrl, type: data.type, nickname: data.nickname, adoptDate: data.adoptDate)
+            
+            return cell
+
+        }else{
+            
+            //else 식물이 하나도 없으면 -> 만들어놓은 식물추가 nib을 사용하고 추가페이지로 연결
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AppendCollectionViewCell", for: indexPath) as? AppendCollectionViewCell else{
+                return UICollectionViewCell()
+            }
+            cell.layer.cornerRadius = 12
+            
+            return cell
+
         }
-        cell.layer.cornerRadius = 12
+
         
-        return cell
-        
-        //else 식물이 하나도 없으면 -> 만들어놓은 식물추가 nib을 사용하고 추가페이지로 연결
+ 
 
     }
 
