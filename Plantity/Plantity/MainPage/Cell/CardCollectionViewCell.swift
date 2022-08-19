@@ -8,7 +8,15 @@
 import UIKit
 
 class CardCollectionViewCell: UICollectionViewCell {
+    
+    //식물로그보러가기버튼
     @IBOutlet weak var pushLogButton: UIButton!
+    
+    //식물이름
+    @IBOutlet weak var plantNickname: UILabel!
+    
+    
+
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -19,5 +27,13 @@ class CardCollectionViewCell: UICollectionViewCell {
     func setupAttribute() {
         pushLogButton.layer.cornerRadius = 10
         pushLogButton.clipsToBounds = true
+    }
+    func setupCardData(imageUrl: String?, type: String?, nickname: String?, adoptDate: Date?){
+        
+        if let nicknameStr:String=nickname{
+            plantNickname.text=nicknameStr
+        }
+        
+        
     }
 }

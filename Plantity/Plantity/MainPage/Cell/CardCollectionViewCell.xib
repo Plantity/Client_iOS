@@ -109,6 +109,7 @@
             </constraints>
             <size key="customSize" width="289" height="432"/>
             <connections>
+                <outlet property="plantNickname" destination="2bk-mj-WpB" id="FXO-MS-6EQ"/>
                 <outlet property="pushLogButton" destination="glG-Lm-gtC" id="OvY-Ll-466"/>
             </connections>
             <point key="canvasLocation" x="116.66666666666667" y="41.517857142857139"/>

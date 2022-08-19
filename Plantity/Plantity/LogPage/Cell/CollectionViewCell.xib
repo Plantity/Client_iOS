@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="CollectionViewCell" reuseIdentifier="CollectionViewCell" id="gTV-IL-0wX" customClass="CollectionViewCell" customModule="Plantity" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="394" height="194"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="394" height="194"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fFm-qK-7Io">
+                        <rect key="frame" x="0.0" y="0.0" width="394" height="194"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_plant_ex" translatesAutoresizingMaskIntoConstraints="NO" id="KLt-Zf-tqj">
+                                <rect key="frame" x="25" y="25" width="144" height="144"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="KLt-Zf-tqj" secondAttribute="height" multiplier="1:1" id="Tdc-Yu-1KC"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="식물이름" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jj4-Bh-DFd">
+                                <rect key="frame" x="180" y="45" width="69.5" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="난이도 :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D6F-Qi-Pal">
+                                <rect key="frame" x="180" y="84" width="39" height="14.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="I0h-bA-c4v">
+                                <rect key="frame" x="227" y="80" width="22" height="22"/>
+                                <color key="tintColor" systemColor="systemYellowColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="I0h-bA-c4v" secondAttribute="height" multiplier="1:1" id="Y7q-hQ-ALh"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="식물종류" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3en-mj-hJH">
+                                <rect key="frame" x="256.5" y="57" width="35" height="12"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="✔️물은 7일에 한번씩 주세요." lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zWo-u9-BFB">
+                                <rect key="frame" x="180" y="115.5" width="130.5" height="13.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" name="background_card"/>
+                        <constraints>
+                            <constraint firstItem="I0h-bA-c4v" firstAttribute="leading" secondItem="D6F-Qi-Pal" secondAttribute="trailing" constant="8" id="Dc5-9p-4A5"/>
+                            <constraint firstItem="D6F-Qi-Pal" firstAttribute="top" secondItem="Jj4-Bh-DFd" secondAttribute="bottom" constant="15" id="FX8-Cq-JnC"/>
+                            <constraint firstItem="KLt-Zf-tqj" firstAttribute="top" secondItem="fFm-qK-7Io" secondAttribute="top" constant="25" id="FmV-Vk-Vbo"/>
+                            <constraint firstItem="zWo-u9-BFB" firstAttribute="top" secondItem="I0h-bA-c4v" secondAttribute="bottom" constant="13" id="Ln7-Np-ZV6"/>
+                            <constraint firstItem="D6F-Qi-Pal" firstAttribute="leading" secondItem="Jj4-Bh-DFd" secondAttribute="leading" id="MV6-hU-r7c"/>
+                            <constraint firstItem="Jj4-Bh-DFd" firstAttribute="leading" secondItem="KLt-Zf-tqj" secondAttribute="trailing" constant="11" id="Zqd-wg-8to"/>
+                            <constraint firstItem="3en-mj-hJH" firstAttribute="leading" secondItem="Jj4-Bh-DFd" secondAttribute="trailing" constant="7" id="dAp-2n-5fZ"/>
+                            <constraint firstItem="KLt-Zf-tqj" firstAttribute="leading" secondItem="fFm-qK-7Io" secondAttribute="leading" constant="25" id="drN-Fa-4sd"/>
+                            <constraint firstItem="zWo-u9-BFB" firstAttribute="leading" secondItem="D6F-Qi-Pal" secondAttribute="leading" id="ml8-Fe-G66"/>
+                            <constraint firstAttribute="bottom" secondItem="KLt-Zf-tqj" secondAttribute="bottom" constant="25" id="rOP-aG-jsB"/>
+                            <constraint firstItem="3en-mj-hJH" firstAttribute="bottom" secondItem="Jj4-Bh-DFd" secondAttribute="bottom" id="rTZ-OV-hEB"/>
+                            <constraint firstItem="I0h-bA-c4v" firstAttribute="centerY" secondItem="D6F-Qi-Pal" secondAttribute="centerY" id="uws-aH-m5E"/>
+                            <constraint firstItem="Jj4-Bh-DFd" firstAttribute="top" secondItem="fFm-qK-7Io" secondAttribute="top" constant="45" id="vYd-rS-qMF"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="fFm-qK-7Io" secondAttribute="trailing" id="BLJ-mO-FwU"/>
+                <constraint firstItem="fFm-qK-7Io" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="IEm-FX-fpX"/>
+                <constraint firstItem="fFm-qK-7Io" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Qnw-eT-k8m"/>
+                <constraint firstAttribute="bottom" secondItem="fFm-qK-7Io" secondAttribute="bottom" id="iGs-Av-958"/>
+            </constraints>
+            <size key="customSize" width="394" height="194"/>
+            <connections>
+                <outlet property="plantImage" destination="KLt-Zf-tqj" id="SMz-7H-5yl"/>
+                <outlet property="plantLevel" destination="I0h-bA-c4v" id="AYO-2y-km2"/>
+                <outlet property="plantMemo" destination="zWo-u9-BFB" id="vTo-z6-D0d"/>
+                <outlet property="plantNickname" destination="Jj4-Bh-DFd" id="fQO-Sv-xHq"/>
+                <outlet property="plantType" destination="3en-mj-hJH" id="iso-Wk-pXP"/>
+                <outlet property="uiView" destination="fFm-qK-7Io" id="ZK5-8x-rmw"/>
+            </connections>
+            <point key="canvasLocation" x="320.28985507246381" y="79.6875"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="image_plant_ex" width="105" height="115"/>
+        <image name="star.fill" catalog="system" width="128" height="116"/>
+        <namedColor name="background_card">
+            <color red="0.83921568627450982" green="0.92549019607843142" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

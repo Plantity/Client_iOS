@@ -8,36 +8,36 @@
 import Foundation
 
 
-/** 받는 데이터 : 메인페이지
+/** 받는 데이터 : 로그페이지
  *
- *  식물이름
- *  식물종류
+ * 유저식물정보
+ *  식물사진
+ *  애칭
+ *  식물종
  *  난이도
- *  카드메모
+ *  물주기메모
  *
+ * 과제수행여부
  *  물주기
+ *  햇빛
  *  살펴보기
- *  씻겨주기
  *  분갈이
- *
  */
 
-
-struct LogDataCardModel : Decodable {
-    
-    let plantName : String?
-    let plantType : String?
-//    let level : String?
-    let cardMemo : String?
+//유저식물정보
+struct LogUserPlant : Decodable {
+    let imageUrl : String?
+    let nickname: String?
+    let type: String?
+    let plantlevel : Int?
+    let plantMemo:String?
 
 }
 
-
-struct LogDataCalendar : Decodable {
-    
-    let watering : Bool?
-    let watching : Bool?
-    let showering : Bool?
-    let soiling : Bool?
-    
+//달력-과제수행여부
+struct TodoLog:Decodable {
+    let didwater: Bool?
+    let didsun : Bool?
+    let didlook : Bool?
+    let didsplit: Bool?
 }
