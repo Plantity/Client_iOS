@@ -38,6 +38,18 @@ class MainPageViewController: UIViewController {
         cardCollectionView.collectionViewLayout = layout
         
         cardCollectionView.backgroundColor = .none
+        
+        let appendCardNib=UINib(nibName: "AppendCollectionViewCell", bundle: nil)
+        cardCollectionView.register(appendCardNib, forCellWithReuseIdentifier: "AppendCollectionViewCell")
+        
+        //carousel적용하기
+        let appendlayout = UPCarouselFlowLayout()
+        appendlayout.itemSize = CGSize(width: cardCollectionView.frame.width, height: 500)
+        appendlayout.scrollDirection = .horizontal
+        appendlayout.sideItemAlpha = 0.3
+        cardCollectionView.collectionViewLayout = layout
+        
+        
     }
 
 }
@@ -51,12 +63,16 @@ extension MainPageViewController: UICollectionViewDelegate,UICollectionViewDataS
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
+        //if 식물이 하나라도 있으면
+        
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CardCollectionViewCell", for: indexPath) as? CardCollectionViewCell else{
             return UICollectionViewCell()
         }
         cell.layer.cornerRadius = 12
         
         return cell
+        
+        //else 식물이 하나도 없으면 -> 만들어놓은 식물추가 nib을 사용하고 추가페이지로 연결
 
     }
 

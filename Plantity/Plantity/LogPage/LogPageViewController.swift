@@ -47,10 +47,9 @@ class LogPageViewController: UIViewController, FSCalendarDelegate, FSCalendarDat
         layout.scrollDirection = .horizontal
         layout.sideItemAlpha = 0.3
         layout.spacingMode = UPCarouselFlowLayoutSpacingMode.fixed(spacing: 10)
+        
         cardcollectionView.collectionViewLayout = layout
     }
-
-    
 
 
     
@@ -67,6 +66,7 @@ class LogPageViewController: UIViewController, FSCalendarDelegate, FSCalendarDat
         layout.scrollDirection = .horizontal
         layout.sideItemAlpha = 0.3
         logCollectionView.collectionViewLayout = layout
+        
         
         
     }

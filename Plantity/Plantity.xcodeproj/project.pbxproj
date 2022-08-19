@@ -21,6 +21,8 @@
 		55436ED12893B3870045B8EE /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55436ED02893B3870045B8EE /* TestViewController.swift */; };
 		554DF9F428AE276500CE462F /* CalendarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554DF9F228AE276500CE462F /* CalendarCollectionViewCell.swift */; };
 		554DF9F528AE276500CE462F /* CalendarCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 554DF9F328AE276500CE462F /* CalendarCollectionViewCell.xib */; };
+		554DF9F828AF6D1600CE462F /* AppendCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554DF9F628AF6D1600CE462F /* AppendCollectionViewCell.swift */; };
+		554DF9F928AF6D1600CE462F /* AppendCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 554DF9F728AF6D1600CE462F /* AppendCollectionViewCell.xib */; };
 		B77A185B69A00583FF0855B7 /* Pods_Plantity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A5BB4544D9658449C93E75F /* Pods_Plantity.framework */; };
 		F402FE4228ACC84600138D8E /* SearchDataInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = F402FE4128ACC84600138D8E /* SearchDataInput.swift */; };
 		F402FE4428ACC86B00138D8E /* SearchDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F402FE4328ACC86B00138D8E /* SearchDataManager.swift */; };
@@ -86,6 +88,8 @@
 		55436ED02893B3870045B8EE /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		554DF9F228AE276500CE462F /* CalendarCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCollectionViewCell.swift; sourceTree = "<group>"; };
 		554DF9F328AE276500CE462F /* CalendarCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalendarCollectionViewCell.xib; sourceTree = "<group>"; };
+		554DF9F628AF6D1600CE462F /* AppendCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppendCollectionViewCell.swift; sourceTree = "<group>"; };
+		554DF9F728AF6D1600CE462F /* AppendCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AppendCollectionViewCell.xib; sourceTree = "<group>"; };
 		F402FE4128ACC84600138D8E /* SearchDataInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDataInput.swift; sourceTree = "<group>"; };
 		F402FE4328ACC86B00138D8E /* SearchDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDataManager.swift; sourceTree = "<group>"; };
 		F402FE4528ACCBB500138D8E /* AddPlantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlantViewController.swift; sourceTree = "<group>"; };
@@ -170,6 +174,8 @@
 		5506067B288EC85000B717DE /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				554DF9F628AF6D1600CE462F /* AppendCollectionViewCell.swift */,
+				554DF9F728AF6D1600CE462F /* AppendCollectionViewCell.xib */,
 				55060680288ECCB500B717DE /* CardCollectionViewCell.swift */,
 				55060681288ECCB500B717DE /* CardCollectionViewCell.xib */,
 			);
@@ -462,6 +468,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				554DF9F928AF6D1600CE462F /* AppendCollectionViewCell.xib in Resources */,
 				F4B98A0428918A5400807A14 /* Assets.xcassets in Resources */,
 				F4B98A0328918A3400807A14 /* MyTableViewCell.xib in Resources */,
 				F4B98A0228918A3000807A14 /* MyCollectionViewCell.xib in Resources */,
@@ -554,6 +561,7 @@
 				F4BE4BDE288ADBFF00CF276D /* AppDelegate.swift in Sources */,
 				F448F99128AA417F009FAE31 /* MyDataManager.swift in Sources */,
 				F4D8C931288B90230019B6BC /* TagTableViewCell.swift in Sources */,
+				554DF9F828AF6D1600CE462F /* AppendCollectionViewCell.swift in Sources */,
 				F4DDD508289E2380004F6932 /* GuideModel.swift in Sources */,
 				5527D3BB2890243300D33242 /* CollectionViewCell.swift in Sources */,
 				F4C829E528926221009AB584 /* GuideCollectionViewCell.swift in Sources */,
