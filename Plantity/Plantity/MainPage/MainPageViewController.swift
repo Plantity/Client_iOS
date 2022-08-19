@@ -137,16 +137,32 @@ extension MainPageViewController: UICollectionViewDelegate,UICollectionViewDataS
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        
-        let storyboard=UIStoryboard(name: "MainPage", bundle: nil)
-        
-        guard let viewController = storyboard.instantiateViewController(identifier: "AddPlantViewController") as? AddPlantViewController else { return }
+        if userPlant.count != 0{
+            let storyboard=UIStoryboard(name: "LogPage", bundle: nil)
+            
+            guard let viewController = storyboard.instantiateViewController(identifier: "LogPageViewController") as? LogPageViewController else { return }
 
-        self.modalPresentationStyle = UIModalPresentationStyle.fullScreen
+            self.modalPresentationStyle = UIModalPresentationStyle.fullScreen
 
+            self.present(viewController, animated: true, completion: nil)
+    //        self.navigationController?.pushViewController(viewController, animated: true)
+
+        }else{
+            let storyboard=UIStoryboard(name: "MainPage", bundle: nil)
+            
+            guard let viewController = storyboard.instantiateViewController(identifier: "AddPlantViewController") as? AddPlantViewController else { return }
+
+            self.modalPresentationStyle = UIModalPresentationStyle.fullScreen
+
+            
+            self.present(viewController, animated: true, completion: nil)
+    //        self.navigationController?.pushViewController(viewController, animated: true)
+
+        }
+    
         
-        self.present(viewController, animated: true, completion: nil)
-//        self.navigationController?.pushViewController(viewController, animated: true)
+        
+
         
     }
 }
