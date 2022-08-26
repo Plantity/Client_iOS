@@ -40,9 +40,13 @@ class CalendarCollectionViewCell: UICollectionViewCell,FSCalendarDelegate, FSCal
         super.awakeFromNib()
         // Initialization code
         setUpLog()
-        // setUpEvents()
         //주간달력일때 -> 아래 메모 나오게
         //월간달력일때 -> 달력만 전체 나오게
+    }
+    
+    override func layoutSubviews() {
+        // 달력 데이터 변경
+        setUpEvents(data: logCalendar)
     }
     
     func setUpLog() {
@@ -99,7 +103,19 @@ class CalendarCollectionViewCell: UICollectionViewCell,FSCalendarDelegate, FSCal
         
         // 어떤 식물의 캘린더인지 지정
         self.logCalendar = data
-        print(data)
+        // 데이터 셋팅 다른 버전
+        if let water : Bool =  logCalendar.todos[0].didwater {
+            didWaterLabel.text = water ? "물 주기 완료!" : "물을 주지 않았어요"
+        }
+        if let look : Bool =  logCalendar.todos[0].didlook {
+            didLookLabel.text = look ? "살펴보기 완료!" : "살펴보지 않았어요"
+        }
+        if let sun : Bool =  logCalendar.todos[0].didsun {
+            didSunLabel.text = sun ? "햇살주기 완료!" : "햇살을 보지 않았어요"
+        }
+        if let split : Bool =  logCalendar.todos[0].didsplit {
+            didSplitLabel.text = split ? "분갈이 완료!" : "분갈이하지 않았어요"
+        }
     }
 
     func calendar(_ calendar: FSCalendar, numberOfEventsFor date: Date) -> Int {
@@ -153,30 +169,29 @@ class CalendarCollectionViewCell: UICollectionViewCell,FSCalendarDelegate, FSCal
             todoView.isHidden=false
         }
         //물주기
-        if(self.events.contains(date)){
-            didWaterLabel.text="물 주기 완료!"
-        }else{
-            didWaterLabel.text="물을 주지 않았어요"
-        }
-        //살펴보기
-        if(self.events.contains(date)){
-            didLookLabel.text="살펴보기 완료!"
-        }else{
-            didLookLabel.text="살펴보지 않았어요"
-        }
-        //씻겨주기
-        if(self.events.contains(date)){
-            didSunLabel.text="햇살주기 완료!"
-        }else{
-            didSunLabel.text="햇살을 보지 않았어요"
-        }
-        //분갈이
-        if(self.events.contains(date)){
-            didSplitLabel.text="분갈이 완료!"
-        }else{
-            didSplitLabel.text="분갈이하지 않았어요"
-        }
-        
+//        if(self.events.contains(date)){
+//            didWaterLabel.text="물 주기 완료!"
+//        }else{
+//            didWaterLabel.text="물을 주지 않았어요"
+//        }
+//        //살펴보기
+//        if(self.events.contains(date)){
+//            didLookLabel.text="살펴보기 완료!"
+//        }else{
+//            didLookLabel.text="살펴보지 않았어요"
+//        }
+//        //씻겨주기
+//        if(self.events.contains(date)){
+//            didSunLabel.text="햇살주기 완료!"
+//        }else{
+//            didSunLabel.text="햇살을 보지 않았어요"
+//        }
+//        //분갈이
+//        if(self.events.contains(date)){
+//            didSplitLabel.text="분갈이 완료!"
+//        }else{
+//            didSplitLabel.text="분갈이하지 않았어요"
+//        }
     }
     
     // 날짜 선택 해제 시 콜백 메소드

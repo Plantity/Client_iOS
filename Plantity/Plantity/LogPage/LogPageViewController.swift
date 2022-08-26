@@ -134,22 +134,19 @@ extension LogPageViewController : UICollectionViewDataSource, UICollectionViewDe
             return customCell
 
         }else{
-            guard let customCell = collectionView.dequeueReusableCell(withReuseIdentifier: "CalendarCollectionViewCell", for: indexPath) as? CalendarCollectionViewCell else { return UICollectionViewCell() }
-
-            customCell.layer.cornerRadius=10
-            
+            // 캘린더 셀
+            guard let calendarCell = collectionView.dequeueReusableCell(withReuseIdentifier: "CalendarCollectionViewCell", for: indexPath) as? CalendarCollectionViewCell else { return UICollectionViewCell() }
+            calendarCell.layer.cornerRadius=10
             //자동스크롤
 //            let logcurrentIndex=indexPath.row
 //            print("아래",logcurrentIndex)
             
             // 캘린더에 데이터 넘기기
             let data = calendars[currentPage]
-            customCell.setUpEvents(data: data)
-            
-            
+            calendarCell.setUpEvents(data: data)
 //            logCollectionView.scrollToItem(at: IndexPath(item: logcurrentIndex, section: 0), at: .left, animated: true)
             
-            return customCell
+            return calendarCell
         }
         
     }
@@ -162,7 +159,12 @@ extension LogPageViewController : UICollectionViewDataSource, UICollectionViewDe
         } else {
             currentPage = nextPage
         }
+        
+        // 페이징 버튼 변경
         self.pageControl.currentPage = self.currentPage
+        
+        // 달력 변경
+        logCollectionView.reloadData()
     }
 }
 
