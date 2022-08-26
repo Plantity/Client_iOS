@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PkE-Nd-1wo">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6qf-0X-4sq">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
@@ -22,35 +22,35 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eoy-gi-K8F">
-                                <rect key="frame" x="0.0" y="44" width="414" height="220"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="220"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PLANTITY2x" translatesAutoresizingMaskIntoConstraints="NO" id="hLt-Rs-NsD">
-                                        <rect key="frame" x="14" y="10" width="180" height="70"/>
+                                        <rect key="frame" x="14" y="0.0" width="180" height="50"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="70" id="Ea6-4Z-etB"/>
+                                            <constraint firstAttribute="height" constant="50" id="Ea6-4Z-etB"/>
                                             <constraint firstAttribute="width" constant="180" id="fPN-KA-hLf"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="plan your plants" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1HR-af-oKn">
-                                        <rect key="frame" x="14" y="70" width="115.5" height="19.5"/>
+                                        <rect key="frame" x="14" y="40" width="115.5" height="19.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="유석종 가드너님!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AhD-tk-3xA">
-                                        <rect key="frame" x="14" y="109.5" width="159" height="29"/>
+                                        <rect key="frame" x="14" y="79.5" width="159" height="29"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="안녕하세요 오늘도 민첩한 식물인이 되세요!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y8s-eT-37Q">
-                                        <rect key="frame" x="14" y="145.5" width="254" height="18"/>
+                                        <rect key="frame" x="14" y="115.5" width="254" height="18"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="vEh-uA-LGK">
-                                        <rect key="frame" x="14" y="183.5" width="310" height="15"/>
+                                        <rect key="frame" x="14" y="153.5" width="310" height="15"/>
                                         <rect key="contentStretch" x="0.0" y="1" width="1" height="1"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="15" id="lnD-QG-Zlf"/>
@@ -60,13 +60,13 @@
                                         <color key="trackTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </progressView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="23/100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o90-7S-kO2">
-                                        <rect key="frame" x="331" y="182" width="48" height="18"/>
+                                        <rect key="frame" x="331" y="152" width="48" height="18"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Gu7-Be-eCH">
-                                        <rect key="frame" x="382" y="180.5" width="20" height="20"/>
+                                        <rect key="frame" x="382" y="150.5" width="20" height="20"/>
                                         <color key="tintColor" systemColor="systemYellowColor"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="20" id="1XO-VN-dot"/>
@@ -76,7 +76,7 @@
                                     </imageView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="hLt-Rs-NsD" firstAttribute="top" secondItem="eoy-gi-K8F" secondAttribute="top" constant="10" id="0tH-cd-Fdc"/>
+                                    <constraint firstItem="hLt-Rs-NsD" firstAttribute="top" secondItem="eoy-gi-K8F" secondAttribute="top" id="0tH-cd-Fdc"/>
                                     <constraint firstItem="AhD-tk-3xA" firstAttribute="leading" secondItem="hLt-Rs-NsD" secondAttribute="leading" id="3gL-0P-Rh0"/>
                                     <constraint firstItem="vEh-uA-LGK" firstAttribute="top" secondItem="Y8s-eT-37Q" secondAttribute="bottom" constant="20" id="B0w-jE-Xex"/>
                                     <constraint firstItem="o90-7S-kO2" firstAttribute="leading" secondItem="vEh-uA-LGK" secondAttribute="trailing" constant="7" id="DJt-ku-fRV"/>
@@ -94,7 +94,7 @@
                                 </constraints>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="3vd-8v-1bz">
-                                <rect key="frame" x="0.0" y="264" width="414" height="549"/>
+                                <rect key="frame" x="0.0" y="308" width="414" height="505"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="iuw-dZ-IR4">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -120,15 +120,7 @@
                             <constraint firstItem="4gC-YU-U8U" firstAttribute="trailing" secondItem="i3C-0J-vde" secondAttribute="trailing" id="zVb-Ig-NO8"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="house.fill" catalog="system" id="3mB-Gv-Nx3">
-                        <imageReference key="selectedImage" image="house.fill" catalog="system" renderingMode="hierarchical">
-                            <hierarchicalColors>
-                                <color systemColor="systemGreenColor"/>
-                                <color systemColor="secondaryLabelColor"/>
-                                <color systemColor="tertiaryLabelColor"/>
-                            </hierarchicalColors>
-                        </imageReference>
-                    </tabBarItem>
+                    <navigationItem key="navigationItem" id="lq8-aZ-PIx"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="cardCollectionView" destination="3vd-8v-1bz" id="aWP-Fd-q1d"/>
@@ -136,7 +128,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ahe-L8-rhF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-149.27536231884059" y="13.392857142857142"/>
+            <point key="canvasLocation" x="760.86956521739137" y="13.392857142857142"/>
         </scene>
         <!--Add Plant View Controller-->
         <scene sceneID="8YY-jF-YPs">
@@ -283,7 +275,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="msc-WD-WFY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="650.72463768115949" y="12.723214285714285"/>
+            <point key="canvasLocation" x="1560.8695652173915" y="12.723214285714285"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="lkK-kH-bLa">
@@ -347,7 +339,34 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="33e-Hi-gAg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1354" y="13"/>
+            <point key="canvasLocation" x="2263.768115942029" y="12.723214285714285"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="coo-9g-umC">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6qf-0X-4sq" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="house.fill" catalog="system" id="3mB-Gv-Nx3">
+                        <imageReference key="selectedImage" image="house.fill" catalog="system" renderingMode="hierarchical">
+                            <hierarchicalColors>
+                                <color systemColor="systemGreenColor"/>
+                                <color systemColor="secondaryLabelColor"/>
+                                <color systemColor="tertiaryLabelColor"/>
+                            </hierarchicalColors>
+                        </imageReference>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="VSd-13-L68">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="PkE-Nd-1wo" kind="relationship" relationship="rootViewController" id="yVw-5A-3YO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tzy-Sa-JjY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-149.27536231884059" y="13.392857142857142"/>
         </scene>
     </scenes>
     <resources>

@@ -82,7 +82,7 @@ extension MainPageViewController: UICollectionViewDelegate,UICollectionViewDataS
         
         if userPlant.count != 0{
             //식물이 하나라도 있으면 -> 식물개수만큼
-            return userPlant.count
+            return userPlant.count+1
         }else{
             //식물이 하나도 없으면 1개
             return 1
@@ -96,7 +96,9 @@ extension MainPageViewController: UICollectionViewDelegate,UICollectionViewDataS
     
         if userPlant.count != 0{
             
+            
             //if 식물이 하나라도 있으면
+            //맨 마지막 꺼는 + 페이지로 바꾸기
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CardCollectionViewCell", for: indexPath) as? CardCollectionViewCell else{
                 return UICollectionViewCell()
             }
@@ -104,6 +106,15 @@ extension MainPageViewController: UICollectionViewDelegate,UICollectionViewDataS
             
             let data=userPlant[indexPath.row]
             cell.setupCardData(imageUrl:data.imageUrl, type: data.type, nickname: data.nickname, adoptDate: data.adoptDate)
+            
+            
+            //마지막 추가셀
+//            guard let appendcell = collectionView.dequeueReusableCell(withReuseIdentifier: "AppendCollectionViewCell", for: indexPath) as? AppendCollectionViewCell else{
+//                return UICollectionViewCell()
+//            }
+//            appendcell.layer.cornerRadius = 12
+            
+            
             
             return cell
 
@@ -114,6 +125,8 @@ extension MainPageViewController: UICollectionViewDelegate,UICollectionViewDataS
                 return UICollectionViewCell()
             }
             cell.layer.cornerRadius = 12
+            
+            
             
             return cell
 
@@ -131,5 +144,38 @@ extension MainPageViewController: UICollectionViewDelegate,UICollectionViewDataS
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: 0, left: 50, bottom: 0, right: 50)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        if userPlant.count != 0{
+            //맨 마지막 꺼는 + 페이지로 바꾸기
+            print(indexPath)
+            let storyboard=UIStoryboard(name: "LogPage", bundle: nil)
+            
+            guard let viewController = storyboard.instantiateViewController(identifier: "LogPageViewController") as? LogPageViewController else { return }
+
+            self.modalPresentationStyle = UIModalPresentationStyle.fullScreen
+
+            self.present(viewController, animated: true, completion: nil)
+    //        self.navigationController?.pushViewController(viewController, animated: true)
+
+        }else{
+            let storyboard=UIStoryboard(name: "MainPage", bundle: nil)
+            
+            guard let viewController = storyboard.instantiateViewController(identifier: "AddPlantViewController") as? AddPlantViewController else { return }
+
+            self.modalPresentationStyle = UIModalPresentationStyle.fullScreen
+
+            
+            self.present(viewController, animated: true, completion: nil)
+    //        self.navigationController?.pushViewController(viewController, animated: true)
+
+        }
+    
+        
+        
+
+        
     }
 }

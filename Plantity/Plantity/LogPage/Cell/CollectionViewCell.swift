@@ -31,5 +31,29 @@ CollectionViewCell: UICollectionViewCell {
         uiView.layer.cornerRadius = 10
         uiView.clipsToBounds = true
     }
+    func setupCardData(image:String?,nickname:String?,type:String?,level:Int?,memo:String?){
+        
+//        if let plantImageImg:UIImage=image{
+//            plantImage.image=plantImageImg
+//        }
+        
+        if let plantNicknameStr:String=nickname{
+            plantNickname.text=plantNicknameStr
+        }
+        
+        if let plantTypeStr:String=type{
+            plantType.text=plantTypeStr
+        }
+        
+//        if let plantLevelInt:Int=level{
+//            plantLevel.image=
+//
+//        }
+        
+        if let plantMemoString:String=memo{
+            plantMemo.text=plantMemoString
+        }
+        
+    }
 
 }

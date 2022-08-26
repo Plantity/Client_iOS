@@ -23,6 +23,13 @@ class LogPageViewController: UIViewController, FSCalendarDelegate, FSCalendarDat
     //하단로그collectionView
     @IBOutlet weak var logCollectionView: UICollectionView!
     
+    //dummies
+    var logUserPlant:[LogUserPlant]=[
+        LogUserPlant(imageUrl: "", nickname: "a", type: "aa", plantlevel: 3, plantMemo: "aaa"),
+        LogUserPlant(imageUrl: "", nickname: "b", type: "bb", plantlevel: 3, plantMemo: "bbb"),
+        LogUserPlant(imageUrl: "", nickname: "c", type: "cc", plantlevel: 3, plantMemo: "ccc")
+    ]
+    
 
     
 
@@ -67,6 +74,9 @@ class LogPageViewController: UIViewController, FSCalendarDelegate, FSCalendarDat
         layout.sideItemAlpha = 0.3
         logCollectionView.collectionViewLayout = layout
         
+        //자동스크롤
+//        cardcollectionView.indexPath(for: <#T##UICollectionViewCell#>)
+//        logCollectionView.scrollToItem(at: IndexPath(item: 0, section: 0), at: .left, animated: true)
         
         
     }
@@ -81,26 +91,50 @@ class LogPageViewController: UIViewController, FSCalendarDelegate, FSCalendarDat
 //카드
 extension LogPageViewController : UICollectionViewDataSource, UICollectionViewDelegate,UICollectionViewDelegateFlowLayout{
 
-    //collection view의 cell 을 10개 생성
+    //cell갯수
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return logUserPlant.count
     }
 
     //customCell생성
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
+//        let cardcurrentIndex=indexPath.row
+//        print("위",cardcurrentIndex)
+        
         if collectionView == cardcollectionView {
             guard let customCell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as? CollectionViewCell else { return UICollectionViewCell() }
 
             customCell.layer.cornerRadius=10
+            
+            let data = logUserPlant[indexPath.row]
+            customCell.setupCardData(image: data.imageUrl, nickname: data.nickname, type: data.type, level: data.plantlevel, memo: data.plantMemo)
+            
+            //자동스크롤
+//            let cardcurrentIndex=indexPath.row
+//            print("위",cardcurrentIndex)
+
+//            logCollectionView.scrollToItem(at: IndexPath(item: 0, section: 0), at: .left, animated: true)
+            
             return customCell
 
         }else{
             guard let customCell = collectionView.dequeueReusableCell(withReuseIdentifier: "CalendarCollectionViewCell", for: indexPath) as? CalendarCollectionViewCell else { return UICollectionViewCell() }
 
             customCell.layer.cornerRadius=10
+            
+            //자동스크롤
+//            let logcurrentIndex=indexPath.row
+//            print("아래",logcurrentIndex)
+            
+    
+            
+            
+//            logCollectionView.scrollToItem(at: IndexPath(item: logcurrentIndex, section: 0), at: .left, animated: true)
+            
             return customCell
         }
+
 
     }
 }

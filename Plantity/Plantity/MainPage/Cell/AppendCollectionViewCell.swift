@@ -24,16 +24,7 @@ class AppendCollectionViewCell: UICollectionViewCell {
     @IBAction func cardAppendButton(_ sender: Any) {
         
 //        버튼누르면 추가페이지 모달 띄우기
-        
-        let storyboard=UIStoryboard(name: "MainPageViewController", bundle: nil)
-        
-        guard let viewController = storyboard.instantiateViewController(identifier: "AddPlantViewController") as? AddPlantViewController else { return }
 
-        viewController.modalPresentationStyle = UIModalPresentationStyle.fullScreen
-
-        
-//        self.present(viewController, animated: true, completion: nil)
-//        self.navigationController?.pushViewController(viewController, animated: true)
         
         
     }
