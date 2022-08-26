@@ -35,7 +35,11 @@ class LogPageViewController: UIViewController, FSCalendarDelegate, FSCalendarDat
         LogUserPlant(imageUrl: "", nickname: "c", type: "cc", plantlevel: 3, plantMemo: "ccc")
     ]
     
-
+    var calendars: [LogCalendar] = [
+        LogCalendar(date: ["2022-08-26"], todos: [TodoLog(didwater: false, didsun: false, didlook: false, didsplit: false)]),
+        LogCalendar(date: ["2022-08-26"], todos: [TodoLog(didwater: true, didsun: true, didlook: true, didsplit: true)]),
+        LogCalendar(date: ["2022-08-26"], todos: [TodoLog(didwater: true, didsun: true, didlook: false, didsplit: false)])
+    ]
     
 
     override func viewDidLoad() {
@@ -138,6 +142,9 @@ extension LogPageViewController : UICollectionViewDataSource, UICollectionViewDe
 //            let logcurrentIndex=indexPath.row
 //            print("아래",logcurrentIndex)
             
+            // 캘린더에 데이터 넘기기
+            let data = calendars[currentPage]
+            customCell.setUpEvents(data: data)
             
             
 //            logCollectionView.scrollToItem(at: IndexPath(item: logcurrentIndex, section: 0), at: .left, animated: true)

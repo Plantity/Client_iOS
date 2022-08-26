@@ -33,12 +33,14 @@ class CalendarCollectionViewCell: UICollectionViewCell,FSCalendarDelegate, FSCal
     @IBOutlet weak var didSunLabel: UILabel!
     @IBOutlet weak var didSplitLabel: UILabel!
     
+    // dummies
+    var logCalendar: LogCalendar = LogCalendar(date: [], todos: [])
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
         setUpLog()
-        setUpEvents()
+        // setUpEvents()
         //주간달력일때 -> 아래 메모 나오게
         //월간달력일때 -> 달력만 전체 나오게
     }
@@ -68,6 +70,8 @@ class CalendarCollectionViewCell: UICollectionViewCell,FSCalendarDelegate, FSCal
         calendarView.appearance.todayColor=UIColor.systemGreen
         //날자 클릭시 동그라미
         calendarView.appearance.selectionColor=UIColor.lightGray
+        // 스크롤 금지
+        calendarView.scrollEnabled = false
     }
     
     
@@ -80,18 +84,22 @@ class CalendarCollectionViewCell: UICollectionViewCell,FSCalendarDelegate, FSCal
     var showeringdays=[Date]()
     var soilingdays=[Date]()
     
-    func setUpEvents() {
+    func setUpEvents(data: LogCalendar) {
         let formatter = DateFormatter()
         formatter.locale = Locale(identifier: "ko_KR")
         formatter.dateFormat = "yyyy-MM-dd"
         let xmas = formatter.date(from: "2022-08-02")
         let sampledate = formatter.date(from: "2022-08-01")
         
-        events = [xmas!, sampledate!]
+        // events = [xmas!, sampledate!]
         wateringdays = [xmas!, sampledate!]
         lookingdays = [xmas!, sampledate!]
         showeringdays = [xmas!, sampledate!]
         soilingdays = [xmas!, sampledate!]
+        
+        // 어떤 식물의 캘린더인지 지정
+        self.logCalendar = data
+        print(data)
     }
 
     func calendar(_ calendar: FSCalendar, numberOfEventsFor date: Date) -> Int {
