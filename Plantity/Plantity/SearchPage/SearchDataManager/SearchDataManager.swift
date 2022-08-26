@@ -9,9 +9,16 @@ import Foundation
 import Alamofire
 
 class SearchDataManager {
-    func feedDataManager(_ parameters: SearchDataInput, _ viewController: SearchViewController) {
+    func srearchDataManager(_ parameters: SearchDataInput, _ viewController: SearchViewController) {
         // 데이터 주고받는 함수
-        AF.request("https://api.thecatapi.com/v1/images/search", method: .get, parameters: parameters).validate().responseDecodable(of: SearchDataModel.self) { response in
+        AF.request(
+            "https://plantity.shop/plant",
+            method: .get,
+            parameters: parameters)
+        .validate()
+        .responseDecodable(
+            of: SearchDataModel.self
+        ) { response in
             switch response.result {
             case .success(let result):
                 // 성공

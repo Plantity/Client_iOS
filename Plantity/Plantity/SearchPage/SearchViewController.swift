@@ -18,15 +18,15 @@ class SearchViewController: UIViewController {
     var fileteredData: [SearchPlantModel] = []
     var dataArray: [SearchPlantModel] = [
         SearchPlantModel(name: "몬스테라", level: 1, intro: "자라면서 잎에 구멍이 생기는 것으로 유명한 인테리어 식물", water: "물을 7일에 한 번씩 흙이 마르면 주세요.", sun: "햇빛이 적당한 것을 좋아해요", isUserLiked: false, tag: "# 플렌테리어")
-    ]
+    ] {
+        didSet { self.searchTableView.reloadData() }
+    }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // To Server
-        // let input = SearchDataInput(limit: 10, page: 0)
-        // SearchDataManager().feedDataManager(input, self)
+        setupData()
 
         // Delegate
         searchTableView.delegate = self
@@ -53,17 +53,12 @@ class SearchViewController: UIViewController {
             // for Collection View
         let tagNib = UINib(nibName: "TagTableViewCell", bundle: nil)
         searchTableView.register(tagNib, forCellReuseIdentifier: "TagTableViewCell")
-        
-        // setupAttribute()
-    }
-    
-    func successAPI(_ result: SearchDataModel) {
-        // dataArray = result
-        // tableView.reloadData()
     }
 
-    private func setupAttribute() {
-        //searchTableView.separatorStyle = .none
+    private func setupData() {
+        // To Server
+        let input = SearchDataInput(limit: 10, page: 0)
+        SearchDataManager().srearchDataManager(input, self)
     }
     
     
@@ -202,5 +197,17 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
         } else {
             return 600
         }
+    }
+}
+
+// MARK: - Network
+extension SearchViewController {
+    func successAPI(_ result: SearchDataModel?) {
+        print("come on")
+        if let resultData : [SearchDataModelResult] = result?.result {
+            print(resultData)
+            // dataArray = resultData
+        }
+        searchTableView.reloadData()
     }
 }

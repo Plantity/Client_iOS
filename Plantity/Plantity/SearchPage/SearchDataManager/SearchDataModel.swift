@@ -21,7 +21,23 @@ struct SearchDataModel : Decodable {
     let isSuccess : Bool
     let code: Int
     let message: String
-    let result: SearchPlantModel?
+    var result: [SearchDataModelResult]?
+}
+
+struct SearchDataModelResult: Decodable {
+    let plantIdx: Int?
+    let cntntsNo: String?
+    let cntntsSj: String?
+    let plntbneNm: String?
+    let plntzrNm: String?
+    let adviseInfo: String?
+    let orgplceInfo: String?
+    let lighttdemanddoCodeNm: String?
+    let ignSeasonCodeNm: String?
+    let flclrCodeNm: String?
+    let watercycleSprngCodeNm: String?
+    let managelevelCode: String?
+    let plantFollowings: [String]?
 }
 
 struct SearchPlantModel: Decodable {
