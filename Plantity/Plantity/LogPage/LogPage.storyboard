@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -50,7 +50,7 @@
                                 <cells/>
                             </collectionView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="1S9-sE-u4i" userLabel="Log Collection View">
-                                <rect key="frame" x="0.0" y="324" width="414" height="572"/>
+                                <rect key="frame" x="0.0" y="350" width="414" height="546"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="5yO-t0-uQH">
                                     <size key="itemSize" width="368" height="467"/>
@@ -60,12 +60,18 @@
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="FSR-vL-NUP">
+                                <rect key="frame" x="149" y="324" width="116" height="26"/>
+                                <color key="pageIndicatorTintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="currentPageIndicatorTintColor" red="0.35294117650000001" green="0.89019607840000003" blue="0.76862745099999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </pageControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="X1U-dz-8dc" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="10" id="IVU-Df-xtg"/>
-                            <constraint firstItem="1S9-sE-u4i" firstAttribute="top" secondItem="X1U-dz-8dc" secondAttribute="bottom" id="M4s-8t-5vg"/>
+                            <constraint firstItem="FSR-vL-NUP" firstAttribute="top" secondItem="X1U-dz-8dc" secondAttribute="bottom" id="K1K-5I-KiD"/>
+                            <constraint firstItem="1S9-sE-u4i" firstAttribute="top" secondItem="FSR-vL-NUP" secondAttribute="bottom" id="L06-yQ-rKB"/>
                             <constraint firstItem="UWj-MM-dTQ" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="T7e-ZY-1zP"/>
                             <constraint firstItem="X1U-dz-8dc" firstAttribute="top" secondItem="UWj-MM-dTQ" secondAttribute="bottom" id="W7G-VS-gCb"/>
                             <constraint firstItem="UWj-MM-dTQ" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="XQG-yu-RGf"/>
@@ -74,6 +80,7 @@
                             <constraint firstAttribute="bottom" secondItem="1S9-sE-u4i" secondAttribute="bottom" id="nYu-qH-kId"/>
                             <constraint firstItem="1S9-sE-u4i" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="sIf-HD-XxP"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="X1U-dz-8dc" secondAttribute="trailing" constant="10" id="sms-6f-xfX"/>
+                            <constraint firstItem="FSR-vL-NUP" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="t0P-Cq-L8v"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="calendar" catalog="system" id="o3d-hH-QuY">
@@ -93,7 +100,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-574" y="-96"/>
+            <point key="canvasLocation" x="-575.36231884057975" y="-96.428571428571431"/>
         </scene>
     </scenes>
     <resources>
