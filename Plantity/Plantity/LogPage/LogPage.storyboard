@@ -96,6 +96,7 @@
                     <connections>
                         <outlet property="cardcollectionView" destination="X1U-dz-8dc" id="cy4-Sw-LAt"/>
                         <outlet property="logCollectionView" destination="1S9-sE-u4i" id="aBn-Kc-yTq"/>
+                        <outlet property="pageControl" destination="FSR-vL-NUP" id="lfa-67-hva"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

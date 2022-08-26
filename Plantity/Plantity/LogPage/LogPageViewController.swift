@@ -20,6 +20,11 @@ class LogPageViewController: UIViewController, FSCalendarDelegate, FSCalendarDat
     //상단카드collectionView
     @IBOutlet weak var cardcollectionView: UICollectionView!
     
+    // 페이지 컨트롤
+    @IBOutlet weak var pageControl: UIPageControl!
+    // 처음에 보여줄 식물로그
+    var currentPage: Int = 0
+    
     //하단로그collectionView
     @IBOutlet weak var logCollectionView: UICollectionView!
     
@@ -37,6 +42,7 @@ class LogPageViewController: UIViewController, FSCalendarDelegate, FSCalendarDat
         super.viewDidLoad()
         
         setupCard()
+        setupPageControl()
         setUplogCV()
         
     }
@@ -58,7 +64,12 @@ class LogPageViewController: UIViewController, FSCalendarDelegate, FSCalendarDat
         cardcollectionView.collectionViewLayout = layout
     }
 
-
+    func setupPageControl() {
+        //페이지 컨트롤의 전체 페이지를 images 배열의 전체 개수 값으로 설정
+        pageControl.numberOfPages = logUserPlant.count
+        // 페이지 컨트롤의 현재 페이지를 0으로 설정
+        pageControl.currentPage = self.currentPage
+    }
     
     func setUplogCV(){
         logCollectionView.dataSource=self
@@ -127,15 +138,24 @@ extension LogPageViewController : UICollectionViewDataSource, UICollectionViewDe
 //            let logcurrentIndex=indexPath.row
 //            print("아래",logcurrentIndex)
             
-    
             
             
 //            logCollectionView.scrollToItem(at: IndexPath(item: logcurrentIndex, section: 0), at: .left, animated: true)
             
             return customCell
         }
-
-
+        
+    }
+    
+    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+        let nextPage = Int(targetContentOffset.pointee.x / cardcollectionView.frame.width) + 1
+        if currentPage == nextPage {
+            // 맨처음 페이지일 경우
+            currentPage = 0
+        } else {
+            currentPage = nextPage
+        }
+        self.pageControl.currentPage = self.currentPage
     }
 }
 
