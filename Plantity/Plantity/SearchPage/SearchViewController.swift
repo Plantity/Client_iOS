@@ -136,22 +136,10 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
             else { return UITableViewCell() }
             
             if tableView == searchTableView {
-                cell.setupData(
-                    name:
-                    fileteredData[indexPath.row].cntntsSj,
-                    level: fileteredData[indexPath.row].managelevelCode,
-                    intro: fileteredData[indexPath.row].adviseInfo,
-                    tag: fileteredData[indexPath.row].flclrCodeNm
-                )
+                cell.setupData(plant: fileteredData[indexPath.row])
                 // 태그 대신에 임시로 꽃 색 flclrCodeNm 넣어놓음
             } else {
-                cell.setupData(
-                    name:
-                        dataArray[indexPath.row].cntntsSj,
-                    level: dataArray[indexPath.row].managelevelCode,
-                    intro: dataArray[indexPath.row].adviseInfo,
-                    tag: dataArray[indexPath.row].flclrCodeNm
-                )
+                cell.setupData(plant: dataArray[indexPath.row])
             }
             
             return cell
