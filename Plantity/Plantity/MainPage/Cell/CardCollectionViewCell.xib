@@ -17,7 +17,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="289" height="432"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JVd-eY-scA">
+                    <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="JVd-eY-scA">
                         <rect key="frame" x="0.0" y="0.0" width="289" height="432"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="몬스테라 D+134" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Esi-GZ-2Hc">
@@ -79,6 +79,10 @@
                                     <constraint firstAttribute="width" secondItem="fEr-px-UK7" secondAttribute="height" multiplier="1:1" id="75g-gF-cCb"/>
                                 </constraints>
                             </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="카드추가" translatesAutoresizingMaskIntoConstraints="NO" id="X0y-5U-Ijp">
+                                <rect key="frame" x="1" y="-1" width="297" height="433"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -109,7 +113,14 @@
             </constraints>
             <size key="customSize" width="289" height="432"/>
             <connections>
+                <outlet property="didlook" destination="tJ0-as-OlI" id="9vK-rt-xV1"/>
+                <outlet property="didshower" destination="n1Z-p7-dUZ" id="qJD-eh-gUf"/>
+                <outlet property="didsoil" destination="B68-5A-DLv" id="U9v-cY-pfj"/>
+                <outlet property="didwater" destination="HsE-nz-0Y1" id="0Oi-ub-XLy"/>
                 <outlet property="plantNickname" destination="2bk-mj-WpB" id="FXO-MS-6EQ"/>
+                <outlet property="plantdate" destination="Esi-GZ-2Hc" id="gKP-01-YcG"/>
+                <outlet property="plantimage" destination="fEr-px-UK7" id="490-PK-TDZ"/>
+                <outlet property="plusimage" destination="X0y-5U-Ijp" id="lkI-8E-XxT"/>
                 <outlet property="pushLogButton" destination="glG-Lm-gtC" id="OvY-Ll-466"/>
             </connections>
             <point key="canvasLocation" x="116.66666666666667" y="41.517857142857139"/>
@@ -121,6 +132,7 @@
         <image name="button_shower" width="83" height="83"/>
         <image name="button_water" width="83" height="83"/>
         <image name="image_plant_ex" width="105" height="115"/>
+        <image name="카드추가" width="242" height="385"/>
         <namedColor name="background_card">
             <color red="0.83921568627450982" green="0.92549019607843142" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
