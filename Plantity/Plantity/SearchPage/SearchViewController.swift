@@ -184,6 +184,7 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
             let plantViewController = storyboard.instantiateViewController(withIdentifier: "PlantViewController") as! PlantViewController
             
             plantViewController.searchPlant = fileteredData[indexPath.row]
+            plantViewController.hidesBottomBarWhenPushed = true
             
             self.navigationController?.pushViewController(plantViewController, animated: true)
         }

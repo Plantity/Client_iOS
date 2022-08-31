@@ -207,7 +207,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="DBV-NE-VNM">
-                                <rect key="frame" x="45" y="560.5" width="198.5" height="127"/>
+                                <rect key="frame" x="45" y="560.5" width="198.5" height="105"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="학명: Monstera deliciosa Liebm." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="az2-15-uXY">
                                         <rect key="frame" x="0.0" y="0.0" width="198.5" height="17"/>
@@ -243,16 +243,10 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="꽃말: 웅장한 계획" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pbq-7H-du7">
-                                        <rect key="frame" x="0.0" y="110" width="96" height="17"/>
-                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OAy-gE-EZ8">
-                                <rect key="frame" x="30" y="787" width="354" height="60"/>
+                                <rect key="frame" x="30" y="802" width="354" height="60"/>
                                 <color key="backgroundColor" name="text_green"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="M5H-Lf-ca3"/>
@@ -279,7 +273,7 @@
                             <constraint firstItem="OaN-3i-SUa" firstAttribute="top" secondItem="TXX-pi-40J" secondAttribute="bottom" constant="3" id="En2-HH-mai"/>
                             <constraint firstItem="DBV-NE-VNM" firstAttribute="leading" secondItem="w6S-kO-IM4" secondAttribute="leading" constant="5" id="FPo-Zx-HbM"/>
                             <constraint firstItem="w6S-kO-IM4" firstAttribute="top" secondItem="BZQ-HT-xMc" secondAttribute="bottom" constant="20" id="GgL-uh-zjU"/>
-                            <constraint firstItem="o7m-Jo-YQz" firstAttribute="bottom" secondItem="OAy-gE-EZ8" secondAttribute="bottom" constant="15" id="Io5-bn-wpJ"/>
+                            <constraint firstItem="o7m-Jo-YQz" firstAttribute="bottom" secondItem="OAy-gE-EZ8" secondAttribute="bottom" id="Io5-bn-wpJ"/>
                             <constraint firstItem="OAy-gE-EZ8" firstAttribute="width" secondItem="BZQ-HT-xMc" secondAttribute="width" id="NTq-j8-bA1"/>
                             <constraint firstItem="Voj-dA-XCj" firstAttribute="centerX" secondItem="o7m-Jo-YQz" secondAttribute="centerX" id="Oub-Z7-Tdu"/>
                             <constraint firstItem="DBV-NE-VNM" firstAttribute="top" secondItem="w6S-kO-IM4" secondAttribute="bottom" constant="10" id="Pjo-Wy-65i"/>
@@ -297,8 +291,12 @@
                     <connections>
                         <outlet property="addButton" destination="OAy-gE-EZ8" id="98M-Wg-C0O"/>
                         <outlet property="backButton" destination="9KZ-v8-6SB" id="aJD-fh-0Dx"/>
+                        <outlet property="engNameLabel" destination="QVW-qZ-Fsx" id="0hM-0i-Ysv"/>
+                        <outlet property="flowerColorLabel" destination="uC0-Ht-vmX" id="upU-Vg-wM3"/>
+                        <outlet property="floweringLabel" destination="iLy-dC-nwV" id="DVC-m4-ilZ"/>
                         <outlet property="likeButton" destination="pcL-fq-bBr" id="WVZ-fB-LOu"/>
-                        <outlet property="plantDetail" destination="DBV-NE-VNM" id="XWE-Kk-Avo"/>
+                        <outlet property="officialNameLabel" destination="az2-15-uXY" id="Ob5-33-id3"/>
+                        <outlet property="originLabel" destination="Flx-CL-ku0" id="zJk-9N-7Cq"/>
                         <outlet property="plantImageView" destination="oy3-BP-cKs" id="wWM-6n-kLX"/>
                         <outlet property="plantIntro" destination="Voj-dA-XCj" id="u9h-TJ-AHh"/>
                         <outlet property="plantLevel" destination="C6T-Ry-OwJ" id="N66-zb-nvw"/>

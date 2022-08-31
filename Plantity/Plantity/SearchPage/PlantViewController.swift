@@ -21,7 +21,12 @@ class PlantViewController: UIViewController {
     @IBOutlet weak var plantWater: UILabel!
     @IBOutlet weak var plantSun: UILabel!
     
-    @IBOutlet weak var plantDetail: UIStackView!
+    @IBOutlet weak var officialNameLabel: UILabel!
+    @IBOutlet weak var engNameLabel: UILabel!
+    @IBOutlet weak var originLabel: UILabel!
+    @IBOutlet weak var floweringLabel: UILabel!
+    @IBOutlet weak var flowerColorLabel: UILabel!
+    @IBOutlet weak var flowerLangLabel: UILabel!
     
     var searchPlant: SearchPlantModel = SearchPlantModel(plantIdx: 0, cntntsNo: "", cntntsSj: "", plntbneNm: "", plntzrNm: "", adviseInfo: "", orgplceInfo: "", lighttdemanddoCodeNm: "", ignSeasonCodeNm: "", flclrCodeNm: "", watercycleSprngCodeNm: "", managelevelCode: "", plantFollowings: [])
     
@@ -30,14 +35,7 @@ class PlantViewController: UIViewController {
         super.viewDidLoad()
 
         setupAttribute()
-        setupData(
-            // isUserLike: searchPlant.isUserLiked,
-            name: searchPlant.cntntsSj,
-            level: searchPlant.managelevelCode,
-            intro: searchPlant.adviseInfo,
-            water: searchPlant.watercycleSprngCodeNm,
-            sun: searchPlant.lighttdemanddoCodeNm
-        )
+        setupData(plant: searchPlant)
     }
     
     func setupAttribute() {
@@ -48,21 +46,19 @@ class PlantViewController: UIViewController {
         addButton.layer.cornerRadius = 10
     }
     
-    func setupData(isUserLike: Bool? = false, name: String?, level: String?, intro: String?, water: String?, sun: String?) {
-        
-        
-        if let isLike:Bool = isUserLike {
-            likeButton.isSelected = isLike
-        } else {return}
+    func setupData(plant: SearchPlantModel?) {
+//        if let isLike:Bool = isUserLike {
+//            likeButton.isSelected = isLike
+//        } else {return}
         
         // set image
         
-        if let nameStr:String = name {
-            plantName.text =  nameStr
-        } else {return}
-        
-        if let levelInt: String = level {
-            switch levelInt {
+        if let plantData: SearchPlantModel = plant {
+            // set Name
+            plantName.text =  plantData.cntntsSj
+            
+            // set Lv
+            switch plantData.managelevelCode {
             case "089001":
                 plantLevel.text = "⭐️"
             case "089002":
@@ -72,21 +68,23 @@ class PlantViewController: UIViewController {
             default:
                 plantLevel.text = ""
             }
-        } else {return}
-        
-        if let introStr: String = intro {
-            plantIntro.text =  introStr
-        } else {return}
-        
-        if let waterStr:String = water {
-            plantWater.text =  waterStr
-        } else {return}
-        
-        if let sunStr:String = sun {
-            plantSun.text =  sunStr
-        } else {return}
-        
-        // set details
+            
+            // set Introduction
+            plantIntro.text =  plantData.adviseInfo
+            
+            // set Water
+            plantWater.text =  plantData.watercycleSprngCodeNm
+            
+            // set Sun
+            plantSun.text =  plantData.lighttdemanddoCodeNm
+            
+            // set details
+            officialNameLabel.text = "학명 : " + plantData.plntbneNm
+            engNameLabel.text = "영문명 : " + plantData.plntzrNm
+            originLabel.text = "원산지 : " + plantData.orgplceInfo
+            floweringLabel.text = "개화시기 : " + plantData.ignSeasonCodeNm
+            flowerColorLabel.text = "꽃 색 : " + plantData.flclrCodeNm
+        }
     }
     
     @IBAction func backButtonClicked(_ sender: UIButton) {
@@ -99,7 +97,7 @@ class PlantViewController: UIViewController {
         } else {
             likeButton.isSelected = true
         }
-        // searchPlant.isUserLiked = likeButton.isSelected
+        //searchPlant.isUserLiked = likeButton.isSelected
     }
     
     @IBAction func addButtonClicked(_ sender: UIButton) {
