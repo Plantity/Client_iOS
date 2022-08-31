@@ -10,6 +10,6 @@ import Alamofire
 
 // post to server
 struct SearchDataInput: Encodable {
-    var limit: Int?
+    var size: Int?
     var page: Int?
 }

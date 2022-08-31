@@ -25,7 +25,7 @@ class ResultTableViewCell: UITableViewCell {
         // Initialization code
     }
     
-    func setupData(name: String?, level: Int?, intro: String?, tag: String?) {
+    func setupData(name: String?, level: String?, intro: String?, tag: String?) {
         // setImage
         // guard let imageURLString = imageURLStr else { return }
         // if let url = URL(string: imageURLString) {
@@ -37,7 +37,7 @@ class ResultTableViewCell: UITableViewCell {
         } else { return }
         
         // setLevel
-        if let levelInt: Int = level {
+        if let levelInt: String = level {
             resultLvLabel.text = String(levelInt)
         } else { return }
         

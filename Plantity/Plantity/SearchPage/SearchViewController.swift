@@ -16,9 +16,7 @@ class SearchViewController: UIViewController {
     var resultVC = UITableViewController()
     
     var fileteredData: [SearchPlantModel] = []
-    var dataArray: [SearchPlantModel] = [
-        SearchPlantModel(name: "몬스테라", level: 1, intro: "자라면서 잎에 구멍이 생기는 것으로 유명한 인테리어 식물", water: "물을 7일에 한 번씩 흙이 마르면 주세요.", sun: "햇빛이 적당한 것을 좋아해요", isUserLiked: false, tag: "# 플렌테리어")
-    ] {
+    var dataArray: [SearchPlantModel] = [] {
         didSet { self.searchTableView.reloadData() }
     }
     
@@ -57,7 +55,11 @@ class SearchViewController: UIViewController {
 
     private func setupData() {
         // To Server
-        let input = SearchDataInput(limit: 10, page: 0)
+        var input = SearchDataInput(size: 10, page: 0)
+        
+        SearchDataManager().srearchDataManager(input, self)
+        
+        input = SearchDataInput(size: 10, page: 0)
         SearchDataManager().srearchDataManager(input, self)
     }
     
@@ -78,7 +80,7 @@ extension SearchViewController:
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         searchBar.text = searchText
         fileteredData = dataArray.filter({ (data: SearchPlantModel) -> Bool in
-            return data.name?.lowercased().contains(searchBar.text!.lowercased()) ?? false
+            return data.cntntsSj.lowercased().contains(searchBar.text!.lowercased())
             })
         
         searchTableView.reloadData()
@@ -138,18 +140,19 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
             if tableView == searchTableView {
                 cell.setupData(
                     name:
-                    fileteredData[indexPath.row].name,
-                    level: fileteredData[indexPath.row].level,
-                    intro: fileteredData[indexPath.row].intro,
-                    tag: fileteredData[indexPath.row].tag
+                    fileteredData[indexPath.row].cntntsSj,
+                    level: fileteredData[indexPath.row].managelevelCode,
+                    intro: fileteredData[indexPath.row].adviseInfo,
+                    tag: fileteredData[indexPath.row].flclrCodeNm
                 )
+                // 태그 대신에 임시로 꽃 색 flclrCodeNm 넣어놓음
             } else {
                 cell.setupData(
                     name:
-                        dataArray[indexPath.row].name,
-                    level: dataArray[indexPath.row].level,
-                    intro: dataArray[indexPath.row].intro,
-                    tag: dataArray[indexPath.row].tag
+                        dataArray[indexPath.row].cntntsSj,
+                    level: dataArray[indexPath.row].managelevelCode,
+                    intro: dataArray[indexPath.row].adviseInfo,
+                    tag: dataArray[indexPath.row].flclrCodeNm
                 )
             }
             
@@ -203,10 +206,8 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
 // MARK: - Network
 extension SearchViewController {
     func successAPI(_ result: SearchDataModel?) {
-        print("come on")
-        if let resultData : [SearchDataModelResult] = result?.result {
-            print(resultData)
-            // dataArray = resultData
+        if let resultData : SearchDataModelResult = result?.result {
+            dataArray = resultData.content
         }
         searchTableView.reloadData()
     }

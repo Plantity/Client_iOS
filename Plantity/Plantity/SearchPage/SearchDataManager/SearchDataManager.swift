@@ -12,7 +12,7 @@ class SearchDataManager {
     func srearchDataManager(_ parameters: SearchDataInput, _ viewController: SearchViewController) {
         // 데이터 주고받는 함수
         AF.request(
-            "https://plantity.shop/plant",
+            "http://plantity.shop/plant",
             method: .get,
             parameters: parameters)
         .validate()
