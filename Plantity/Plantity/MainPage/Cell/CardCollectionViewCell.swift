@@ -48,7 +48,7 @@ class CardCollectionViewCell: UICollectionViewCell {
         }
         
         //마지막 카드는 항상 "plus"로 이름설정
-        if nickname == "plus"{
+        if type == "plus" && nickname == "plus"{
             pushLogButton.isHidden=true
             plantNickname.isHidden=true
             didwater.isHidden=true
@@ -60,6 +60,15 @@ class CardCollectionViewCell: UICollectionViewCell {
             plusimage.isHidden=false
         
         }else{
+            pushLogButton.isHidden=false
+            plantNickname.isHidden=false
+            didwater.isHidden=false
+            didsoil.isHidden=false
+            didlook.isHidden=false
+            didshower.isHidden=false
+            plantimage.isHidden=false
+            plantdate.isHidden=false
+            plusimage.isHidden=false
             plusimage.isHidden=true
             
         }

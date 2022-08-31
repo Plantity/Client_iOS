@@ -26,7 +26,7 @@ class MainPageViewController: UIViewController {
         UserPlant(imageUrl: "", type: "b", nickname: "b", adoptDate: Date()),
         UserPlant(imageUrl: "", type: "c", nickname: "c", adoptDate: Date()),
         UserPlant(imageUrl: "", type: "d", nickname: "d", adoptDate: Date()),
-        UserPlant(imageUrl: "", type: "e", nickname: "plus", adoptDate: Date())
+        UserPlant(imageUrl: "", type: "plus", nickname: "plus", adoptDate: Date())
     ]
 
 
@@ -141,6 +141,7 @@ extension MainPageViewController: UICollectionViewDelegate,UICollectionViewDataS
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print(indexPath.row)
         
         //카드개수 0개가 아니면
         if userPlant.count != 0{
