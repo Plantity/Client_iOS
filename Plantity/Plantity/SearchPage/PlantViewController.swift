@@ -23,7 +23,7 @@ class PlantViewController: UIViewController {
     
     @IBOutlet weak var plantDetail: UIStackView!
     
-    var searchPlant: SearchPlantModel = SearchPlantModel(name: "", level: 0, intro: "", water: "", sun: "", isUserLiked: false, tag: "")
+    var searchPlant: SearchPlantModel = SearchPlantModel(plantIdx: 0, cntntsNo: "", cntntsSj: "", plntbneNm: "", plntzrNm: "", adviseInfo: "", orgplceInfo: "", lighttdemanddoCodeNm: "", ignSeasonCodeNm: "", flclrCodeNm: "", watercycleSprngCodeNm: "", managelevelCode: "", plantFollowings: [])
     
     
     override func viewDidLoad() {
@@ -31,12 +31,12 @@ class PlantViewController: UIViewController {
 
         setupAttribute()
         setupData(
-            isUserLike: searchPlant.isUserLiked,
-            name: searchPlant.name,
-            level: searchPlant.level,
-            intro: searchPlant.intro,
-            water: searchPlant.water,
-            sun: searchPlant.sun
+            // isUserLike: searchPlant.isUserLiked,
+            name: searchPlant.cntntsSj,
+            level: searchPlant.managelevelCode,
+            intro: searchPlant.adviseInfo,
+            water: searchPlant.watercycleSprngCodeNm,
+            sun: searchPlant.lighttdemanddoCodeNm
         )
     }
     
@@ -48,7 +48,7 @@ class PlantViewController: UIViewController {
         addButton.layer.cornerRadius = 10
     }
     
-    func setupData(isUserLike: Bool?, name: String?, level: Int?, intro: String?, water: String?, sun: String?) {
+    func setupData(isUserLike: Bool? = false, name: String?, level: String?, intro: String?, water: String?, sun: String?) {
         
         
         if let isLike:Bool = isUserLike {
@@ -61,13 +61,13 @@ class PlantViewController: UIViewController {
             plantName.text =  nameStr
         } else {return}
         
-        if let levelInt:Int = level {
+        if let levelInt: String = level {
             switch levelInt {
-            case 1:
+            case "089001":
                 plantLevel.text = "⭐️"
-            case 2:
+            case "089002":
                 plantLevel.text = "⭐️⭐️"
-            case 3:
+            case "089003":
                 plantLevel.text = "⭐️⭐️⭐️"
             default:
                 plantLevel.text = ""
@@ -99,7 +99,7 @@ class PlantViewController: UIViewController {
         } else {
             likeButton.isSelected = true
         }
-        searchPlant.isUserLiked = likeButton.isSelected
+        // searchPlant.isUserLiked = likeButton.isSelected
     }
     
     @IBAction func addButtonClicked(_ sender: UIButton) {

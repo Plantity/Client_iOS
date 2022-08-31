@@ -31,7 +31,12 @@ struct LogUserPlant : Decodable {
     let type: String?
     let plantlevel : Int?
     let plantMemo:String?
+}
 
+// 식물 각각의 캘린더
+struct LogCalendar : Decodable {
+    var date: [String]
+    var todos: [TodoLog]
 }
 
 //달력-과제수행여부

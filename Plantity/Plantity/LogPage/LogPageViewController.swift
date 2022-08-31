@@ -20,6 +20,11 @@ class LogPageViewController: UIViewController, FSCalendarDelegate, FSCalendarDat
     //상단카드collectionView
     @IBOutlet weak var cardcollectionView: UICollectionView!
     
+    // 페이지 컨트롤
+    @IBOutlet weak var pageControl: UIPageControl!
+    // 처음에 보여줄 식물로그
+    var currentPage: Int = 0
+    
     //하단로그collectionView
     @IBOutlet weak var logCollectionView: UICollectionView!
     
@@ -30,13 +35,18 @@ class LogPageViewController: UIViewController, FSCalendarDelegate, FSCalendarDat
         LogUserPlant(imageUrl: "", nickname: "c", type: "cc", plantlevel: 3, plantMemo: "ccc")
     ]
     
-
+    var calendars: [LogCalendar] = [
+        LogCalendar(date: ["2022-08-26"], todos: [TodoLog(didwater: false, didsun: false, didlook: false, didsplit: false)]),
+        LogCalendar(date: ["2022-08-26"], todos: [TodoLog(didwater: true, didsun: true, didlook: true, didsplit: true)]),
+        LogCalendar(date: ["2022-08-26"], todos: [TodoLog(didwater: true, didsun: true, didlook: false, didsplit: false)])
+    ]
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupCard()
+        setupPageControl()
         setUplogCV()
         
     }
@@ -58,7 +68,12 @@ class LogPageViewController: UIViewController, FSCalendarDelegate, FSCalendarDat
         cardcollectionView.collectionViewLayout = layout
     }
 
-
+    func setupPageControl() {
+        //페이지 컨트롤의 전체 페이지를 images 배열의 전체 개수 값으로 설정
+        pageControl.numberOfPages = logUserPlant.count
+        // 페이지 컨트롤의 현재 페이지를 0으로 설정
+        pageControl.currentPage = self.currentPage
+    }
     
     func setUplogCV(){
         logCollectionView.dataSource=self
@@ -119,23 +134,37 @@ extension LogPageViewController : UICollectionViewDataSource, UICollectionViewDe
             return customCell
 
         }else{
-            guard let customCell = collectionView.dequeueReusableCell(withReuseIdentifier: "CalendarCollectionViewCell", for: indexPath) as? CalendarCollectionViewCell else { return UICollectionViewCell() }
-
-            customCell.layer.cornerRadius=10
-            
+            // 캘린더 셀
+            guard let calendarCell = collectionView.dequeueReusableCell(withReuseIdentifier: "CalendarCollectionViewCell", for: indexPath) as? CalendarCollectionViewCell else { return UICollectionViewCell() }
+            calendarCell.layer.cornerRadius=10
             //자동스크롤
 //            let logcurrentIndex=indexPath.row
 //            print("아래",logcurrentIndex)
             
-    
-            
-            
+            // 캘린더에 데이터 넘기기
+            let data = calendars[currentPage]
+            calendarCell.setUpEvents(data: data)
 //            logCollectionView.scrollToItem(at: IndexPath(item: logcurrentIndex, section: 0), at: .left, animated: true)
             
-            return customCell
+            return calendarCell
         }
-
-
+        
+    }
+    
+    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+        let nextPage = Int(targetContentOffset.pointee.x / cardcollectionView.frame.width) + 1
+        if currentPage == nextPage {
+            // 맨처음 페이지일 경우
+            currentPage = 0
+        } else {
+            currentPage = nextPage
+        }
+        
+        // 페이징 버튼 변경
+        self.pageControl.currentPage = self.currentPage
+        
+        // 달력 변경
+        logCollectionView.reloadData()
     }
 }
 
