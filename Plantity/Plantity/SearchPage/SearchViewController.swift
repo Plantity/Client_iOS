@@ -20,11 +20,12 @@ class SearchViewController: UIViewController {
         didSet { self.searchTableView.reloadData() }
     }
     
+    var pageNum: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupData()
+        setupData(pageNum: pageNum)
 
         // Delegate
         searchTableView.delegate = self
@@ -53,13 +54,10 @@ class SearchViewController: UIViewController {
         searchTableView.register(tagNib, forCellReuseIdentifier: "TagTableViewCell")
     }
 
-    private func setupData() {
+    private func setupData(pageNum: Int) {
         // To Server
-        var input = SearchDataInput(size: 10, page: 0)
+        let input = SearchDataInput(size: 10, page: pageNum)
         
-        SearchDataManager().srearchDataManager(input, self)
-        
-        input = SearchDataInput(size: 10, page: 0)
         SearchDataManager().srearchDataManager(input, self)
     }
     
@@ -207,9 +205,18 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
 // MARK: - Network
 extension SearchViewController {
     func successAPI(_ result: SearchDataModel?) {
+        var isLastPage: Bool = false
+        
         if let resultData : SearchDataModelResult = result?.result {
-            dataArray = resultData.content
+            dataArray += resultData.content
+            isLastPage = resultData.last
+            self.pageNum += 1
         }
         searchTableView.reloadData()
+        
+        // 마지막 페이지가 아니라면 계속 받아오기
+        if !isLastPage {
+            self.setupData(pageNum: self.pageNum)
+        }
     }
 }
