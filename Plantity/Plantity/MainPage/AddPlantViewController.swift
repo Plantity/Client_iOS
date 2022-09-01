@@ -55,6 +55,10 @@ class AddPlantViewController: UIViewController {
         
         self.present(selectorVC, animated: true, completion: nil)
     }
+    
+    @IBAction func closeClicked(_ sender: UIButton) {
+        self.dismiss(animated: true)
+    }
 }
 
 extension AddPlantViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {

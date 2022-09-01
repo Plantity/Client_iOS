@@ -154,6 +154,9 @@
                                         <state key="normal" image="xmark" catalog="system">
                                             <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="closeClicked:" destination="MSd-JG-XFj" eventType="touchUpInside" id="6l6-V6-9xs"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" name="searchbar_onclick"/>
