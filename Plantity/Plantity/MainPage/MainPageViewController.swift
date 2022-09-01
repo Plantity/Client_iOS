@@ -22,7 +22,11 @@ class MainPageViewController: UIViewController {
     ]
     
     var userPlant:[UserPlant]=[
-        UserPlant(imageUrl: "", type: "a", nickname: "a", adoptDate: Date())
+        UserPlant(imageUrl: "", type: "a", nickname: "a", adoptDate: Date()),
+        UserPlant(imageUrl: "", type: "b", nickname: "b", adoptDate: Date()),
+        UserPlant(imageUrl: "", type: "c", nickname: "c", adoptDate: Date()),
+        UserPlant(imageUrl: "", type: "d", nickname: "d", adoptDate: Date()),
+        UserPlant(imageUrl: "", type: "plus", nickname: "plus", adoptDate: Date())
     ]
 
 
@@ -79,7 +83,7 @@ extension MainPageViewController: UICollectionViewDelegate,UICollectionViewDataS
         
         if userPlant.count != 0{
             //식물이 하나라도 있으면 -> 식물개수만큼
-            return userPlant.count+1
+            return userPlant.count
         }else{
             //식물이 하나도 없으면 1개
             return 1
@@ -89,7 +93,6 @@ extension MainPageViewController: UICollectionViewDelegate,UICollectionViewDataS
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-    
         if userPlant.count != 0{
             
             //마지막 추가셀
@@ -102,31 +105,29 @@ extension MainPageViewController: UICollectionViewDelegate,UICollectionViewDataS
                 return appendcell
             }
             
-            //if 식물이 하나라도 있으면
-            //맨 마지막 꺼는 + 페이지로 바꾸기
-            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CardCollectionViewCell", for: indexPath) as? CardCollectionViewCell else{
+            //plantcell선언
+            guard let plantcell = collectionView.dequeueReusableCell(withReuseIdentifier: "CardCollectionViewCell", for: indexPath) as? CardCollectionViewCell else{
                 return UICollectionViewCell()
             }
-            cell.layer.cornerRadius = 12
+            plantcell.layer.cornerRadius = 12
             
             let data=userPlant[indexPath.row]
-            cell.setupCardData(imageUrl:data.imageUrl, type: data.type, nickname: data.nickname, adoptDate: data.adoptDate)
+            plantcell.setupCardData(imageUrl:data.imageUrl, type: data.type, nickname: data.nickname, adoptDate: data.adoptDate)
             
-            
-            
-            return cell
+            return plantcell
 
-        }else{
-            
-            //else 식물이 하나도 없으면 -> 만들어놓은 식물추가 nib을 사용하고 추가페이지로 연결
-            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AppendCollectionViewCell", for: indexPath) as? AppendCollectionViewCell else{
+        }
+        
+        //식물이 아예 없으면 -> pluscell하나만 리턴
+        else{
+            //pluscell 선언
+            guard let pluscell = collectionView.dequeueReusableCell(withReuseIdentifier: "AppendCollectionViewCell", for: indexPath) as? AppendCollectionViewCell else{
                 return UICollectionViewCell()
             }
-            cell.layer.cornerRadius = 12
+            pluscell.layer.cornerRadius = 12
             
-            
-            
-            return cell
+            //else 식물이 하나도 없으면 -> 만들어놓은 식물추가 nib을 사용하고 추가페이지로 연결
+            return pluscell
 
         }
 
@@ -145,38 +146,44 @@ extension MainPageViewController: UICollectionViewDelegate,UICollectionViewDataS
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print(indexPath.row)
         
+        //카드개수 0개가 아니면
         if userPlant.count != 0{
-            print(indexPath)
-            let storyboard=UIStoryboard(name: "LogPage", bundle: nil)
-            
-            guard let viewController = storyboard.instantiateViewController(identifier: "LogPageViewController") as? LogPageViewController else { return }
-            
-            //맨 마지막 꺼는 + 페이지로 바꾸기
-            if indexPath.row == userPlant.count {
-                let storyboard=UIStoryboard(name: "MainPage", bundle: nil)
+            //마지막 카드인지 검사 ->  식물추가페이지로 이동
+            if indexPath.row == userPlant.count-1 {
                 
-                guard let addViewController = storyboard.instantiateViewController(identifier: "AddPlantViewController") as? AddPlantViewController else {return}
+                let storyboard=UIStoryboard(name: "MainPage", bundle: nil)
+                //더하기 버튼 이동하기
+                guard let plusviewController = storyboard.instantiateViewController(identifier: "AddPlantViewController") as? AddPlantViewController else { return }
 
                 self.modalPresentationStyle = UIModalPresentationStyle.fullScreen
 
-                self.present(addViewController, animated: true, completion: nil)
+                
+                self.present(plusviewController, animated: true, completion: nil)
+                
+            }else{
+                let storyboard=UIStoryboard(name: "LogPage", bundle: nil)
+                //식물로그 이동하기
+                guard let viewController = storyboard.instantiateViewController(identifier: "LogPageViewController") as? LogPageViewController else { return }
+
+                self.modalPresentationStyle = UIModalPresentationStyle.fullScreen
+
+                self.present(viewController, animated: true, completion: nil)
+                // self.navigationController?.pushViewController(viewController, animated: true)
             }
 
-            self.modalPresentationStyle = UIModalPresentationStyle.fullScreen
-
-            self.present(viewController, animated: true, completion: nil)
-    //        self.navigationController?.pushViewController(viewController, animated: true)
-
-        }else{
+        }
+        //카드개수 0개라면
+        else{
             let storyboard=UIStoryboard(name: "MainPage", bundle: nil)
             
-            guard let viewController = storyboard.instantiateViewController(identifier: "AddPlantViewController") as? AddPlantViewController else { return }
+            guard let plusviewController = storyboard.instantiateViewController(identifier: "AddPlantViewController") as? AddPlantViewController else { return }
 
             self.modalPresentationStyle = UIModalPresentationStyle.fullScreen
 
             
-            self.present(viewController, animated: true, completion: nil)
+            self.present(plusviewController, animated: true, completion: nil)
     //        self.navigationController?.pushViewController(viewController, animated: true)
 
         }
