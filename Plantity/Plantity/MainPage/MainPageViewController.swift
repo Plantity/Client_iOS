@@ -93,11 +93,17 @@ extension MainPageViewController: UICollectionViewDelegate,UICollectionViewDataS
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
-
-        
-
         if userPlant.count != 0{
+            
+            //마지막 추가셀
+            if indexPath.row == userPlant.count {
+                guard let appendcell = collectionView.dequeueReusableCell(withReuseIdentifier: "AppendCollectionViewCell", for: indexPath) as? AppendCollectionViewCell else{
+                    return UICollectionViewCell()
+                }
+                appendcell.layer.cornerRadius = 12
+                
+                return appendcell
+            }
             
             //plantcell선언
             guard let plantcell = collectionView.dequeueReusableCell(withReuseIdentifier: "CardCollectionViewCell", for: indexPath) as? CardCollectionViewCell else{
@@ -107,7 +113,6 @@ extension MainPageViewController: UICollectionViewDelegate,UICollectionViewDataS
             
             let data=userPlant[indexPath.row]
             plantcell.setupCardData(imageUrl:data.imageUrl, type: data.type, nickname: data.nickname, adoptDate: data.adoptDate)
-
             
             return plantcell
 
