@@ -47,11 +47,10 @@ class AddPlantViewController: UIViewController {
     }
 
     @IBAction func plantTypeClicked(_ sender: UITextField) {
-        print("클릭")
         // 식물종류 필드 클릭시 식물종류 검색 페이지로 이동
         let storyboard=UIStoryboard(name: "MainPage", bundle: nil)
         
-        guard let selectorVC = storyboard.instantiateViewController(identifier: "PlantSelectorViewController") as? PlantSelectorViewController else { return }
+        guard let selectorVC = storyboard.instantiateViewController(identifier: "TypeSelectorViewController") as? TypeSelectorViewController else { return }
         
         self.present(selectorVC, animated: true, completion: nil)
     }

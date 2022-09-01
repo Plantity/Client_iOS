@@ -29,4 +29,25 @@ class SearchDataManager {
             }
         }
     }
+    
+    func selectorDataManager(_ parameters: SearchDataInput, _ viewController: TypeSelectorViewController) {
+        // 데이터 주고받는 함수
+        AF.request(
+            "http://plantity.shop/plant",
+            method: .get,
+            parameters: parameters)
+        .validate()
+        .responseDecodable(
+            of: SearchDataModel.self
+        ) { response in
+            switch response.result {
+            case .success(let result):
+                // 성공
+                viewController.successAPI(result)
+            case .failure(let error):
+                // 실패
+                print(error.localizedDescription)
+            }
+        }
+    }
 }

@@ -31,7 +31,7 @@
 		F448F98F28AA4142009FAE31 /* MyDataInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = F448F98E28AA4142009FAE31 /* MyDataInput.swift */; };
 		F448F99128AA417F009FAE31 /* MyDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F448F99028AA417F009FAE31 /* MyDataManager.swift */; };
 		F45D9D912894D39C00EFA5A7 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45D9D902894D39C00EFA5A7 /* SettingsViewController.swift */; };
-		F47D0B6728C0453A003BC566 /* PlantSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47D0B6628C0453A003BC566 /* PlantSelectorViewController.swift */; };
+		F47D0B6728C0453A003BC566 /* TypeSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47D0B6628C0453A003BC566 /* TypeSelectorViewController.swift */; };
 		F4864507288CC34B00956C4C /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4864506288CC34B00956C4C /* Color+Extension.swift */; };
 		F4987E8D289F9ED90067B178 /* PlantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4987E8C289F9ED90067B178 /* PlantViewController.swift */; };
 		F4AE4A7928937236008E7A82 /* GuideDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AE4A7828937236008E7A82 /* GuideDetailViewController.swift */; };
@@ -101,7 +101,7 @@
 		F448F98E28AA4142009FAE31 /* MyDataInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDataInput.swift; sourceTree = "<group>"; };
 		F448F99028AA417F009FAE31 /* MyDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDataManager.swift; sourceTree = "<group>"; };
 		F45D9D902894D39C00EFA5A7 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		F47D0B6628C0453A003BC566 /* PlantSelectorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantSelectorViewController.swift; sourceTree = "<group>"; };
+		F47D0B6628C0453A003BC566 /* TypeSelectorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeSelectorViewController.swift; sourceTree = "<group>"; };
 		F4864506288CC34B00956C4C /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		F4987E8C289F9ED90067B178 /* PlantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantViewController.swift; sourceTree = "<group>"; };
 		F4AE4A7828937236008E7A82 /* GuideDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideDetailViewController.swift; sourceTree = "<group>"; };
@@ -300,7 +300,7 @@
 				55060675288EA07100B717DE /* MainPage.storyboard */,
 				55060679288EC71F00B717DE /* MainPageViewController.swift */,
 				F402FE4528ACCBB500138D8E /* AddPlantViewController.swift */,
-				F47D0B6628C0453A003BC566 /* PlantSelectorViewController.swift */,
+				F47D0B6628C0453A003BC566 /* TypeSelectorViewController.swift */,
 			);
 			path = MainPage;
 			sourceTree = "<group>";
@@ -557,7 +557,7 @@
 				F4D8C935288B94140019B6BC /* TagCollectionViewCell.swift in Sources */,
 				F4BE4BE2288ADBFF00CF276D /* ViewController.swift in Sources */,
 				55436ED12893B3870045B8EE /* TestViewController.swift in Sources */,
-				F47D0B6728C0453A003BC566 /* PlantSelectorViewController.swift in Sources */,
+				F47D0B6728C0453A003BC566 /* TypeSelectorViewController.swift in Sources */,
 				F4AE4A7928937236008E7A82 /* GuideDetailViewController.swift in Sources */,
 				F402FE4428ACC86B00138D8E /* SearchDataManager.swift in Sources */,
 				F4DDD511289E274B004F6932 /* SearchDataModel.swift in Sources */,

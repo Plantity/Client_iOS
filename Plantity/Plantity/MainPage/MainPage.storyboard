@@ -287,10 +287,10 @@
             </objects>
             <point key="canvasLocation" x="1560.8695652173915" y="12.723214285714285"/>
         </scene>
-        <!--Plant Selector View Controller-->
+        <!--Type Selector View Controller-->
         <scene sceneID="lkK-kH-bLa">
             <objects>
-                <viewController storyboardIdentifier="PlantSelectorViewController" id="Sfv-vX-qTI" customClass="PlantSelectorViewController" customModule="Plantity" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TypeSelectorViewController" id="Sfv-vX-qTI" customClass="TypeSelectorViewController" customModule="Plantity" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Bvz-G4-Jhj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -346,6 +346,10 @@
                             <constraint firstItem="tqu-fN-H04" firstAttribute="bottom" secondItem="G3Y-cy-MwQ" secondAttribute="bottom" id="yHe-4q-SaZ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="searchBar" destination="1hC-s0-Waa" id="fDs-D1-495"/>
+                        <outlet property="typeTableView" destination="G3Y-cy-MwQ" id="0P7-FR-gru"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="33e-Hi-gAg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
