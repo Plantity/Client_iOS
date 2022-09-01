@@ -73,7 +73,16 @@ extension TypeSelectorViewController: UITableViewDataSource, UITableViewDelegate
         return cell;
     }
     
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // 이전 화면에 선택된 식물종류 전달
+        if !filteredList.isEmpty {
+            NotificationCenter.default.post(name: NSNotification.Name("plantType"), object: filteredList[indexPath.row])
+        } else {
+            NotificationCenter.default.post(name: NSNotification.Name("plantType"), object: plantList[indexPath.row])
+        }
+        
+        self.dismiss(animated: true)
+    }
 }
 
 extension TypeSelectorViewController:

@@ -15,6 +15,8 @@ class AddPlantViewController: UIViewController {
     @IBOutlet weak var addButton: UIButton!
     
     let imagePickerViewController = UIImagePickerController()
+    
+    var selectedPlant: SearchPlantModel = SearchPlantModel(plantIdx: 0, cntntsNo: "", cntntsSj: "", plntbneNm: "", plntzrNm: "", adviseInfo: "", orgplceInfo: "", lighttdemanddoCodeNm: "", ignSeasonCodeNm: "", flclrCodeNm: "", watercycleSprngCodeNm: "", managelevelCode: "", plantFollowings: [])
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +28,17 @@ class AddPlantViewController: UIViewController {
         addImageView.isUserInteractionEnabled = true
         
         imagePickerViewController.delegate = self
+        
+        // 식물종류 옵저버
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(didRecieveTypeNotification(_:)), name: Notification.Name("plantType"), object: nil)
+    }
+    
+    @objc func didRecieveTypeNotification(_ notification: NSNotification) {
+        let plantData: SearchPlantModel = notification.object as! SearchPlantModel
+        
+        selectedPlant = plantData
+        plantTypeField.text = plantData.cntntsSj
     }
     
     func setupAttribute() {
@@ -45,7 +58,7 @@ class AddPlantViewController: UIViewController {
             
         }
     }
-
+    
     @IBAction func plantTypeClicked(_ sender: UITextField) {
         // 식물종류 필드 클릭시 식물종류 검색 페이지로 이동
         let storyboard=UIStoryboard(name: "MainPage", bundle: nil)
