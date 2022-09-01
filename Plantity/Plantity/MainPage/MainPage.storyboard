@@ -251,6 +251,9 @@
                                 <state key="normal" title="내 식물로 추가하기">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="addButtonClicked:" destination="MSd-JG-XFj" eventType="touchUpInside" id="MQu-Jh-zEE"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vQs-q2-mJr"/>
@@ -279,8 +282,10 @@
                     </view>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="adaptDatePicker" destination="hC4-1G-3j7" id="vp9-Lc-t05"/>
                         <outlet property="addButton" destination="yc5-vR-cSt" id="SRt-E9-vL1"/>
                         <outlet property="addImageView" destination="rTr-5Z-GvV" id="sKC-lN-c0r"/>
+                        <outlet property="nicknameField" destination="Nkp-hS-rCu" id="HOu-Zl-Xk7"/>
                         <outlet property="plantTypeField" destination="UIN-WO-dYy" id="07q-bT-rLe"/>
                     </connections>
                 </viewController>

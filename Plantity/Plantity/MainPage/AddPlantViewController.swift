@@ -12,6 +12,9 @@ class AddPlantViewController: UIViewController {
     @IBOutlet weak var addImageView: UIImageView!
     
     @IBOutlet weak var plantTypeField: UITextField!
+    @IBOutlet weak var nicknameField: UITextField!
+    @IBOutlet weak var adaptDatePicker: UIDatePicker!
+    
     @IBOutlet weak var addButton: UIButton!
     
     let imagePickerViewController = UIImagePickerController()
@@ -70,6 +73,10 @@ class AddPlantViewController: UIViewController {
     
     @IBAction func closeClicked(_ sender: UIButton) {
         self.dismiss(animated: true)
+    }
+    
+    @IBAction func addButtonClicked(_ sender: Any) {
+        // 내 식물로 추가하기 클릭시 POST
     }
 }
 
