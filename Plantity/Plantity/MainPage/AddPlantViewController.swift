@@ -29,6 +29,7 @@ class AddPlantViewController: UIViewController {
     
     func setupAttribute() {
         addImageView.clipsToBounds = true
+        addImageView.contentMode = .center
         
         addButton.layer.cornerRadius = 10
         addButton.clipsToBounds = true
@@ -48,6 +49,7 @@ extension AddPlantViewController: UIImagePickerControllerDelegate, UINavigationC
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             addImageView.image = image
+            addImageView.contentMode = .scaleToFill
         }
         
         self.dismiss(animated: true)
