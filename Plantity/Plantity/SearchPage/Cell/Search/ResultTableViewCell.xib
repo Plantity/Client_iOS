@@ -24,36 +24,22 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="식물명" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KwH-Ay-ovo">
-                        <rect key="frame" x="132" y="6" width="36.5" height="17"/>
+                        <rect key="frame" x="132" y="16" width="36.5" height="17"/>
                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="난이도: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dsh-Io-Tho">
-                        <rect key="frame" x="132" y="26" width="32" height="12"/>
+                        <rect key="frame" x="132" y="38" width="32" height="12"/>
                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                         <color key="textColor" name="text_gray"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="⭐️⭐️⭐️" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hJh-CM-fV6">
-                        <rect key="frame" x="164" y="26" width="42" height="12"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="식물소개" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NcB-CE-uBd">
-                        <rect key="frame" x="132" y="48" width="180" height="50"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="식물소개" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NcB-CE-uBd">
+                        <rect key="frame" x="132" y="60" width="180" height="12"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="50" id="LVx-Gc-EyO"/>
                             <constraint firstAttribute="width" constant="180" id="Qti-dQ-DBA"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                        <color key="textColor" name="text_gray"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="# 태그" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="El8-XG-d2v">
-                        <rect key="frame" x="132" y="111" width="27" height="12"/>
                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                         <color key="textColor" name="text_gray"/>
                         <nil key="highlightedColor"/>
@@ -74,16 +60,14 @@
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="iN3-y7-mrn" secondAttribute="trailing" constant="8.5" id="EPz-gK-7Lp"/>
-                    <constraint firstItem="El8-XG-d2v" firstAttribute="top" secondItem="NcB-CE-uBd" secondAttribute="bottom" constant="13" id="KSr-be-SN9"/>
                     <constraint firstItem="KwH-Ay-ovo" firstAttribute="leading" secondItem="45o-YO-STC" secondAttribute="trailing" constant="19" id="Omc-7k-gDA"/>
-                    <constraint firstItem="KwH-Ay-ovo" firstAttribute="top" secondItem="45o-YO-STC" secondAttribute="top" id="WfU-nn-Xbt"/>
+                    <constraint firstItem="KwH-Ay-ovo" firstAttribute="top" secondItem="45o-YO-STC" secondAttribute="top" constant="10" id="WfU-nn-Xbt"/>
                     <constraint firstItem="dsh-Io-Tho" firstAttribute="leading" secondItem="KwH-Ay-ovo" secondAttribute="leading" id="X1l-Pd-I3Q"/>
                     <constraint firstAttribute="bottom" secondItem="45o-YO-STC" secondAttribute="bottom" constant="8" id="bMG-Cf-Ymm"/>
                     <constraint firstItem="45o-YO-STC" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="f2w-m1-gb1"/>
                     <constraint firstAttribute="bottom" secondItem="iN3-y7-mrn" secondAttribute="bottom" constant="8.5" id="hqM-dL-Y15"/>
                     <constraint firstItem="45o-YO-STC" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="6" id="igq-7e-aaS"/>
-                    <constraint firstItem="El8-XG-d2v" firstAttribute="leading" secondItem="KwH-Ay-ovo" secondAttribute="leading" id="kc8-CD-aK1"/>
-                    <constraint firstItem="dsh-Io-Tho" firstAttribute="top" secondItem="KwH-Ay-ovo" secondAttribute="bottom" constant="3" id="rN8-xN-HQ9"/>
+                    <constraint firstItem="dsh-Io-Tho" firstAttribute="top" secondItem="KwH-Ay-ovo" secondAttribute="bottom" constant="5" id="rN8-xN-HQ9"/>
                     <constraint firstItem="NcB-CE-uBd" firstAttribute="top" secondItem="dsh-Io-Tho" secondAttribute="bottom" constant="10" id="tOy-gj-AYS"/>
                     <constraint firstItem="NcB-CE-uBd" firstAttribute="leading" secondItem="KwH-Ay-ovo" secondAttribute="leading" id="uqT-Yl-Uu6"/>
                 </constraints>
@@ -93,9 +77,8 @@
                 <outlet property="resultImageView" destination="45o-YO-STC" id="P8h-WM-M6L"/>
                 <outlet property="resultIntroLabel" destination="NcB-CE-uBd" id="laW-Fb-JYq"/>
                 <outlet property="resultLikeButton" destination="iN3-y7-mrn" id="8FV-CF-RBf"/>
-                <outlet property="resultLvLabel" destination="hJh-CM-fV6" id="GEd-dE-PO6"/>
+                <outlet property="resultLvLabel" destination="dsh-Io-Tho" id="uct-Y8-1k4"/>
                 <outlet property="resultNameLabel" destination="KwH-Ay-ovo" id="hGe-PO-KE3"/>
-                <outlet property="resultTagLabel" destination="El8-XG-d2v" id="tNj-LE-ElP"/>
             </connections>
             <point key="canvasLocation" x="131.8840579710145" y="92.745535714285708"/>
         </tableViewCell>

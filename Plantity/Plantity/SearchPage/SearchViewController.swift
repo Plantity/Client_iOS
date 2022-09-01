@@ -20,11 +20,12 @@ class SearchViewController: UIViewController {
         didSet { self.searchTableView.reloadData() }
     }
     
+    var pageNum: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupData()
+        setupData(pageNum: pageNum)
 
         // Delegate
         searchTableView.delegate = self
@@ -53,13 +54,10 @@ class SearchViewController: UIViewController {
         searchTableView.register(tagNib, forCellReuseIdentifier: "TagTableViewCell")
     }
 
-    private func setupData() {
+    private func setupData(pageNum: Int) {
         // To Server
-        var input = SearchDataInput(size: 10, page: 0)
+        let input = SearchDataInput(size: 10, page: pageNum)
         
-        SearchDataManager().srearchDataManager(input, self)
-        
-        input = SearchDataInput(size: 10, page: 0)
         SearchDataManager().srearchDataManager(input, self)
     }
     
@@ -138,22 +136,10 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
             else { return UITableViewCell() }
             
             if tableView == searchTableView {
-                cell.setupData(
-                    name:
-                    fileteredData[indexPath.row].cntntsSj,
-                    level: fileteredData[indexPath.row].managelevelCode,
-                    intro: fileteredData[indexPath.row].adviseInfo,
-                    tag: fileteredData[indexPath.row].flclrCodeNm
-                )
+                cell.setupData(plant: fileteredData[indexPath.row])
                 // 태그 대신에 임시로 꽃 색 flclrCodeNm 넣어놓음
             } else {
-                cell.setupData(
-                    name:
-                        dataArray[indexPath.row].cntntsSj,
-                    level: dataArray[indexPath.row].managelevelCode,
-                    intro: dataArray[indexPath.row].adviseInfo,
-                    tag: dataArray[indexPath.row].flclrCodeNm
-                )
+                cell.setupData(plant: dataArray[indexPath.row])
             }
             
             return cell
@@ -184,6 +170,7 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
             let plantViewController = storyboard.instantiateViewController(withIdentifier: "PlantViewController") as! PlantViewController
             
             plantViewController.searchPlant = fileteredData[indexPath.row]
+            plantViewController.hidesBottomBarWhenPushed = true
             
             self.navigationController?.pushViewController(plantViewController, animated: true)
         }
@@ -206,9 +193,18 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
 // MARK: - Network
 extension SearchViewController {
     func successAPI(_ result: SearchDataModel?) {
+        var isLastPage: Bool = false
+        
         if let resultData : SearchDataModelResult = result?.result {
-            dataArray = resultData.content
+            dataArray += resultData.content
+            isLastPage = resultData.last
+            self.pageNum += 1
         }
         searchTableView.reloadData()
+        
+        // 마지막 페이지가 아니라면 계속 받아오기
+        if !isLastPage {
+            self.setupData(pageNum: self.pageNum)
+        }
     }
 }

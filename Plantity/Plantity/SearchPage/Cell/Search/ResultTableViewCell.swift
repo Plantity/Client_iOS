@@ -20,36 +20,35 @@ class ResultTableViewCell: UITableViewCell {
     
     @IBOutlet weak var resultLikeButton: UIButton!
     
+    var reusltPlant: SearchPlantModel = SearchPlantModel(plantIdx: 0, cntntsNo: "", cntntsSj: "", plntbneNm: "", plntzrNm: "", adviseInfo: "", orgplceInfo: "", lighttdemanddoCodeNm: "", ignSeasonCodeNm: "", flclrCodeNm: "", watercycleSprngCodeNm: "", managelevelCode: "", plantFollowings: [])
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
     
-    func setupData(name: String?, level: String?, intro: String?, tag: String?) {
+    func setupData(plant: SearchPlantModel?) {
         // setImage
         // guard let imageURLString = imageURLStr else { return }
         // if let url = URL(string: imageURLString) {
             //resultImageView.kf.setImage(with: url, placeholder: UIImage(systemName: "photo")) }
         
-        // setName
-        if let nameStr: String = name {
-            resultNameLabel.text = nameStr
-        } else { return }
-        
-        // setLevel
-        if let levelInt: String = level {
-            resultLvLabel.text = String(levelInt)
-        } else { return }
-        
-        // setIntro
-        if let introStr: String = intro {
-            resultIntroLabel.text = introStr
-        } else { return }
-        
-        // setTag
-        if let tagStr: String = tag {
-            resultTagLabel.text = tagStr
-        } else { return }
+        if let plantData : SearchPlantModel = plant {
+            resultNameLabel.text = plantData.cntntsSj
+            
+            switch plantData.managelevelCode {
+            case "089001":
+                resultLvLabel.text = "난이도 : ⭐️"
+            case "089002":
+                resultLvLabel.text = "난이도 : ⭐️⭐️"
+            case "089003":
+                resultLvLabel.text = "난이도 : ⭐️⭐️⭐️"
+            default:
+                resultLvLabel.text = ""
+            }
+            
+            resultIntroLabel.text = plantData.adviseInfo
+        }
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
