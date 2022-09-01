@@ -270,6 +270,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="addButton" destination="yc5-vR-cSt" id="SRt-E9-vL1"/>
                         <outlet property="addImageView" destination="rTr-5Z-GvV" id="sKC-lN-c0r"/>
                     </connections>
                 </viewController>

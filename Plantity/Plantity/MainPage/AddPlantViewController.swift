@@ -11,10 +11,14 @@ class AddPlantViewController: UIViewController {
     
     @IBOutlet weak var addImageView: UIImageView!
     
+    @IBOutlet weak var addButton: UIButton!
+    
     let imagePickerViewController = UIImagePickerController()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setupAttribute()
 
         let tapGR = UITapGestureRecognizer(target: self, action: #selector(self.imageTapped))
         addImageView.addGestureRecognizer(tapGR)
@@ -23,10 +27,18 @@ class AddPlantViewController: UIViewController {
         imagePickerViewController.delegate = self
     }
     
+    func setupAttribute() {
+        addImageView.clipsToBounds = true
+        
+        addButton.layer.cornerRadius = 10
+        addButton.clipsToBounds = true
+    }
+    
     @objc func imageTapped(sender: UITapGestureRecognizer) {
         if sender.state == .ended {
             self.imagePickerViewController.sourceType = .photoLibrary
             self.present(imagePickerViewController, animated: true, completion: nil)
+            
         }
     }
 
@@ -37,5 +49,7 @@ extension AddPlantViewController: UIImagePickerControllerDelegate, UINavigationC
         if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             addImageView.image = image
         }
+        
+        self.dismiss(animated: true)
     }
 }
