@@ -11,6 +11,7 @@ class AddPlantViewController: UIViewController {
     
     @IBOutlet weak var addImageView: UIImageView!
     
+    @IBOutlet weak var plantTypeField: UITextField!
     @IBOutlet weak var addButton: UIButton!
     
     let imagePickerViewController = UIImagePickerController()
@@ -33,6 +34,8 @@ class AddPlantViewController: UIViewController {
         
         addButton.layer.cornerRadius = 10
         addButton.clipsToBounds = true
+        
+        plantTypeField.placeholder = ""
     }
     
     @objc func imageTapped(sender: UITapGestureRecognizer) {
@@ -43,6 +46,15 @@ class AddPlantViewController: UIViewController {
         }
     }
 
+    @IBAction func plantTypeClicked(_ sender: UITextField) {
+        print("클릭")
+        // 식물종류 필드 클릭시 식물종류 검색 페이지로 이동
+        let storyboard=UIStoryboard(name: "MainPage", bundle: nil)
+        
+        guard let selectorVC = storyboard.instantiateViewController(identifier: "PlantSelectorViewController") as? PlantSelectorViewController else { return }
+        
+        self.present(selectorVC, animated: true, completion: nil)
+    }
 }
 
 extension AddPlantViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {

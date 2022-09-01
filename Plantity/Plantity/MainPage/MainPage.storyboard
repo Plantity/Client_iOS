@@ -165,7 +165,7 @@
                                     <constraint firstAttribute="height" constant="50" id="wQR-Hu-VEq"/>
                                 </constraints>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="더하기버튼" translatesAutoresizingMaskIntoConstraints="NO" id="rTr-5Z-GvV">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="더하기버튼" translatesAutoresizingMaskIntoConstraints="NO" id="rTr-5Z-GvV">
                                 <rect key="frame" x="30" y="114" width="354" height="354"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="rTr-5Z-GvV" secondAttribute="height" multiplier="1:1" id="PRo-WU-n55"/>
@@ -182,8 +182,12 @@
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="UIN-WO-dYy">
                                         <rect key="frame" x="0.0" y="22" width="354" height="34"/>
+                                        <color key="backgroundColor" systemColor="systemGray5Color"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="plantTypeClicked:" destination="MSd-JG-XFj" eventType="touchDown" id="huW-Yg-z1w"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                                 <constraints>
@@ -273,16 +277,17 @@
                     <connections>
                         <outlet property="addButton" destination="yc5-vR-cSt" id="SRt-E9-vL1"/>
                         <outlet property="addImageView" destination="rTr-5Z-GvV" id="sKC-lN-c0r"/>
+                        <outlet property="plantTypeField" destination="UIN-WO-dYy" id="07q-bT-rLe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="msc-WD-WFY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1560.8695652173915" y="12.723214285714285"/>
         </scene>
-        <!--View Controller-->
+        <!--Plant Selector View Controller-->
         <scene sceneID="lkK-kH-bLa">
             <objects>
-                <viewController id="Sfv-vX-qTI" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PlantSelectorViewController" id="Sfv-vX-qTI" customClass="PlantSelectorViewController" customModule="Plantity" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Bvz-G4-Jhj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -386,6 +391,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
