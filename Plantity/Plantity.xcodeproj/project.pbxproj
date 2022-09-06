@@ -27,6 +27,7 @@
 		F402FE4228ACC84600138D8E /* SearchDataInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = F402FE4128ACC84600138D8E /* SearchDataInput.swift */; };
 		F402FE4428ACC86B00138D8E /* SearchDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F402FE4328ACC86B00138D8E /* SearchDataManager.swift */; };
 		F402FE4628ACCBB500138D8E /* AddPlantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F402FE4528ACCBB500138D8E /* AddPlantViewController.swift */; };
+		F4310D9628C7204B003B731A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4310D9528C7204B003B731A /* LoginViewController.swift */; };
 		F431BC77288FCDA800E4E614 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F431BC76288FCDA800E4E614 /* MyPageViewController.swift */; };
 		F448F98F28AA4142009FAE31 /* MyDataInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = F448F98E28AA4142009FAE31 /* MyDataInput.swift */; };
 		F448F99128AA417F009FAE31 /* MyDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F448F99028AA417F009FAE31 /* MyDataManager.swift */; };
@@ -97,6 +98,7 @@
 		F402FE4128ACC84600138D8E /* SearchDataInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDataInput.swift; sourceTree = "<group>"; };
 		F402FE4328ACC86B00138D8E /* SearchDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDataManager.swift; sourceTree = "<group>"; };
 		F402FE4528ACCBB500138D8E /* AddPlantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlantViewController.swift; sourceTree = "<group>"; };
+		F4310D9528C7204B003B731A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F431BC76288FCDA800E4E614 /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
 		F431BC7A288FCF8100E4E614 /* MyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyTableViewCell.xib; sourceTree = "<group>"; };
 		F431BC7D288FD2B500E4E614 /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -310,6 +312,7 @@
 				55060679288EC71F00B717DE /* MainPageViewController.swift */,
 				F402FE4528ACCBB500138D8E /* AddPlantViewController.swift */,
 				F47D0B6628C0453A003BC566 /* TypeSelectorViewController.swift */,
+				F4310D9528C7204B003B731A /* LoginViewController.swift */,
 			);
 			path = MainPage;
 			sourceTree = "<group>";
@@ -587,6 +590,7 @@
 				F4C829D928925314009AB584 /* GuideViewController.swift in Sources */,
 				F4B989FD2891828200807A14 /* MyTableViewCell.swift in Sources */,
 				F4D8C929288B866F0019B6BC /* SearchTableViewCell.swift in Sources */,
+				F4310D9628C7204B003B731A /* LoginViewController.swift in Sources */,
 				5516AEEC28A11BB700458259 /* MainDataModel.swift in Sources */,
 				F4B989F92891826C00807A14 /* MyCollectionViewCell.swift in Sources */,
 				F4987E8D289F9ED90067B178 /* PlantViewController.swift in Sources */,
