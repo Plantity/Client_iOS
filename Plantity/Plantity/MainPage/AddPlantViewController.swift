@@ -77,7 +77,7 @@ class AddPlantViewController: UIViewController {
     
     @IBAction func addButtonClicked(_ sender: Any) {
         // 내 식물로 추가하기 클릭시 POST
-        //postData()
+        postData()
     }
 }
 
@@ -96,12 +96,13 @@ extension AddPlantViewController {
     private func postData() {
         // 날짜 포맷팅
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd" // 2020-08-13 16:30
+        dateFormatter.dateFormat = "yyyy-MM-dd"
         let dateStr = dateFormatter.string(from: adaptDatePicker.date)
+        print(dateStr)
         
         // To Server
-        //let input = AddDataInput(plantName: nicknameField.text, plantType: plantTypeField.text, plantImage: addImageView.image, plantAdaptTime: dateStr)
+        let input = AddDataInput(plantName: nicknameField.text, plantType: plantTypeField.text, plantImage: addImageView.image, plantAdaptTime: dateStr)
         
-        //AddDataManager().addDataManager(input, self)
+        AddDataManager().addDataManager(input, self)
     }
 }
