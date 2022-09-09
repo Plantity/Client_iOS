@@ -209,6 +209,8 @@ extension MainPageViewController: UICollectionViewDelegate,UICollectionViewDataS
 
 
                 self.present(plusviewController, animated: true, completion: nil)
+//                self.navigationController?.pushViewController(plusviewController, animated: true)
+                
                 
             }else{
                 let storyboard=UIStoryboard(name: "LogPage", bundle: nil)
@@ -217,8 +219,8 @@ extension MainPageViewController: UICollectionViewDelegate,UICollectionViewDataS
 
                 self.modalPresentationStyle = UIModalPresentationStyle.fullScreen
 
-                self.present(viewController, animated: true, completion: nil)
-                // self.navigationController?.pushViewController(viewController, animated: true)
+//                self.present(viewController, animated: true, completion: nil)
+                 self.navigationController?.pushViewController(viewController, animated: true)
             }
 
         }
@@ -232,7 +234,7 @@ extension MainPageViewController: UICollectionViewDelegate,UICollectionViewDataS
 
             
             self.present(plusviewController, animated: true, completion: nil)
-    //        self.navigationController?.pushViewController(viewController, animated: true)
+//            self.navigationController?.pushViewController(plusviewController, animated: true)
 
         }
     
@@ -255,4 +257,8 @@ extension MainPageViewController{
         cardCollectionView.reloadData()
     }
     
+//    func successtodoAPI(){
+//        let input= ?
+//        MainDataManager().posts(self, input)
+//    }
 }
