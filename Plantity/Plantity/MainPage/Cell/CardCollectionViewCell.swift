@@ -41,6 +41,7 @@ class CardCollectionViewCell: UICollectionViewCell {
         pushLogButton.layer.cornerRadius = 10
         pushLogButton.clipsToBounds = true
     }
+
     func setupCardData(imageUrl: String?, type: String?, nickname: String?, adoptDate: Date?){
         
         if let nicknameStr:String=nickname{
