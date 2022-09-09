@@ -40,8 +40,11 @@ class MainPageViewController: UIViewController {
         super.viewDidLoad()
         
         //연동
-//        let input=UserInfoInput()
-//        MaininfoDataManager().mainDataManager(input)
+//        let userinput=UserInfoInput()
+//        MainDataManager().maininfoDataManager(userinput)
+        
+//        let plantinput=UserPlantInput()
+//        MainDataManager().plantDataManager(plantinput)
         
 
         setupCard()
@@ -242,8 +245,13 @@ extension MainPageViewController: UICollectionViewDelegate,UICollectionViewDataS
 
 
 extension MainPageViewController{
-    func successAPI(_ result: [UserInfo]){
+    func successuserAPI(_ result: [UserInfo]){
         userInfo=result
+        cardCollectionView.reloadData()
+    }
+    
+    func successplantAPI(_ result: [UserPlant]){
+        userPlant=result
         cardCollectionView.reloadData()
     }
     
