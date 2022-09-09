@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6qf-0X-4sq">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6qf-0X-4sq">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -154,6 +154,9 @@
                                         <state key="normal" image="xmark" catalog="system">
                                             <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="closeClicked:" destination="MSd-JG-XFj" eventType="touchUpInside" id="6l6-V6-9xs"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" name="searchbar_onclick"/>
@@ -165,7 +168,7 @@
                                     <constraint firstAttribute="height" constant="50" id="wQR-Hu-VEq"/>
                                 </constraints>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rTr-5Z-GvV">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="더하기버튼" translatesAutoresizingMaskIntoConstraints="NO" id="rTr-5Z-GvV">
                                 <rect key="frame" x="30" y="114" width="354" height="354"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="rTr-5Z-GvV" secondAttribute="height" multiplier="1:1" id="PRo-WU-n55"/>
@@ -182,8 +185,13 @@
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="UIN-WO-dYy">
                                         <rect key="frame" x="0.0" y="22" width="354" height="34"/>
+                                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="plantTypeClicked:" destination="MSd-JG-XFj" eventType="touchDown" id="huW-Yg-z1w"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                                 <constraints>
@@ -243,6 +251,9 @@
                                 <state key="normal" title="내 식물로 추가하기">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="addButtonClicked:" destination="MSd-JG-XFj" eventType="touchUpInside" id="MQu-Jh-zEE"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vQs-q2-mJr"/>
@@ -269,19 +280,23 @@
                             <constraint firstItem="clH-xf-3L3" firstAttribute="leading" secondItem="rTr-5Z-GvV" secondAttribute="leading" id="x1a-N6-Cy3"/>
                         </constraints>
                     </view>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="adaptDatePicker" destination="hC4-1G-3j7" id="vp9-Lc-t05"/>
                         <outlet property="addButton" destination="yc5-vR-cSt" id="SRt-E9-vL1"/>
                         <outlet property="addImageView" destination="rTr-5Z-GvV" id="sKC-lN-c0r"/>
+                        <outlet property="nicknameField" destination="Nkp-hS-rCu" id="HOu-Zl-Xk7"/>
+                        <outlet property="plantTypeField" destination="UIN-WO-dYy" id="07q-bT-rLe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="msc-WD-WFY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1560.8695652173915" y="12.723214285714285"/>
         </scene>
-        <!--View Controller-->
+        <!--Type Selector View Controller-->
         <scene sceneID="lkK-kH-bLa">
             <objects>
-                <viewController id="Sfv-vX-qTI" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TypeSelectorViewController" id="Sfv-vX-qTI" customClass="TypeSelectorViewController" customModule="Plantity" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Bvz-G4-Jhj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -337,6 +352,10 @@
                             <constraint firstItem="tqu-fN-H04" firstAttribute="bottom" secondItem="G3Y-cy-MwQ" secondAttribute="bottom" id="yHe-4q-SaZ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="searchBar" destination="1hC-s0-Waa" id="fDs-D1-495"/>
+                        <outlet property="typeTableView" destination="G3Y-cy-MwQ" id="0P7-FR-gru"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="33e-Hi-gAg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -369,13 +388,82 @@
             </objects>
             <point key="canvasLocation" x="-149.27536231884059" y="13.392857142857142"/>
         </scene>
+        <!--Login View Controller-->
+        <scene sceneID="RLp-nH-6cy">
+            <objects>
+                <viewController storyboardIdentifier="LoginViewController" id="Pi9-ah-slN" customClass="LoginViewController" customModule="Plantity" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Mvy-iA-wLu">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="teststartbackground" translatesAutoresizingMaskIntoConstraints="NO" id="dXF-Ou-02A">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FGl-HA-zEB">
+                                <rect key="frame" x="29.5" y="682.5" width="355" height="74"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="button_login"/>
+                                <buttonConfiguration key="configuration" style="plain" image="button_login"/>
+                                <connections>
+                                    <action selector="loginButtonClicked:" destination="Pi9-ah-slN" eventType="touchUpInside" id="L5u-yV-Kma"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="cHK-Bu-WHJ">
+                                <rect key="frame" x="81" y="190.5" width="252.5" height="59"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="내 반려식물과 함께" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GzI-fE-KHh">
+                                        <rect key="frame" x="48.5" y="0.0" width="155" height="25.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="21"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="가드닝 라이프를 시작해보세요!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eDh-Ak-bgQ">
+                                        <rect key="frame" x="0.0" y="33.5" width="252.5" height="25.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_login" translatesAutoresizingMaskIntoConstraints="NO" id="zHC-I4-1Vz">
+                                <rect key="frame" x="42.5" y="283.5" width="329" height="329"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="329" id="9Up-1B-8jx"/>
+                                    <constraint firstAttribute="width" secondItem="zHC-I4-1Vz" secondAttribute="height" multiplier="1:1" id="n3T-Px-jcl"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="O3p-Hy-yML"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="zHC-I4-1Vz" firstAttribute="centerX" secondItem="dXF-Ou-02A" secondAttribute="centerX" id="5Gt-W8-si5"/>
+                            <constraint firstItem="zHC-I4-1Vz" firstAttribute="centerY" secondItem="dXF-Ou-02A" secondAttribute="centerY" id="9ij-wJ-aTP"/>
+                            <constraint firstItem="FGl-HA-zEB" firstAttribute="centerX" secondItem="dXF-Ou-02A" secondAttribute="centerX" id="G1Z-Va-Syk"/>
+                            <constraint firstItem="zHC-I4-1Vz" firstAttribute="top" secondItem="cHK-Bu-WHJ" secondAttribute="bottom" constant="34" id="GXM-vD-RB8"/>
+                            <constraint firstItem="cHK-Bu-WHJ" firstAttribute="centerX" secondItem="dXF-Ou-02A" secondAttribute="centerX" id="b0Z-qb-p6T"/>
+                            <constraint firstAttribute="bottom" secondItem="dXF-Ou-02A" secondAttribute="bottom" id="qAq-va-Sva"/>
+                            <constraint firstItem="FGl-HA-zEB" firstAttribute="top" secondItem="zHC-I4-1Vz" secondAttribute="bottom" constant="70" id="vEV-YF-5FF"/>
+                            <constraint firstItem="dXF-Ou-02A" firstAttribute="leading" secondItem="O3p-Hy-yML" secondAttribute="leading" id="wCz-EZ-xyW"/>
+                            <constraint firstItem="dXF-Ou-02A" firstAttribute="trailing" secondItem="O3p-Hy-yML" secondAttribute="trailing" id="xDR-0O-Mh3"/>
+                            <constraint firstItem="dXF-Ou-02A" firstAttribute="top" secondItem="Mvy-iA-wLu" secondAttribute="top" id="ynV-Nn-ufB"/>
+                        </constraints>
+                    </view>
+                    <nil key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wxt-6U-hgB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="217.39130434782609" y="726.5625"/>
+        </scene>
     </scenes>
     <resources>
         <image name="PLANTITY2x" width="344" height="50"/>
+        <image name="button_login" width="331" height="60"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>
+        <image name="image_login" width="369" height="369"/>
         <image name="star.fill" catalog="system" width="128" height="116"/>
         <image name="teststartbackground" width="375" height="812"/>
         <image name="xmark" catalog="system" width="128" height="113"/>
+        <image name="더하기버튼" width="83" height="83"/>
         <namedColor name="searchbar_onclick">
             <color red="0.91764705882352937" green="0.96470588235294119" blue="0.8901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
@@ -384,6 +472,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -159,7 +159,7 @@ extension MainPageViewController: UICollectionViewDelegate,UICollectionViewDataS
 
                 self.modalPresentationStyle = UIModalPresentationStyle.fullScreen
 
-                
+
                 self.present(plusviewController, animated: true, completion: nil)
                 
             }else{
