@@ -11,14 +11,18 @@ import UPCarouselFlowLayout
 class MainPageViewController: UIViewController {
     
     //사용자항목들
+    @IBOutlet weak var usernameLabel: UILabel!
     
+    @IBOutlet weak var welcomeLabel: UILabel!
+    @IBOutlet weak var progressLabel: UILabel!
+    @IBOutlet weak var progressBar: UIProgressView!
     
     //카드뷰
     @IBOutlet weak var cardCollectionView: UICollectionView!
     
     //dummies
     var userInfo:[UserInfo]=[
-        UserInfo(username: "hailey", level: 2, progress: 49)
+        UserInfo(username: "김다연", level: 2, progress: 75)
     ]
     
     var userPlant:[UserPlant]=[
@@ -34,8 +38,45 @@ class MainPageViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //연동
+//        let input=UserInfoInput()
+//        MaininfoDataManager().mainDataManager(input)
+        
 
         setupCard()
+        let userdata=userInfo[0]
+        setupUserData(name:userdata.username, level: userdata.level, progress: userdata.progress)
+        
+
+        
+    }
+    func setupUserData(name:String?,level:Int?,progress:Int?){
+        
+        //이름
+        if let nameStr:String=name{
+            usernameLabel.text=nameStr
+        }
+        
+        //레벨
+        if let levelInt:Int=level{
+            if levelInt==1{
+                welcomeLabel.text="안녕하세요 레벨 1 오늘도 민첩한 식물인이 되세요!"
+            }else if levelInt==2{
+                welcomeLabel.text="안녕하세요 레벨 2 오늘도 민첩한 식물인이 되세요!"
+            }else if levelInt==3{
+                welcomeLabel.text="안녕하세요 레벨 3 오늘도 민첩한 식물인이 되세요!"
+            }else{
+                welcomeLabel.text="안녕하세요 레벨 4 오늘도 민첩한 식물인이 되세요!"
+            }
+            
+        }
+        
+        //게이지
+        if let progressInt:Int=progress{
+            progressBar.progress=Float(progressInt)/100
+            progressLabel.text=String(progressInt)
+        }
         
     }
     
@@ -76,7 +117,10 @@ class MainPageViewController: UIViewController {
 }
 
 
+
 extension MainPageViewController: UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
+    
+    
     //카드갯수
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
@@ -110,6 +154,7 @@ extension MainPageViewController: UICollectionViewDelegate,UICollectionViewDataS
                 return UICollectionViewCell()
             }
             plantcell.layer.cornerRadius = 12
+            
             
             let data=userPlant[indexPath.row]
             plantcell.setupCardData(imageUrl:data.imageUrl, type: data.type, nickname: data.nickname, adoptDate: data.adoptDate)
@@ -193,4 +238,13 @@ extension MainPageViewController: UICollectionViewDelegate,UICollectionViewDataS
 
         
     }
+}
+
+
+extension MainPageViewController{
+    func successAPI(_ result: [UserInfo]){
+        userInfo=result
+        cardCollectionView.reloadData()
+    }
+    
 }
