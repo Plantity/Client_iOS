@@ -14,9 +14,12 @@ class MyTableViewCell: UITableViewCell {
     // subviews 한번만 호출하기 위한 변수
     var didLayoutSubviews: Bool = false
     
-    public func configure(with plants: [String]) {
-        self.data = plants
-        myCollectionView.reloadData()
+    public func configure(with plants: [String]?)
+    {
+        if let plantData: [String] = plants {
+            self.data = plantData
+            myCollectionView.reloadData()
+        }
     }
     
     @IBOutlet weak var titleLabel: UILabel!
@@ -63,13 +66,13 @@ class MyTableViewCell: UITableViewCell {
 
 extension MyTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+        return data.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MyCollectionViewCell", for: indexPath) as? MyCollectionViewCell else { return UICollectionViewCell() }
         
-        // cell.configure(with: data)
+        cell.configure(with: data)
         
         return cell
     }

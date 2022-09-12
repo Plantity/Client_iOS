@@ -24,7 +24,7 @@ class MyPageViewController: UIViewController {
     @IBOutlet weak var myTableView: UITableView!
     
     // tmp
-    var plants: [String] = ["몬스테라","몬스테라","몬스테라","몬스테라"]
+    //var plants: [String] = ["몬스테라","몬스테라","몬스테라","몬스테라"]
     // response 예시
     var myData : MyModelResult = MyModelResult(myInfo: MyInfo(username: "ㅇㅇㅇ", userId: "1234", level: 1, progress: 30), myPlants: ["몬스테라"], myLikes: ["몬스테라"])
     
@@ -118,7 +118,13 @@ extension MyPageViewController: UITableViewDelegate, UITableViewDataSource {
         cell.clipsToBounds = true
         cell.layer.cornerRadius = 20
         
-        cell.configure(with: plants)
+        if indexPath.row == 0 {
+            // 첫번째 셀: 나의 식물
+            cell.configure(with: myData.myPlants)
+        } else {
+            // 두번째 셀: 내가 찜한 식물
+            cell.configure(with: myData.myLikes)
+        }
         
         return cell
     }
