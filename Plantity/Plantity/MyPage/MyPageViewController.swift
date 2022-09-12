@@ -43,11 +43,35 @@ class MyPageViewController: UIViewController {
         myTableView.register(myTableNib, forCellReuseIdentifier: "MyTableViewCell")
 
         setupAttribute()
+        setupData()
     }
     
     func successAPI(_ result: MyDataModel) {
         // myData = result
         // tableView.reloadData()
+    }
+    
+    private func setupData() {
+        if let userInfo : MyInfo = myData.myInfo {
+            myProgressView.setProgress(Float(userInfo.progress ?? 0) / 100, animated: false)
+            
+            myNameLabel.text = userInfo.username
+            
+            switch userInfo.level {
+            case 0:
+                myMedalImageView.image = UIImage(named: "image_medal_bronze")
+                myLevelLabel.text = "비기너"
+            case 1:
+                myMedalImageView.image = UIImage(named: "image_medal_silver")
+                myLevelLabel.text = "가드너"
+            case 2:
+                myMedalImageView.image = UIImage(named: "image_medal_gold")
+                myLevelLabel.text = "마스터"
+            default:
+                myLevelLabel.text = "_"
+            }
+        }
+        
     }
     
     private func setupAttribute() {
