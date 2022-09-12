@@ -9,4 +9,5 @@ target 'Plantity' do
   pod 'FSCalendar'
   pod "UPCarouselFlowLayout"
   pod 'Alamofire'
+  pod 'KakaoSDK'
 end
