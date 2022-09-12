@@ -37,7 +37,7 @@ class LoginViewController: UIViewController {
                    let accessToken = oauthToken?.accessToken
                     // 서버에 토큰 전달
                     // ***
-                    
+                    // 서버에 토큰 보내고 successAPI에서 화면이동 호출할 것
                     
                     // 자체 처리: self.setUserInfo()
                 }
