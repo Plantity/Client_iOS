@@ -26,7 +26,7 @@ class MyPageViewController: UIViewController {
     // tmp
     //var plants: [String] = ["몬스테라","몬스테라","몬스테라","몬스테라"]
     // response 예시
-    var myData : MyModelResult = MyModelResult(myInfo: MyInfo(username: "ㅇㅇㅇ", userId: "1234", level: 1, progress: 30), myPlants: ["몬스테라"], myLikes: ["몬스테라"])
+    var myData : MyModelResult = MyModelResult(myInfo: MyInfo(username: "ㅇㅇㅇ", userId: "1234", level: 1, progress: 30), myPlants: ["몬스테라"], myLikes: ["베고니아"])
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -121,9 +121,11 @@ extension MyPageViewController: UITableViewDelegate, UITableViewDataSource {
         if indexPath.row == 0 {
             // 첫번째 셀: 나의 식물
             cell.configure(with: myData.myPlants)
+            cell.isMyPlant = true
         } else {
             // 두번째 셀: 내가 찜한 식물
             cell.configure(with: myData.myLikes)
+            cell.isMyPlant = false
         }
         
         return cell

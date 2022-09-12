@@ -9,6 +9,9 @@ import UIKit
 class MyTableViewCell: UITableViewCell {
     static let identifier = "MyTableViewCell"
     
+    // 나의 식물인지 내가 찜한 식물인지
+    var isMyPlant: Bool = true
+    
     // 임시 Data
     var data: [String] = []
     // subviews 한번만 호출하기 위한 변수
@@ -79,5 +82,11 @@ extension MyTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource,
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 105, height: 105)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        //
+        print(data[indexPath.row])
+        print(isMyPlant)
     }
 }
