@@ -85,8 +85,13 @@ extension MyTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource,
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        //
         print(data[indexPath.row])
         print(isMyPlant)
+        if isMyPlant == true {
+            // 나의 식물 컬렉션이면 로그로 이동
+        } else {
+            // 내가 찜한 식물 컬렉션이면 검색 -> 식물 상세보기로 이동
+            // 코어데이터에 뭘 저장할건지??
+        }
     }
 }
