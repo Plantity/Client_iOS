@@ -25,8 +25,8 @@ class MyPageViewController: UIViewController {
     
     // tmp
     var plants: [String] = ["몬스테라","몬스테라","몬스테라","몬스테라"]
-    // response
-    // var myData : MyDataModel
+    // response 예시
+    var myData : MyModelResult = MyModelResult(myInfo: MyInfo(username: "ㅇㅇㅇ", userId: "1234", level: 1, progress: 30), myPlants: ["몬스테라"], myLikes: ["몬스테라"])
     
     override func viewDidLoad() {
         super.viewDidLoad()
