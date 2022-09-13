@@ -48,12 +48,9 @@ struct UserPlant : Decodable {
 }
 
 
-//과제 -> 보낼거
+//과제 -> POST 성공
 struct Todo:Decodable {
-    let water: Bool?
-    let sun : Bool?
-    let look : Bool?
-    let split: Bool?
+    let isSuccess: Bool
 }
 
 
