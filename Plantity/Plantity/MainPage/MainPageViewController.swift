@@ -47,8 +47,8 @@ class MainPageViewController: UIViewController {
 //        MainDataManager().plantDataManager(plantinput)
         
         //연동 예시
-        MainDataManager().getTest()
-        MainDataManager().postTest()
+        MainDataManager().getplantcardTest()
+        MainDataManager().postsunTest()
         
 
         setupCard()

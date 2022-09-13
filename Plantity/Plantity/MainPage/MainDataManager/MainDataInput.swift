@@ -28,3 +28,20 @@ struct TodoInput:Encodable {
     var look : Bool?
     var split: Bool?
 }
+
+//--------------------------과제수행여부------------------------------------//
+
+struct TodoRepotInput:Encodable{
+    var userId:Int?
+    var myPlantId:Int?
+}
+
+struct TodoSunInput:Encodable{
+    var userId:Int?
+    var myPlantId:Int?
+}
+
+struct TodoWaterInput:Encodable{
+    var userId:Int?
+    var myPlantId:Int?
+}
