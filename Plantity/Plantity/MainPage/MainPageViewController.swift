@@ -46,6 +46,10 @@ class MainPageViewController: UIViewController {
 //        let plantinput=UserPlantInput()
 //        MainDataManager().plantDataManager(plantinput)
         
+        //연동 예시
+        MainDataManager().getTest()
+        MainDataManager().postTest()
+        
 
         setupCard()
         let userdata=userInfo[0]
