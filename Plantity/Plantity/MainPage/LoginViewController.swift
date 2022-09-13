@@ -21,6 +21,7 @@ class LoginViewController: UIViewController {
     
     
     @IBAction func loginButtonClicked(_ sender: Any) {
+        var accessToken: String = ""
         // 카카오톡 설치 여부 확인
           if (UserApi.isKakaoTalkLoginAvailable()) {
             // 카카오톡 로그인. api 호출 결과를 클로저로 전달.
@@ -30,16 +31,9 @@ class LoginViewController: UIViewController {
                     print(error)
                 }
                 else {
-                    print("loginWithKakaoTalk() success.")
-                   // do something
-                    _ = oauthToken
-                   // 어세스토큰
-                   let accessToken = oauthToken?.accessToken
-                    // 서버에 토큰 전달
-                    // ***
-                    // 서버에 토큰 보내고 successAPI에서 화면이동 호출할 것
-                    
-                    // 자체 처리: self.setUserInfo()
+                    if let token : String = oauthToken?.accessToken {
+                        accessToken = token
+                    }
                 }
             }
           } else {
@@ -49,19 +43,19 @@ class LoginViewController: UIViewController {
                       print(error)
                   }
                   else {
-                      print("loginWithKakaoAccount() success.")
-                      
-                      //do something
-                      _ = oauthToken
-                      // 어세스토큰
-                      let accessToken = oauthToken?.accessToken
-                      print("카카오 로그인 성공")
-                      
-                      //카카오 로그인을 통해 사용자 토큰을 발급 받은 후 사용자 관리 API 호출
-                      // self.setUserInfo()
+                      if let token : String = oauthToken?.accessToken {
+                          accessToken = token
+                      }
                   }
               }
           }
+        // 서버에 토큰 전달
+        // ***
+        
+        print(accessToken)
+        
+        //카카오 로그인을 통해 사용자 토큰을 발급 받은 후 사용자 관리 API 호출
+        // self.setUserInfo()
     }
     
     func setUserInfo() {
