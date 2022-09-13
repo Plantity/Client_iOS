@@ -39,16 +39,19 @@ class AddDataManager {
         ]
         
         AF.upload(multipartFormData: { multipartFormData in
+            if let image = parameter.plantImage?.pngData() {
+                multipartFormData.append(image, withName: "image", fileName: "\(image).png", mimeType: "image/png")
+            }
+            
             for (key, value) in parameters {
                 if let strValue: String = value {
                     multipartFormData.append("\(strValue)".data(using: .utf8)!, withName: key)
                 }
             }
-            if let image = parameter.plantImage?.pngData() {
-                multipartFormData.append(image, withName: "plantImage", fileName: "\(image).png", mimeType: "image/png")
-            }
-        }, to: "http://plantity.shop/myplant/save", usingThreshold: UInt64.init(), method: .post, headers: header).responseDecodable(of: AddDataModel.self) {
+            
+        }, to: "http://plantity.shop/myplant/save/\(1)", usingThreshold: UInt64.init(), method: .post, headers: header).responseDecodable(of: AddDataModel.self) {
             response in
+                print(response)
                 switch response.result {
                 case .success(let result):
                     if result.success {

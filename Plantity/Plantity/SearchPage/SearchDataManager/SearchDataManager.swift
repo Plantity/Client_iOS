@@ -19,6 +19,7 @@ class SearchDataManager {
         .responseDecodable(
             of: SearchDataModel.self
         ) { response in
+            print(response)
             switch response.result {
             case .success(let result):
                 // 성공

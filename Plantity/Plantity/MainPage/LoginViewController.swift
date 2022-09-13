@@ -67,7 +67,7 @@ class LoginViewController: UIViewController {
             else {
                 print("me() success.")
                 // 로그인한 유저정보 받아와서 무언가 할 것
-                print(user)
+                print(user?.id)
             }
         }
     }
