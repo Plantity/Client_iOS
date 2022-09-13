@@ -1,24 +1,44 @@
 PODS:
   - Alamofire (5.6.2)
   - FSCalendar (2.8.4)
+  - KakaoSDKAuth (2.11.1):
+    - KakaoSDKCommon (= 2.11.1)
+  - KakaoSDKCommon (2.11.1):
+    - KakaoSDKCommon/Common (= 2.11.1)
+    - KakaoSDKCommon/Network (= 2.11.1)
+  - KakaoSDKCommon/Common (2.11.1)
+  - KakaoSDKCommon/Network (2.11.1):
+    - Alamofire (~> 5.1)
+    - KakaoSDKCommon/Common (= 2.11.1)
+  - KakaoSDKUser (2.11.1):
+    - KakaoSDKAuth (= 2.11.1)
   - UPCarouselFlowLayout (1.1.2)
 
 DEPENDENCIES:
   - Alamofire
   - FSCalendar
+  - KakaoSDKAuth
+  - KakaoSDKCommon
+  - KakaoSDKUser
   - UPCarouselFlowLayout
 
 SPEC REPOS:
   trunk:
     - Alamofire
     - FSCalendar
+    - KakaoSDKAuth
+    - KakaoSDKCommon
+    - KakaoSDKUser
     - UPCarouselFlowLayout
 
 SPEC CHECKSUMS:
   Alamofire: d368e1ff8a298e6dde360e35a3e68e6c610e7204
   FSCalendar: 2d1d0d9398f12d439f55c1fe0f01525b151b8260
+  KakaoSDKAuth: bb2dfa7be30daa8403c9cfc8001aa6fde7a5b779
+  KakaoSDKCommon: 555e1bb46595b842ded01cf7888cc17bbae4e113
+  KakaoSDKUser: 08c0a4f40bebdebdf948a9e3d0e44ed5c2754f99
   UPCarouselFlowLayout: 4c7d2c43a10ebb1597bde502a53699d378341dad
 
-PODFILE CHECKSUM: bb36438b819605cd7871c9c651bdc824ed4ba898
+PODFILE CHECKSUM: 4e5eb645243fdd6cbd54ada646a534bc3d8206da
 
 COCOAPODS: 1.11.3

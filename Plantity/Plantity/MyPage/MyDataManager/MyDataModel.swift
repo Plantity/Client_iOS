@@ -32,8 +32,8 @@ struct MyDataModel : Decodable {
 
 struct MyModelResult: Decodable {
     let myInfo: MyInfo?
-    let myPlants: [MyPlantModel?]
-    let myLikes: [SearchPlantModel?]
+    let myPlants: [String] // 이름으로 데이터 찾을거임
+    let myLikes: [String]  // 이름으로 데이터 찾을거임
 }
 
 struct MyInfo: Decodable {

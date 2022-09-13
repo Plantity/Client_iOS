@@ -244,13 +244,13 @@
                                 <rect key="frame" x="30" y="640" width="354" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="입양날짜" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W2N-jB-96D">
-                                        <rect key="frame" x="0.0" y="16.5" width="48.5" height="17"/>
+                                        <rect key="frame" x="0.0" y="16.5" width="39" height="17"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="hC4-1G-3j7">
-                                        <rect key="frame" x="66.5" y="0.0" width="287.5" height="50"/>
+                                        <rect key="frame" x="57" y="0.0" width="297" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="t1v-af-0K3"/>
                                         </constraints>

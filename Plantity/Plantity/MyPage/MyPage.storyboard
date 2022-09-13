@@ -111,7 +111,7 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="가드너" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="clZ-lo-T2R">
-                                                <rect key="frame" x="158" y="116" width="42" height="20"/>
+                                                <rect key="frame" x="138" y="116" width="42" height="20"/>
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -123,7 +123,7 @@
                                             <constraint firstItem="AW1-Zl-82k" firstAttribute="leading" secondItem="eJ2-kg-FxI" secondAttribute="leading" constant="13" id="38m-gf-6Gm"/>
                                             <constraint firstItem="OiG-4k-WDj" firstAttribute="top" secondItem="eJ2-kg-FxI" secondAttribute="top" constant="18" id="6Zh-i0-0ZD"/>
                                             <constraint firstItem="cl7-Fw-bAA" firstAttribute="leading" secondItem="AW1-Zl-82k" secondAttribute="trailing" constant="7" id="AFs-TT-PGY"/>
-                                            <constraint firstItem="clZ-lo-T2R" firstAttribute="leading" secondItem="cl7-Fw-bAA" secondAttribute="trailing" constant="20" id="HxI-5h-xew"/>
+                                            <constraint firstItem="clZ-lo-T2R" firstAttribute="leading" secondItem="cl7-Fw-bAA" secondAttribute="trailing" id="HxI-5h-xew"/>
                                             <constraint firstItem="cl7-Fw-bAA" firstAttribute="top" secondItem="nAH-4O-Veq" secondAttribute="bottom" constant="10" id="Ioz-eM-Fvf"/>
                                             <constraint firstItem="g1K-O0-jgH" firstAttribute="centerY" secondItem="nAH-4O-Veq" secondAttribute="centerY" id="Pz1-Tc-3bf"/>
                                             <constraint firstItem="clZ-lo-T2R" firstAttribute="centerY" secondItem="cl7-Fw-bAA" secondAttribute="centerY" id="RDe-Uo-vXT"/>

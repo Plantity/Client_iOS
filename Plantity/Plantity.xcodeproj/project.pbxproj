@@ -43,6 +43,7 @@
 		F4AE4A7928937236008E7A82 /* GuideDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AE4A7828937236008E7A82 /* GuideDetailViewController.swift */; };
 		F4B3722C288E5E2F002215F1 /* ResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B3722A288E5E2F002215F1 /* ResultTableViewCell.swift */; };
 		F4B3722D288E5E2F002215F1 /* ResultTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4B3722B288E5E2F002215F1 /* ResultTableViewCell.xib */; };
+		F4B6E8BD28CF52DC00D5F339 /* Pods_Plantity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A5BB4544D9658449C93E75F /* Pods_Plantity.framework */; };
 		F4B989F92891826C00807A14 /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B989F72891826C00807A14 /* MyCollectionViewCell.swift */; };
 		F4B989FD2891828200807A14 /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B989FB2891828200807A14 /* MyTableViewCell.swift */; };
 		F4B989FF289189E700807A14 /* SearchPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4BE4BFA288AE00100CF276D /* SearchPage.storyboard */; };
@@ -119,6 +120,7 @@
 		F4AE4A7828937236008E7A82 /* GuideDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideDetailViewController.swift; sourceTree = "<group>"; };
 		F4B3722A288E5E2F002215F1 /* ResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultTableViewCell.swift; sourceTree = "<group>"; };
 		F4B3722B288E5E2F002215F1 /* ResultTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultTableViewCell.xib; sourceTree = "<group>"; };
+		F4B6E8B628CF525300D5F339 /* KakaoSDKCommon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = KakaoSDKCommon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4B989F72891826C00807A14 /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell.swift; sourceTree = "<group>"; };
 		F4B989F82891826C00807A14 /* MyCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCollectionViewCell.xib; sourceTree = "<group>"; };
 		F4B989FB2891828200807A14 /* MyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
@@ -151,6 +153,8 @@
 		F4DDD507289E2380004F6932 /* GuideModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideModel.swift; sourceTree = "<group>"; };
 		F4DDD50A289E24F5004F6932 /* MyDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDataModel.swift; sourceTree = "<group>"; };
 		F4DDD510289E274B004F6932 /* SearchDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDataModel.swift; sourceTree = "<group>"; };
+		F4E7029B28CF5C9C00613282 /* KakaoSDKFriend.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = KakaoSDKFriend.xcframework; path = Pods/KakaoSDKFriend/sources/KakaoSDKFriend/KakaoSDKFriend.xcframework; sourceTree = "<group>"; };
+		F4E7029F28CF5CA600613282 /* KakaoSDKCommon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = KakaoSDKCommon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,7 +162,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B77A185B69A00583FF0855B7 /* Pods_Plantity.framework in Frameworks */,
+				F4B6E8BD28CF52DC00D5F339 /* Pods_Plantity.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,6 +245,9 @@
 		5863E4D5568D95492D10BDA6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F4E7029F28CF5CA600613282 /* KakaoSDKCommon.framework */,
+				F4E7029B28CF5C9C00613282 /* KakaoSDKFriend.xcframework */,
+				F4B6E8B628CF525300D5F339 /* KakaoSDKCommon.framework */,
 				3A5BB4544D9658449C93E75F /* Pods_Plantity.framework */,
 			);
 			name = Frameworks;

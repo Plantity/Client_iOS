@@ -9,14 +9,20 @@ import UIKit
 class MyTableViewCell: UITableViewCell {
     static let identifier = "MyTableViewCell"
     
+    // 나의 식물인지 내가 찜한 식물인지
+    var isMyPlant: Bool = true
+    
     // 임시 Data
     var data: [String] = []
     // subviews 한번만 호출하기 위한 변수
     var didLayoutSubviews: Bool = false
     
-    public func configure(with plants: [String]) {
-        self.data = plants
-        myCollectionView.reloadData()
+    public func configure(with plants: [String]?)
+    {
+        if let plantData: [String] = plants {
+            self.data = plantData
+            myCollectionView.reloadData()
+        }
     }
     
     @IBOutlet weak var titleLabel: UILabel!
@@ -63,18 +69,29 @@ class MyTableViewCell: UITableViewCell {
 
 extension MyTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+        return data.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MyCollectionViewCell", for: indexPath) as? MyCollectionViewCell else { return UICollectionViewCell() }
         
-        // cell.configure(with: data)
+        cell.configure(with: data)
         
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 105, height: 105)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print(data[indexPath.row])
+        print(isMyPlant)
+        if isMyPlant == true {
+            // 나의 식물 컬렉션이면 로그로 이동
+        } else {
+            // 내가 찜한 식물 컬렉션이면 검색 -> 식물 상세보기로 이동
+            // 코어데이터에 뭘 저장할건지??
+        }
     }
 }

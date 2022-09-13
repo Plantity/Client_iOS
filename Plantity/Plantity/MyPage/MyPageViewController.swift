@@ -24,9 +24,9 @@ class MyPageViewController: UIViewController {
     @IBOutlet weak var myTableView: UITableView!
     
     // tmp
-    var plants: [String] = ["몬스테라","몬스테라","몬스테라","몬스테라"]
-    // response
-    // var myData : MyDataModel
+    //var plants: [String] = ["몬스테라","몬스테라","몬스테라","몬스테라"]
+    // response 예시
+    var myData : MyModelResult = MyModelResult(myInfo: MyInfo(username: "ㅇㅇㅇ", userId: "1234", level: 1, progress: 30), myPlants: ["몬스테라"], myLikes: ["베고니아"])
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,11 +43,35 @@ class MyPageViewController: UIViewController {
         myTableView.register(myTableNib, forCellReuseIdentifier: "MyTableViewCell")
 
         setupAttribute()
+        setupData()
     }
     
     func successAPI(_ result: MyDataModel) {
         // myData = result
         // tableView.reloadData()
+    }
+    
+    private func setupData() {
+        if let userInfo : MyInfo = myData.myInfo {
+            myProgressView.setProgress(Float(userInfo.progress ?? 0) / 100, animated: false)
+            
+            myNameLabel.text = userInfo.username
+            
+            switch userInfo.level {
+            case 0:
+                myMedalImageView.image = UIImage(named: "image_medal_bronze")
+                myLevelLabel.text = "비기너"
+            case 1:
+                myMedalImageView.image = UIImage(named: "image_medal_silver")
+                myLevelLabel.text = "가드너"
+            case 2:
+                myMedalImageView.image = UIImage(named: "image_medal_gold")
+                myLevelLabel.text = "마스터"
+            default:
+                myLevelLabel.text = "_"
+            }
+        }
+        
     }
     
     private func setupAttribute() {
@@ -94,7 +118,15 @@ extension MyPageViewController: UITableViewDelegate, UITableViewDataSource {
         cell.clipsToBounds = true
         cell.layer.cornerRadius = 20
         
-        cell.configure(with: plants)
+        if indexPath.row == 0 {
+            // 첫번째 셀: 나의 식물
+            cell.configure(with: myData.myPlants)
+            cell.isMyPlant = true
+        } else {
+            // 두번째 셀: 내가 찜한 식물
+            cell.configure(with: myData.myLikes)
+            cell.isMyPlant = false
+        }
         
         return cell
     }
