@@ -13,6 +13,10 @@ class GuideViewController: UIViewController {
     
     @IBOutlet weak var guideCollectionView: UICollectionView!
     
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var subtitleLabel: UILabel!
+    
+    
     // dummies
     var guides: [GuideModelResult] = [
         GuideModelResult(
@@ -72,7 +76,13 @@ extension GuideViewController: UICollectionViewDelegate, UICollectionViewDataSou
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if collectionView == newsCollectionView {
+            // Carousel
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "NewsCollectionViewCell", for: indexPath) as? NewsCollectionViewCell else { return UICollectionViewCell() }
+            
+            if let data: String = guides[indexPath.row].title {
+                titleLabel.text = "\(data)에 대해 알려드릴게요"
+            }
+            subtitleLabel.text = guides[indexPath.row].subtitle
             
             return cell
         } else {

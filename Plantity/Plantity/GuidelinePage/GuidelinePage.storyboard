@@ -123,6 +123,8 @@
                     <connections>
                         <outlet property="guideCollectionView" destination="PrM-DK-eBi" id="WRG-ay-gum"/>
                         <outlet property="newsCollectionView" destination="2oj-sl-efy" id="rho-FO-vkF"/>
+                        <outlet property="subtitleLabel" destination="l2Q-Ug-o3H" id="tKb-Bc-Rwp"/>
+                        <outlet property="titleLabel" destination="yxX-wN-F0h" id="ymu-ws-Hps"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
