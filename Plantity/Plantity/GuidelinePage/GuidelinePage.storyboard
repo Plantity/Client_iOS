@@ -137,7 +137,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" alwaysBounceHorizontal="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FOY-Fg-ePa">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FOY-Fg-ePa">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lQk-Gm-fzJ">
@@ -164,40 +164,22 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="NHk-I3-zM4">
-                                                <rect key="frame" x="30" y="93" width="354" height="486"/>
+                                                <rect key="frame" x="30" y="93" width="354" height="233.5"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2022년 7월 29일" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lcs-ij-WEv">
-                                                        <rect key="frame" x="0.0" y="0.0" width="102.5" height="17"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="곽윤기 쇼트트랙 선수는 늘 동료들과 더치페이를 한다고 해요. “짜게구는 이유가 있다고 하는데 저는 정말 공감했거든요. 왜 내 식물만 맨날 죽어가는걸까요? 이런 사람들에게는 문제가 있어요" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b0J-l0-Xss">
-                                                        <rect key="frame" x="0.0" y="36" width="351" height="50.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_news" translatesAutoresizingMaskIntoConstraints="NO" id="KIa-t4-RDC">
-                                                        <rect key="frame" x="0.0" y="105.5" width="351" height="128"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="128" id="Q2O-se-Qv3"/>
-                                                        </constraints>
-                                                    </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="그럼 우리는 무슨 문제가 있는걸까요?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" showsExpansionTextWhenTruncated="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QA0-di-cn5">
-                                                        <rect key="frame" x="0.0" y="252.5" width="203.5" height="17"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="203.5" height="17"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="곽윤기 쇼트트랙 선수는 늘 동료들과 더치페이를 한다고 해요. “짜게구는 이유가 있다고 하는데 저는 정말 공감했거든요. 왜 내 식물만 맨날 죽어가는걸까요? 이런 사람들에게는 문제가 있어요" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pHp-rH-DBW">
-                                                        <rect key="frame" x="0.0" y="288.5" width="347.5" height="50.5"/>
+                                                        <rect key="frame" x="0.0" y="36" width="354" height="50.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_news" translatesAutoresizingMaskIntoConstraints="NO" id="ucX-qg-Xy1">
-                                                        <rect key="frame" x="0.0" y="358" width="347.5" height="128"/>
+                                                        <rect key="frame" x="0.0" y="105.5" width="354" height="128"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="128" id="r4D-wI-vBL"/>
                                                         </constraints>
@@ -205,23 +187,23 @@
                                                 </subviews>
                                                 <constraints>
                                                     <constraint firstItem="ucX-qg-Xy1" firstAttribute="width" secondItem="pHp-rH-DBW" secondAttribute="width" id="MSX-u7-WNK"/>
-                                                    <constraint firstItem="pHp-rH-DBW" firstAttribute="width" secondItem="b0J-l0-Xss" secondAttribute="width" multiplier="0.990323" id="hqu-W9-5iV"/>
-                                                    <constraint firstItem="KIa-t4-RDC" firstAttribute="width" secondItem="b0J-l0-Xss" secondAttribute="width" id="w0T-BC-vmV"/>
+                                                    <constraint firstAttribute="trailing" secondItem="pHp-rH-DBW" secondAttribute="trailing" id="vqu-an-Shl"/>
                                                 </constraints>
                                             </stackView>
                                         </subviews>
                                         <color key="backgroundColor" name="background_card"/>
                                         <constraints>
-                                            <constraint firstItem="NHk-I3-zM4" firstAttribute="leading" secondItem="lQk-Gm-fzJ" secondAttribute="leading" constant="30" id="06j-AP-5iJ"/>
                                             <constraint firstItem="7r1-eQ-ygr" firstAttribute="leading" secondItem="lQk-Gm-fzJ" secondAttribute="leading" constant="18" id="3PM-eU-GiB"/>
+                                            <constraint firstAttribute="trailing" secondItem="NHk-I3-zM4" secondAttribute="trailing" constant="30" id="6FG-Fk-QJv"/>
                                             <constraint firstItem="dMx-BH-vZi" firstAttribute="top" secondItem="lQk-Gm-fzJ" secondAttribute="top" constant="57" id="8hY-yi-ejy"/>
                                             <constraint firstItem="dMx-BH-vZi" firstAttribute="centerX" secondItem="lQk-Gm-fzJ" secondAttribute="centerX" id="DBE-co-0Ec"/>
-                                            <constraint firstAttribute="trailing" secondItem="NHk-I3-zM4" secondAttribute="trailing" constant="30" id="Sxj-vh-rrk"/>
-                                            <constraint firstItem="NHk-I3-zM4" firstAttribute="top" secondItem="dMx-BH-vZi" secondAttribute="bottom" constant="12" id="cQT-Z8-Ld9"/>
+                                            <constraint firstItem="NHk-I3-zM4" firstAttribute="leading" secondItem="lQk-Gm-fzJ" secondAttribute="leading" constant="30" id="SmV-GK-cgl"/>
                                             <constraint firstItem="7r1-eQ-ygr" firstAttribute="top" secondItem="lQk-Gm-fzJ" secondAttribute="top" constant="18" id="dmY-Fk-gmp"/>
+                                            <constraint firstItem="NHk-I3-zM4" firstAttribute="top" secondItem="dMx-BH-vZi" secondAttribute="bottom" constant="12" id="q67-mT-Oal"/>
                                         </constraints>
                                     </view>
                                 </subviews>
+                                <color key="backgroundColor" name="background_card"/>
                                 <constraints>
                                     <constraint firstItem="lQk-Gm-fzJ" firstAttribute="leading" secondItem="FOY-Fg-ePa" secondAttribute="leading" id="FsQ-3G-Tmc"/>
                                     <constraint firstAttribute="trailing" secondItem="lQk-Gm-fzJ" secondAttribute="trailing" id="Gy1-57-HYJ"/>
@@ -243,9 +225,10 @@
                     </view>
                     <size key="freeformSize" width="414" height="1000"/>
                     <connections>
-                        <outlet property="contentLabel" destination="b0J-l0-Xss" id="Vk7-br-7dh"/>
+                        <outlet property="contentLabel" destination="pHp-rH-DBW" id="Z9J-Yi-lnO"/>
+                        <outlet property="contentStack" destination="NHk-I3-zM4" id="UKU-iS-N1E"/>
                         <outlet property="detailView" destination="lQk-Gm-fzJ" id="p9n-Qe-q2J"/>
-                        <outlet property="subtitleLabel" destination="Lcs-ij-WEv" id="keD-fk-tuq"/>
+                        <outlet property="subtitleLabel" destination="QA0-di-cn5" id="KFF-L6-ZWW"/>
                         <outlet property="titleLabel" destination="dMx-BH-vZi" id="wc0-yj-WBB"/>
                     </connections>
                 </viewController>
