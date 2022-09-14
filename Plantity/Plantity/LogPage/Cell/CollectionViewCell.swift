@@ -45,6 +45,10 @@ CollectionViewCell: UICollectionViewCell {
             plantType.text=plantTypeStr
         }
         
+        //url으로 imageurl 받는 방법 -> kingfisher 사용하기
+        if let imageURL = URL(string:image!) {
+            plantImage.kf.setImage(with: imageURL)
+        }
 //        if let plantLevelInt:Int=level{
 //            plantLevel.image=
 //
