@@ -26,11 +26,11 @@ class MainPageViewController: UIViewController {
     ]
     
     var userPlant:[UserPlant]=[
-        UserPlant(imageUrl: "", type: "a", nickname: "a", adoptDate: Date()),
-        UserPlant(imageUrl: "", type: "b", nickname: "b", adoptDate: Date()),
-        UserPlant(imageUrl: "", type: "c", nickname: "c", adoptDate: Date()),
-        UserPlant(imageUrl: "", type: "d", nickname: "d", adoptDate: Date()),
-        UserPlant(imageUrl: "", type: "plus", nickname: "plus", adoptDate: Date())
+        UserPlant(imageUrl: "https://images.app.goo.gl/rsNc2UjMhDeQZafk7", type: "a", nickname: "찌니꾸", adoptDate:"함께한지 14일 째"),
+        UserPlant(imageUrl: "https://images.app.goo.gl/rsNc2UjMhDeQZafk7", type: "b", nickname: "땅후니", adoptDate: "함께한지 5일 째"),
+        UserPlant(imageUrl: "https://images.app.goo.gl/rsNc2UjMhDeQZafk7", type: "c", nickname: "쁘뀨보이", adoptDate: "함께한지 10일 째"),
+        UserPlant(imageUrl: "https://images.app.goo.gl/rsNc2UjMhDeQZafk7", type: "d", nickname: "유석종", adoptDate: "함께한지 16일 째"),
+        UserPlant(imageUrl: "", type: "plus", nickname: "plus", adoptDate: "134")
     ]
 
 
@@ -70,7 +70,7 @@ class MainPageViewController: UIViewController {
             if levelInt==1{
                 welcomeLabel.text="안녕하세요 레벨 1 오늘도 민첩한 식물인이 되세요!"
             }else if levelInt==2{
-                welcomeLabel.text="안녕하세요 레벨 2 오늘도 민첩한 식물인이 되세요!"
+                welcomeLabel.text="벌써 레벨2까지 왔습니다! 오늘도 민첩한 식물인이 되세요🌳"
             }else if levelInt==3{
                 welcomeLabel.text="안녕하세요 레벨 3 오늘도 민첩한 식물인이 되세요!"
             }else{
