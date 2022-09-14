@@ -25,8 +25,26 @@ class MyPageViewController: UIViewController {
     
     // tmp
     //var plants: [String] = ["몬스테라","몬스테라","몬스테라","몬스테라"]
+    
+    //dummies
+    var userInfo:[UserInfo]=[
+        UserInfo(username: "김다연", level: 2, progress: 75)
+    ]
+    
+    var userPlant:[UserPlant]=[
+        UserPlant(imageUrl: "https://images.app.goo.gl/rsNc2UjMhDeQZafk7", type: "a", nickname: "찌니꾸", adoptDate:"함께한지 14일 째"),
+        UserPlant(imageUrl: "https://images.app.goo.gl/rsNc2UjMhDeQZafk7", type: "b", nickname: "땅후니", adoptDate: "함께한지 5일 째"),
+        UserPlant(imageUrl: "https://images.app.goo.gl/rsNc2UjMhDeQZafk7", type: "c", nickname: "쁘뀨보이", adoptDate: "함께한지 10일 째"),
+        UserPlant(imageUrl: "https://images.app.goo.gl/rsNc2UjMhDeQZafk7", type: "d", nickname: "유석종", adoptDate: "함께한지 16일 째"),
+        UserPlant(imageUrl: "", type: "plus", nickname: "plus", adoptDate: "134")
+    ]
+    
     // response 예시
-    var myData : MyModelResult = MyModelResult(myInfo: MyInfo(username: "ㅇㅇㅇ", userId: "1234", level: 1, progress: 30), myPlants: ["몬스테라"], myLikes: ["베고니아"])
+    var myData : MyModelResult = MyModelResult(
+        myInfo: MyInfo(username: "김다연", userId: "1234", level: 1, progress: 75),
+        myPlants: [MyPlantModel(imageUrl: "https://images.app.goo.gl/rsNc2UjMhDeQZafk7", name: "베고니아", nickname: "찌니꾸", adoptDate: Date()),MyPlantModel(imageUrl: "https://images.app.goo.gl/rsNc2UjMhDeQZafk7", name: "베고니아", nickname: "땅후니", adoptDate: Date()), MyPlantModel(imageUrl: "https://images.app.goo.gl/rsNc2UjMhDeQZafk7", name: "베고니아", nickname: "쁘큐보이", adoptDate: Date()), MyPlantModel(imageUrl: "https://images.app.goo.gl/rsNc2UjMhDeQZafk7", name: "베고니아", nickname: "유석종", adoptDate: Date())],
+        myLikes: [MyPlantModel(imageUrl: "", name: "베고니아", nickname: "베고니아", adoptDate: Date())]
+    )
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -72,6 +90,20 @@ class MyPageViewController: UIViewController {
             }
         }
         
+        // 컬렉션 셀 옵저버 -> 식물로그로 이동
+        NotificationCenter.default.addObserver(self, selector: #selector(didRecieveGoNotification(_:)), name: Notification.Name("gotoLog"), object: nil)
+    }
+    
+    @objc func didRecieveGoNotification(_ notification: NSNotification) {
+        let gotoPlant: Int = notification.object as! Int
+        
+        let storyboard=UIStoryboard(name: "LogPage", bundle: nil)
+        //식물로그 이동하기
+        guard let viewController = storyboard.instantiateViewController(identifier: "LogPageViewController") as? LogPageViewController else { return }
+        
+        viewController.currentPage = gotoPlant
+
+        self.present(viewController, animated: true, completion: nil)
     }
     
     private func setupAttribute() {

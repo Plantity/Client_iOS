@@ -32,8 +32,8 @@ struct MyDataModel : Decodable {
 
 struct MyModelResult: Decodable {
     let myInfo: MyInfo?
-    let myPlants: [String] // 이름으로 데이터 찾을거임
-    let myLikes: [String]  // 이름으로 데이터 찾을거임
+    let myPlants: [MyPlantModel]? // 이름으로 데이터 찾을거임
+    let myLikes: [MyPlantModel]?  // 이름으로 데이터 찾을거임
 }
 
 struct MyInfo: Decodable {
@@ -44,7 +44,7 @@ struct MyInfo: Decodable {
 }
 
 struct MyPlantModel: Decodable {
-    // let imageUrl: String?
+    let imageUrl: String?
     let name: String?
     let nickname: String?
     let adoptDate: Date?
