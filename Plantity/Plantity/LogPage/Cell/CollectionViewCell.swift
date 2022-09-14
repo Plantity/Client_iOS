@@ -27,6 +27,7 @@ CollectionViewCell: UICollectionViewCell {
 
         
     }
+    
     func setupcard() {
         uiView.layer.cornerRadius = 10
         uiView.clipsToBounds = true

@@ -10,7 +10,10 @@ import UIKit
 class MyCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var imageView: UIImageView!
     
-    public func configure(with data: [String]) {
+    public func configure(with data: String?) {
+        if let imageUrl: String = data {
+            print(imageUrl)
+        }
     }
     
     override func awakeFromNib() {

@@ -13,13 +13,13 @@ class MyTableViewCell: UITableViewCell {
     var isMyPlant: Bool = true
     
     // 임시 Data
-    var data: [String] = []
+    var data: [MyPlantModel] = []
     // subviews 한번만 호출하기 위한 변수
     var didLayoutSubviews: Bool = false
     
-    public func configure(with plants: [String]?)
+    public func configure(with plants: [MyPlantModel]?)
     {
-        if let plantData: [String] = plants {
+        if let plantData: [MyPlantModel] = plants {
             self.data = plantData
             myCollectionView.reloadData()
         }
@@ -75,7 +75,7 @@ extension MyTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource,
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MyCollectionViewCell", for: indexPath) as? MyCollectionViewCell else { return UICollectionViewCell() }
         
-        cell.configure(with: data)
+        cell.configure(with: data[indexPath.row].imageUrl)
         
         return cell
     }
@@ -85,10 +85,11 @@ extension MyTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource,
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print(data[indexPath.row])
-        print(isMyPlant)
         if isMyPlant == true {
             // 나의 식물 컬렉션이면 로그로 이동
+            // MyPage VC 옵저버에 전달
+            NotificationCenter.default.post(name: NSNotification.Name("gotoLog"), object: indexPath.row)
+            
         } else {
             // 내가 찜한 식물 컬렉션이면 검색 -> 식물 상세보기로 이동
             // 코어데이터에 뭘 저장할건지??
