@@ -10,12 +10,12 @@ import UIKit
 class GuideDetailViewController: UIViewController {
     @IBOutlet weak var detailView: UIView!
     
-    @IBOutlet weak var summaryView: UIView!
+    //@IBOutlet weak var summaryView: UIView!
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var subtitleLabel: UILabel!
     @IBOutlet weak var contentLabel: UILabel!
-    @IBOutlet weak var summaryLabel: UILabel!
+    //@IBOutlet weak var summaryLabel: UILabel!
     
     var guideData: GuideModelResult = GuideModelResult(title: "", subtitle: "", imageUrl: "", content: "", summary: "")
     
@@ -31,8 +31,8 @@ class GuideDetailViewController: UIViewController {
         detailView.layer.cornerRadius = 20
         detailView.clipsToBounds = true
         
-        summaryView.layer.cornerRadius = 20
-        summaryView.clipsToBounds = true
+        //summaryView.layer.cornerRadius = 20
+        //summaryView.clipsToBounds = true
     }
     
     func setupData(title: String?, subtitle: String?, content: String?, summary: String? ) {
@@ -46,7 +46,7 @@ class GuideDetailViewController: UIViewController {
             contentLabel.text = contentStr
         }
         if let summaryStr: String = summary {
-            summaryLabel.text = summaryStr
+            //summaryLabel.text = summaryStr
         }
     }
     
