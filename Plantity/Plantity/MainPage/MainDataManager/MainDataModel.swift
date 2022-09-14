@@ -48,9 +48,36 @@ struct UserPlant : Decodable {
 }
 
 
-//과제 -> POST 성공
-struct Todo:Decodable {
-    let isSuccess: Bool
+//-----------------------------과제성공여부----------------------------------------//
+
+//과제(분갈이) -> POST 성공
+struct TodoRepotDataModel:Decodable {
+    let isSuccess : Bool
+    let code: Int
+    let message: String
+    let result: String
 }
 
+//과제(햇빛) -> POST 성공
+struct TodoSunDataModel:Decodable {
+    let isSuccess : Bool
+    let code: Int
+    let message: String
+    let result: String
+}
 
+//과제(물주기) -> POST 성공
+struct TodoWaterDataModel:Decodable {
+    let isSuccess : Bool
+    let code: Int
+    let message: String
+    let result: String
+}
+
+//과제(쳐다보기) -> POST 성공
+struct TodoLookDataModel:Decodable {
+    let isSuccess : Bool
+    let code: Int
+    let message: String
+    let result: String
+}
