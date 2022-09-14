@@ -138,19 +138,18 @@ class MainDataManager{
     
     //post
     func posts(_ parameters: TodoInput, _ viewController:MainPageViewController){
-        
-//        AF.request("http://plantity.shop/myplant/repot/{userId}/{myPlantId}", method: .post, parameters: parameters, encoder: JSONParameterEncoder.default,headers: nil).validate().responseDecodable(of:Todo.self) { response in
-//            switch response.result{
-//            case.success(let result):
-//                if result.isSuccess{
-//                    print("성공")
-//                }else{
-//                    print("result.message")
-//                }
-//            case.failure(let error):
-//                print(error.localizedDescription)
-//            }
-//        }
+        AF.request("http://plantity.shop/myplant/repot/{userId}/{myPlantId}", method: .post, parameters: parameters, encoder: JSONParameterEncoder.default,headers: nil).validate().responseDecodable(of:TodoRepotDataModel.self) { response in
+            switch response.result{
+            case.success(let result):
+                if result.isSuccess{
+                    print("성공")
+                }else{
+                    print("result.message")
+                }
+            case.failure(let error):
+                print(error.localizedDescription)
+            }
+        }
     }
 }
 

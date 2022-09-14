@@ -44,7 +44,7 @@ struct UserPlant : Decodable {
     let imageUrl : String?
     let type: String?
     let nickname: String?
-    let adoptDate: Date?
+    let adoptDate: String?
 }
 
 

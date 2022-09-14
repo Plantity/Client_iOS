@@ -30,9 +30,10 @@ class LogPageViewController: UIViewController, FSCalendarDelegate, FSCalendarDat
     
     //dummies
     var logUserPlant:[LogUserPlant]=[
-        LogUserPlant(imageUrl: "", nickname: "a", type: "aa", plantlevel: 3, plantMemo: "aaa"),
-        LogUserPlant(imageUrl: "", nickname: "b", type: "bb", plantlevel: 3, plantMemo: "bbb"),
-        LogUserPlant(imageUrl: "", nickname: "c", type: "cc", plantlevel: 3, plantMemo: "ccc")
+        LogUserPlant(imageUrl: "", nickname: "찌니꾸", type: "몬스테라", plantlevel: 3, plantMemo: "🌳물은 일주일에 한번 주기"),
+        LogUserPlant(imageUrl: "", nickname: "땅후니", type: "대봉룡", plantlevel: 3, plantMemo: "🌳매일매일 물주기"),
+        LogUserPlant(imageUrl: "", nickname: "쁘뀨보이", type: "양팔선인장", plantlevel: 3, plantMemo: "🌳물은 한달에 한번만!"),
+        LogUserPlant(imageUrl: "", nickname: "유석종", type: "다육선인장", plantlevel: 3, plantMemo: "🌳3일에 한번씩 물 주기")
     ]
     
     var calendars: [LogCalendar] = [
