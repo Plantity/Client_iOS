@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BQD-vB-Jez">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BQD-vB-Jez">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -19,7 +20,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GVU-T6-sDY">
-                                <rect key="frame" x="0.0" y="44" width="414" height="50"/>
+                                <rect key="frame" x="0.0" y="48" width="414" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="가이드라인" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DVr-GH-ESb">
                                         <rect key="frame" x="23" y="18" width="104" height="29"/>
@@ -35,7 +36,7 @@
                                 </constraints>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="2oj-sl-efy">
-                                <rect key="frame" x="0.0" y="114" width="414" height="157"/>
+                                <rect key="frame" x="0.0" y="118" width="414" height="157"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="157" id="Y3H-XK-H4d"/>
@@ -49,13 +50,13 @@
                                 <cells/>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🌱 Editor's Pick" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6gY-7E-kPg">
-                                <rect key="frame" x="31" y="278" width="105" height="17"/>
+                                <rect key="frame" x="31" y="282" width="105" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" name="text_green"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="초보자도 쉽게할 수 있는 분갈이 방법을 알려드릴게요" lineBreakMode="tailTruncation" numberOfLines="0" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yxX-wN-F0h">
-                                <rect key="frame" x="47" y="295" width="277" height="54"/>
+                                <rect key="frame" x="47" y="299" width="277" height="54"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="54" id="BsQ-jO-mss"/>
                                     <constraint firstAttribute="width" constant="277" id="mmr-kI-QiT"/>
@@ -65,7 +66,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="‘국민주’ 삼성전자의 주가가 어떤 흐름을 보일지, 애널리스트의 솔직한 의견을 확인해보세요." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l2Q-Ug-o3H">
-                                <rect key="frame" x="48" y="349" width="271" height="38"/>
+                                <rect key="frame" x="48" y="353" width="271" height="38"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="38" id="Ret-iT-Dwa"/>
                                     <constraint firstAttribute="width" constant="271" id="eXs-i4-31B"/>
@@ -75,7 +76,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="PrM-DK-eBi">
-                                <rect key="frame" x="0.0" y="401" width="414" height="412"/>
+                                <rect key="frame" x="0.0" y="405" width="414" height="408"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="n1I-Zf-S06">
                                     <size key="itemSize" width="128" height="128"/>
@@ -111,7 +112,7 @@
                         <imageReference key="image" image="map" catalog="system"/>
                         <imageReference key="selectedImage" image="map" catalog="system" renderingMode="hierarchical">
                             <hierarchicalColors>
-                                <color red="0.35294117650000001" green="0.89019607840000003" blue="0.76862745099999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color systemColor="systemGreenColor"/>
                                 <color systemColor="secondaryLabelColor"/>
                                 <color systemColor="tertiaryLabelColor"/>
                             </hierarchicalColors>
@@ -122,6 +123,8 @@
                     <connections>
                         <outlet property="guideCollectionView" destination="PrM-DK-eBi" id="WRG-ay-gum"/>
                         <outlet property="newsCollectionView" destination="2oj-sl-efy" id="rho-FO-vkF"/>
+                        <outlet property="subtitleLabel" destination="l2Q-Ug-o3H" id="tKb-Bc-Rwp"/>
+                        <outlet property="titleLabel" destination="yxX-wN-F0h" id="ymu-ws-Hps"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -133,15 +136,14 @@
             <objects>
                 <viewController storyboardIdentifier="GuideDetailViewController" hidesBottomBarWhenPushed="YES" id="xTU-Xw-fNk" customClass="GuideDetailViewController" customModule="Plantity" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ucj-vq-PCr">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" alwaysBounceHorizontal="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FOY-Fg-ePa">
-                                <rect key="frame" x="0.0" y="24" width="414" height="872"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FOY-Fg-ePa">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lQk-Gm-fzJ">
-                                        <rect key="frame" x="20" y="0.0" width="374" height="832"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="845.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7r1-eQ-ygr">
                                                 <rect key="frame" x="18" y="18" width="28" height="22"/>
@@ -158,124 +160,143 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="식물이 죽을 것 같아요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dMx-BH-vZi">
-                                                <rect key="frame" x="102.5" y="57" width="169" height="24"/>
+                                                <rect key="frame" x="122.5" y="57" width="169" height="24"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2022년 7월 29일" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lcs-ij-WEv">
-                                                <rect key="frame" x="32" y="93" width="102.5" height="17"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="곽윤기 쇼트트랙 선수는 늘 동료들과 더치페이를 한다고 해요. “짜게구는 이유가 있다고 하는데 저는 정말 공감했거든요. 왜 내 식물만 맨날 죽어가는걸까요? 이런 사람들에게는 문제가 있어요" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b0J-l0-Xss">
-                                                <rect key="frame" x="32" y="123" width="310" height="67"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="그럼 우리는 무슨 문제가 있는걸까요?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" showsExpansionTextWhenTruncated="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QA0-di-cn5">
-                                                <rect key="frame" x="32" y="368" width="204" height="17"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_news" translatesAutoresizingMaskIntoConstraints="NO" id="KIa-t4-RDC">
-                                                <rect key="frame" x="32" y="210" width="307" height="128"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="128" id="Q2O-se-Qv3"/>
-                                                </constraints>
-                                            </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="곽윤기 쇼트트랙 선수는 늘 동료들과 더치페이를 한다고 해요. “짜게구는 이유가 있다고 하는데 저는 정말 공감했거든요. 왜 내 식물만 맨날 죽어가는걸까요? 이런 사람들에게는 문제가 있어요" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pHp-rH-DBW">
-                                                <rect key="frame" x="32" y="397" width="307" height="67"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_news" translatesAutoresizingMaskIntoConstraints="NO" id="ucX-qg-Xy1">
-                                                <rect key="frame" x="32" y="487" width="307" height="128"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="128" id="r4D-wI-vBL"/>
-                                                </constraints>
-                                            </imageView>
-                                            <view alpha="0.59999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y8W-hF-kYu">
-                                                <rect key="frame" x="21" y="651" width="332" height="149"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="xTs-cn-kza">
+                                                <rect key="frame" x="30" y="101" width="354" height="724.5"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="요약정리를 해드릴게요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PeO-SE-pdf">
-                                                        <rect key="frame" x="23" y="18" width="160.5" height="21"/>
-                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
-                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vPu-hk-bcG">
-                                                        <rect key="frame" x="16" y="51" width="300" height="84"/>
-                                                        <string key="text">식물 🌲 을 키우면 좋은점 : 내 수익/ 손해 액수가 얼마인지 파악하기 쉽다.
-내가 식물 을 자꾸 죽이는 이유 🤔 : 모르겠다
-플랜티티에서는 터치 몇번으로 간단히 내 식물을 살릴 수 있습니다</string>
-                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
-                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="NHk-I3-zM4">
+                                                        <rect key="frame" x="0.0" y="0.0" width="354" height="233.5"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="그럼 우리는 무슨 문제가 있는걸까요?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" showsExpansionTextWhenTruncated="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QA0-di-cn5">
+                                                                <rect key="frame" x="0.0" y="0.0" width="203.5" height="17"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="곽윤기 쇼트트랙 선수는 늘 동료들과 더치페이를 한다고 해요. “짜게구는 이유가 있다고 하는데 저는 정말 공감했거든요. 왜 내 식물만 맨날 죽어가는걸까요? 이런 사람들에게는 문제가 있어요" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pHp-rH-DBW">
+                                                                <rect key="frame" x="0.0" y="36" width="354" height="50.5"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_plant_tag" translatesAutoresizingMaskIntoConstraints="NO" id="ucX-qg-Xy1">
+                                                                <rect key="frame" x="0.0" y="105.5" width="354" height="128"/>
+                                                                <color key="backgroundColor" name="searchbar_onclick"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="128" id="r4D-wI-vBL"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="ucX-qg-Xy1" firstAttribute="width" secondItem="pHp-rH-DBW" secondAttribute="width" id="MSX-u7-WNK"/>
+                                                            <constraint firstAttribute="trailing" secondItem="pHp-rH-DBW" secondAttribute="trailing" id="vqu-an-Shl"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="Jbx-sr-DGW">
+                                                        <rect key="frame" x="0.0" y="245.5" width="354" height="233.5"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="그럼 우리는 무슨 문제가 있는걸까요?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" showsExpansionTextWhenTruncated="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QYV-su-Nb8">
+                                                                <rect key="frame" x="0.0" y="0.0" width="203.5" height="17"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="곽윤기 쇼트트랙 선수는 늘 동료들과 더치페이를 한다고 해요. “짜게구는 이유가 있다고 하는데 저는 정말 공감했거든요. 왜 내 식물만 맨날 죽어가는걸까요? 이런 사람들에게는 문제가 있어요" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2md-W2-WHL">
+                                                                <rect key="frame" x="0.0" y="36" width="354" height="50.5"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_login" translatesAutoresizingMaskIntoConstraints="NO" id="mzJ-4a-Zjc">
+                                                                <rect key="frame" x="0.0" y="105.5" width="354" height="128"/>
+                                                                <color key="backgroundColor" red="0.40000000000000002" green="0.59999999999999998" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="128" id="eGo-HO-lVx"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="trailing" secondItem="2md-W2-WHL" secondAttribute="trailing" id="pKL-UK-nIA"/>
+                                                            <constraint firstItem="mzJ-4a-Zjc" firstAttribute="width" secondItem="2md-W2-WHL" secondAttribute="width" id="znl-lc-VWj"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="ZFU-bH-6Hg">
+                                                        <rect key="frame" x="0.0" y="491" width="354" height="233.5"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="그럼 우리는 무슨 문제가 있는걸까요?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" showsExpansionTextWhenTruncated="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jwG-8D-PJb">
+                                                                <rect key="frame" x="0.0" y="0.0" width="203.5" height="17"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="곽윤기 쇼트트랙 선수는 늘 동료들과 더치페이를 한다고 해요. “짜게구는 이유가 있다고 하는데 저는 정말 공감했거든요. 왜 내 식물만 맨날 죽어가는걸까요? 이런 사람들에게는 문제가 있어요" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="caB-9y-rWt">
+                                                                <rect key="frame" x="0.0" y="36" width="354" height="50.5"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_logo" translatesAutoresizingMaskIntoConstraints="NO" id="SfV-lE-iNk">
+                                                                <rect key="frame" x="0.0" y="105.5" width="354" height="128"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="128" id="Ekr-Df-8qz"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="SfV-lE-iNk" firstAttribute="width" secondItem="caB-9y-rWt" secondAttribute="width" id="dsR-sM-vS1"/>
+                                                            <constraint firstAttribute="trailing" secondItem="caB-9y-rWt" secondAttribute="trailing" id="xpR-7N-Qkn"/>
+                                                        </constraints>
+                                                    </stackView>
                                                 </subviews>
-                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstItem="PeO-SE-pdf" firstAttribute="top" secondItem="y8W-hF-kYu" secondAttribute="top" constant="18" id="9jF-hl-EVu"/>
-                                                    <constraint firstItem="vPu-hk-bcG" firstAttribute="leading" secondItem="y8W-hF-kYu" secondAttribute="leading" constant="16" id="LkP-jZ-5Nr"/>
-                                                    <constraint firstAttribute="trailing" secondItem="vPu-hk-bcG" secondAttribute="trailing" constant="16" id="MMK-Mg-s90"/>
-                                                    <constraint firstItem="PeO-SE-pdf" firstAttribute="leading" secondItem="y8W-hF-kYu" secondAttribute="leading" constant="23" id="uED-0A-fI0"/>
-                                                    <constraint firstItem="vPu-hk-bcG" firstAttribute="top" secondItem="PeO-SE-pdf" secondAttribute="bottom" constant="12" id="veG-bp-AFw"/>
-                                                </constraints>
-                                            </view>
+                                            </stackView>
                                         </subviews>
                                         <color key="backgroundColor" name="background_card"/>
                                         <constraints>
-                                            <constraint firstItem="QA0-di-cn5" firstAttribute="top" secondItem="KIa-t4-RDC" secondAttribute="bottom" constant="30" id="6XO-pZ-KZy"/>
-                                            <constraint firstItem="dMx-BH-vZi" firstAttribute="centerX" secondItem="lQk-Gm-fzJ" secondAttribute="centerX" id="8LN-Eu-lmg"/>
-                                            <constraint firstItem="KIa-t4-RDC" firstAttribute="leading" secondItem="b0J-l0-Xss" secondAttribute="leading" id="93E-S4-FY0"/>
-                                            <constraint firstItem="y8W-hF-kYu" firstAttribute="top" secondItem="ucX-qg-Xy1" secondAttribute="bottom" constant="36" id="CMi-ue-Ifd"/>
-                                            <constraint firstItem="ucX-qg-Xy1" firstAttribute="width" secondItem="pHp-rH-DBW" secondAttribute="width" id="CVe-jo-Cgr"/>
-                                            <constraint firstItem="b0J-l0-Xss" firstAttribute="centerX" secondItem="lQk-Gm-fzJ" secondAttribute="centerX" id="E1c-iw-87F"/>
-                                            <constraint firstItem="KIa-t4-RDC" firstAttribute="width" secondItem="b0J-l0-Xss" secondAttribute="width" multiplier="0.990323" id="EpC-2Y-el3"/>
-                                            <constraint firstItem="7r1-eQ-ygr" firstAttribute="leading" secondItem="lQk-Gm-fzJ" secondAttribute="leading" constant="18" id="Epl-mX-Hdy"/>
-                                            <constraint firstItem="b0J-l0-Xss" firstAttribute="leading" secondItem="Lcs-ij-WEv" secondAttribute="leading" id="Geb-d4-Tc8"/>
-                                            <constraint firstItem="QA0-di-cn5" firstAttribute="leading" secondItem="b0J-l0-Xss" secondAttribute="leading" id="GfO-BT-0zJ"/>
-                                            <constraint firstItem="Lcs-ij-WEv" firstAttribute="leading" secondItem="lQk-Gm-fzJ" secondAttribute="leading" constant="32" id="RlY-qh-lCk"/>
-                                            <constraint firstItem="ucX-qg-Xy1" firstAttribute="leading" secondItem="QA0-di-cn5" secondAttribute="leading" id="SJW-Is-78h"/>
-                                            <constraint firstItem="pHp-rH-DBW" firstAttribute="top" secondItem="QA0-di-cn5" secondAttribute="bottom" constant="12" id="Tb6-YK-vQM"/>
-                                            <constraint firstItem="ucX-qg-Xy1" firstAttribute="top" secondItem="pHp-rH-DBW" secondAttribute="bottom" constant="23" id="UgF-o5-sTX"/>
-                                            <constraint firstItem="b0J-l0-Xss" firstAttribute="top" secondItem="Lcs-ij-WEv" secondAttribute="bottom" constant="13" id="Usk-rr-zm4"/>
-                                            <constraint firstAttribute="bottom" secondItem="y8W-hF-kYu" secondAttribute="bottom" constant="32" id="Xf6-ab-wsg"/>
-                                            <constraint firstItem="pHp-rH-DBW" firstAttribute="leading" secondItem="QA0-di-cn5" secondAttribute="leading" id="f6C-7o-8Ai"/>
-                                            <constraint firstItem="7r1-eQ-ygr" firstAttribute="top" secondItem="lQk-Gm-fzJ" secondAttribute="top" constant="18" id="fLn-so-W7x"/>
-                                            <constraint firstItem="KIa-t4-RDC" firstAttribute="top" secondItem="b0J-l0-Xss" secondAttribute="bottom" constant="20" id="fRe-jG-Npx"/>
-                                            <constraint firstItem="pHp-rH-DBW" firstAttribute="width" secondItem="b0J-l0-Xss" secondAttribute="width" multiplier="0.990323" id="frP-aO-ztd"/>
-                                            <constraint firstItem="Lcs-ij-WEv" firstAttribute="top" secondItem="dMx-BH-vZi" secondAttribute="bottom" constant="12" id="lMv-si-7GO"/>
-                                            <constraint firstItem="dMx-BH-vZi" firstAttribute="top" secondItem="lQk-Gm-fzJ" secondAttribute="top" constant="57" id="mOD-2g-PGS"/>
-                                            <constraint firstAttribute="trailing" secondItem="y8W-hF-kYu" secondAttribute="trailing" constant="21" id="nDV-EF-tkf"/>
-                                            <constraint firstItem="y8W-hF-kYu" firstAttribute="leading" secondItem="lQk-Gm-fzJ" secondAttribute="leading" constant="21" id="qCK-8q-Czd"/>
+                                            <constraint firstItem="7r1-eQ-ygr" firstAttribute="leading" secondItem="lQk-Gm-fzJ" secondAttribute="leading" constant="18" id="3PM-eU-GiB"/>
+                                            <constraint firstItem="dMx-BH-vZi" firstAttribute="top" secondItem="lQk-Gm-fzJ" secondAttribute="top" constant="57" id="8hY-yi-ejy"/>
+                                            <constraint firstItem="dMx-BH-vZi" firstAttribute="centerX" secondItem="lQk-Gm-fzJ" secondAttribute="centerX" id="DBE-co-0Ec"/>
+                                            <constraint firstItem="xTs-cn-kza" firstAttribute="leading" secondItem="lQk-Gm-fzJ" secondAttribute="leading" constant="30" id="SDN-ne-09d"/>
+                                            <constraint firstItem="7r1-eQ-ygr" firstAttribute="top" secondItem="lQk-Gm-fzJ" secondAttribute="top" constant="18" id="dmY-Fk-gmp"/>
+                                            <constraint firstAttribute="bottom" secondItem="xTs-cn-kza" secondAttribute="bottom" constant="20" id="lHz-lW-rGN"/>
+                                            <constraint firstAttribute="trailing" secondItem="xTs-cn-kza" secondAttribute="trailing" constant="30" id="yi8-J4-Lc2"/>
+                                            <constraint firstItem="xTs-cn-kza" firstAttribute="top" secondItem="dMx-BH-vZi" secondAttribute="bottom" constant="20" id="zK5-0v-vx0"/>
                                         </constraints>
                                     </view>
                                 </subviews>
+                                <color key="backgroundColor" name="background_card"/>
                                 <constraints>
-                                    <constraint firstItem="lQk-Gm-fzJ" firstAttribute="leading" secondItem="Axn-gf-4RH" secondAttribute="leading" constant="20" id="0pQ-zS-jw8"/>
-                                    <constraint firstItem="Axn-gf-4RH" firstAttribute="bottom" secondItem="lQk-Gm-fzJ" secondAttribute="bottom" constant="20" id="M0M-31-Amd"/>
-                                    <constraint firstItem="Axn-gf-4RH" firstAttribute="trailing" secondItem="lQk-Gm-fzJ" secondAttribute="trailing" constant="20" id="UUy-iA-vua"/>
-                                    <constraint firstItem="lQk-Gm-fzJ" firstAttribute="top" secondItem="Axn-gf-4RH" secondAttribute="top" constant="20" id="fCt-u9-vOP"/>
+                                    <constraint firstItem="lQk-Gm-fzJ" firstAttribute="leading" secondItem="FOY-Fg-ePa" secondAttribute="leading" id="FsQ-3G-Tmc"/>
+                                    <constraint firstAttribute="trailing" secondItem="lQk-Gm-fzJ" secondAttribute="trailing" id="Gy1-57-HYJ"/>
+                                    <constraint firstAttribute="bottom" secondItem="lQk-Gm-fzJ" secondAttribute="bottom" id="YYe-hb-e4X"/>
+                                    <constraint firstItem="lQk-Gm-fzJ" firstAttribute="top" secondItem="FOY-Fg-ePa" secondAttribute="top" id="sNi-H0-a65"/>
                                 </constraints>
-                                <viewLayoutGuide key="contentLayoutGuide" id="39Y-UJ-XNq"/>
-                                <viewLayoutGuide key="frameLayoutGuide" id="Axn-gf-4RH"/>
                             </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fZh-WP-a4v"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="lQk-Gm-fzJ" secondAttribute="width" id="06g-wZ-iXm"/>
+                            <constraint firstItem="FOY-Fg-ePa" firstAttribute="top" secondItem="Ucj-vq-PCr" secondAttribute="top" id="5xj-ZJ-VD2"/>
+                            <constraint firstItem="FOY-Fg-ePa" firstAttribute="trailing" secondItem="fZh-WP-a4v" secondAttribute="trailing" id="6sT-hG-i6b"/>
+                            <constraint firstItem="FOY-Fg-ePa" firstAttribute="leading" secondItem="fZh-WP-a4v" secondAttribute="leading" id="fhe-as-Fnd"/>
+                            <constraint firstAttribute="height" secondItem="lQk-Gm-fzJ" secondAttribute="height" priority="250" id="hmf-TC-WSF"/>
+                            <constraint firstAttribute="bottom" secondItem="FOY-Fg-ePa" secondAttribute="bottom" id="rAq-v9-a5A"/>
+                        </constraints>
                     </view>
+                    <size key="freeformSize" width="414" height="1000"/>
                     <connections>
-                        <outlet property="contentLabel" destination="b0J-l0-Xss" id="Vk7-br-7dh"/>
+                        <outlet property="contentLabel" destination="pHp-rH-DBW" id="Z9J-Yi-lnO"/>
+                        <outlet property="contentLabel2" destination="2md-W2-WHL" id="YZA-Uu-Akz"/>
+                        <outlet property="contentLabel3" destination="caB-9y-rWt" id="0nT-3C-oHZ"/>
+                        <outlet property="contentStack" destination="NHk-I3-zM4" id="UKU-iS-N1E"/>
                         <outlet property="detailView" destination="lQk-Gm-fzJ" id="p9n-Qe-q2J"/>
-                        <outlet property="subtitleLabel" destination="Lcs-ij-WEv" id="keD-fk-tuq"/>
-                        <outlet property="summaryLabel" destination="vPu-hk-bcG" id="ZM6-nh-DuO"/>
-                        <outlet property="summaryView" destination="y8W-hF-kYu" id="6i4-ld-nXH"/>
+                        <outlet property="subtitleLabel" destination="QA0-di-cn5" id="KFF-L6-ZWW"/>
+                        <outlet property="subtitleLabel2" destination="QYV-su-Nb8" id="5bl-N0-wXi"/>
+                        <outlet property="subtitleLabel3" destination="jwG-8D-PJb" id="hVn-nF-GkH"/>
                         <outlet property="titleLabel" destination="dMx-BH-vZi" id="wc0-yj-WBB"/>
                     </connections>
                 </viewController>
@@ -302,11 +323,16 @@
         </scene>
     </scenes>
     <resources>
-        <image name="arrow.backward" catalog="system" width="128" height="98"/>
-        <image name="image_news" width="326" height="157"/>
-        <image name="map" catalog="system" width="128" height="110"/>
+        <image name="arrow.backward" catalog="system" width="128" height="95"/>
+        <image name="image_login" width="369" height="369"/>
+        <image name="image_logo" width="85" height="101"/>
+        <image name="image_plant_tag" width="71" height="71"/>
+        <image name="map" catalog="system" width="128" height="112"/>
         <namedColor name="background_card">
             <color red="0.83921568627450982" green="0.92549019607843142" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="searchbar_onclick">
+            <color red="0.91764705882352937" green="0.96470588235294119" blue="0.8901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="text_green">
             <color red="0.1803921568627451" green="0.45490196078431372" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -317,8 +343,11 @@
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="tertiaryLabelColor">
-            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29803921568627451" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
