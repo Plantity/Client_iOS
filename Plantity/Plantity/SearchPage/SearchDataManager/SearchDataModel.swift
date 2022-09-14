@@ -66,7 +66,7 @@ struct SearchPlantModel : Decodable {
     let flclrCodeNm: String
     let watercycleSprngCodeNm: String
     let managelevelCode: String
-    let plantFollowings: [Int]
+    //let plantFollowings: [Int]
 }
 
 //struct SearchPlantModel: Decodable {

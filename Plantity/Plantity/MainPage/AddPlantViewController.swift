@@ -19,7 +19,7 @@ class AddPlantViewController: UIViewController {
     
     let imagePickerViewController = UIImagePickerController()
     
-    var selectedPlant: SearchPlantModel = SearchPlantModel(plantIdx: 0, cntntsNo: "", cntntsSj: "", plntbneNm: "", plntzrNm: "", adviseInfo: "", orgplceInfo: "", lighttdemanddoCodeNm: "", ignSeasonCodeNm: "", flclrCodeNm: "", watercycleSprngCodeNm: "", managelevelCode: "", plantFollowings: [])
+    var selectedPlant: SearchPlantModel = SearchPlantModel(plantIdx: 0, cntntsNo: "", cntntsSj: "", plntbneNm: "", plntzrNm: "", adviseInfo: "", orgplceInfo: "", lighttdemanddoCodeNm: "", ignSeasonCodeNm: "", flclrCodeNm: "", watercycleSprngCodeNm: "", managelevelCode: "")
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -98,7 +98,6 @@ extension AddPlantViewController {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd"
         let dateStr = dateFormatter.string(from: adaptDatePicker.date)
-        print(dateStr)
         
         // To Server
         let input = AddDataInput(plantName: nicknameField.text, plantType: plantTypeField.text, plantImage: addImageView.image, plantAdaptTime: dateStr)
