@@ -23,7 +23,7 @@ class LogPageViewController: UIViewController, FSCalendarDelegate, FSCalendarDat
     // 페이지 컨트롤
     @IBOutlet weak var pageControl: UIPageControl!
     // 처음에 보여줄 식물로그
-    var currentPage: Int = 0 
+    var currentPage: Int = 0
     
     //하단로그collectionView
     @IBOutlet weak var logCollectionView: UICollectionView!
@@ -39,7 +39,8 @@ class LogPageViewController: UIViewController, FSCalendarDelegate, FSCalendarDat
     var calendars: [LogCalendar] = [
         LogCalendar(date: ["2022-08-26"], todos: [TodoLog(didwater: false, didsun: false, didlook: false, didsplit: false)]),
         LogCalendar(date: ["2022-08-26"], todos: [TodoLog(didwater: true, didsun: true, didlook: true, didsplit: true)]),
-        LogCalendar(date: ["2022-08-26"], todos: [TodoLog(didwater: true, didsun: true, didlook: false, didsplit: false)])
+        LogCalendar(date: ["2022-08-26"], todos: [TodoLog(didwater: true, didsun: true, didlook: false, didsplit: false)]),
+        LogCalendar(date: ["2022-09-14"], todos: [TodoLog(didwater: true, didsun: true, didlook: false, didsplit: false)]),
     ]
     
 
@@ -123,7 +124,7 @@ extension LogPageViewController : UICollectionViewDataSource, UICollectionViewDe
 
             customCell.layer.cornerRadius=10
             
-            let data = logUserPlant[currentPage]
+            let data = logUserPlant[indexPath.row]
             customCell.setupCardData(image: data.imageUrl, nickname: data.nickname, type: data.type, level: data.plantlevel, memo: data.plantMemo)
             
             //자동스크롤
@@ -155,11 +156,11 @@ extension LogPageViewController : UICollectionViewDataSource, UICollectionViewDe
     func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
         let nextPage = Int(targetContentOffset.pointee.x / cardcollectionView.frame.width) + 1
         if currentPage == nextPage {
-            // 맨처음 페이지일 경우
-            currentPage = 0
+            currentPage = nextPage == 1 ? 0 : logUserPlant.count - 1
         } else {
             currentPage = nextPage
         }
+        //print(currentPage)
         
         // 페이징 버튼 변경
         self.pageControl.currentPage = self.currentPage
