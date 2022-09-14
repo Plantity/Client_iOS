@@ -23,7 +23,7 @@ class LogPageViewController: UIViewController, FSCalendarDelegate, FSCalendarDat
     // 페이지 컨트롤
     @IBOutlet weak var pageControl: UIPageControl!
     // 처음에 보여줄 식물로그
-    var currentPage: Int = 0
+    var currentPage: Int = 0 
     
     //하단로그collectionView
     @IBOutlet weak var logCollectionView: UICollectionView!
@@ -123,7 +123,7 @@ extension LogPageViewController : UICollectionViewDataSource, UICollectionViewDe
 
             customCell.layer.cornerRadius=10
             
-            let data = logUserPlant[indexPath.row]
+            let data = logUserPlant[currentPage]
             customCell.setupCardData(image: data.imageUrl, nickname: data.nickname, type: data.type, level: data.plantlevel, memo: data.plantMemo)
             
             //자동스크롤
