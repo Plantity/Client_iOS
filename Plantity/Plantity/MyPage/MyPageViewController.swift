@@ -90,6 +90,20 @@ class MyPageViewController: UIViewController {
             }
         }
         
+        // 컬렉션 셀 옵저버 -> 식물로그로 이동
+        NotificationCenter.default.addObserver(self, selector: #selector(didRecieveGoNotification(_:)), name: Notification.Name("gotoLog"), object: nil)
+    }
+    
+    @objc func didRecieveGoNotification(_ notification: NSNotification) {
+        let gotoPlant: Int = notification.object as! Int
+        
+        let storyboard=UIStoryboard(name: "LogPage", bundle: nil)
+        //식물로그 이동하기
+        guard let viewController = storyboard.instantiateViewController(identifier: "LogPageViewController") as? LogPageViewController else { return }
+        
+        viewController.currentPage = gotoPlant
+
+        self.present(viewController, animated: true, completion: nil)
     }
     
     private func setupAttribute() {
