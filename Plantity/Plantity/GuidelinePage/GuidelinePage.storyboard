@@ -141,7 +141,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lQk-Gm-fzJ">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="845.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7r1-eQ-ygr">
                                                 <rect key="frame" x="18" y="18" width="28" height="22"/>
@@ -163,43 +163,105 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="NHk-I3-zM4">
-                                                <rect key="frame" x="30" y="93" width="354" height="233.5"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="xTs-cn-kza">
+                                                <rect key="frame" x="30" y="101" width="354" height="724.5"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="그럼 우리는 무슨 문제가 있는걸까요?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" showsExpansionTextWhenTruncated="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QA0-di-cn5">
-                                                        <rect key="frame" x="0.0" y="0.0" width="203.5" height="17"/>
-                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="곽윤기 쇼트트랙 선수는 늘 동료들과 더치페이를 한다고 해요. “짜게구는 이유가 있다고 하는데 저는 정말 공감했거든요. 왜 내 식물만 맨날 죽어가는걸까요? 이런 사람들에게는 문제가 있어요" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pHp-rH-DBW">
-                                                        <rect key="frame" x="0.0" y="36" width="354" height="50.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_news" translatesAutoresizingMaskIntoConstraints="NO" id="ucX-qg-Xy1">
-                                                        <rect key="frame" x="0.0" y="105.5" width="354" height="128"/>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="NHk-I3-zM4">
+                                                        <rect key="frame" x="0.0" y="0.0" width="354" height="233.5"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="그럼 우리는 무슨 문제가 있는걸까요?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" showsExpansionTextWhenTruncated="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QA0-di-cn5">
+                                                                <rect key="frame" x="0.0" y="0.0" width="203.5" height="17"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="곽윤기 쇼트트랙 선수는 늘 동료들과 더치페이를 한다고 해요. “짜게구는 이유가 있다고 하는데 저는 정말 공감했거든요. 왜 내 식물만 맨날 죽어가는걸까요? 이런 사람들에게는 문제가 있어요" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pHp-rH-DBW">
+                                                                <rect key="frame" x="0.0" y="36" width="354" height="50.5"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_plant_tag" translatesAutoresizingMaskIntoConstraints="NO" id="ucX-qg-Xy1">
+                                                                <rect key="frame" x="0.0" y="105.5" width="354" height="128"/>
+                                                                <color key="backgroundColor" name="searchbar_onclick"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="128" id="r4D-wI-vBL"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                        </subviews>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="128" id="r4D-wI-vBL"/>
+                                                            <constraint firstItem="ucX-qg-Xy1" firstAttribute="width" secondItem="pHp-rH-DBW" secondAttribute="width" id="MSX-u7-WNK"/>
+                                                            <constraint firstAttribute="trailing" secondItem="pHp-rH-DBW" secondAttribute="trailing" id="vqu-an-Shl"/>
                                                         </constraints>
-                                                    </imageView>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="Jbx-sr-DGW">
+                                                        <rect key="frame" x="0.0" y="245.5" width="354" height="233.5"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="그럼 우리는 무슨 문제가 있는걸까요?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" showsExpansionTextWhenTruncated="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QYV-su-Nb8">
+                                                                <rect key="frame" x="0.0" y="0.0" width="203.5" height="17"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="곽윤기 쇼트트랙 선수는 늘 동료들과 더치페이를 한다고 해요. “짜게구는 이유가 있다고 하는데 저는 정말 공감했거든요. 왜 내 식물만 맨날 죽어가는걸까요? 이런 사람들에게는 문제가 있어요" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2md-W2-WHL">
+                                                                <rect key="frame" x="0.0" y="36" width="354" height="50.5"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_login" translatesAutoresizingMaskIntoConstraints="NO" id="mzJ-4a-Zjc">
+                                                                <rect key="frame" x="0.0" y="105.5" width="354" height="128"/>
+                                                                <color key="backgroundColor" red="0.40000000000000002" green="0.59999999999999998" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="128" id="eGo-HO-lVx"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="trailing" secondItem="2md-W2-WHL" secondAttribute="trailing" id="pKL-UK-nIA"/>
+                                                            <constraint firstItem="mzJ-4a-Zjc" firstAttribute="width" secondItem="2md-W2-WHL" secondAttribute="width" id="znl-lc-VWj"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="ZFU-bH-6Hg">
+                                                        <rect key="frame" x="0.0" y="491" width="354" height="233.5"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="그럼 우리는 무슨 문제가 있는걸까요?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" showsExpansionTextWhenTruncated="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jwG-8D-PJb">
+                                                                <rect key="frame" x="0.0" y="0.0" width="203.5" height="17"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="곽윤기 쇼트트랙 선수는 늘 동료들과 더치페이를 한다고 해요. “짜게구는 이유가 있다고 하는데 저는 정말 공감했거든요. 왜 내 식물만 맨날 죽어가는걸까요? 이런 사람들에게는 문제가 있어요" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="caB-9y-rWt">
+                                                                <rect key="frame" x="0.0" y="36" width="354" height="50.5"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_logo" translatesAutoresizingMaskIntoConstraints="NO" id="SfV-lE-iNk">
+                                                                <rect key="frame" x="0.0" y="105.5" width="354" height="128"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="128" id="Ekr-Df-8qz"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="SfV-lE-iNk" firstAttribute="width" secondItem="caB-9y-rWt" secondAttribute="width" id="dsR-sM-vS1"/>
+                                                            <constraint firstAttribute="trailing" secondItem="caB-9y-rWt" secondAttribute="trailing" id="xpR-7N-Qkn"/>
+                                                        </constraints>
+                                                    </stackView>
                                                 </subviews>
-                                                <constraints>
-                                                    <constraint firstItem="ucX-qg-Xy1" firstAttribute="width" secondItem="pHp-rH-DBW" secondAttribute="width" id="MSX-u7-WNK"/>
-                                                    <constraint firstAttribute="trailing" secondItem="pHp-rH-DBW" secondAttribute="trailing" id="vqu-an-Shl"/>
-                                                </constraints>
                                             </stackView>
                                         </subviews>
                                         <color key="backgroundColor" name="background_card"/>
                                         <constraints>
                                             <constraint firstItem="7r1-eQ-ygr" firstAttribute="leading" secondItem="lQk-Gm-fzJ" secondAttribute="leading" constant="18" id="3PM-eU-GiB"/>
-                                            <constraint firstAttribute="trailing" secondItem="NHk-I3-zM4" secondAttribute="trailing" constant="30" id="6FG-Fk-QJv"/>
                                             <constraint firstItem="dMx-BH-vZi" firstAttribute="top" secondItem="lQk-Gm-fzJ" secondAttribute="top" constant="57" id="8hY-yi-ejy"/>
                                             <constraint firstItem="dMx-BH-vZi" firstAttribute="centerX" secondItem="lQk-Gm-fzJ" secondAttribute="centerX" id="DBE-co-0Ec"/>
-                                            <constraint firstItem="NHk-I3-zM4" firstAttribute="leading" secondItem="lQk-Gm-fzJ" secondAttribute="leading" constant="30" id="SmV-GK-cgl"/>
+                                            <constraint firstItem="xTs-cn-kza" firstAttribute="leading" secondItem="lQk-Gm-fzJ" secondAttribute="leading" constant="30" id="SDN-ne-09d"/>
                                             <constraint firstItem="7r1-eQ-ygr" firstAttribute="top" secondItem="lQk-Gm-fzJ" secondAttribute="top" constant="18" id="dmY-Fk-gmp"/>
-                                            <constraint firstItem="NHk-I3-zM4" firstAttribute="top" secondItem="dMx-BH-vZi" secondAttribute="bottom" constant="12" id="q67-mT-Oal"/>
+                                            <constraint firstAttribute="bottom" secondItem="xTs-cn-kza" secondAttribute="bottom" constant="20" id="lHz-lW-rGN"/>
+                                            <constraint firstAttribute="trailing" secondItem="xTs-cn-kza" secondAttribute="trailing" constant="30" id="yi8-J4-Lc2"/>
+                                            <constraint firstItem="xTs-cn-kza" firstAttribute="top" secondItem="dMx-BH-vZi" secondAttribute="bottom" constant="20" id="zK5-0v-vx0"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -226,9 +288,13 @@
                     <size key="freeformSize" width="414" height="1000"/>
                     <connections>
                         <outlet property="contentLabel" destination="pHp-rH-DBW" id="Z9J-Yi-lnO"/>
+                        <outlet property="contentLabel2" destination="2md-W2-WHL" id="YZA-Uu-Akz"/>
+                        <outlet property="contentLabel3" destination="caB-9y-rWt" id="0nT-3C-oHZ"/>
                         <outlet property="contentStack" destination="NHk-I3-zM4" id="UKU-iS-N1E"/>
                         <outlet property="detailView" destination="lQk-Gm-fzJ" id="p9n-Qe-q2J"/>
                         <outlet property="subtitleLabel" destination="QA0-di-cn5" id="KFF-L6-ZWW"/>
+                        <outlet property="subtitleLabel2" destination="QYV-su-Nb8" id="5bl-N0-wXi"/>
+                        <outlet property="subtitleLabel3" destination="jwG-8D-PJb" id="hVn-nF-GkH"/>
                         <outlet property="titleLabel" destination="dMx-BH-vZi" id="wc0-yj-WBB"/>
                     </connections>
                 </viewController>
@@ -256,10 +322,15 @@
     </scenes>
     <resources>
         <image name="arrow.backward" catalog="system" width="128" height="95"/>
-        <image name="image_news" width="326" height="157"/>
+        <image name="image_login" width="369" height="369"/>
+        <image name="image_logo" width="85" height="101"/>
+        <image name="image_plant_tag" width="71" height="71"/>
         <image name="map" catalog="system" width="128" height="112"/>
         <namedColor name="background_card">
             <color red="0.83921568627450982" green="0.92549019607843142" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="searchbar_onclick">
+            <color red="0.91764705882352937" green="0.96470588235294119" blue="0.8901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="text_green">
             <color red="0.1803921568627451" green="0.45490196078431372" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

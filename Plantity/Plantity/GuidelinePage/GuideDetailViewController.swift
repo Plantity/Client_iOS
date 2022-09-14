@@ -18,6 +18,12 @@ class GuideDetailViewController: UIViewController {
     @IBOutlet weak var contentLabel: UILabel!
     //@IBOutlet weak var summaryLabel: UILabel!
     
+    @IBOutlet weak var subtitleLabel2: UILabel!
+    @IBOutlet weak var contentLabel2: UILabel!
+    
+    @IBOutlet weak var subtitleLabel3: UILabel!
+    @IBOutlet weak var contentLabel3: UILabel!
+    
     var guideData: GuideModelResult = GuideModelResult(title: "", subtitle: "", content: [])
     
     
@@ -40,11 +46,15 @@ class GuideDetailViewController: UIViewController {
         if let titleStr: String = title {
             titleLabel.text = titleStr
         }
-        if let subtitleStr:String = subtitle {
-            subtitleLabel.text = subtitleStr
-        }
-        if let contentStr: [GuideContentModel] = content {
-            //contentLabel.text = contentStr
+        if let contentArray: [GuideContentModel] = content {
+            subtitleLabel.text = contentArray[0].subtitle
+            contentLabel.text = contentArray[0].text
+            
+            subtitleLabel2.text = contentArray[1].subtitle
+            contentLabel2.text = contentArray[1].text
+            
+            subtitleLabel3.text = contentArray[2].subtitle
+            contentLabel3.text = contentArray[2].text
         }
     }
     
