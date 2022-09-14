@@ -16,7 +16,7 @@ class CardCollectionViewCell: UICollectionViewCell {
     
     
     //식물로그보러가기버튼
-    @IBOutlet weak var pushLogButton: UIButton!
+//    @IBOutlet weak var pushLogButton: UIButton!
     
     //dday
     @IBOutlet weak var plantdate: UILabel!
@@ -38,19 +38,31 @@ class CardCollectionViewCell: UICollectionViewCell {
     }
 
     func setupAttribute() {
-        pushLogButton.layer.cornerRadius = 10
-        pushLogButton.clipsToBounds = true
+//        pushLogButton.layer.cornerRadius = 10
+//        pushLogButton.clipsToBounds = true
     }
 
-    func setupCardData(imageUrl: String?, type: String?, nickname: String?, adoptDate: Date?){
+    func setupCardData(imageUrl: String?, type: String?, nickname: String?, adoptDate: String?){
         
         if let nicknameStr:String=nickname{
             plantNickname.text=nicknameStr
         }
+        if let adoptDateStr:String = adoptDate {
+            plantdate.text=adoptDateStr
+        }
+        
+        //url으로 imageurl 받는 방법 -> kingfisher 사용하기
+//        if let imageURL = URL(string: imageUrl) {
+//            plantimage.kf.setImage(with: url)
+//        }
+//        if let imageUrlStr:String = imageUrl {
+//            plantimage.image=imageUrlStr
+//        }
+      
         
         //마지막 카드는 항상 "plus"로 이름설정
         if type == "plus" && nickname == "plus"{
-            pushLogButton.isHidden=true
+//            pushLogButton.isHidden=true
             plantNickname.isHidden=true
             didwater.isHidden=true
             didsoil.isHidden=true
@@ -61,7 +73,7 @@ class CardCollectionViewCell: UICollectionViewCell {
             plusimage.isHidden=false
         
         }else{
-            pushLogButton.isHidden=false
+//            pushLogButton.isHidden=false
             plantNickname.isHidden=false
             didwater.isHidden=false
             didsoil.isHidden=false
