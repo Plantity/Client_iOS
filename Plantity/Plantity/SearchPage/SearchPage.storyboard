@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cG2-jQ-bp0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cG2-jQ-bp0">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -19,11 +20,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="WnI-xz-Wtu">
-                                <rect key="frame" x="0.0" y="44" width="414" height="51"/>
+                                <rect key="frame" x="0.0" y="48" width="414" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="BjR-UM-nPq">
-                                <rect key="frame" x="0.0" y="95" width="414" height="669"/>
+                                <rect key="frame" x="0.0" y="104" width="414" height="660"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
@@ -68,7 +69,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uPZ-Hg-Gip">
-                                <rect key="frame" x="0.0" y="44" width="414" height="50"/>
+                                <rect key="frame" x="0.0" y="48" width="414" height="50"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9KZ-v8-6SB">
                                         <rect key="frame" x="25" y="14" width="22" height="22"/>
@@ -109,20 +110,20 @@
                                 </constraints>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_plant_ex" translatesAutoresizingMaskIntoConstraints="NO" id="oy3-BP-cKs">
-                                <rect key="frame" x="123.5" y="114" width="167" height="167"/>
+                                <rect key="frame" x="123.5" y="118" width="167" height="167"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="167" id="ljx-IX-vcA"/>
                                     <constraint firstAttribute="width" secondItem="oy3-BP-cKs" secondAttribute="height" multiplier="1:1" id="qNq-Vv-Je0"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="몬스테라" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TXX-pi-40J">
-                                <rect key="frame" x="170.5" y="291" width="73" height="25.5"/>
+                                <rect key="frame" x="170.5" y="295" width="73" height="25.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="OaN-3i-SUa">
-                                <rect key="frame" x="162" y="319.5" width="90" height="14.5"/>
+                                <rect key="frame" x="162" y="323.5" width="90" height="14.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="난이도:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nWh-Ui-YNQ">
                                         <rect key="frame" x="0.0" y="0.0" width="35" height="14.5"/>
@@ -142,7 +143,7 @@
                                 </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="자라면서 잎에 구멍이 생기는 것으로 유명한 인테리어 식물" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Voj-dA-XCj">
-                                <rect key="frame" x="72" y="340" width="270" height="50"/>
+                                <rect key="frame" x="72" y="344" width="270" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Y1R-mZ-n29"/>
                                     <constraint firstAttribute="width" constant="270" id="fqA-rX-zFw"/>
@@ -152,7 +153,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BZQ-HT-xMc">
-                                <rect key="frame" x="30" y="410" width="354" height="100"/>
+                                <rect key="frame" x="30" y="414" width="354" height="100"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="76I-LT-vvY">
                                         <rect key="frame" x="15" y="5" width="250.5" height="50"/>
@@ -172,18 +173,18 @@
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="HAN-Q9-DIy">
-                                        <rect key="frame" x="15" y="45" width="199" height="50"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="HAN-Q9-DIy">
+                                        <rect key="frame" x="25" y="65" width="250.5" height="30"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="button_shower" translatesAutoresizingMaskIntoConstraints="NO" id="RjC-mL-H1h">
-                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="50" id="3FM-C9-NzG"/>
                                                     <constraint firstAttribute="width" secondItem="RjC-mL-H1h" secondAttribute="height" multiplier="1:1" id="Win-dz-mGL"/>
+                                                    <constraint firstAttribute="width" constant="30" id="wdD-tw-biB"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="햇빛이 적당한 것을 좋아해요." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8i5-ND-fGL">
-                                                <rect key="frame" x="50" y="17" width="149" height="16"/>
+                                                <rect key="frame" x="40" y="7" width="210.5" height="16"/>
                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="13"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -195,19 +196,20 @@
                                 <constraints>
                                     <constraint firstItem="76I-LT-vvY" firstAttribute="top" secondItem="BZQ-HT-xMc" secondAttribute="top" constant="5" id="6we-d9-9Yl"/>
                                     <constraint firstItem="76I-LT-vvY" firstAttribute="leading" secondItem="BZQ-HT-xMc" secondAttribute="leading" constant="15" id="8Lu-5v-ykp"/>
+                                    <constraint firstItem="HAN-Q9-DIy" firstAttribute="width" secondItem="76I-LT-vvY" secondAttribute="width" id="RLh-iu-c5G"/>
                                     <constraint firstAttribute="height" constant="100" id="Svn-93-7mU"/>
                                     <constraint firstAttribute="bottom" secondItem="HAN-Q9-DIy" secondAttribute="bottom" constant="5" id="phe-9w-StJ"/>
-                                    <constraint firstItem="HAN-Q9-DIy" firstAttribute="leading" secondItem="BZQ-HT-xMc" secondAttribute="leading" constant="15" id="qkN-tl-jHG"/>
+                                    <constraint firstItem="HAN-Q9-DIy" firstAttribute="leading" secondItem="BZQ-HT-xMc" secondAttribute="leading" constant="25" id="qkN-tl-jHG"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="더 자세히 알려드릴게요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w6S-kO-IM4">
-                                <rect key="frame" x="40" y="530" width="155.5" height="20.5"/>
+                                <rect key="frame" x="40" y="534" width="155.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="DBV-NE-VNM">
-                                <rect key="frame" x="45" y="560.5" width="198.5" height="105"/>
+                                <rect key="frame" x="45" y="564.5" width="198.5" height="105"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="학명: Monstera deliciosa Liebm." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="az2-15-uXY">
                                         <rect key="frame" x="0.0" y="0.0" width="198.5" height="17"/>
@@ -329,13 +331,13 @@
         </scene>
     </scenes>
     <resources>
-        <image name="arrow.left" catalog="system" width="128" height="98"/>
+        <image name="arrow.left" catalog="system" width="128" height="95"/>
         <image name="button_shower" width="47" height="47"/>
         <image name="button_water" width="83" height="83"/>
         <image name="icon_heart" width="35" height="34"/>
         <image name="icon_heart_fill" width="18.5" height="15.5"/>
         <image name="image_plant_ex" width="105" height="115"/>
-        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="117"/>
         <namedColor name="background_card">
             <color red="0.83921568627450982" green="0.92549019607843142" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
@@ -352,7 +354,7 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="tertiaryLabelColor">
-            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29803921568627451" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
