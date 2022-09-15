@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class CardCollectionViewCell: UICollectionViewCell {
     //plusimage
@@ -52,9 +53,10 @@ class CardCollectionViewCell: UICollectionViewCell {
         }
         
         //url으로 imageurl 받는 방법 -> kingfisher 사용하기
-//        if let imageURL = URL(string: imageUrl) {
-//            plantimage.kf.setImage(with: url)
-//        }
+        if let imageURL = URL(string:imageUrl!) {
+            plantimage.kf.setImage(with: imageURL)
+        }
+        
 //        if let imageUrlStr:String = imageUrl {
 //            plantimage.image=imageUrlStr
 //        }
