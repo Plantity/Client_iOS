@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lqI-fM-G3Y">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="h06-fB-8ZX">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -77,7 +79,100 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Qv-B1-68y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="18.840579710144929" y="91.741071428571431"/>
+            <point key="canvasLocation" x="928.98550724637687" y="91.741071428571431"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="34B-sZ-KeV">
+            <objects>
+                <viewController storyboardIdentifier="LoginViewController" id="YCX-J6-tbM" customClass="LoginViewController" customModule="Plantity" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zwX-X2-3jM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="teststartbackground" translatesAutoresizingMaskIntoConstraints="NO" id="PKf-eD-UZk">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hbc-6a-vdd">
+                                <rect key="frame" x="29.5" y="682.5" width="355" height="74"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="button_login"/>
+                                <buttonConfiguration key="configuration" style="plain" image="button_login"/>
+                                <connections>
+                                    <action selector="loginButtonClicked:" destination="YCX-J6-tbM" eventType="touchUpInside" id="9Wa-z4-tkm"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="spR-Dh-WUP">
+                                <rect key="frame" x="81" y="190.5" width="252.5" height="59"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="내 반려식물과 함께" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BJv-xs-aq7">
+                                        <rect key="frame" x="48.5" y="0.0" width="155" height="25.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="21"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="가드닝 라이프를 시작해보세요!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jZf-ru-A6Q">
+                                        <rect key="frame" x="0.0" y="33.5" width="252.5" height="25.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_login" translatesAutoresizingMaskIntoConstraints="NO" id="O2z-HC-klT">
+                                <rect key="frame" x="42.5" y="283.5" width="329" height="329"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="329" id="Glt-iz-TTq"/>
+                                    <constraint firstAttribute="width" secondItem="O2z-HC-klT" secondAttribute="height" multiplier="1:1" id="WQA-1o-r6q"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="5GX-UA-UtT"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="O2z-HC-klT" firstAttribute="centerY" secondItem="PKf-eD-UZk" secondAttribute="centerY" id="4iQ-Ol-ohu"/>
+                            <constraint firstAttribute="bottom" secondItem="PKf-eD-UZk" secondAttribute="bottom" id="HSQ-Yg-aUF"/>
+                            <constraint firstItem="spR-Dh-WUP" firstAttribute="centerX" secondItem="PKf-eD-UZk" secondAttribute="centerX" id="O8e-Nz-Zzp"/>
+                            <constraint firstItem="O2z-HC-klT" firstAttribute="centerX" secondItem="PKf-eD-UZk" secondAttribute="centerX" id="OTj-zL-viu"/>
+                            <constraint firstItem="PKf-eD-UZk" firstAttribute="trailing" secondItem="5GX-UA-UtT" secondAttribute="trailing" id="QGA-SA-ZNH"/>
+                            <constraint firstItem="PKf-eD-UZk" firstAttribute="top" secondItem="zwX-X2-3jM" secondAttribute="top" id="Rg8-65-fQX"/>
+                            <constraint firstItem="PKf-eD-UZk" firstAttribute="leading" secondItem="5GX-UA-UtT" secondAttribute="leading" id="iHa-iQ-xMJ"/>
+                            <constraint firstItem="O2z-HC-klT" firstAttribute="top" secondItem="spR-Dh-WUP" secondAttribute="bottom" constant="34" id="pv5-sf-atu"/>
+                            <constraint firstItem="hbc-6a-vdd" firstAttribute="centerX" secondItem="PKf-eD-UZk" secondAttribute="centerX" id="q4o-UB-FOd"/>
+                            <constraint firstItem="hbc-6a-vdd" firstAttribute="top" secondItem="O2z-HC-klT" secondAttribute="bottom" constant="70" id="w3S-Fr-wLu"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="3Tg-RZ-yak"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QNX-oH-Wgj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="189.85507246376812" y="91.741071428571431"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="IkJ-xU-uw9">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="h06-fB-8ZX" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="g77-XJ-YHs">
+                        <rect key="frame" x="0.0" y="48" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="YCX-J6-tbM" kind="relationship" relationship="rootViewController" id="Qyg-wy-VuA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iR5-Tc-ZLR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-720.28985507246387" y="91.741071428571431"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="button_login" width="331" height="60"/>
+        <image name="image_login" width="369" height="369"/>
+        <image name="teststartbackground" width="375" height="812"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

@@ -11,6 +11,9 @@ class MainViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.navigationItem.hidesBackButton = true
+        self.navigationController?.navigationBar.isHidden = true
 
         self.selectedIndex = 2
 

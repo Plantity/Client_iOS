@@ -46,6 +46,7 @@ class LoginViewController: UIViewController {
                       if let token : String = oauthToken?.accessToken {
                           accessToken = token
                       }
+                      self.setUserInfo()
                   }
               }
           }
@@ -55,7 +56,6 @@ class LoginViewController: UIViewController {
         print(accessToken)
         
         //카카오 로그인을 통해 사용자 토큰을 발급 받은 후 사용자 관리 API 호출
-        // self.setUserInfo()
     }
     
     func setUserInfo() {
@@ -67,7 +67,11 @@ class LoginViewController: UIViewController {
             else {
                 print("me() success.")
                 // 로그인한 유저정보 받아와서 무언가 할 것
-                print(user?.id)
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                
+                let viewController = storyboard.instantiateViewController(withIdentifier: "MainViewController") as! MainViewController
+                
+                self.navigationController?.pushViewController(viewController, animated: true)
             }
         }
     }
