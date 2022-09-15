@@ -32,25 +32,32 @@ class MyPageViewController: UIViewController {
     ]
     
     var userPlant:[UserPlant]=[
-        UserPlant(imageUrl: "https://images.app.goo.gl/rsNc2UjMhDeQZafk7", type: "a", nickname: "찌니꾸", adoptDate:"함께한지 14일 째"),
-        UserPlant(imageUrl: "https://images.app.goo.gl/rsNc2UjMhDeQZafk7", type: "b", nickname: "땅후니", adoptDate: "함께한지 5일 째"),
-        UserPlant(imageUrl: "https://images.app.goo.gl/rsNc2UjMhDeQZafk7", type: "c", nickname: "쁘뀨보이", adoptDate: "함께한지 10일 째"),
-        UserPlant(imageUrl: "https://images.app.goo.gl/rsNc2UjMhDeQZafk7", type: "d", nickname: "유석종", adoptDate: "함께한지 16일 째"),
+        UserPlant(imageUrl: "https://www.100ssd.co.kr/news/photo/202009/71614_51734_4048.jpg", type: "a", nickname: "찌니꾸", adoptDate:"함께한지 14일 째"),
+        UserPlant(imageUrl: "https://static.coupangcdn.com/image/vendor_inventory/a6e2/74c35fa637388b7fdf3ce4a696160fa055ce3748aecc7262259a9f8bbd04.jpg", type: "b", nickname: "땅후니", adoptDate: "함께한지 5일 째"),
+        UserPlant(imageUrl: "https://mule4.dingul.io/api/r?l=aHR0cHM6Ly90aHVtYm5haWw5LmNvdXBhbmdjZG4uY29tL3RodW1ibmFpbHMvcmVtb3RlLzQ5Mng0OTJleC9pbWFnZS92ZW5kb3JfaW52ZW50b3J5L2U1ZWMvNGI5YzQxODdjMjYyZGZiOGY2NzIyMmQzZDIzNWVhODU2YjA1NTViYWI2N2IwMTE4MDk5ZDlmMjI5OGFjLmpwZw", type: "c", nickname: "쁘뀨보이", adoptDate: "함께한지 10일 째"),
+        UserPlant(imageUrl: "https://mule4.dingul.io/api/r?l=aHR0cHM6Ly90aHVtYm5haWwxMC5jb3VwYW5nY2RuLmNvbS90aHVtYm5haWxzL3JlbW90ZS80OTJ4NDkyZXgvaW1hZ2UvdmVuZG9yX2ludmVudG9yeS9pbWFnZXMvMjAxOC8wOS8xNS8xMy84LzdhMmZiOTczLWJjOTMtNDE0OS1hYzZhLTZhNjEyZjljNjIzZS5qcGc", type: "d", nickname: "유석종", adoptDate: "함께한지 16일 째"),
         UserPlant(imageUrl: "", type: "plus", nickname: "plus", adoptDate: "134")
     ]
+
     
     // response 예시
-    var myData : MyModelResult = MyModelResult(
-        myInfo: MyInfo(username: "김다연", userId: "1234", level: 1, progress: 75),
-        myPlants: [MyPlantModel(imageUrl: "https://images.app.goo.gl/rsNc2UjMhDeQZafk7", name: "베고니아", nickname: "찌니꾸", adoptDate: Date()),MyPlantModel(imageUrl: "https://images.app.goo.gl/rsNc2UjMhDeQZafk7", name: "베고니아", nickname: "땅후니", adoptDate: Date()), MyPlantModel(imageUrl: "https://images.app.goo.gl/rsNc2UjMhDeQZafk7", name: "베고니아", nickname: "쁘큐보이", adoptDate: Date()), MyPlantModel(imageUrl: "https://images.app.goo.gl/rsNc2UjMhDeQZafk7", name: "베고니아", nickname: "유석종", adoptDate: Date())],
-        myLikes: [MyPlantModel(imageUrl: "", name: "베고니아", nickname: "베고니아", adoptDate: Date())]
-    )
+    var myData : MyModelResult = MyModelResult(myInfo: MyInfo(username: "", userId: "", level: 0, progress: 0), myPlants: [], myLikes: [])
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // To Server
         // let input = MyDataInput(limit: 10, page: 0)
         // MyDataManager().feedDataManager(input, self)
+        
+        self.myData = MyModelResult(
+            myInfo: MyInfo(username: "김다연", userId: "1234", level: 1, progress: 75),
+            myPlants: [
+                MyPlantModel(imageUrl: userPlant[0].imageUrl, name: userPlant[0].type, nickname: userPlant[0].nickname, adoptDate: Date()),
+                MyPlantModel(imageUrl: userPlant[1].imageUrl, name: userPlant[1].type, nickname: userPlant[1].nickname, adoptDate: Date()),
+                MyPlantModel(imageUrl: userPlant[2].imageUrl, name: userPlant[2].type, nickname: userPlant[2].nickname, adoptDate: Date()),
+                MyPlantModel(imageUrl: userPlant[3].imageUrl, name: userPlant[3].type, nickname: userPlant[3].nickname, adoptDate: Date())],
+            myLikes: [MyPlantModel(imageUrl: "", name: "베고니아", nickname: "베고니아", adoptDate: Date())]
+        )
         
         // Delegates
         myTableView.delegate = self
