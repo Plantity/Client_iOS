@@ -50,9 +50,9 @@ class MyPageViewController: UIViewController {
         self.myData = MyModelResult(
             myInfo: MyInfo(username: "고해주", userId: "1234", level: 1, progress: 75),
             myPlants: [
-                MyPlantModel(imageUrl: userPlant[0].imageUrl, name: userPlant[0].type, nickname: userPlant[0].nickname, adoptDate: Date()),
-                MyPlantModel(imageUrl: userPlant[1].imageUrl, name: userPlant[1].type, nickname: userPlant[1].nickname, adoptDate: Date())],
-            myLikes: [MyPlantModel(imageUrl: "", name: "베고니아", nickname: "베고니아", adoptDate: Date())]
+                MyPlantModel(imageUrl: userPlant[0].imageUrl, name: userPlant[0].type, nickname: userPlant[0].nickname, adoptDate: Date(), plantNo: "12345"),
+                MyPlantModel(imageUrl: userPlant[1].imageUrl, name: userPlant[1].type, nickname: userPlant[1].nickname, adoptDate: Date(), plantNo: "12367")],
+            myLikes: [MyPlantModel(imageUrl: "", name: "베고니아", nickname: "베고니아", adoptDate: Date(), plantNo: "12938")]
         )
         
         // Delegates
@@ -119,7 +119,7 @@ class MyPageViewController: UIViewController {
         guard let viewController = storyboard.instantiateViewController(identifier: "PlantViewController") as? PlantViewController else { return }
         
         // 상세보기 API 조회
-        
+        viewController.postData(myData.myLikes?[plantIdx].plantNo ?? "")
         
         self.navigationController?.pushViewController(viewController, animated: true)
     }

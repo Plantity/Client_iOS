@@ -48,4 +48,5 @@ struct MyPlantModel: Decodable {
     let name: String?
     let nickname: String?
     let adoptDate: Date?
+    let plantNo: String?    // 식물 상세조회할 때 쓰는 고유번호
 }

@@ -69,14 +69,10 @@ struct SearchPlantModel : Decodable {
     //let plantFollowings: [Int]
 }
 
-//struct SearchPlantModel: Decodable {
-//    // let imageUrl: String?
-//    let name: String?
-//    let level: Int?
-//    let intro: String?
-//    let water: String?
-//    let sun: String?
-//    var isUserLiked: Bool?
-//    // let details: PlantDetailModel?
-//    let tag: String?
-//}
+// 상제보기 모델
+struct DetailDataModel : Decodable {
+    let isSuccess : Bool
+    let code: Int
+    let message: String
+    let result: SearchPlantModel
+}
