@@ -53,13 +53,6 @@ class SearchViewController: UIViewController {
         let tagNib = UINib(nibName: "TagTableViewCell", bundle: nil)
         searchTableView.register(tagNib, forCellReuseIdentifier: "TagTableViewCell")
     }
-
-    private func setupData(pageNum: Int) {
-        // To Server
-        let input = SearchDataInput(size: 10, page: pageNum)
-        
-        SearchDataManager().srearchDataManager(input, self)
-    }
     
     
     
@@ -192,6 +185,13 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
 
 // MARK: - Network
 extension SearchViewController {
+    private func setupData(pageNum: Int) {
+        // To Server
+        let input = SearchDataInput(size: 10, page: pageNum)
+        
+        SearchDataManager().searchDataManager(input, self)
+    }
+    
     func successAPI(_ result: SearchDataModel?) {
         var isLastPage: Bool = false
         

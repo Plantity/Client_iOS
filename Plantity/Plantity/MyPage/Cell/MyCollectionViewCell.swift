@@ -6,13 +6,14 @@
 //
 
 import UIKit
+import Kingfisher
 
 class MyCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var imageView: UIImageView!
     
     public func configure(with data: String?) {
-        if let imageUrl: String = data {
-            print(imageUrl)
+        if let imageUrl: URL = URL(string: data ?? "") {
+            imageView.kf.setImage(with: imageUrl)
         }
     }
     

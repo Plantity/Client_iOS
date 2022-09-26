@@ -38,14 +38,24 @@ class AddDataManager {
             "plantAdaptTime": parameter.plantAdaptTime
         ]
         
+        //let myPlantSaveRequestDto: [String: String?] = [:]
+        
         AF.upload(multipartFormData: { multipartFormData in
+            // 이미지
             if let image = parameter.plantImage?.pngData() {
                 multipartFormData.append(image, withName: "image", fileName: "\(image).png", mimeType: "image/png")
             }
             
+            // 세부 데이터
+//            for (key, value) in parameters {
+//                if let strValue: String = value {
+//                    myPlantSaveRequestDto.append("\(strValue)".data(using: .utf8)!, withName: key, mimeType: "application/json")
+//                }
+//            }
+            
             for (key, value) in parameters {
                 if let strValue: String = value {
-                    multipartFormData.append("\(strValue)".data(using: .utf8)!, withName: key)
+                    multipartFormData.append("\(strValue)".data(using: .utf8)!, withName: "myPlantSaveRequestDto/\(key)")
                 }
             }
             

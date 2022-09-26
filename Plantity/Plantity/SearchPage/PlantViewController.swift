@@ -109,3 +109,18 @@ class PlantViewController: UIViewController {
 
     }
 }
+
+extension PlantViewController {
+    func postData(_ plantNo: String) {
+        // To Server
+        SearchDataManager().detailDataManager(plantNo, self)
+    }
+    
+    func successAPI(_ result: DetailDataModel?) {
+        if let resultData : SearchPlantModel = result?.result {
+            print(resultData)
+            searchPlant = resultData
+            setupData(plant: searchPlant)
+        }
+    }
+}

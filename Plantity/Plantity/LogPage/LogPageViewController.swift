@@ -30,10 +30,8 @@ class LogPageViewController: UIViewController, FSCalendarDelegate, FSCalendarDat
     
     //dummies
     var logUserPlant:[LogUserPlant]=[
-        LogUserPlant(imageUrl: "https://www.100ssd.co.kr/news/photo/202009/71614_51734_4048.jpg", nickname: "찌니꾸", type: "몬스테라", plantlevel: 3, plantMemo: "🌳물은 일주일에 한번 주기"),
-        LogUserPlant(imageUrl: "https://static.coupangcdn.com/image/vendor_inventory/a6e2/74c35fa637388b7fdf3ce4a696160fa055ce3748aecc7262259a9f8bbd04.jpg", nickname: "땅후니", type: "대봉룡", plantlevel: 3, plantMemo: "🌳매일매일 물주기"),
-        LogUserPlant(imageUrl: "https://mule4.dingul.io/api/r?l=aHR0cHM6Ly90aHVtYm5haWw5LmNvdXBhbmdjZG4uY29tL3RodW1ibmFpbHMvcmVtb3RlLzQ5Mng0OTJleC9pbWFnZS92ZW5kb3JfaW52ZW50b3J5L2U1ZWMvNGI5YzQxODdjMjYyZGZiOGY2NzIyMmQzZDIzNWVhODU2YjA1NTViYWI2N2IwMTE4MDk5ZDlmMjI5OGFjLmpwZw", nickname: "쁘뀨보이", type: "양팔선인장", plantlevel: 3, plantMemo: "🌳물은 한달에 한번만!"),
-        LogUserPlant(imageUrl: "https://mule4.dingul.io/api/r?l=aHR0cHM6Ly90aHVtYm5haWwxMC5jb3VwYW5nY2RuLmNvbS90aHVtYm5haWxzL3JlbW90ZS80OTJ4NDkyZXgvaW1hZ2UvdmVuZG9yX2ludmVudG9yeS9pbWFnZXMvMjAxOC8wOS8xNS8xMy84LzdhMmZiOTczLWJjOTMtNDE0OS1hYzZhLTZhNjEyZjljNjIzZS5qcGc", nickname: "유석종", type: "다육선인장", plantlevel: 3, plantMemo: "🌳3일에 한번씩 물 주기")
+        LogUserPlant(imageUrl: "https://www.100ssd.co.kr/news/photo/202009/71614_51734_4048.jpg", nickname: "새삼이", type: "멕시코소철", plantlevel: 3, plantMemo: "🌳매일매일 물주기"),
+        LogUserPlant(imageUrl: "https://mule4.dingul.io/api/r?l=aHR0cHM6Ly90aHVtYm5haWw5LmNvdXBhbmdjZG4uY29tL3RodW1ibmFpbHMvcmVtb3RlLzQ5Mng0OTJleC9pbWFnZS92ZW5kb3JfaW52ZW50b3J5L2U1ZWMvNGI5YzQxODdjMjYyZGZiOGY2NzIyMmQzZDIzNWVhODU2YjA1NTViYWI2N2IwMTE4MDk5ZDlmMjI5OGFjLmpwZw", nickname: "쁘뀨보이", type: "허브", plantlevel: 3, plantMemo: "🌳물은 한달에 한번만!")
     ]
     
     var calendars: [LogCalendar] = [

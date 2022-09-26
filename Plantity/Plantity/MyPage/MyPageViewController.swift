@@ -28,29 +28,32 @@ class MyPageViewController: UIViewController {
     
     //dummies
     var userInfo:[UserInfo]=[
-        UserInfo(username: "김다연", level: 2, progress: 75)
+        UserInfo(username: "고해주", level: 2, progress: 75)
     ]
     
     var userPlant:[UserPlant]=[
-        UserPlant(imageUrl: "https://images.app.goo.gl/rsNc2UjMhDeQZafk7", type: "a", nickname: "찌니꾸", adoptDate:"함께한지 14일 째"),
-        UserPlant(imageUrl: "https://images.app.goo.gl/rsNc2UjMhDeQZafk7", type: "b", nickname: "땅후니", adoptDate: "함께한지 5일 째"),
-        UserPlant(imageUrl: "https://images.app.goo.gl/rsNc2UjMhDeQZafk7", type: "c", nickname: "쁘뀨보이", adoptDate: "함께한지 10일 째"),
-        UserPlant(imageUrl: "https://images.app.goo.gl/rsNc2UjMhDeQZafk7", type: "d", nickname: "유석종", adoptDate: "함께한지 16일 째"),
+        UserPlant(imageUrl: "https://www.100ssd.co.kr/news/photo/202009/71614_51734_4048.jpg", type: "필로덴드론", nickname: "새삼이", adoptDate: "함께한지 5일 째"),
+        UserPlant(imageUrl: "https://mule4.dingul.io/api/r?l=aHR0cHM6Ly90aHVtYm5haWw5LmNvdXBhbmdjZG4uY29tL3RodW1ibmFpbHMvcmVtb3RlLzQ5Mng0OTJleC9pbWFnZS92ZW5kb3JfaW52ZW50b3J5L2U1ZWMvNGI5YzQxODdjMjYyZGZiOGY2NzIyMmQzZDIzNWVhODU2YjA1NTViYWI2N2IwMTE4MDk5ZDlmMjI5OGFjLmpwZw", type: "허브", nickname: "쁘뀨보이", adoptDate: "함께한지 10일 째"),
         UserPlant(imageUrl: "", type: "plus", nickname: "plus", adoptDate: "134")
     ]
+
     
     // response 예시
-    var myData : MyModelResult = MyModelResult(
-        myInfo: MyInfo(username: "김다연", userId: "1234", level: 1, progress: 75),
-        myPlants: [MyPlantModel(imageUrl: "https://images.app.goo.gl/rsNc2UjMhDeQZafk7", name: "베고니아", nickname: "찌니꾸", adoptDate: Date()),MyPlantModel(imageUrl: "https://images.app.goo.gl/rsNc2UjMhDeQZafk7", name: "베고니아", nickname: "땅후니", adoptDate: Date()), MyPlantModel(imageUrl: "https://images.app.goo.gl/rsNc2UjMhDeQZafk7", name: "베고니아", nickname: "쁘큐보이", adoptDate: Date()), MyPlantModel(imageUrl: "https://images.app.goo.gl/rsNc2UjMhDeQZafk7", name: "베고니아", nickname: "유석종", adoptDate: Date())],
-        myLikes: [MyPlantModel(imageUrl: "", name: "베고니아", nickname: "베고니아", adoptDate: Date())]
-    )
+    var myData : MyModelResult = MyModelResult(myInfo: MyInfo(username: "", userId: "", level: 0, progress: 0), myPlants: [], myLikes: [])
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // To Server
         // let input = MyDataInput(limit: 10, page: 0)
         // MyDataManager().feedDataManager(input, self)
+        
+        self.myData = MyModelResult(
+            myInfo: MyInfo(username: "고해주", userId: "1234", level: 1, progress: 75),
+            myPlants: [
+                MyPlantModel(imageUrl: userPlant[0].imageUrl, name: userPlant[0].type, nickname: userPlant[0].nickname, adoptDate: Date(), plantNo: "12345"),
+                MyPlantModel(imageUrl: userPlant[1].imageUrl, name: userPlant[1].type, nickname: userPlant[1].nickname, adoptDate: Date(), plantNo: "12367")],
+            myLikes: [MyPlantModel(imageUrl: "", name: "베고니아", nickname: "베고니아", adoptDate: Date(), plantNo: "12938")]
+        )
         
         // Delegates
         myTableView.delegate = self
@@ -91,10 +94,12 @@ class MyPageViewController: UIViewController {
         }
         
         // 컬렉션 셀 옵저버 -> 식물로그로 이동
-        NotificationCenter.default.addObserver(self, selector: #selector(didRecieveGoNotification(_:)), name: Notification.Name("gotoLog"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(didRecieveLogNotification(_:)), name: Notification.Name("gotoLog"), object: nil)
+        // 식물 상세보기로 이동
+        NotificationCenter.default.addObserver(self, selector: #selector(didRecieveSearchNotification(_:)), name: Notification.Name("gotoSearch"), object: nil)
     }
     
-    @objc func didRecieveGoNotification(_ notification: NSNotification) {
+    @objc func didRecieveLogNotification(_ notification: NSNotification) {
         let gotoPlant: Int = notification.object as! Int
         
         let storyboard=UIStoryboard(name: "LogPage", bundle: nil)
@@ -104,6 +109,19 @@ class MyPageViewController: UIViewController {
         viewController.currentPage = gotoPlant
 
         self.present(viewController, animated: true, completion: nil)
+    }
+    
+    @objc func didRecieveSearchNotification(_ notification: NSNotification) {
+        let plantIdx: Int = notification.object as! Int
+        
+        let storyboard=UIStoryboard(name: "SearchPage", bundle: nil)
+        //식물로그 이동하기
+        guard let viewController = storyboard.instantiateViewController(identifier: "PlantViewController") as? PlantViewController else { return }
+        
+        // 상세보기 API 조회
+        viewController.postData(myData.myLikes?[plantIdx].plantNo ?? "")
+        
+        self.navigationController?.pushViewController(viewController, animated: true)
     }
     
     private func setupAttribute() {
@@ -127,7 +145,8 @@ class MyPageViewController: UIViewController {
         let setVC = storyboard.instantiateViewController(withIdentifier: "SettingsViewController") as! SettingsViewController
 
         
-        self.navigationController?.pushViewController(setVC, animated: true)
+        //self.navigationController?.pushViewController(setVC, animated: true)
+        self.present(setVC, animated: true)
     }
 }
 

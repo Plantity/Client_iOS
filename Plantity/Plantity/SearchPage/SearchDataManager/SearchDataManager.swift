@@ -9,7 +9,7 @@ import Foundation
 import Alamofire
 
 class SearchDataManager {
-    func srearchDataManager(_ parameters: SearchDataInput, _ viewController: SearchViewController) {
+    func searchDataManager(_ parameters: SearchDataInput, _ viewController: SearchViewController) {
         // 데이터 주고받는 함수
         AF.request(
             "http://plantity.shop/plant",
@@ -32,7 +32,7 @@ class SearchDataManager {
     }
     
     func selectorDataManager(_ parameters: SearchDataInput, _ viewController: TypeSelectorViewController) {
-        // 데이터 주고받는 함수
+        // 식물추가할때 데이터 주고받는 함수
         AF.request(
             "http://plantity.shop/plant",
             method: .get,
@@ -51,4 +51,25 @@ class SearchDataManager {
             }
         }
     }
+    
+    func detailDataManager(_ cntntsNo: String, _ viewController: PlantViewController) {
+        // 식물상세조회 시 데이터 주고받는 함수
+        AF.request(
+            "http://plantity.shop/plant/\(cntntsNo)",
+            method: .get)
+        .validate()
+        .responseDecodable(
+            of: DetailDataModel.self
+        ) { response in
+            switch response.result {
+            case .success(let result):
+                // 성공
+                viewController.successAPI(result)
+            case .failure(let error):
+                // 실패
+                print(error.localizedDescription)
+            }
+        }
+    }
+    
 }

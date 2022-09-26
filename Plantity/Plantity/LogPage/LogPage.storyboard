@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -18,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UWj-MM-dTQ">
-                                <rect key="frame" x="0.0" y="44" width="414" height="80"/>
+                                <rect key="frame" x="0.0" y="48" width="414" height="80"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="식물로그" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sy6-T1-IFj">
                                         <rect key="frame" x="20" y="25" width="87" height="30"/>
@@ -35,7 +36,7 @@
                                 </constraints>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="X1U-dz-8dc" userLabel="Card Collection View">
-                                <rect key="frame" x="10" y="124" width="394" height="200"/>
+                                <rect key="frame" x="10" y="128" width="394" height="200"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="200" id="M67-p4-pcC"/>
@@ -50,7 +51,7 @@
                                 <cells/>
                             </collectionView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="1S9-sE-u4i" userLabel="Log Collection View">
-                                <rect key="frame" x="0.0" y="350" width="414" height="546"/>
+                                <rect key="frame" x="0.0" y="354" width="414" height="522"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="5yO-t0-uQH">
                                     <size key="itemSize" width="368" height="467"/>
@@ -61,7 +62,7 @@
                                 <cells/>
                             </collectionView>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="FSR-vL-NUP">
-                                <rect key="frame" x="149" y="324" width="116" height="26"/>
+                                <rect key="frame" x="149" y="328" width="116" height="26"/>
                                 <color key="pageIndicatorTintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="currentPageIndicatorTintColor" red="0.35294117650000001" green="0.89019607840000003" blue="0.76862745099999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </pageControl>
@@ -77,7 +78,7 @@
                             <constraint firstItem="UWj-MM-dTQ" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="XQG-yu-RGf"/>
                             <constraint firstItem="UWj-MM-dTQ" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="d97-DP-VeL"/>
                             <constraint firstItem="1S9-sE-u4i" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="kY4-QS-NmO"/>
-                            <constraint firstAttribute="bottom" secondItem="1S9-sE-u4i" secondAttribute="bottom" id="nYu-qH-kId"/>
+                            <constraint firstAttribute="bottom" secondItem="1S9-sE-u4i" secondAttribute="bottom" constant="20" id="nYu-qH-kId"/>
                             <constraint firstItem="1S9-sE-u4i" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="sIf-HD-XxP"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="X1U-dz-8dc" secondAttribute="trailing" constant="10" id="sms-6f-xfX"/>
                             <constraint firstItem="FSR-vL-NUP" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="t0P-Cq-L8v"/>
@@ -105,7 +106,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="calendar" catalog="system" width="128" height="106"/>
+        <image name="calendar" catalog="system" width="128" height="107"/>
         <systemColor name="secondaryLabelColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
@@ -116,7 +117,7 @@
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tertiaryLabelColor">
-            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29803921568627451" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
