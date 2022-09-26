@@ -94,10 +94,12 @@ class MyPageViewController: UIViewController {
         }
         
         // 컬렉션 셀 옵저버 -> 식물로그로 이동
-        NotificationCenter.default.addObserver(self, selector: #selector(didRecieveGoNotification(_:)), name: Notification.Name("gotoLog"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(didRecieveLogNotification(_:)), name: Notification.Name("gotoLog"), object: nil)
+        // 식물 상세보기로 이동
+        NotificationCenter.default.addObserver(self, selector: #selector(didRecieveSearchNotification(_:)), name: Notification.Name("gotoSearch"), object: nil)
     }
     
-    @objc func didRecieveGoNotification(_ notification: NSNotification) {
+    @objc func didRecieveLogNotification(_ notification: NSNotification) {
         let gotoPlant: Int = notification.object as! Int
         
         let storyboard=UIStoryboard(name: "LogPage", bundle: nil)
@@ -107,6 +109,19 @@ class MyPageViewController: UIViewController {
         viewController.currentPage = gotoPlant
 
         self.present(viewController, animated: true, completion: nil)
+    }
+    
+    @objc func didRecieveSearchNotification(_ notification: NSNotification) {
+        let plantIdx: Int = notification.object as! Int
+        
+        let storyboard=UIStoryboard(name: "SearchPage", bundle: nil)
+        //식물로그 이동하기
+        guard let viewController = storyboard.instantiateViewController(identifier: "PlantViewController") as? PlantViewController else { return }
+        
+        // 상세보기 API 조회
+        
+        
+        self.navigationController?.pushViewController(viewController, animated: true)
     }
     
     private func setupAttribute() {
