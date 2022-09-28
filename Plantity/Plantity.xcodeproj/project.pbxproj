@@ -25,7 +25,8 @@
 		554DF9F928AF6D1600CE462F /* AppendCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 554DF9F728AF6D1600CE462F /* AppendCollectionViewCell.xib */; };
 		55A5806D28CB228A00FF54BC /* MainDataInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A5806C28CB228A00FF54BC /* MainDataInput.swift */; };
 		55A5806F28CB229D00FF54BC /* MainDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A5806E28CB229D00FF54BC /* MainDataManager.swift */; };
-		B77A185B69A00583FF0855B7 /* Pods_Plantity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A5BB4544D9658449C93E75F /* Pods_Plantity.framework */; };
+		55CC0D5C28E47A85005E26D4 /* LogDataInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CC0D5B28E47A85005E26D4 /* LogDataInput.swift */; };
+		55CC0D5E28E47AA8005E26D4 /* LogDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CC0D5D28E47AA8005E26D4 /* LogDataManager.swift */; };
 		F402FE4228ACC84600138D8E /* SearchDataInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = F402FE4128ACC84600138D8E /* SearchDataInput.swift */; };
 		F402FE4428ACC86B00138D8E /* SearchDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F402FE4328ACC86B00138D8E /* SearchDataManager.swift */; };
 		F402FE4628ACCBB500138D8E /* AddPlantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F402FE4528ACCBB500138D8E /* AddPlantViewController.swift */; };
@@ -100,6 +101,8 @@
 		554DF9F728AF6D1600CE462F /* AppendCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AppendCollectionViewCell.xib; sourceTree = "<group>"; };
 		55A5806C28CB228A00FF54BC /* MainDataInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainDataInput.swift; sourceTree = "<group>"; };
 		55A5806E28CB229D00FF54BC /* MainDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainDataManager.swift; sourceTree = "<group>"; };
+		55CC0D5B28E47A85005E26D4 /* LogDataInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogDataInput.swift; sourceTree = "<group>"; };
+		55CC0D5D28E47AA8005E26D4 /* LogDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogDataManager.swift; sourceTree = "<group>"; };
 		F402FE4128ACC84600138D8E /* SearchDataInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDataInput.swift; sourceTree = "<group>"; };
 		F402FE4328ACC86B00138D8E /* SearchDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDataManager.swift; sourceTree = "<group>"; };
 		F402FE4528ACCBB500138D8E /* AddPlantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlantViewController.swift; sourceTree = "<group>"; };
@@ -204,6 +207,8 @@
 			isa = PBXGroup;
 			children = (
 				5516AEE828A11B5100458259 /* LogDataModel.swift */,
+				55CC0D5B28E47A85005E26D4 /* LogDataInput.swift */,
+				55CC0D5D28E47AA8005E26D4 /* LogDataManager.swift */,
 			);
 			path = LogDataManager;
 			sourceTree = "<group>";
@@ -572,6 +577,7 @@
 				554DF9F428AE276500CE462F /* CalendarCollectionViewCell.swift in Sources */,
 				55A5806D28CB228A00FF54BC /* MainDataInput.swift in Sources */,
 				F47D0B6D28C09D77003BC566 /* AddDataManager.swift in Sources */,
+				55CC0D5C28E47A85005E26D4 /* LogDataInput.swift in Sources */,
 				5527D3B62890187F00D33242 /* LogPageViewController.swift in Sources */,
 				F4C829E128925A7E009AB584 /* NewsCollectionViewCell.swift in Sources */,
 				5506067A288EC71F00B717DE /* MainPageViewController.swift in Sources */,
@@ -587,6 +593,7 @@
 				55436ED12893B3870045B8EE /* TestViewController.swift in Sources */,
 				F47D0B6728C0453A003BC566 /* TypeSelectorViewController.swift in Sources */,
 				F4AE4A7928937236008E7A82 /* GuideDetailViewController.swift in Sources */,
+				55CC0D5E28E47AA8005E26D4 /* LogDataManager.swift in Sources */,
 				F402FE4428ACC86B00138D8E /* SearchDataManager.swift in Sources */,
 				F4DDD511289E274B004F6932 /* SearchDataModel.swift in Sources */,
 				F47D0B6928C09BF4003BC566 /* AddDataModel.swift in Sources */,
