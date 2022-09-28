@@ -72,11 +72,38 @@ class PlantViewController: UIViewController {
             // set Introduction
             plantIntro.text =  plantData.adviseInfo
             
-            // set Water
-            plantWater.text =  plantData.watercycleSprngCodeNm
+            /** 물주기 멘트
+             * 축축 -> 항상 축축하게 흙을 유지해주세요.
+             * 촉촉 -> 물을 3일에 한 번씩 흙이 마르면 주세요.
+             * 표면 -> 물을 7일에 한 번씩 표면이 마르면 주세요.
+             * 대부분 -> 흙이 바싹 말랐을 때 조금씩 주세요.
+             */
+            let waterStr = plantData.watercycleSprngCodeNm
+            if waterStr.contains("축축"){
+                plantWater.text = "항상 축축하게 흙을 유지해주세요."
+            } else if waterStr.contains("촉촉"){
+                plantWater.text = "물을 3일에 한 번씩 흙이 마르면 주세요."
+            } else if waterStr.contains("표면"){
+                plantWater.text = "물을 7일에 한 번씩 표면이 마르면 주세요."
+            } else if waterStr.contains("대부분"){
+                plantWater.text = "흙이 바싹 말랐을 때 조금씩 주세요."
+            } else{
+                plantWater.text = "식물 상태를 살펴보면서 주세요."
+            }
             
-            // set Sun
-            plantSun.text =  plantData.lighttdemanddoCodeNm
+            /** 광도 멘트
+             * 낮은 -> 햇빛이 적은 것을 좋아해요.
+             * 중간 -> 햇빛이 적당한 것을 좋아해요.
+             * 높은 -> 햇빛을 매우 좋아해요.
+             */
+            let lightStr = plantData.lighttdemanddoCodeNm
+            if lightStr.contains("낮은"){
+                plantSun.text = "햇빛이 적은 것을 좋아해요."
+            } else if lightStr.contains("높은"){
+                plantSun.text = "햇빛을 매우 좋아해요."
+            } else{
+                plantSun.text = "햇빛이 적당한 것을 좋아해요."
+            }
             
             // set details
             officialNameLabel.text = "학명 : " + plantData.plntbneNm
