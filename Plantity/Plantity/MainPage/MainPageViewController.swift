@@ -54,7 +54,13 @@ class MainPageViewController: UIViewController {
         setupUserData(name:userdata.username, level: userdata.level, progress: userdata.progress)
         
 
+        NotificationCenter.default.addObserver(self, selector: #selector(didRecieveAssignNotification(_:)), name: Notification.Name("didAssign"), object: nil)
+    }
+    
+    @objc func didRecieveAssignNotification(_ notification: NSNotification) {
+        let assignStr: String = notification.object as! String
         
+        print(assignStr)
     }
     
     func setupModal() {
