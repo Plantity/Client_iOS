@@ -46,3 +46,37 @@ struct TodoLog:Decodable {
     let didlook : Bool?
     let didsplit: Bool?
 }
+
+// *************** 과제 request 성공했을때 **************//
+// 과제(분갈이) -> POST 성공시
+struct LogRepotDataModel:Decodable {
+    let isSuccess : Bool
+    let code: Int
+    let message: String
+    let result: String
+}
+
+//과제(햇빛) -> POST 성공
+struct LogSunDataModel:Decodable {
+    let isSuccess : Bool
+    let code: Int
+    let message: String
+    let result: String
+}
+
+
+//과제(물주기) -> POST 성공
+struct LogWaterDataModel:Decodable {
+    let isSuccess : Bool
+    let code: Int
+    let message: String
+    let result: String
+}
+
+//과제(쳐다보기) -> POST 성공
+struct LogLookDataModel:Decodable {
+    let isSuccess : Bool
+    let code: Int
+    let message: String
+    let result: String
+}
