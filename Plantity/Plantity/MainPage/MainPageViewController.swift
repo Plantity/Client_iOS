@@ -56,6 +56,11 @@ class MainPageViewController: UIViewController {
 
         
     }
+    
+    func setupModal() {
+        
+    }
+    
     func setupUserData(name:String?,level:Int?,progress:Int?){
         
         //이름

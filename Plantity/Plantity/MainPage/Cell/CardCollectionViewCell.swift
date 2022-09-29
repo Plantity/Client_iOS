@@ -90,4 +90,21 @@ class CardCollectionViewCell: UICollectionViewCell {
         
         
     }
+    
+    
+    @IBAction func didwaterClicked(_ sender: UIButton) {
+        print("water")
+    }
+    
+    @IBAction func didsoilClicked(_ sender: UIButton) {
+        print("repot")
+    }
+    
+    @IBAction func didlookClicked(_ sender: UIButton) {
+        print("look")
+    }
+    
+    @IBAction func didsunClicked(_ sender: UIButton) {
+        print("sun")
+    }
 }
