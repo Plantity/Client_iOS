@@ -46,7 +46,7 @@ class MainPageViewController: UIViewController {
         
         //연동 예시
         MainDataManager().getplantcardTest()
-        MainDataManager().postsunTest()
+        
         
 
         setupCard()
@@ -83,7 +83,10 @@ class MainPageViewController: UIViewController {
             //
             // 임시 id
             //
-            LogDataManager().LogRepotDataManager(assign, 1, 0, self)
+            
+            //main으로 바꿈 (편의상)
+//            LogDataManager().LogRepotDataManager(assign, 1, 0, self)
+            MainDataManager().MainAssignDataManager(assign, 1, 0, self)
         })
         self.present(alert, animated: true, completion: nil)
     }
