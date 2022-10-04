@@ -80,3 +80,10 @@ struct LogLookDataModel:Decodable {
     let message: String
     let result: String
 }
+
+struct AssginDataModel: Decodable {
+    let isSuccess : Bool
+    let code: Int
+    let message: String
+    let result: String
+}

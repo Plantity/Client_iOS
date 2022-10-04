@@ -54,8 +54,40 @@ class MainPageViewController: UIViewController {
         setupUserData(name:userdata.username, level: userdata.level, progress: userdata.progress)
         
 
-        
+        NotificationCenter.default.addObserver(self, selector: #selector(didRecieveAssignNotification(_:)), name: Notification.Name("didAssign"), object: nil)
     }
+    
+    @objc func didRecieveAssignNotification(_ notification: NSNotification) {
+        let assignStr: String = notification.object as! String
+        
+        setupModal(assignStr)
+    }
+    
+    func setupModal(_ assign: String) {
+        var assignStr = ""
+        switch assign {
+        case "water": assignStr = "물주기"
+        case "repot": assignStr = "분갈이"
+        case "look": assignStr = "살펴보기"
+        case "sun": assignStr = "햇빛"
+        default: assignStr = ""
+        }
+        
+        let alert = UIAlertController(title: "알림", message: "\(assignStr) 과제를 완료할까요?", preferredStyle: .alert)
+        
+//        alert.addAction(UIAlertAction(title: "취소", style: .default) { action in
+//          //취소처리...
+//        })
+        alert.addAction(UIAlertAction(title: "확인", style: .default) { action in
+          //확인처리...
+            //
+            // 임시 id
+            //
+            LogDataManager().LogRepotDataManager(assign, 1, 0, self)
+        })
+        self.present(alert, animated: true, completion: nil)
+    }
+    
     func setupUserData(name:String?,level:Int?,progress:Int?){
         
         //이름

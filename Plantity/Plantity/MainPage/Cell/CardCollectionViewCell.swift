@@ -90,4 +90,17 @@ class CardCollectionViewCell: UICollectionViewCell {
         
         
     }
+    
+    
+    @IBAction func didwaterClicked(_ sender: UIButton) { NotificationCenter.default.post(name: NSNotification.Name("didAssign"), object: "water")
+    }
+    
+    @IBAction func didsoilClicked(_ sender: UIButton) { NotificationCenter.default.post(name: NSNotification.Name("didAssign"), object: "repot")
+    }
+    
+    @IBAction func didlookClicked(_ sender: UIButton) { NotificationCenter.default.post(name: NSNotification.Name("didAssign"), object: "look")
+    }
+    
+    @IBAction func didsunClicked(_ sender: UIButton) { NotificationCenter.default.post(name: NSNotification.Name("didAssign"), object: "sun")
+    }
 }
