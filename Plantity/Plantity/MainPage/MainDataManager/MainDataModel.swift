@@ -31,12 +31,21 @@ import Foundation
 
 
 
+
 //사용자정보 -> 받을거
 struct UserInfo: Decodable {
     let username : String?
     let level : Int?
     let progress : Int?
     
+}
+
+//이렇게 줄거라 예상 (search 처럼)
+struct UserPlantModel : Decodable {
+    let isSuccess : Bool
+    let code: Int
+    let message: String
+    let result: UserPlant
 }
 
 //유저식물정보 -> 받을거
@@ -76,6 +85,40 @@ struct TodoWaterDataModel:Decodable {
 
 //과제(쳐다보기) -> POST 성공
 struct TodoLookDataModel:Decodable {
+    let isSuccess : Bool
+    let code: Int
+    let message: String
+    let result: String
+}
+
+// 서버에 보내줄 로그 정보
+
+// 분갈이
+struct MainRepotInput:Encodable{
+    var userId:Int?
+    var myPlantId:Int?
+}
+
+// 햇살주기
+struct MainSunInput:Encodable{
+    var userId:Int?
+    var myPlantId:Int?
+}
+
+// 물주기
+struct MainWaterInput:Encodable{
+    var userId:Int?
+    var myPlantId:Int?
+}
+
+// 살펴보기
+struct MainWatchInput:Encodable{
+    var userId:Int?
+    var myPlantId:Int?
+}
+
+//과제 get 하면 받을 모양
+struct MainAssginDataModel: Decodable {
     let isSuccess : Bool
     let code: Int
     let message: String
