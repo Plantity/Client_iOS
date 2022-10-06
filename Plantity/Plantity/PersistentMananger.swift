@@ -40,4 +40,24 @@ class PersistenceManager {
             return []
         }
     }
+    
+    func insert(userId: String) -> Bool {
+        let entity = NSEntityDescription.entity(forEntityName: "User", in: self.context)
+        
+        if let entity = entity {
+            let managedObj = NSManagedObject(entity: entity, insertInto: self.context)
+            
+            managedObj.setValue(userId, forKey: "userId")
+            
+            do {
+                try self.context.save()
+                return true
+            } catch {
+                print(error.localizedDescription)
+                return false
+            }
+        } else {
+            return false
+        }
+    }
 }
