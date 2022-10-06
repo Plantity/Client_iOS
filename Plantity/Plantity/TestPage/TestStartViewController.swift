@@ -22,9 +22,9 @@ class TestStartViewController: UIViewController {
         let storyboard = UIStoryboard(name: "TestViewController", bundle: nil)
         
         //뷰컨생성
-        let TestViewController = storyboard.instantiateViewController(withIdentifier: "TestViewController")as! TestViewController
+        let testViewController = storyboard.instantiateViewController(withIdentifier: "TestViewController")as! TestViewController
         //화면전환메소드 이용
-        self.present(TestViewController, animated: true, completion: nil)
+        self.navigationController?.pushViewController(testViewController, animated: true)
     }
     
 
