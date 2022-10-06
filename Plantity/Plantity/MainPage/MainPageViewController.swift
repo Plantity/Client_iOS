@@ -45,7 +45,8 @@ class MainPageViewController: UIViewController {
 //        MainDataManager().plantDataManager(plantinput)
         
         //연동 예시
-        MainDataManager().getplantcardTest()
+        MainDataManager().plantCardDataManager(self)
+        
         
         
 
@@ -151,6 +152,14 @@ class MainPageViewController: UIViewController {
         appendlayout.sideItemAlpha = 0.3
         cardCollectionView.collectionViewLayout = layout
         
+        
+    }
+    
+    func successAPI(_ result: UserPlantModel?){
+        if let resultData : UserPlant = result?.result {
+//            userPlant += resultData.nickname
+            
+        }
         
     }
 
