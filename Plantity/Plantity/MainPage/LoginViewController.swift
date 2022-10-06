@@ -9,11 +9,20 @@ import UIKit
 import KakaoSDKCommon
 import KakaoSDKAuth
 import KakaoSDKUser
+import CoreData
 
 class LoginViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // 코어데이터에 userId 있으면 그냥 넘어감
+        let request: NSFetchRequest = User.fetchRequest()
+        let fetchResult = PersistenceManager.shared.fetch(request: request)
+        
+        if fetchResult.count > 0 {
+            setUserInfo()
+        }
 
         // 하단 바 숨기기
         self.tabBarController?.tabBar.isHidden = true
