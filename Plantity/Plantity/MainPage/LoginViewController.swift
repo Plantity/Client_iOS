@@ -21,7 +21,6 @@ class LoginViewController: UIViewController {
     
     
     @IBAction func loginButtonClicked(_ sender: Any) {
-        var accessToken: String = ""
         // 카카오톡 설치 여부 확인
           if (UserApi.isKakaoTalkLoginAvailable()) {
             // 카카오톡 로그인. api 호출 결과를 클로저로 전달.
@@ -32,7 +31,7 @@ class LoginViewController: UIViewController {
                 }
                 else {
                     if let token : String = oauthToken?.accessToken {
-                        accessToken = token
+                        LoginDataManager().loginDataManager(token, self)
                     }
                 }
             }
@@ -44,18 +43,42 @@ class LoginViewController: UIViewController {
                   }
                   else {
                       if let token : String = oauthToken?.accessToken {
-                          accessToken = token
+                          LoginDataManager().loginDataManager(token, self)
                       }
-                      self.setUserInfo()
                   }
               }
+              
           }
-        // 서버에 토큰 전달
-        // ***
-        
-        print(accessToken)
-        
+        setUserInfo()
+    }
+    
+//    func inputLogin() {
+//        // 유저정보 저장
+//        UserApi.shared.me() { (user, error) in
+//            if let error = error {
+//                print(error)
+//            }
+//            else {
+//                if let nickname : String = user?.kakaoAccount?.profile?.nickname {
+//                    self.inputData.nickName = nickname
+//                }
+//                if let email: String = user?.kakaoAccount?.email {
+//                    print(email)
+//                    self.inputData.social = email
+//                }
+//                print(user?.kakaoAccount?.email)
+//            }
+//
+//            // 서버에 정보 전달
+//            print("여기", self.inputData)
+//
+//        }
+//    }
+    
+    func successLogin(_ data: LoginResultModel) {
+        print(data)
         //카카오 로그인을 통해 사용자 토큰을 발급 받은 후 사용자 관리 API 호출
+        self.setUserInfo()
     }
     
     func setUserInfo() {
@@ -65,7 +88,6 @@ class LoginViewController: UIViewController {
                 print(error)
             }
             else {
-                print("me() success.")
                 // 로그인한 유저정보 받아와서 무언가 할 것
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
                 
