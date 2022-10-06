@@ -11,7 +11,7 @@ import Alamofire
 class MyDataManager {
     func feedDataManager(_ parameters: MyDataInput, _ viewController: MyPageViewController) {
         // 데이터 주고받는 함수
-        AF.request("https://api.thecatapi.com/v1/images/search", method: .get, parameters: parameters).validate().responseDecodable(of: MyDataModel.self) { response in
+        AF.request("http://plantity.shop/users/\(1)", method: .get, parameters: parameters).validate().responseDecodable(of: MyDataModel.self) { response in
             switch response.result {
             case .success(let result):
                 // 성공
