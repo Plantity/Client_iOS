@@ -17,16 +17,20 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         
         // 임시로 코어데이터 저장해놓은것 -> 원래 successApi에서 해야함
-        let id = "1"
-        PersistenceManager.shared.insert(userId: id)
+        // let id = "1"
+        // PersistenceManager.shared.insert(userId: id)
         
         // 코어데이터에 userId 있으면 그냥 넘어감
         let request: NSFetchRequest = User.fetchRequest()
         let fetchResult = PersistenceManager.shared.fetch(request: request)
+        print("오", fetchResult)
         
-        if fetchResult.count > 0 {
-            setUserInfo()
-        }
+        // 코어데이터 삭제
+        // PersistenceManager.shared.delete(object: fetchResult.last!)
+        
+//        if fetchResult.count > 0 {
+//            setUserInfo()
+//        }
 
         // 하단 바 숨기기
         self.tabBarController?.tabBar.isHidden = true
@@ -46,6 +50,7 @@ class LoginViewController: UIViewController {
                     if let token : String = oauthToken?.accessToken {
                         LoginDataManager().loginDataManager(token, self)
                     }
+                    self.gotoTest()
                 }
             }
           } else {
@@ -58,11 +63,23 @@ class LoginViewController: UIViewController {
                       if let token : String = oauthToken?.accessToken {
                           LoginDataManager().loginDataManager(token, self)
                       }
+                      self.gotoTest()
                   }
               }
               
           }
-        setUserInfo()
+        // setUserInfo()
+    }
+    
+    func gotoTest() {
+        //스토리보트 생성
+        let storyboard = UIStoryboard(name: "TestPage", bundle: nil)
+        
+        //뷰컨생성
+        let startViewController = storyboard.instantiateViewController(withIdentifier: "TestStartViewController")as! TestStartViewController
+        
+        //화면전환메소드 이용
+        self.navigationController?.pushViewController(startViewController, animated: true)
     }
     
     func inputLogin() {

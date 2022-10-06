@@ -12,14 +12,13 @@ class TestStartViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
         // Do any additional setup after loading the view.
     }
     
     @IBAction func testStartButton(_ sender: Any) {
         //화면전환
         //스토리보트 생성
-        let storyboard = UIStoryboard(name: "TestViewController", bundle: nil)
+        let storyboard = UIStoryboard(name: "TestPage", bundle: nil)
         
         //뷰컨생성
         let testViewController = storyboard.instantiateViewController(withIdentifier: "TestViewController")as! TestViewController

@@ -41,6 +41,7 @@ class PersistenceManager {
         }
     }
     
+    // 저장
     func insert(userId: String) -> Bool {
         let entity = NSEntityDescription.entity(forEntityName: "User", in: self.context)
         
@@ -59,5 +60,18 @@ class PersistenceManager {
         } else {
             return false
         }
+    }
+    
+    // 삭제
+    func delete(object: NSManagedObject) -> Bool {
+        self.context.delete(object)
+        
+        do {
+            try context.save()
+            return true
+        } catch {
+            return false
+        }
+        
     }
 }

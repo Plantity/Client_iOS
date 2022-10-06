@@ -8,9 +8,12 @@
 import UIKit
 
 class TestResultViewController: UIViewController {
+    
+    var result : [Int] = [0, 0, 0, 0]
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(result)
 
         // Do any additional setup after loading the view.
     }
