@@ -9,9 +9,11 @@ import Foundation
 import Alamofire
 
 class MyDataManager {
-    func feedDataManager(_ parameters: MyDataInput, _ viewController: MyPageViewController) {
+    func myDataManager(_ userId: Int, _ viewController: MyPageViewController) {
         // 데이터 주고받는 함수
-        AF.request("http://plantity.shop/users/\(1)", method: .get, parameters: parameters).validate().responseDecodable(of: MyDataModel.self) { response in
+        AF.request("http://plantity.shop/users/\(userId)", method: .get)
+            .validate()
+            .responseDecodable(of: MyDataModel.self) { response in
             switch response.result {
             case .success(let result):
                 // 성공
