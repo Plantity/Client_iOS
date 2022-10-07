@@ -18,15 +18,14 @@ class TestResultViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func goButtonClicked(_ sender: UIButton) {
+        // 메인화면으로
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        //뷰컨생성
+        let mainViewController = storyboard.instantiateViewController(withIdentifier: "MainViewController")as! MainViewController
+        //화면전환메소드 이용
+        self.navigationController?.pushViewController(mainViewController, animated: true)
     }
-    */
 
 }

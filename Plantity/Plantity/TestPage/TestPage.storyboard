@@ -190,6 +190,9 @@
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="baseBackgroundColor" name="green_testbox"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="goButtonClicked:" destination="kj7-vp-uip" eventType="touchUpInside" id="qD6-X2-ogr"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="VCm-ml-Uom"/>
