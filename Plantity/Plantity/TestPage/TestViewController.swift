@@ -41,7 +41,7 @@ class TestViewController: UIViewController {
     }
     
     @IBAction func firstClicked(_ sender: UIButton) {
-        if order == tests.count - 2 {
+        if order == tests.count - 1 {
             //스토리보트 생성
             let storyboard = UIStoryboard(name: "TestPage", bundle: nil)
             
@@ -51,16 +51,17 @@ class TestViewController: UIViewController {
             
             //화면전환메소드 이용
             self.navigationController?.pushViewController(resultViewController, animated: true)
+        } else {
+            order += 1
+            mbti[order] += 1
+            questionLabel.text = tests[order].test
+            answer1Button.setTitle(tests[order].answer1, for: .normal)
+            answer2Button.setTitle(tests[order].answer2, for: .normal)
         }
-        order += 1
-        mbti[order] += 1
-        questionLabel.text = tests[order].test
-        answer1Button.setTitle(tests[order].answer1, for: .normal)
-        answer2Button.setTitle(tests[order].answer2, for: .normal)
     }
     
     @IBAction func secondClicked(_ sender: Any) {
-        if order == tests.count - 2 {
+        if order == tests.count - 1 {
             //스토리보트 생성
             let storyboard = UIStoryboard(name: "TestPage", bundle: nil)
             
@@ -70,12 +71,13 @@ class TestViewController: UIViewController {
             
             //화면전환메소드 이용
             self.navigationController?.pushViewController(resultViewController, animated: true)
+        } else {
+            order += 1
+            mbti[order] -= 1
+            questionLabel.text = tests[order].test
+            answer1Button.setTitle(tests[order].answer1, for: .normal)
+            answer2Button.setTitle(tests[order].answer2, for: .normal)
         }
-        order += 1
-        mbti[order] -= 1
-        questionLabel.text = tests[order].test
-        answer1Button.setTitle(tests[order].answer1, for: .normal)
-        answer2Button.setTitle(tests[order].answer2, for: .normal)
     }
 
 }
