@@ -1,17 +1,15 @@
 {
   "images" : [
     {
-      "filename" : "현재 카드뉴스.png",
+      "filename" : "pot-g41cac6fab_1920.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "현재 카드뉴스@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "현재 카드뉴스@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

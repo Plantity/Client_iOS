@@ -170,16 +170,19 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="exampleresultplant" translatesAutoresizingMaskIntoConstraints="NO" id="lOW-t6-LcF">
-                                <rect key="frame" x="60" y="178" width="283" height="383"/>
+                                <rect key="frame" x="-72.5" y="248" width="559" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="8df-UG-Oan"/>
+                                </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="당신에게 꼭맞는 식물을 찾았어요!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GPU-1I-zv3">
-                                <rect key="frame" x="56.5" y="561" width="301" height="28"/>
+                                <rect key="frame" x="56.5" y="578" width="301" height="28"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
                                 <color key="textColor" name="text_green"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cGV-d1-DHT">
-                                <rect key="frame" x="47" y="619" width="320" height="60"/>
+                                <rect key="frame" x="47" y="636" width="320" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="0HZ-uu-TFd"/>
                                     <constraint firstAttribute="width" constant="320" id="ASf-7M-5eF"/>
@@ -198,17 +201,16 @@
                         <viewLayoutGuide key="safeArea" id="VCm-ml-Uom"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="lOW-t6-LcF" firstAttribute="centerX" secondItem="fJ6-sz-YmU" secondAttribute="centerX" id="04m-Xs-nKX"/>
                             <constraint firstItem="fJ6-sz-YmU" firstAttribute="top" secondItem="2Xt-OH-QGL" secondAttribute="top" id="4Gu-y9-pH7"/>
                             <constraint firstItem="VCm-ml-Uom" firstAttribute="bottom" secondItem="fJ6-sz-YmU" secondAttribute="bottom" constant="-34" id="Egq-91-eOy"/>
                             <constraint firstItem="fJ6-sz-YmU" firstAttribute="leading" secondItem="VCm-ml-Uom" secondAttribute="leading" id="LO6-o5-jg0"/>
-                            <constraint firstItem="VCm-ml-Uom" firstAttribute="trailing" secondItem="lOW-t6-LcF" secondAttribute="trailing" constant="71" id="OXB-le-iiA"/>
+                            <constraint firstItem="lOW-t6-LcF" firstAttribute="centerY" secondItem="fJ6-sz-YmU" secondAttribute="centerY" constant="-50" id="PAk-qV-c2i"/>
                             <constraint firstItem="cGV-d1-DHT" firstAttribute="top" secondItem="GPU-1I-zv3" secondAttribute="bottom" constant="30" id="REg-7b-hdl"/>
-                            <constraint firstItem="GPU-1I-zv3" firstAttribute="centerX" secondItem="fJ6-sz-YmU" secondAttribute="centerX" id="hAX-bM-zzH"/>
-                            <constraint firstItem="GPU-1I-zv3" firstAttribute="top" secondItem="lOW-t6-LcF" secondAttribute="bottom" id="lS7-78-N0K"/>
+                            <constraint firstItem="GPU-1I-zv3" firstAttribute="top" secondItem="lOW-t6-LcF" secondAttribute="bottom" constant="30" id="ixO-Ma-CW2"/>
                             <constraint firstItem="VCm-ml-Uom" firstAttribute="trailing" secondItem="fJ6-sz-YmU" secondAttribute="trailing" id="mqo-TS-Abg"/>
                             <constraint firstItem="cGV-d1-DHT" firstAttribute="centerX" secondItem="GPU-1I-zv3" secondAttribute="centerX" id="phM-Np-d06"/>
-                            <constraint firstItem="lOW-t6-LcF" firstAttribute="leading" secondItem="VCm-ml-Uom" secondAttribute="leading" constant="60" id="piE-re-WUz"/>
-                            <constraint firstItem="lOW-t6-LcF" firstAttribute="top" secondItem="VCm-ml-Uom" secondAttribute="top" constant="130" id="z3n-gp-f97"/>
+                            <constraint firstItem="GPU-1I-zv3" firstAttribute="centerX" secondItem="fJ6-sz-YmU" secondAttribute="centerX" id="w04-rA-4jK"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -235,7 +237,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="exampleresultplant" width="338" height="383"/>
+        <image name="exampleresultplant" width="559" height="684"/>
         <image name="logobig" width="570" height="790"/>
         <image name="testlogo" width="235" height="81"/>
         <image name="teststartbackground" width="375" height="812"/>

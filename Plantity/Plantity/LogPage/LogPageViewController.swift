@@ -30,7 +30,7 @@ class LogPageViewController: UIViewController, FSCalendarDelegate, FSCalendarDat
     
     //dummies
     var logUserPlant:[LogUserPlant]=[
-        LogUserPlant(imageUrl: "https://www.100ssd.co.kr/news/photo/202009/71614_51734_4048.jpg", nickname: "새삼이", type: "멕시코소철", plantlevel: 3, plantMemo: "🌳매일매일 물주기"),
+        LogUserPlant(imageUrl: "file:///Users/ggowellingg/Downloads/Plantity%20UX%20(28)/marc-blue-K-o_iBHQn7w-unsplash%201@3x.png", nickname: "새삼이", type: "몬스테라", plantlevel: 3, plantMemo: "🌳매일매일 물주기"),
         LogUserPlant(imageUrl: "https://mule4.dingul.io/api/r?l=aHR0cHM6Ly90aHVtYm5haWw5LmNvdXBhbmdjZG4uY29tL3RodW1ibmFpbHMvcmVtb3RlLzQ5Mng0OTJleC9pbWFnZS92ZW5kb3JfaW52ZW50b3J5L2U1ZWMvNGI5YzQxODdjMjYyZGZiOGY2NzIyMmQzZDIzNWVhODU2YjA1NTViYWI2N2IwMTE4MDk5ZDlmMjI5OGFjLmpwZw", nickname: "쁘뀨보이", type: "허브", plantlevel: 3, plantMemo: "🌳물은 한달에 한번만!")
     ]
     
