@@ -40,7 +40,7 @@ struct UserInfo: Decodable {
     
 }
 
-//이렇게 줄거라 예상 (search 처럼)
+//내 식물 목록 GET
 struct UserPlantModel : Decodable {
     let isSuccess : Bool
     let code: Int
@@ -117,7 +117,7 @@ struct MainWatchInput:Encodable{
     var myPlantId:Int?
 }
 
-//과제 get 하면 받을 모양
+//과제 PUT
 struct MainAssginDataModel: Decodable {
     let isSuccess : Bool
     let code: Int

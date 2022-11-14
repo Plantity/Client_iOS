@@ -9,6 +9,8 @@ import Alamofire
 
 class MainDataManager{
     //유저정보 가져오기
+    // - 이름
+    // - 게이지
     //get-userinfo
     func maininfoDataManager(_ parameters: UserInfoInput, _ viewController:MainPageViewController){
         AF.request("", method: .get, parameters: parameters ).validate().responseDecodable(of: [UserInfo].self) { response in
@@ -24,11 +26,11 @@ class MainDataManager{
     
 
     
-    //--------------------------
+    //-----------------------나의식물 리스트 조회--------------
     
     func plantCardDataManager(_ viewController: MainPageViewController) {
         AF.request(
-            "http://httpstat.us/200",
+            "http://plantity.shop/myplant/plant/1/1",
             method: .get)
         .validate()
         .responseDecodable(
@@ -50,7 +52,7 @@ class MainDataManager{
     
 
     
-    //--------------------------
+    //--------------------과제 PUT------------------------
     
     // 우리 url
     // "http://plantity.shop/myplant/\(assign)/\(userId)/\(myPlantId)"

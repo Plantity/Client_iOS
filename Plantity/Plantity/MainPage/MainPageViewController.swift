@@ -44,11 +44,10 @@ class MainPageViewController: UIViewController {
 //        let plantinput=UserPlantInput()
 //        MainDataManager().plantDataManager(plantinput)
         
-        //연동 예시
+        // 내 식물 목록 가져오기 (서버통신)
         MainDataManager().plantCardDataManager(self)
         
-        
-        
+     
 
         setupCard()
         let userdata=userInfo[0]
