@@ -87,7 +87,18 @@ class MainPageViewController: UIViewController {
             
             //main으로 바꿈 (편의상)
 //            LogDataManager().LogRepotDataManager(assign, 1, 0, self)
-            MainDataManager().MainAssignDataManager(assign, 1, 0, self)
+            
+            
+            // assign 에 따라 다른 과제 put 하기
+            switch assign {
+            case "water": MainDataManager().MainWaterAssignDataManager(assign, 1, 0, self)
+            case "repot": MainDataManager().MainRepotAssignDataManager(assign, 1, 0, self)
+            case "look": MainDataManager().MainLookAssignDataManager(assign, 1, 0, self)
+            case "sun": MainDataManager().MainSunAssignDataManager(assign, 1, 0, self)
+            default://default로 일단 repot해놈
+                MainDataManager().MainRepotAssignDataManager(assign, 1, 0, self)
+            }
+//            MainDataManager().MainRepotAssignDataManager(assign, 1, 0, self)
         })
         self.present(alert, animated: true, completion: nil)
     }
