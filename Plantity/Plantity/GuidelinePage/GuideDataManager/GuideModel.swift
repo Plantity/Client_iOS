@@ -26,6 +26,7 @@ struct GuideModelResult : Decodable {
     let subtitle: String?
     let content: [GuideContentModel]?
     //let summary: [String]?
+    let image: String?
 }
 
     struct GuideContentModel : Decodable {

@@ -86,7 +86,7 @@
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="카드추가" translatesAutoresizingMaskIntoConstraints="NO" id="X0y-5U-Ijp">
-                                <rect key="frame" x="1" y="-1" width="297" height="433"/>
+                                <rect key="frame" x="-4" y="0.0" width="297" height="433"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>

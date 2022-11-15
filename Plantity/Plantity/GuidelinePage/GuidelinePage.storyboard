@@ -143,7 +143,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lQk-Gm-fzJ">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="845.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="989.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7r1-eQ-ygr">
                                                 <rect key="frame" x="18" y="18" width="28" height="22"/>
@@ -166,10 +166,10 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="xTs-cn-kza">
-                                                <rect key="frame" x="30" y="101" width="354" height="724.5"/>
+                                                <rect key="frame" x="30" y="101" width="354" height="868.5"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="NHk-I3-zM4">
-                                                        <rect key="frame" x="0.0" y="0.0" width="354" height="233.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="354" height="305.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="그럼 우리는 무슨 문제가 있는걸까요?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" showsExpansionTextWhenTruncated="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QA0-di-cn5">
                                                                 <rect key="frame" x="0.0" y="0.0" width="203.5" height="17"/>
@@ -183,11 +183,11 @@
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_plant_tag" translatesAutoresizingMaskIntoConstraints="NO" id="ucX-qg-Xy1">
-                                                                <rect key="frame" x="0.0" y="105.5" width="354" height="128"/>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_prun2" translatesAutoresizingMaskIntoConstraints="NO" id="ucX-qg-Xy1">
+                                                                <rect key="frame" x="0.0" y="105.5" width="354" height="200"/>
                                                                 <color key="backgroundColor" name="searchbar_onclick"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="height" constant="128" id="r4D-wI-vBL"/>
+                                                                    <constraint firstAttribute="height" constant="200" id="r4D-wI-vBL"/>
                                                                 </constraints>
                                                             </imageView>
                                                         </subviews>
@@ -197,7 +197,7 @@
                                                         </constraints>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="Jbx-sr-DGW">
-                                                        <rect key="frame" x="0.0" y="245.5" width="354" height="233.5"/>
+                                                        <rect key="frame" x="0.0" y="317.5" width="354" height="305.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="그럼 우리는 무슨 문제가 있는걸까요?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" showsExpansionTextWhenTruncated="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QYV-su-Nb8">
                                                                 <rect key="frame" x="0.0" y="0.0" width="203.5" height="17"/>
@@ -211,11 +211,11 @@
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_login" translatesAutoresizingMaskIntoConstraints="NO" id="mzJ-4a-Zjc">
-                                                                <rect key="frame" x="0.0" y="105.5" width="354" height="128"/>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgae_cut" translatesAutoresizingMaskIntoConstraints="NO" id="mzJ-4a-Zjc">
+                                                                <rect key="frame" x="0.0" y="105.5" width="354" height="200"/>
                                                                 <color key="backgroundColor" red="0.40000000000000002" green="0.59999999999999998" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="height" constant="128" id="eGo-HO-lVx"/>
+                                                                    <constraint firstAttribute="height" constant="200" id="eGo-HO-lVx"/>
                                                                 </constraints>
                                                             </imageView>
                                                         </subviews>
@@ -225,7 +225,7 @@
                                                         </constraints>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="ZFU-bH-6Hg">
-                                                        <rect key="frame" x="0.0" y="491" width="354" height="233.5"/>
+                                                        <rect key="frame" x="0.0" y="635" width="354" height="233.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="그럼 우리는 무슨 문제가 있는걸까요?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" showsExpansionTextWhenTruncated="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jwG-8D-PJb">
                                                                 <rect key="frame" x="0.0" y="0.0" width="203.5" height="17"/>
@@ -324,9 +324,9 @@
     </scenes>
     <resources>
         <image name="arrow.backward" catalog="system" width="128" height="95"/>
-        <image name="image_login" width="369" height="369"/>
         <image name="image_logo" width="85" height="101"/>
-        <image name="image_plant_tag" width="71" height="71"/>
+        <image name="image_prun2" width="1920" height="1080"/>
+        <image name="imgae_cut" width="1920" height="1280"/>
         <image name="map" catalog="system" width="128" height="112"/>
         <namedColor name="background_card">
             <color red="0.83921568627450982" green="0.92549019607843142" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
