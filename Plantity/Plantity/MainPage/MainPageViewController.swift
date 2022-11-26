@@ -26,9 +26,9 @@ class MainPageViewController: UIViewController {
     ]
     
     var userPlant:[UserPlant]=[
-        UserPlant(imageUrl: "https://www.100ssd.co.kr/news/photo/202009/71614_51734_4048.jpg", type: "필로덴드론", nickname: "새삼이", adoptDate: "함께한지 5일 째"),
-        UserPlant(imageUrl: "https://mule4.dingul.io/api/r?l=aHR0cHM6Ly90aHVtYm5haWw5LmNvdXBhbmdjZG4uY29tL3RodW1ibmFpbHMvcmVtb3RlLzQ5Mng0OTJleC9pbWFnZS92ZW5kb3JfaW52ZW50b3J5L2U1ZWMvNGI5YzQxODdjMjYyZGZiOGY2NzIyMmQzZDIzNWVhODU2YjA1NTViYWI2N2IwMTE4MDk5ZDlmMjI5OGFjLmpwZw", type: "허브", nickname: "쁘뀨보이", adoptDate: "함께한지 10일 째"),
-        UserPlant(imageUrl: "", type: "plus", nickname: "plus", adoptDate: "134")
+        UserPlant(myPlantId: 1, plantName: "필로덴드론", plantNickName: "새삼이", filePath: "https://www.100ssd.co.kr/news/photo/202009/71614_51734_4048.jpg"),
+        UserPlant(myPlantId: 1, plantName: "필로덴드론", plantNickName: "새삼이", filePath: "https://www.100ssd.co.kr/news/photo/202009/71614_51734_4048.jpg"),
+        UserPlant(myPlantId: 1, plantName: "plus", plantNickName: "plus", filePath: "https://www.100ssd.co.kr/news/photo/202009/71614_51734_4048.jpg")
     ]
 
 
@@ -166,10 +166,10 @@ class MainPageViewController: UIViewController {
     }
     
     func successAPI(_ result: UserPlantModel?){
-        if let resultData : UserPlant = result?.result {
+//        if let resultData : UserPlant = result?.result {
 //            userPlant += resultData.nickname
-            
-        }
+//
+//        }
         
     }
 
@@ -216,7 +216,8 @@ extension MainPageViewController: UICollectionViewDelegate,UICollectionViewDataS
             
             
             let data=userPlant[indexPath.row]
-            plantcell.setupCardData(imageUrl:data.imageUrl, type: data.type, nickname: data.nickname, adoptDate: data.adoptDate)
+            plantcell.setupCardData(filePath: data.filePath, plantName: data.plantName, plantNickName: data.plantNickName, myPlantId: "")
+            
             
             return plantcell
 

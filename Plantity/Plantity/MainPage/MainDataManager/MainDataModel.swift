@@ -45,76 +45,15 @@ struct UserPlantModel : Decodable {
     let isSuccess : Bool
     let code: Int
     let message: String
-    let result: UserPlant
+    let result: [UserPlant]?
 }
 
 //유저식물정보 -> 받을거
 struct UserPlant : Decodable {
-    let imageUrl : String?
-    let type: String?
-    let nickname: String?
-    let adoptDate: String?
-}
-
-
-//-----------------------------과제성공여부----------------------------------------//
-
-//과제(분갈이) -> POST 성공
-struct TodoRepotDataModel:Decodable {
-    let isSuccess : Bool
-    let code: Int
-    let message: String
-    let result: String
-}
-
-//과제(햇빛) -> POST 성공
-struct TodoSunDataModel:Decodable {
-    let isSuccess : Bool
-    let code: Int
-    let message: String
-    let result: String
-}
-
-//과제(물주기) -> POST 성공
-struct TodoWaterDataModel:Decodable {
-    let isSuccess : Bool
-    let code: Int
-    let message: String
-    let result: String
-}
-
-//과제(쳐다보기) -> POST 성공
-struct TodoLookDataModel:Decodable {
-    let isSuccess : Bool
-    let code: Int
-    let message: String
-    let result: String
-}
-
-// 서버에 보내줄 로그 정보
-
-// 분갈이
-struct MainRepotInput:Encodable{
-    var userId:Int?
-    var myPlantId:Int?
-}
-
-// 햇살주기
-struct MainSunInput:Encodable{
-    var userId:Int?
-    var myPlantId:Int?
-}
-
-// 물주기
-struct MainWaterInput:Encodable{
-    var userId:Int?
-    var myPlantId:Int?
-}
-
-// 살펴보기
-struct MainWatchInput:Encodable{
-    var userId:Int?
-    var myPlantId:Int?
+    let myPlantId : Int?
+    let plantName: String?
+    let plantNickName: String?
+    let filePath: String?
 }
 
 //과제 PUT
