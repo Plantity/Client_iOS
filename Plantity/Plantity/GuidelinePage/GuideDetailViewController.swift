@@ -24,7 +24,7 @@ class GuideDetailViewController: UIViewController {
     @IBOutlet weak var subtitleLabel3: UILabel!
     @IBOutlet weak var contentLabel3: UILabel!
     
-    var guideData: GuideModelResult = GuideModelResult(title: "", subtitle: "", content: [])
+    var guideData: GuideModelResult = GuideModelResult(title: "", subtitle: "", content: [], image: "")
     
     
     override func viewDidLoad() {

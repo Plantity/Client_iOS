@@ -16,13 +16,13 @@ class GuideCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var guideSubtitleLabel: UILabel!
     
-    var guideData: GuideModelResult = GuideModelResult(title: "", subtitle: "", content: [])
+    var guideData: GuideModelResult = GuideModelResult(title: "", subtitle: "", content: [], image: "")
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
         setupAttribute()
-        setupData(title: guideData.title, subtitle: guideData.subtitle)
+        setupData(title: guideData.title, subtitle: guideData.subtitle, image: guideData.image)
     }
 
     func setupAttribute() {
@@ -33,7 +33,7 @@ class GuideCollectionViewCell: UICollectionViewCell {
         guideImageView.clipsToBounds = true
     }
     
-    func setupData(title: String?, subtitle: String?) {
+    func setupData(title: String?, subtitle: String?, image: String?) {
         // guideImageView.image
         if let titleStr: String = title {
             guideTitleLabel.text = titleStr
@@ -42,6 +42,8 @@ class GuideCollectionViewCell: UICollectionViewCell {
             guideSubtitleLabel.text = subtitleStr
         }
         
-        
+        if let imageStr:String = image {
+            guideImageView.image = UIImage(named: imageStr)
+        }
     }
 }

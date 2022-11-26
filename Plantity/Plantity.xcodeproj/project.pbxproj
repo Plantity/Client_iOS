@@ -44,6 +44,9 @@
 		F4A8294228EBF40C00FB1F65 /* LoginDataInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A8294128EBF40C00FB1F65 /* LoginDataInput.swift */; };
 		F4A8294428EBF4E000FB1F65 /* LoginDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A8294328EBF4E000FB1F65 /* LoginDataManager.swift */; };
 		F4A8294628EBF56A00FB1F65 /* LoginDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A8294528EBF56A00FB1F65 /* LoginDataModel.swift */; };
+		F4A8294828EE9FD500FB1F65 /* TestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A8294728EE9FD500FB1F65 /* TestModel.swift */; };
+		F4A8294A28EEAEEA00FB1F65 /* TestResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A8294928EEAEEA00FB1F65 /* TestResultViewController.swift */; };
+		F4A8294F28EEB36300FB1F65 /* PersistentMananger.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A8294E28EEB36300FB1F65 /* PersistentMananger.swift */; };
 		F4AE4A7928937236008E7A82 /* GuideDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AE4A7828937236008E7A82 /* GuideDetailViewController.swift */; };
 		F4B3722C288E5E2F002215F1 /* ResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B3722A288E5E2F002215F1 /* ResultTableViewCell.swift */; };
 		F4B3722D288E5E2F002215F1 /* ResultTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4B3722B288E5E2F002215F1 /* ResultTableViewCell.xib */; };
@@ -126,6 +129,9 @@
 		F4A8294128EBF40C00FB1F65 /* LoginDataInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginDataInput.swift; sourceTree = "<group>"; };
 		F4A8294328EBF4E000FB1F65 /* LoginDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginDataManager.swift; sourceTree = "<group>"; };
 		F4A8294528EBF56A00FB1F65 /* LoginDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginDataModel.swift; sourceTree = "<group>"; };
+		F4A8294728EE9FD500FB1F65 /* TestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestModel.swift; sourceTree = "<group>"; };
+		F4A8294928EEAEEA00FB1F65 /* TestResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestResultViewController.swift; sourceTree = "<group>"; };
+		F4A8294E28EEB36300FB1F65 /* PersistentMananger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentMananger.swift; sourceTree = "<group>"; };
 		F4AE4A7828937236008E7A82 /* GuideDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideDetailViewController.swift; sourceTree = "<group>"; };
 		F4B3722A288E5E2F002215F1 /* ResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultTableViewCell.swift; sourceTree = "<group>"; };
 		F4B3722B288E5E2F002215F1 /* ResultTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultTableViewCell.xib; sourceTree = "<group>"; };
@@ -241,6 +247,8 @@
 				55436EC82893A1CE0045B8EE /* TestPage.storyboard */,
 				55436ECC2893B33D0045B8EE /* TestStartViewController.swift */,
 				55436ED02893B3870045B8EE /* TestViewController.swift */,
+				F4A8294728EE9FD500FB1F65 /* TestModel.swift */,
+				F4A8294928EEAEEA00FB1F65 /* TestResultViewController.swift */,
 			);
 			path = TestPage;
 			sourceTree = "<group>";
@@ -317,6 +325,7 @@
 				F4BE4BF5288ADFB400CF276D /* GuidelinePage */,
 				F4BE4BF4288ADFA500CF276D /* MainPage */,
 				F4BE4BDD288ADBFF00CF276D /* AppDelegate.swift */,
+				F4A8294E28EEB36300FB1F65 /* PersistentMananger.swift */,
 				F4BE4BDF288ADBFF00CF276D /* SceneDelegate.swift */,
 				F4BE4BE1288ADBFF00CF276D /* ViewController.swift */,
 				F4BE4BE3288ADBFF00CF276D /* Main.storyboard */,
@@ -598,6 +607,9 @@
 				F4DDD50B289E24F5004F6932 /* MyDataModel.swift in Sources */,
 				55060682288ECCB500B717DE /* CardCollectionViewCell.swift in Sources */,
 				F4D8C935288B94140019B6BC /* TagCollectionViewCell.swift in Sources */,
+				F4A8294F28EEB36300FB1F65 /* PersistentMananger.swift in Sources */,
+				F4A8294A28EEAEEA00FB1F65 /* TestResultViewController.swift in Sources */,
+				F4A8294828EE9FD500FB1F65 /* TestModel.swift in Sources */,
 				F4BE4BE2288ADBFF00CF276D /* ViewController.swift in Sources */,
 				55436ED12893B3870045B8EE /* TestViewController.swift in Sources */,
 				F47D0B6728C0453A003BC566 /* TypeSelectorViewController.swift in Sources */,

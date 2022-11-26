@@ -42,8 +42,8 @@ class MyPageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // To Server
-        // let input = MyDataInput(limit: 10, page: 0)
-        // MyDataManager().feedDataManager(input, self)
+        let input: Int = 1 // 임시 유저아이디
+        MyDataManager().myDataManager(input, self)
         
         self.myData = MyModelResult(
             myInfo: MyInfo(username: "고해주", userId: "1234", level: 1, progress: 75),
@@ -65,8 +65,10 @@ class MyPageViewController: UIViewController {
     }
     
     func successAPI(_ result: MyDataModel) {
-        // myData = result
-        // tableView.reloadData()
+        if let data : MyModelResult = result.result {
+            myData = data
+        }
+        myTableView.reloadData()
     }
     
     private func setupData() {

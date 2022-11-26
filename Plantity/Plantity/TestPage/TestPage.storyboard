@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="CY8-qo-QIn">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Xly-ud-07A">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -21,13 +22,13 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logobig" translatesAutoresizingMaskIntoConstraints="NO" id="GTJ-eB-0xX">
-                                <rect key="frame" x="57" y="225" width="304" height="380"/>
+                                <rect key="frame" x="57" y="229" width="304" height="380"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="380" id="x6P-uL-77c"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5QQ-sc-gs6">
-                                <rect key="frame" x="53" y="623" width="308" height="63"/>
+                                <rect key="frame" x="53" y="627" width="308" height="63"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="63" id="OUF-DK-vhr"/>
                                 </constraints>
@@ -42,7 +43,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zs0-Rj-iO3">
-                                <rect key="frame" x="53" y="706" width="308" height="63"/>
+                                <rect key="frame" x="53" y="710" width="308" height="63"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="63" id="KNR-rB-GpX"/>
                                 </constraints>
@@ -52,9 +53,12 @@
                                     <color key="baseForegroundColor" name="text_green"/>
                                     <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="skipButtonClicked:" destination="CY8-qo-QIn" eventType="touchUpInside" id="gp1-3I-Ghl"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="testlogo" translatesAutoresizingMaskIntoConstraints="NO" id="cTI-UJ-Hdi">
-                                <rect key="frame" x="87" y="124" width="240" height="81"/>
+                                <rect key="frame" x="87" y="128" width="240" height="81"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Vxh-lw-lya"/>
@@ -74,15 +78,16 @@
                             <constraint firstAttribute="trailing" secondItem="GTJ-eB-0xX" secondAttribute="trailing" constant="53" id="XvO-sA-Rzb"/>
                             <constraint firstItem="5QQ-sc-gs6" firstAttribute="top" secondItem="GTJ-eB-0xX" secondAttribute="bottom" constant="18" id="hcL-9Y-lzm"/>
                             <constraint firstItem="3sJ-FL-xNA" firstAttribute="leading" secondItem="Vxh-lw-lya" secondAttribute="leading" id="lpM-xj-IUU"/>
+                            <constraint firstItem="3sJ-FL-xNA" firstAttribute="top" secondItem="QqM-73-2V7" secondAttribute="top" id="mqX-bM-gsf"/>
                             <constraint firstItem="zs0-Rj-iO3" firstAttribute="leading" secondItem="Vxh-lw-lya" secondAttribute="leading" constant="53" id="ohs-KK-reV"/>
-                            <constraint firstItem="3sJ-FL-xNA" firstAttribute="top" secondItem="Vxh-lw-lya" secondAttribute="top" constant="-44" id="pZW-kf-GjA"/>
                             <constraint firstItem="cTI-UJ-Hdi" firstAttribute="top" secondItem="Vxh-lw-lya" secondAttribute="top" constant="80" id="tQG-hr-wt6"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="3uk-WK-Ybe"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fmv-MC-sLl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-771.01449275362324" y="112.5"/>
+            <point key="canvasLocation" x="139.13043478260872" y="112.5"/>
         </scene>
         <!--Test1View Controller-->
         <scene sceneID="s0d-6b-0kx">
@@ -93,13 +98,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="반려식물을 들여오기로 결정한  당신이 처음으로 하는일은?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rz5-m3-USV">
-                                <rect key="frame" x="70" y="294" width="274" height="55"/>
+                                <rect key="frame" x="70" y="298" width="274" height="55"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="23"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W6g-UY-dRK">
-                                <rect key="frame" x="72" y="389" width="270" height="60"/>
+                                <rect key="frame" x="72" y="393" width="270" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="cq2-RQ-pM8"/>
                                     <constraint firstAttribute="width" constant="270" id="mdK-uO-h9L"/>
@@ -110,9 +115,12 @@
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="baseBackgroundColor" red="0.50196081400000003" green="0.69803923369999998" blue="0.27450981740000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="firstClicked:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="qX3-po-V1W"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gMc-at-Nxm">
-                                <rect key="frame" x="72" y="474" width="270" height="60"/>
+                                <rect key="frame" x="72" y="478" width="270" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="270" id="6Jx-kd-Efb"/>
                                     <constraint firstAttribute="height" constant="60" id="TTS-R7-AGm"/>
@@ -123,6 +131,9 @@
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="baseBackgroundColor" name="green_testbox"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="secondClicked:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="fat-II-geU"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
@@ -137,247 +148,20 @@
                             <constraint firstItem="W6g-UY-dRK" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="o3Q-VH-1NM"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="answer1Button" destination="W6g-UY-dRK" id="S73-DH-rsu"/>
+                        <outlet property="answer2Button" destination="gMc-at-Nxm" id="eOH-7Q-pfG"/>
+                        <outlet property="questionLabel" destination="rz5-m3-USV" id="eM4-Hn-Seg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="112.5"/>
-        </scene>
-        <!--Test2View Controller-->
-        <scene sceneID="9zy-JP-7Xg">
-            <objects>
-                <viewController id="1wV-E0-nq3" userLabel="Test2View Controller" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Eaw-hi-Mrd">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="반려식물을 들여오기로 결정한  당신이 처음으로 하는일은?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ecy-nP-nmA">
-                                <rect key="frame" x="70" y="294" width="274" height="55"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="23"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c6m-kE-T1H">
-                                <rect key="frame" x="72" y="389" width="270" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="270" id="6ka-3c-VMY"/>
-                                    <constraint firstAttribute="height" constant="60" id="UlO-Lo-r5O"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="키우는 방법부터 검색해본다.">
-                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="20"/>
-                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <color key="baseBackgroundColor" name="green_testbox"/>
-                                </buttonConfiguration>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YST-YG-PGf">
-                                <rect key="frame" x="72" y="474" width="270" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="DUg-zJ-1On"/>
-                                    <constraint firstAttribute="width" constant="270" id="S8p-sS-ruV"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="이름부터 지어준다.">
-                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="20"/>
-                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <color key="baseBackgroundColor" name="green_testbox"/>
-                                </buttonConfiguration>
-                            </button>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="d68-nz-H0J"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="c6m-kE-T1H" firstAttribute="top" secondItem="Ecy-nP-nmA" secondAttribute="bottom" constant="40" id="3IU-t8-mIF"/>
-                            <constraint firstItem="YST-YG-PGf" firstAttribute="centerX" secondItem="d68-nz-H0J" secondAttribute="centerX" id="OSj-cq-xYa"/>
-                            <constraint firstItem="YST-YG-PGf" firstAttribute="top" secondItem="c6m-kE-T1H" secondAttribute="bottom" constant="25" id="csn-be-WZa"/>
-                            <constraint firstItem="Ecy-nP-nmA" firstAttribute="top" secondItem="d68-nz-H0J" secondAttribute="top" constant="250" id="eLT-Pf-h6c"/>
-                            <constraint firstItem="Ecy-nP-nmA" firstAttribute="centerX" secondItem="d68-nz-H0J" secondAttribute="centerX" id="fbJ-Uv-LiA"/>
-                            <constraint firstItem="c6m-kE-T1H" firstAttribute="top" secondItem="Ecy-nP-nmA" secondAttribute="bottom" constant="40" id="g2V-q4-xIZ"/>
-                            <constraint firstItem="c6m-kE-T1H" firstAttribute="centerX" secondItem="d68-nz-H0J" secondAttribute="centerX" id="mlB-yR-ovt"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4bN-IW-WsK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="814" y="113"/>
-        </scene>
-        <!--Test3View Controller-->
-        <scene sceneID="MdY-2x-R4w">
-            <objects>
-                <viewController id="XZj-Jk-yVM" userLabel="Test3View Controller" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="SdP-91-Fch">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="반려식물을 들여오기로 결정한  당신이 처음으로 하는일은?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aJ2-Y8-LRY">
-                                <rect key="frame" x="70" y="294" width="274" height="55"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="23"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pUE-dY-JeW">
-                                <rect key="frame" x="72" y="389" width="270" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="knh-6I-vyI"/>
-                                    <constraint firstAttribute="width" constant="270" id="oi2-W2-RdF"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="키우는 방법부터 검색해본다.">
-                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="20"/>
-                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <color key="baseBackgroundColor" name="green_testbox"/>
-                                </buttonConfiguration>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qh1-YN-65o">
-                                <rect key="frame" x="72" y="474" width="270" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="XV3-TA-Onq"/>
-                                    <constraint firstAttribute="width" constant="270" id="nAx-Sh-Ttl"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="이름부터 지어준다.">
-                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="20"/>
-                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <color key="baseBackgroundColor" name="green_testbox"/>
-                                </buttonConfiguration>
-                            </button>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="tf9-4X-irs"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="aJ2-Y8-LRY" firstAttribute="top" secondItem="tf9-4X-irs" secondAttribute="top" constant="250" id="BAO-og-FWX"/>
-                            <constraint firstItem="pUE-dY-JeW" firstAttribute="centerX" secondItem="tf9-4X-irs" secondAttribute="centerX" id="DRy-Wf-dVp"/>
-                            <constraint firstItem="pUE-dY-JeW" firstAttribute="top" secondItem="aJ2-Y8-LRY" secondAttribute="bottom" constant="40" id="fpy-xL-s2O"/>
-                            <constraint firstItem="Qh1-YN-65o" firstAttribute="top" secondItem="pUE-dY-JeW" secondAttribute="bottom" constant="25" id="h2B-zA-AIi"/>
-                            <constraint firstItem="aJ2-Y8-LRY" firstAttribute="centerX" secondItem="tf9-4X-irs" secondAttribute="centerX" id="hVP-gM-q1L"/>
-                            <constraint firstItem="pUE-dY-JeW" firstAttribute="top" secondItem="aJ2-Y8-LRY" secondAttribute="bottom" constant="40" id="iY5-64-8vB"/>
-                            <constraint firstItem="Qh1-YN-65o" firstAttribute="centerX" secondItem="tf9-4X-irs" secondAttribute="centerX" id="paI-Fs-ieM"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="JjE-tz-T97" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1497" y="113"/>
-        </scene>
-        <!--Test4View Controller-->
-        <scene sceneID="H36-bc-lTx">
-            <objects>
-                <viewController id="sPT-0l-COJ" userLabel="Test4View Controller" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="KIP-yl-53K">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="반려식물을 들여오기로 결정한  당신이 처음으로 하는일은?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CHu-08-X42">
-                                <rect key="frame" x="70" y="294" width="274" height="55"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="23"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SM9-FJ-OdJ">
-                                <rect key="frame" x="72" y="389" width="270" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="a1K-G1-bVC"/>
-                                    <constraint firstAttribute="width" constant="270" id="qYX-AD-DoZ"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="키우는 방법부터 검색해본다.">
-                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="20"/>
-                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <color key="baseBackgroundColor" name="green_testbox"/>
-                                </buttonConfiguration>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8yk-Iq-fob">
-                                <rect key="frame" x="72" y="474" width="270" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="LJq-c1-E9k"/>
-                                    <constraint firstAttribute="width" constant="270" id="R2i-uh-Qrc"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="이름부터 지어준다.">
-                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="20"/>
-                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <color key="baseBackgroundColor" name="green_testbox"/>
-                                </buttonConfiguration>
-                            </button>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="pmK-uD-fno"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="SM9-FJ-OdJ" firstAttribute="centerX" secondItem="pmK-uD-fno" secondAttribute="centerX" id="3d5-YY-9FK"/>
-                            <constraint firstItem="CHu-08-X42" firstAttribute="centerX" secondItem="pmK-uD-fno" secondAttribute="centerX" id="AUR-lW-Dfe"/>
-                            <constraint firstItem="CHu-08-X42" firstAttribute="top" secondItem="pmK-uD-fno" secondAttribute="top" constant="250" id="R8n-kJ-7A1"/>
-                            <constraint firstItem="8yk-Iq-fob" firstAttribute="top" secondItem="SM9-FJ-OdJ" secondAttribute="bottom" constant="25" id="ggD-VS-Rfq"/>
-                            <constraint firstItem="SM9-FJ-OdJ" firstAttribute="top" secondItem="CHu-08-X42" secondAttribute="bottom" constant="40" id="kRo-bz-uFB"/>
-                            <constraint firstItem="8yk-Iq-fob" firstAttribute="centerX" secondItem="pmK-uD-fno" secondAttribute="centerX" id="tWg-IU-8zD"/>
-                            <constraint firstItem="SM9-FJ-OdJ" firstAttribute="top" secondItem="CHu-08-X42" secondAttribute="bottom" constant="40" id="ypW-Jg-BI9"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="SPc-ap-nU8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2164" y="113"/>
-        </scene>
-        <!--Test5View Controller-->
-        <scene sceneID="3m3-mb-Ssq">
-            <objects>
-                <viewController id="ybC-mH-Rve" userLabel="Test5View Controller" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Zle-bG-hKl">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="반려식물을 들여오기로 결정한  당신이 처음으로 하는일은?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H8x-Gh-CH9">
-                                <rect key="frame" x="70" y="294" width="274" height="55"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="23"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9D8-PB-Tqv">
-                                <rect key="frame" x="72" y="389" width="270" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="cT0-bh-DLC"/>
-                                    <constraint firstAttribute="width" constant="270" id="idJ-CX-Qzn"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="키우는 방법부터 검색해본다.">
-                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="20"/>
-                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <color key="baseBackgroundColor" name="green_testbox"/>
-                                </buttonConfiguration>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lbR-CZ-BkL">
-                                <rect key="frame" x="72" y="474" width="270" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="E09-wd-GVP"/>
-                                    <constraint firstAttribute="width" constant="270" id="V1n-on-kUh"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="이름부터 지어준다.">
-                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="20"/>
-                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <color key="baseBackgroundColor" name="green_testbox"/>
-                                </buttonConfiguration>
-                            </button>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="BVd-ZL-ui2"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="H8x-Gh-CH9" firstAttribute="top" secondItem="BVd-ZL-ui2" secondAttribute="top" constant="250" id="3Tc-dO-nWP"/>
-                            <constraint firstItem="9D8-PB-Tqv" firstAttribute="centerX" secondItem="BVd-ZL-ui2" secondAttribute="centerX" id="548-0V-4CL"/>
-                            <constraint firstItem="9D8-PB-Tqv" firstAttribute="top" secondItem="H8x-Gh-CH9" secondAttribute="bottom" constant="40" id="A78-35-MNc"/>
-                            <constraint firstItem="9D8-PB-Tqv" firstAttribute="top" secondItem="H8x-Gh-CH9" secondAttribute="bottom" constant="40" id="NTw-M5-rEh"/>
-                            <constraint firstItem="lbR-CZ-BkL" firstAttribute="top" secondItem="9D8-PB-Tqv" secondAttribute="bottom" constant="25" id="fBu-Lc-fj6"/>
-                            <constraint firstItem="H8x-Gh-CH9" firstAttribute="centerX" secondItem="BVd-ZL-ui2" secondAttribute="centerX" id="hGN-t9-og9"/>
-                            <constraint firstItem="lbR-CZ-BkL" firstAttribute="centerX" secondItem="BVd-ZL-ui2" secondAttribute="centerX" id="mE2-WC-B6m"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dvF-6X-kQx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2835" y="113"/>
+            <point key="canvasLocation" x="1047.8260869565217" y="112.5"/>
         </scene>
         <!--TestEndView Controller-->
         <scene sceneID="W58-nk-IuX">
             <objects>
-                <viewController id="kj7-vp-uip" userLabel="TestEndView Controller" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TestResultViewController" id="kj7-vp-uip" userLabel="TestEndView Controller" customClass="TestResultViewController" customModule="Plantity" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2Xt-OH-QGL">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -386,16 +170,19 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="exampleresultplant" translatesAutoresizingMaskIntoConstraints="NO" id="lOW-t6-LcF">
-                                <rect key="frame" x="60" y="174" width="283" height="383"/>
+                                <rect key="frame" x="-72.5" y="248" width="559" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="8df-UG-Oan"/>
+                                </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="당신에게 꼭맞는 식물을 찾았어요!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GPU-1I-zv3">
-                                <rect key="frame" x="56.5" y="557" width="301" height="28"/>
+                                <rect key="frame" x="56.5" y="578" width="301" height="28"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
                                 <color key="textColor" name="text_green"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cGV-d1-DHT">
-                                <rect key="frame" x="47" y="615" width="320" height="60"/>
+                                <rect key="frame" x="47" y="636" width="320" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="0HZ-uu-TFd"/>
                                     <constraint firstAttribute="width" constant="320" id="ASf-7M-5eF"/>
@@ -406,32 +193,51 @@
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="baseBackgroundColor" name="green_testbox"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="goButtonClicked:" destination="kj7-vp-uip" eventType="touchUpInside" id="qD6-X2-ogr"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="VCm-ml-Uom"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="lOW-t6-LcF" firstAttribute="centerX" secondItem="fJ6-sz-YmU" secondAttribute="centerX" id="04m-Xs-nKX"/>
+                            <constraint firstItem="fJ6-sz-YmU" firstAttribute="top" secondItem="2Xt-OH-QGL" secondAttribute="top" id="4Gu-y9-pH7"/>
                             <constraint firstItem="VCm-ml-Uom" firstAttribute="bottom" secondItem="fJ6-sz-YmU" secondAttribute="bottom" constant="-34" id="Egq-91-eOy"/>
                             <constraint firstItem="fJ6-sz-YmU" firstAttribute="leading" secondItem="VCm-ml-Uom" secondAttribute="leading" id="LO6-o5-jg0"/>
-                            <constraint firstItem="VCm-ml-Uom" firstAttribute="trailing" secondItem="lOW-t6-LcF" secondAttribute="trailing" constant="71" id="OXB-le-iiA"/>
+                            <constraint firstItem="lOW-t6-LcF" firstAttribute="centerY" secondItem="fJ6-sz-YmU" secondAttribute="centerY" constant="-50" id="PAk-qV-c2i"/>
                             <constraint firstItem="cGV-d1-DHT" firstAttribute="top" secondItem="GPU-1I-zv3" secondAttribute="bottom" constant="30" id="REg-7b-hdl"/>
-                            <constraint firstItem="GPU-1I-zv3" firstAttribute="centerX" secondItem="fJ6-sz-YmU" secondAttribute="centerX" id="hAX-bM-zzH"/>
-                            <constraint firstItem="GPU-1I-zv3" firstAttribute="top" secondItem="lOW-t6-LcF" secondAttribute="bottom" id="lS7-78-N0K"/>
+                            <constraint firstItem="GPU-1I-zv3" firstAttribute="top" secondItem="lOW-t6-LcF" secondAttribute="bottom" constant="30" id="ixO-Ma-CW2"/>
                             <constraint firstItem="VCm-ml-Uom" firstAttribute="trailing" secondItem="fJ6-sz-YmU" secondAttribute="trailing" id="mqo-TS-Abg"/>
-                            <constraint firstItem="fJ6-sz-YmU" firstAttribute="top" secondItem="VCm-ml-Uom" secondAttribute="top" constant="-44" id="oef-JQ-6NS"/>
                             <constraint firstItem="cGV-d1-DHT" firstAttribute="centerX" secondItem="GPU-1I-zv3" secondAttribute="centerX" id="phM-Np-d06"/>
-                            <constraint firstItem="lOW-t6-LcF" firstAttribute="leading" secondItem="VCm-ml-Uom" secondAttribute="leading" constant="60" id="piE-re-WUz"/>
-                            <constraint firstItem="lOW-t6-LcF" firstAttribute="top" secondItem="VCm-ml-Uom" secondAttribute="top" constant="130" id="z3n-gp-f97"/>
+                            <constraint firstItem="GPU-1I-zv3" firstAttribute="centerX" secondItem="fJ6-sz-YmU" secondAttribute="centerX" id="w04-rA-4jK"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a8P-gC-bKM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3676.811594202899" y="112.5"/>
+            <point key="canvasLocation" x="1860.8695652173915" y="112.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="scL-f8-pwB">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="Xly-ud-07A" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3Wn-U6-MVF">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="CY8-qo-QIn" kind="relationship" relationship="rootViewController" id="Ahq-WM-aT7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Fo-8V-yHM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-771.01449275362324" y="112.5"/>
         </scene>
     </scenes>
     <resources>
-        <image name="exampleresultplant" width="338" height="383"/>
+        <image name="exampleresultplant" width="559" height="684"/>
         <image name="logobig" width="570" height="790"/>
         <image name="testlogo" width="235" height="81"/>
         <image name="teststartbackground" width="375" height="812"/>
