@@ -44,11 +44,10 @@ class MainPageViewController: UIViewController {
 //        let plantinput=UserPlantInput()
 //        MainDataManager().plantDataManager(plantinput)
         
-        //연동 예시
+        // 내 식물 목록 가져오기 (서버통신)
         MainDataManager().plantCardDataManager(self)
         
-        
-        
+     
 
         setupCard()
         let userdata=userInfo[0]
@@ -87,7 +86,18 @@ class MainPageViewController: UIViewController {
             
             //main으로 바꿈 (편의상)
 //            LogDataManager().LogRepotDataManager(assign, 1, 0, self)
-            MainDataManager().MainAssignDataManager(assign, 1, 0, self)
+            
+            
+            // assign 에 따라 다른 과제 put 하기
+            switch assign {
+            case "water": MainDataManager().MainWaterAssignDataManager(assign, 1, 0, self)
+            case "repot": MainDataManager().MainRepotAssignDataManager(assign, 1, 0, self)
+            case "look": MainDataManager().MainLookAssignDataManager(assign, 1, 0, self)
+            case "sun": MainDataManager().MainSunAssignDataManager(assign, 1, 0, self)
+            default://default로 일단 repot해놈
+                MainDataManager().MainRepotAssignDataManager(assign, 1, 0, self)
+            }
+//            MainDataManager().MainRepotAssignDataManager(assign, 1, 0, self)
         })
         self.present(alert, animated: true, completion: nil)
     }
