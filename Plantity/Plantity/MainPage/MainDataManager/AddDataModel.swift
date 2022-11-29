@@ -9,7 +9,7 @@ import Foundation
 
 struct AddDataModel: Decodable {
     // POST 성공시
-    let success: Bool
-    let msg: String
-    let timestamp: String
+    let isSuccess: Bool
+    let code: Int
+    let message: String
 }

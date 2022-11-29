@@ -10,70 +10,42 @@ import Alamofire
 
 class AddDataManager {
     
-    func addDataManager(_ parameter: AddDataInput, _ viewController: AddPlantViewController) {
-//        AF.request("http://plantity.shop/myplant/save", method: .post, parameters: parameter, encoder: JSONParameterEncoder.default, headers: nil)
-//        .validate()
-//        .responseDecodable(of: AddDataModel.self) { response in
-//            switch response.result {
-//            case .success(let result):
-//                if result.success {
-//                    // 성공
-//                    print(result.msg)
-//                } else {
-//                    // 실패
-//                    print(result.msg)
-//                }
-//            case .failure(let error):
-//                print(error.localizedDescription)
-//                }
-//            }
-//        }
-        let header : HTTPHeaders = [
-            "Content-Type" : "multipart/form-data",
-        ]
+    func addDataManager(_ imageData: UIImage?, _ inputData: AddDataInput, _ viewController: AddPlantViewController, _ cntntsNo: String) {
+
+//        let header: HTTPHeaders = [
+//            "Content-Type" : "multipart/form-data"
+//        ]
         
         let parameters: [String: String?] = [
-            "plantName": parameter.plantName,
-            "plantType": parameter.plantType,
-            "plantAdaptTime": parameter.plantAdaptTime
+            "plantName": inputData.plantName,
+            "plantNickName": inputData.plantNickName,
+            "plantAdaptTime": inputData.plantAdaptTime
         ]
-        
-        //let myPlantSaveRequestDto: [String: String?] = [:]
-        
-        AF.upload(multipartFormData: { multipartFormData in
+
+        AF.upload(multipartFormData: { multipart in
             // 이미지
-            if let image = parameter.plantImage?.pngData() {
-                multipartFormData.append(image, withName: "image", fileName: "\(image).png", mimeType: "image/png")
-            }
-            
+            if let image = imageData?.pngData() {
+                multipart.append(image, withName: "image", fileName: "\(cntntsNo).png", mimeType: "image/png")
+           }
+
             // 세부 데이터
-//            for (key, value) in parameters {
-//                if let strValue: String = value {
-//                    myPlantSaveRequestDto.append("\(strValue)".data(using: .utf8)!, withName: key, mimeType: "application/json")
-//                }
-//            }
-            
             for (key, value) in parameters {
                 if let strValue: String = value {
-                    multipartFormData.append("\(strValue)".data(using: .utf8)!, withName: "myPlantSaveRequestDto/\(key)")
+                    multipart.append("\(strValue)".data(using: .utf8)!, withName: key)
                 }
             }
-            
-        }, to: "http://plantity.shop/myplant/save/\(1)", usingThreshold: UInt64.init(), method: .post, headers: header).responseDecodable(of: AddDataModel.self) {
-            response in
-                print(response)
-                switch response.result {
-                case .success(let result):
-                    if result.success {
-                        // 성공
-                        print(result.msg)
-                    } else {
-                        // 실패
-                        print(result.msg)
-                    }
-                case .failure(let error):
-                    print(error.localizedDescription)
-                    }
-            }
+
+        }, to: "http://plantity.shop/myplant/save/\(1)?cntntsNo=\(cntntsNo)", method: .post).responseString { response in
+//            switch response.result {
+//            case .success(let result):
+//                print(result.message)
+//            case .failure(let error):
+//                print(error)
+//            }
+            print(response)
+            guard let statusCode = response.response?.statusCode
+            else { return }
+            print(statusCode)
         }
+    }
 }

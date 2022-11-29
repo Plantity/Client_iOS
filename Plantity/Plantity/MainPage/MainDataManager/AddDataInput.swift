@@ -9,9 +9,9 @@ import Foundation
 import Alamofire
 
 // post to server
-struct AddDataInput {
-    let plantName: String?
-    let plantType: String?
-    let plantImage: UIImage?
-    let plantAdaptTime: String? // Should be "yyyy-MM-dd"
+struct AddDataInput: Encodable {
+    //var image: UIImage
+    var plantName: String? // plantType
+    var plantNickName: String?
+    var plantAdaptTime: String? // Should be "yyyy-MM-dd"
 }

@@ -18,6 +18,7 @@ class AddPlantViewController: UIViewController {
     @IBOutlet weak var addButton: UIButton!
     
     let imagePickerViewController = UIImagePickerController()
+    var plantTypeCode: String = "" // 식물코드
     
     var selectedPlant: SearchPlantModel = SearchPlantModel(plantIdx: 0, cntntsNo: "", cntntsSj: "", plntbneNm: "", plntzrNm: "", adviseInfo: "", orgplceInfo: "", lighttdemanddoCodeNm: "", ignSeasonCodeNm: "", flclrCodeNm: "", watercycleSprngCodeNm: "", managelevelCode: "")
 
@@ -40,8 +41,8 @@ class AddPlantViewController: UIViewController {
     @objc func didRecieveTypeNotification(_ notification: NSNotification) {
         let plantData: SearchPlantModel = notification.object as! SearchPlantModel
         
-        selectedPlant = plantData
         plantTypeField.text = plantData.cntntsSj
+        plantTypeCode = plantData.cntntsNo
     }
     
     func setupAttribute() {
@@ -100,8 +101,11 @@ extension AddPlantViewController {
         let dateStr = dateFormatter.string(from: adaptDatePicker.date)
         
         // To Server
-        let input = AddDataInput(plantName: nicknameField.text, plantType: plantTypeField.text, plantImage: addImageView.image, plantAdaptTime: dateStr)
+        //let input = AddDataInput(plantName: nicknameField.text, plantType: plantTypeField.text, plantImage: addImageView.image, plantAdaptTime: dateStr)
+        //let input = AddDataInput(plantName: plantTypeField.text, plantNickName: nicknameField.text, plantType: String?, plantAdaptTime: dateStr)
+        let input = AddDataInput(plantName: plantTypeField.text, plantNickName: nicknameField.text, plantAdaptTime: dateStr)
         
-        AddDataManager().addDataManager(input, self)
+        
+        AddDataManager().addDataManager(addImageView.image, input, self, plantTypeCode)
     }
 }
