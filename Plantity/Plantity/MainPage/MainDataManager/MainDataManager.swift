@@ -30,7 +30,7 @@ class MainDataManager{
     
     func plantCardDataManager(_ viewController: MainPageViewController) {
         AF.request(
-            "http://plantity.shop/myplant/plant/1/1",
+            "http://plantity.shop/myplant/1",
             method: .get)
         .validate()
         .responseDecodable(
@@ -39,12 +39,12 @@ class MainDataManager{
             switch response.result {
             case .success(let result):
                 // 성공
-                print("*********")
+                print("****나의식물 리스트 조회 성공 *****")
                 print(result)
                 viewController.successAPI(result)
             case .failure(let error):
                 // 실패
-                print("***실패******")
+                print("***나의식물 리스트 조회 실패******")
                 print(error.localizedDescription)
             }
         }

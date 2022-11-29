@@ -43,17 +43,19 @@ class CardCollectionViewCell: UICollectionViewCell {
 //        pushLogButton.clipsToBounds = true
     }
 
-    func setupCardData(imageUrl: String?, type: String?, nickname: String?, adoptDate: String?){
+    func setupCardData(filePath: String?, plantName: String?, plantNickName: String?, myPlantId: String?){
         
-        if let nicknameStr:String=nickname{
+        if let nicknameStr:String=plantNickName{
             plantNickname.text=nicknameStr
         }
-        if let adoptDateStr:String = adoptDate {
+        
+        // 원래 adopt date였는데 바뀜!! ㅠㅠ
+        if let adoptDateStr:String = myPlantId {
             plantdate.text=adoptDateStr
         }
         
         //url으로 imageurl 받는 방법 -> kingfisher 사용하기
-        if let imageURL = URL(string:imageUrl!) {
+        if let imageURL = URL(string:filePath!) {
             plantimage.kf.setImage(with: imageURL)
         }
         
@@ -63,7 +65,7 @@ class CardCollectionViewCell: UICollectionViewCell {
       
         
         //마지막 카드는 항상 "plus"로 이름설정
-        if type == "plus" && nickname == "plus"{
+        if plantName == "plus" && plantNickName == "plus"{
 //            pushLogButton.isHidden=true
             plantNickname.isHidden=true
             didwater.isHidden=true
