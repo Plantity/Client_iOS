@@ -27,9 +27,17 @@ struct MyDataModel : Decodable {
     let isSuccess : Bool
     let code: Int
     let message: String
-    let result: MyModelResult?
+    let result: MyDataResult?
 }
 
+// 서버용
+struct MyDataResult : Decodable {
+    let nickName: String?
+    let rating: String?
+    let score: Int?
+}
+
+// view용(변경예정)
 struct MyModelResult: Decodable {
     let myInfo: MyInfo?
     let myPlants: [MyPlantModel]? // 이름으로 데이터 찾을거임
