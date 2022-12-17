@@ -66,14 +66,14 @@ class MainDataManager{
         AF.request("http://plantity.shop/myplant/water/1/1",
                    method: .put)
             .validate()
-            .responseDecodable(of: MainAssginDataModel.self) { response in
+            .responseDecodable(of: MainAssginDataModelH.self) { response in
 
             /** 서버로부터 받은 데이터 활용 */
             switch response.result {
             case .success(let result):
                 /** 정상적으로 reponse를 받은 경우 */
                 print("=======water성공=====")
-                print(result)
+                //print(result)
             case .failure(let error):
                 /** 그렇지 않은 경우 */
                 print("=======water실패=====")
@@ -88,14 +88,14 @@ class MainDataManager{
         AF.request("http://plantity.shop/myplant/look/1/1",
                    method: .put)
             .validate()
-            .responseDecodable(of: MainAssginDataModel.self) { response in
+            .responseDecodable(of: MainAssginDataModelH.self) { response in
 
             /** 서버로부터 받은 데이터 활용 */
             switch response.result {
             case .success(let result):
                 /** 정상적으로 reponse를 받은 경우 */
                 print("=======look성공=====")
-                print(result)
+                //print(result)
             case .failure(let error):
                 /** 그렇지 않은 경우 */
                 print("=======look실패=====")
@@ -110,14 +110,14 @@ class MainDataManager{
         AF.request("http://plantity.shop/myplant/sun/1/1",
                    method: .put)
             .validate()
-            .responseDecodable(of: MainAssginDataModel.self) { response in
+            .responseDecodable(of: MainAssginDataModelH.self) { response in
 
             /** 서버로부터 받은 데이터 활용 */
             switch response.result {
             case .success(let result):
                 /** 정상적으로 reponse를 받은 경우 */
                 print("=======sun성공=====")
-                print(result)
+                //print(result)
             case .failure(let error):
                 /** 그렇지 않은 경우 */
                 print("=======sun실패=====")
@@ -139,7 +139,7 @@ class MainDataManager{
             case .success(let result):
                 /** 정상적으로 reponse를 받은 경우 */
                 print("=======repot성공=====")
-                print(result)
+                //print(result)
             case .failure(let error):
                 /** 그렇지 않은 경우 */
                 print("=======repot실패=====")

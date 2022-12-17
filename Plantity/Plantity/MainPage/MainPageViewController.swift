@@ -293,15 +293,13 @@ extension MainPageViewController: UICollectionViewDelegate,UICollectionViewDataS
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print(indexPath.row)
         
         //카드개수 0개가 아니면
         if userPlant?.count != 0{
             //마지막 카드인지 검사 ->  식물추가페이지로 이동
-            print(userPlant?.count)
             if indexPath.row == userPlant?.count{
-                //print("이 식물 번호는 &&&&")
-                //print(indexPath.row)
+                print("추가 페이지로 이동")
+                print("현재 페이지 넘버는",indexPath.row)
                 let storyboard=UIStoryboard(name: "MainPage", bundle: nil)
                 //더하기 버튼 이동하기
                 guard let plusviewController = storyboard.instantiateViewController(identifier: "AddPlantViewController") as? AddPlantViewController else { return }

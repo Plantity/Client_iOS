@@ -64,3 +64,10 @@ struct MainAssginDataModel: Decodable {
     let message: String
     let result: String
 }
+
+//과제 PUT
+struct MainAssginDataModelH: Decodable {
+    let success : Bool
+    let msg: String
+    let timestamp: String
+}
