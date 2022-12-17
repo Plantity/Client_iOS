@@ -20,7 +20,7 @@ class MyDataManager {
                 viewController.successAPI(result)
             case .failure(let error):
                 // 실패
-                print(error.localizedDescription)
+                print(error)
             }
         }
     }
