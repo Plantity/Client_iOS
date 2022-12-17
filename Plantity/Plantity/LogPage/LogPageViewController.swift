@@ -29,10 +29,19 @@ class LogPageViewController: UIViewController, FSCalendarDelegate, FSCalendarDat
     @IBOutlet weak var logCollectionView: UICollectionView!
     
     //dummies
-    var logUserPlant:[LogUserPlant]=[
-        LogUserPlant(imageUrl: "file:///Users/ggowellingg/Downloads/Plantity%20UX%20(28)/marc-blue-K-o_iBHQn7w-unsplash%201@3x.png", nickname: "새삼이", type: "몬스테라", plantlevel: 3, plantMemo: "🌳매일매일 물주기"),
-        LogUserPlant(imageUrl: "https://mule4.dingul.io/api/r?l=aHR0cHM6Ly90aHVtYm5haWw5LmNvdXBhbmdjZG4uY29tL3RodW1ibmFpbHMvcmVtb3RlLzQ5Mng0OTJleC9pbWFnZS92ZW5kb3JfaW52ZW50b3J5L2U1ZWMvNGI5YzQxODdjMjYyZGZiOGY2NzIyMmQzZDIzNWVhODU2YjA1NTViYWI2N2IwMTE4MDk5ZDlmMjI5OGFjLmpwZw", nickname: "쁘뀨보이", type: "허브", plantlevel: 3, plantMemo: "🌳물은 한달에 한번만!")
-    ]
+    // 하
+    var logUserPlant:[LogUserPlant]?{
+        didSet{
+            self.logCollectionView.reloadData()
+            print(" 로그 식물 개수는 ")
+            print(logUserPlant?.count)
+            //self.cardcollectionView.reloadData()
+        }
+    }
+//    var logUserPlant:[LogUserPlant]=[
+//        LogUserPlant(imageUrl: "file:///Users/ggowellingg/Downloads/Plantity%20UX%20(28)/marc-blue-K-o_iBHQn7w-unsplash%201@3x.png", nickname: "새삼이", type: "몬스테라", plantlevel: 3, plantMemo: "🌳매일매일 물주기"),
+//        LogUserPlant(imageUrl: "https://mule4.dingul.io/api/r?l=aHR0cHM6Ly90aHVtYm5haWw5LmNvdXBhbmdjZG4uY29tL3RodW1ibmFpbHMvcmVtb3RlLzQ5Mng0OTJleC9pbWFnZS92ZW5kb3JfaW52ZW50b3J5L2U1ZWMvNGI5YzQxODdjMjYyZGZiOGY2NzIyMmQzZDIzNWVhODU2YjA1NTViYWI2N2IwMTE4MDk5ZDlmMjI5OGFjLmpwZw", nickname: "쁘뀨보이", type: "허브", plantlevel: 3, plantMemo: "🌳물은 한달에 한번만!")
+//    ]
     
     var calendars: [LogCalendar] = [
         LogCalendar(date: ["2022-08-26"], todos: [TodoLog(didwater: false, didsun: false, didlook: false, didsplit: false)]),
@@ -45,9 +54,16 @@ class LogPageViewController: UIViewController, FSCalendarDelegate, FSCalendarDat
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // 내 식물 목록 가져오기 (서버통신)
+        LogDataManager().plantCardDataManager(self)
+        
+        
         setupCard()
         setupPageControl()
         setUplogCV()
+        
+ 
+        
         
     }
     
@@ -68,9 +84,19 @@ class LogPageViewController: UIViewController, FSCalendarDelegate, FSCalendarDat
         cardcollectionView.collectionViewLayout = layout
     }
 
+    //위
+    func successGETAPI(_ result: LogUserPlantModel?){
+        self.logUserPlant = result?.result
+        //print(result?.result,"9999")
+        print(logUserPlant!.count)
+    }
+    
     func setupPageControl() {
         //페이지 컨트롤의 전체 페이지를 images 배열의 전체 개수 값으로 설정
-        pageControl.numberOfPages = logUserPlant.count
+        let num=logUserPlant?.count
+        print("LOG 데이터 갯수는")
+        print(logUserPlant?.count)
+        pageControl.numberOfPages = num ?? 0
         // 페이지 컨트롤의 현재 페이지를 0으로 설정
         pageControl.currentPage = self.currentPage
     }
@@ -108,7 +134,8 @@ extension LogPageViewController : UICollectionViewDataSource, UICollectionViewDe
 
     //cell갯수
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return logUserPlant.count
+        guard var num=logUserPlant?.count else { return 0 }
+        return num
     }
 
     //customCell생성
@@ -116,24 +143,23 @@ extension LogPageViewController : UICollectionViewDataSource, UICollectionViewDe
         
 //        let cardcurrentIndex=indexPath.row
 //        print("위",cardcurrentIndex)
-        
+        print("**3**")
         if collectionView == cardcollectionView {
+            print("**2**")
             guard let customCell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as? CollectionViewCell else { return UICollectionViewCell() }
 
             customCell.layer.cornerRadius=10
-            
-            let data = logUserPlant[indexPath.row]
-            customCell.setupCardData(image: data.imageUrl, nickname: data.nickname, type: data.type, level: data.plantlevel, memo: data.plantMemo)
-            
-            //자동스크롤
-//            let cardcurrentIndex=indexPath.row
-//            print("위",cardcurrentIndex)
+            print("1****")
+            print(logUserPlant?.count)
+            let data = logUserPlant?[indexPath.row]
 
-//            logCollectionView.scrollToItem(at: IndexPath(item: 0, section: 0), at: .left, animated: true)
+            customCell.setupCardData(filePath: data?.filePath, plantName: data?.plantName, plantNickName: data?.plantNickName, myPlantId: data?.myPlantId, plantadapttime: data?.plantAdaptTime)
+            
             
             return customCell
 
         }else{
+            print("**5**")
             // 캘린더 셀
             guard let calendarCell = collectionView.dequeueReusableCell(withReuseIdentifier: "CalendarCollectionViewCell", for: indexPath) as? CalendarCollectionViewCell else { return UICollectionViewCell() }
             calendarCell.layer.cornerRadius=10
@@ -154,7 +180,8 @@ extension LogPageViewController : UICollectionViewDataSource, UICollectionViewDe
     func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
         let nextPage = Int(targetContentOffset.pointee.x / cardcollectionView.frame.width) + 1
         if currentPage == nextPage {
-            currentPage = nextPage == 1 ? 0 : logUserPlant.count - 1
+            // 원래 :currentPage = nextPage == 1 ? 0 : logUserPlant?.count - 1
+            currentPage = nextPage == 1 ? 0 : logUserPlant?.count ?? 0 - 1
         } else {
             currentPage = nextPage
         }
@@ -167,5 +194,6 @@ extension LogPageViewController : UICollectionViewDataSource, UICollectionViewDe
         logCollectionView.reloadData()
     }
 }
+
 
 

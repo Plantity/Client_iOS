@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class
 CollectionViewCell: UICollectionViewCell {
@@ -32,6 +33,44 @@ CollectionViewCell: UICollectionViewCell {
         uiView.layer.cornerRadius = 10
         uiView.clipsToBounds = true
     }
+    //
+    func setupCardData(filePath: String?, plantName: String?, plantNickName: String?, myPlantId: Int?,plantadapttime:String?){
+        
+        // 이미지
+        //url으로 imageurl 받는 방법 -> kingfisher 사용하기
+        if let imageURL = URL(string:filePath!) {
+            plantImage.kf.setImage(with: imageURL)
+        }
+        
+        // nickname
+        if let nicknameStr:String=plantNickName{
+            plantNickname.text=nicknameStr
+        }
+        
+        
+        //plantType
+        // 원래 adopt date였는데 바뀜!! ㅠㅠ
+        if let plantNamestr:String = plantName {
+            plantType.text=plantNamestr
+        }
+        
+        //plantLevel
+        if let plantlevelstr:String = plantName {
+            plantType.text="LEVEL 3"
+        }
+        
+        //plantMemo
+        if let plantadapttimestr:String = plantadapttime {
+            plantMemo.text=plantadapttimestr
+        }
+        
+        
+
+        
+        
+    }
+    //
+    /* 안씀 예전꺼 = 지워도됨
     func setupCardData(image:String?,nickname:String?,type:String?,level:Int?,memo:String?){
         
 //        if let plantImageImg:UIImage=image{
@@ -50,15 +89,13 @@ CollectionViewCell: UICollectionViewCell {
         if let imageURL = URL(string:image!) {
             plantImage.kf.setImage(with: imageURL)
         }
-//        if let plantLevelInt:Int=level{
-//            plantLevel.image=
-//
-//        }
+
         
         if let plantMemoString:String=memo{
             plantMemo.text=plantMemoString
         }
         
     }
+     */
 
 }
