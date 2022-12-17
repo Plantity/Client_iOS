@@ -41,7 +41,7 @@ class MainDataManager{
                 // 성공
                 print("****나의식물 리스트 조회 성공 *****")
                 print(result)
-                viewController.successAPI(result)
+                viewController.successGETAPI(result)
             case .failure(let error):
                 // 실패
                 print("***나의식물 리스트 조회 실패******")

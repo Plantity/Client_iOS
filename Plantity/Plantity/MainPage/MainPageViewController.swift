@@ -177,11 +177,13 @@ class MainPageViewController: UIViewController {
         
     }
     
-    func successAPI(_ result: UserPlantModel?){
+    func successGETAPI(_ result: UserPlantModel?){
 //        if let resultData : UserPlant = result?.result {
 //            userPlant += resultData.nickname
 //
 //        }
+        
+        self.userPlant = (result?.result)!
         
     }
 
