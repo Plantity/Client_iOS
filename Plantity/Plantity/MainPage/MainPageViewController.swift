@@ -25,11 +25,45 @@ class MainPageViewController: UIViewController {
         UserInfo(username: "고해주", level: 2, progress: 75)
     ]
     
-    var userPlant:[UserPlant]=[
-        UserPlant(myPlantId: 1, plantName: "필로덴드론", plantNickName: "새삼이", filePath: "https://www.100ssd.co.kr/news/photo/202009/71614_51734_4048.jpg"),
-        UserPlant(myPlantId: 1, plantName: "필로덴드론", plantNickName: "새삼이", filePath: "https://www.100ssd.co.kr/news/photo/202009/71614_51734_4048.jpg"),
-        UserPlant(myPlantId: 1, plantName: "plus", plantNickName: "plus", filePath: "https://www.100ssd.co.kr/news/photo/202009/71614_51734_4048.jpg")
-    ]
+    
+    var userPlant:[UserPlant]?{
+        didSet{
+            self.cardCollectionView.reloadData()
+        }
+    }
+    
+//    var userPlant:[UserPlant]=[
+//        UserPlant(myPlantId: 0,
+//                  plantName: "0",
+//                  plantNickName: "0",
+//                  plantAdaptTime: "0",
+//                  filePath: "0"),
+//        UserPlant(myPlantId: 1,
+//                  plantName: "1",
+//                  plantNickName: "1",
+//                  plantAdaptTime: "1",
+//                  filePath: "1"),
+//        UserPlant(myPlantId: 2,
+//                  plantName: "2",
+//                  plantNickName: "2",
+//                  plantAdaptTime: "2",
+//                  filePath: "2"),
+//        UserPlant(myPlantId: 3,
+//                  plantName: "3",
+//                  plantNickName: "3",
+//                  plantAdaptTime: "3",
+//                  filePath: "3"),
+//        UserPlant(myPlantId: 4,
+//                  plantName: "4",
+//                  plantNickName: "4",
+//                  plantAdaptTime: "4",
+//                  filePath: "4"),
+//        UserPlant(myPlantId: 5,
+//                  plantName: "plus",
+//                  plantNickName: "plus",
+//                  plantAdaptTime: "11.22",
+//                  filePath: "https://www.100ssd.co.kr/news/photo/202009/71614_51734_4048.jpg")
+//    ]
 
 
     
@@ -46,6 +80,7 @@ class MainPageViewController: UIViewController {
         
         // 내 식물 목록 가져오기 (서버통신)
         MainDataManager().plantCardDataManager(self)
+  
         
      
 
@@ -165,11 +200,16 @@ class MainPageViewController: UIViewController {
         
     }
     
-    func successAPI(_ result: UserPlantModel?){
+    func successGETAPI(_ result: UserPlantModel?){
 //        if let resultData : UserPlant = result?.result {
 //            userPlant += resultData.nickname
 //
 //        }
+        
+        self.userPlant = (result?.result)!
+        
+
+            
         
     }
 
@@ -184,9 +224,10 @@ extension MainPageViewController: UICollectionViewDelegate,UICollectionViewDataS
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
         
-        if userPlant.count != 0{
+        if userPlant?.count != 0{
             //식물이 하나라도 있으면 -> 식물개수만큼
-            return userPlant.count
+            guard var num=userPlant?.count else { return 0 }
+            return num+1
         }else{
             //식물이 하나도 없으면 1개
             return 1
@@ -196,10 +237,11 @@ extension MainPageViewController: UICollectionViewDelegate,UICollectionViewDataS
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if userPlant.count != 0{
+        if userPlant?.count != 0{
             
             //마지막 추가셀
-            if indexPath.row == userPlant.count {
+            //if userPlant[indexPath.row].myPlantId=="plus"
+            if indexPath.row == userPlant?.count {
                 guard let appendcell = collectionView.dequeueReusableCell(withReuseIdentifier: "AppendCollectionViewCell", for: indexPath) as? AppendCollectionViewCell else{
                     return UICollectionViewCell()
                 }
@@ -215,8 +257,8 @@ extension MainPageViewController: UICollectionViewDelegate,UICollectionViewDataS
             plantcell.layer.cornerRadius = 12
             
             
-            let data=userPlant[indexPath.row]
-            plantcell.setupCardData(filePath: data.filePath, plantName: data.plantName, plantNickName: data.plantNickName, myPlantId: "")
+            let data=userPlant?[indexPath.row]
+            plantcell.setupCardData(filePath: data?.filePath, plantName: data?.plantName, plantNickName: data?.plantNickName, myPlantId: data?.myPlantId)
             
             
             return plantcell
@@ -251,13 +293,13 @@ extension MainPageViewController: UICollectionViewDelegate,UICollectionViewDataS
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print(indexPath.row)
         
         //카드개수 0개가 아니면
-        if userPlant.count != 0{
+        if userPlant?.count != 0{
             //마지막 카드인지 검사 ->  식물추가페이지로 이동
-            if indexPath.row == userPlant.count-1 {
-                
+            if indexPath.row == userPlant?.count{
+                print("추가 페이지로 이동")
+                print("현재 페이지 넘버는",indexPath.row)
                 let storyboard=UIStoryboard(name: "MainPage", bundle: nil)
                 //더하기 버튼 이동하기
                 guard let plusviewController = storyboard.instantiateViewController(identifier: "AddPlantViewController") as? AddPlantViewController else { return }
@@ -270,6 +312,8 @@ extension MainPageViewController: UICollectionViewDelegate,UICollectionViewDataS
                 
                 
             }else{
+                print("로그 페이지로 이동")
+                print("현재 페이지 넘버는",indexPath.row)
                 let storyboard=UIStoryboard(name: "LogPage", bundle: nil)
                 //식물로그 이동하기
                 guard let viewController = storyboard.instantiateViewController(identifier: "LogPageViewController") as? LogPageViewController else { return }

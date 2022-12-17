@@ -43,15 +43,16 @@ class CardCollectionViewCell: UICollectionViewCell {
 //        pushLogButton.clipsToBounds = true
     }
 
-    func setupCardData(filePath: String?, plantName: String?, plantNickName: String?, myPlantId: String?){
+    func setupCardData(filePath: String?, plantName: String?, plantNickName: String?, myPlantId: Int?){
         
         if let nicknameStr:String=plantNickName{
             plantNickname.text=nicknameStr
         }
         
         // 원래 adopt date였는데 바뀜!! ㅠㅠ
-        if let adoptDateStr:String = myPlantId {
-            plantdate.text=adoptDateStr
+        if let adoptDateStr:Int = myPlantId {
+            plantdate.text="함께한지"
+            plantdate.text!+=String(adoptDateStr)+"일째"
         }
         
         //url으로 imageurl 받는 방법 -> kingfisher 사용하기

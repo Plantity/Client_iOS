@@ -53,6 +53,7 @@ struct UserPlant : Decodable {
     let myPlantId : Int?
     let plantName: String?
     let plantNickName: String?
+    let plantAdaptTime: String?
     let filePath: String?
 }
 
@@ -62,4 +63,11 @@ struct MainAssginDataModel: Decodable {
     let code: Int
     let message: String
     let result: String
+}
+
+//과제 PUT
+struct MainAssginDataModelH: Decodable {
+    let success : Bool
+    let msg: String
+    let timestamp: String
 }
