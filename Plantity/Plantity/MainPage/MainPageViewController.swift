@@ -26,9 +26,21 @@ class MainPageViewController: UIViewController {
     ]
     
     var userPlant:[UserPlant]=[
-        UserPlant(myPlantId: 1, plantName: "필로덴드론", plantNickName: "새삼이", filePath: "https://www.100ssd.co.kr/news/photo/202009/71614_51734_4048.jpg"),
-        UserPlant(myPlantId: 1, plantName: "필로덴드론", plantNickName: "새삼이", filePath: "https://www.100ssd.co.kr/news/photo/202009/71614_51734_4048.jpg"),
-        UserPlant(myPlantId: 1, plantName: "plus", plantNickName: "plus", filePath: "https://www.100ssd.co.kr/news/photo/202009/71614_51734_4048.jpg")
+        UserPlant(myPlantId: 1,
+                  plantName: "필로덴드론",
+                  plantNickName: "새삼이",
+                  plantAdaptTime: "11.22",
+                  filePath: "https://www.100ssd.co.kr/news/photo/202009/71614_51734_4048.jpg"),
+        UserPlant(myPlantId: 1,
+                  plantName: "필로덴드론",
+                  plantNickName: "새삼이",
+                  plantAdaptTime: "11.22",
+                  filePath: "https://www.100ssd.co.kr/news/photo/202009/71614_51734_4048.jpg"),
+        UserPlant(myPlantId: 1,
+                  plantName: "plus",
+                  plantNickName: "plus",
+                  plantAdaptTime: "11.22",
+                  filePath: "https://www.100ssd.co.kr/news/photo/202009/71614_51734_4048.jpg")
     ]
 
 

@@ -53,6 +53,7 @@ struct UserPlant : Decodable {
     let myPlantId : Int?
     let plantName: String?
     let plantNickName: String?
+    let plantAdaptTime: String?
     let filePath: String?
 }
 
