@@ -59,8 +59,9 @@ class LogPageViewController: UIViewController, FSCalendarDelegate, FSCalendarDat
         
         
         setupCard()
-        setupPageControl()
         setUplogCV()
+        setupPageControl()
+        
         
  
         
@@ -73,7 +74,7 @@ class LogPageViewController: UIViewController, FSCalendarDelegate, FSCalendarDat
         
         let cardNib=UINib(nibName: "CollectionViewCell", bundle: nil)
         cardcollectionView.register(cardNib, forCellWithReuseIdentifier: "CollectionViewCell")
-        
+    
         // Carousel 적용
         let layout = UPCarouselFlowLayout()
         layout.itemSize = CGSize(width: cardcollectionView.frame.width-50*2, height: 170)
@@ -134,6 +135,7 @@ extension LogPageViewController : UICollectionViewDataSource, UICollectionViewDe
 
     //cell갯수
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        self.cardcollectionView.reloadData()
         guard var num=logUserPlant?.count else { return 0 }
         return num
     }
@@ -141,9 +143,10 @@ extension LogPageViewController : UICollectionViewDataSource, UICollectionViewDe
     //customCell생성
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-//        let cardcurrentIndex=indexPath.row
-//        print("위",cardcurrentIndex)
+        let cardcurrentIndex=indexPath.row
+        print("위",cardcurrentIndex)
         print("**3**")
+        
         if collectionView == cardcollectionView {
             print("**2**")
             guard let customCell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as? CollectionViewCell else { return UICollectionViewCell() }
@@ -181,7 +184,8 @@ extension LogPageViewController : UICollectionViewDataSource, UICollectionViewDe
         let nextPage = Int(targetContentOffset.pointee.x / cardcollectionView.frame.width) + 1
         if currentPage == nextPage {
             // 원래 :currentPage = nextPage == 1 ? 0 : logUserPlant?.count - 1
-            currentPage = nextPage == 1 ? 0 : logUserPlant?.count ?? 0 - 1
+            currentPage = nextPage == 1 ? 0 : logUserPlant!.count - 1
+            //currentPage = nextPage == 1 ? 0 : logUserPlant?.count ?? 0 - 1
         } else {
             currentPage = nextPage
         }
