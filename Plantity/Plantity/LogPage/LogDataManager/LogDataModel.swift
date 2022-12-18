@@ -48,6 +48,7 @@ struct LogUserPlant : Decodable {
 
 //-- 달력 --//
 
+
 // 식물 각각의 캘린더
 struct LogCalendar : Decodable {
     var date: [String]
@@ -97,8 +98,19 @@ struct LogLookDataModel:Decodable {
 }
 
 struct AssginDataModel: Decodable {
-    let isSuccess : Bool
-    let code: Int
-    let message: String
-    let result: String
+    let success : Bool
+    let msg: String
+    let timestamp: String
+    let result: [AssignDatas]?
+}
+
+
+//유저식물정보 -> 받을거
+struct AssignDatas : Decodable {
+    let plantId : Int?
+    let date: String?
+    let water: Bool?
+    let look: Bool?
+    let sun: Bool?
+    let repot: Bool?
 }
