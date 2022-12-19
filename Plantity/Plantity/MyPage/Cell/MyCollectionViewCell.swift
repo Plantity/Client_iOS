@@ -13,7 +13,6 @@ class MyCollectionViewCell: UICollectionViewCell {
     
     public func configure(with data: String?) {
         if let imageUrl: URL = URL(string: data ?? "") {
-            print("이미지: ", imageUrl)
             imageView.kf.setImage(with: imageUrl)
         }
     }
