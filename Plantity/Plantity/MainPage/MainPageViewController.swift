@@ -22,8 +22,7 @@ class MainPageViewController: UIViewController {
     
     //dummies
     var userInfo:[UserInfo]=[
-        UserInfo(username: "고해주", level: 2, progress: 75)
-    ]
+        UserInfo(username: "고해주", level: 2, progress: 75)]
     
     // 하
     var userPlant:[UserPlant]?{
