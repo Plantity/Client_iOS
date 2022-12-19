@@ -25,7 +25,7 @@ class MainPageViewController: UIViewController {
         UserInfo(username: "고해주", level: 2, progress: 75)
     ]
     
-    
+    // 하
     var userPlant:[UserPlant]?{
         didSet{
             self.cardCollectionView.reloadData()
@@ -199,7 +199,7 @@ class MainPageViewController: UIViewController {
         
         
     }
-    
+    // 위
     func successGETAPI(_ result: UserPlantModel?){
 //        if let resultData : UserPlant = result?.result {
 //            userPlant += resultData.nickname
@@ -207,9 +207,6 @@ class MainPageViewController: UIViewController {
 //        }
         
         self.userPlant = (result?.result)!
-        
-
-            
         
     }
 

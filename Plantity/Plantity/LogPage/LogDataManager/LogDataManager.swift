@@ -10,6 +10,28 @@ import Alamofire
 
 class LogDataManager{
     
+    func plantCardDataManager(_ viewController: LogPageViewController) {
+        AF.request(
+            "http://plantity.shop/myplant/1",
+            method: .get)
+        .validate()
+        .responseDecodable(
+            of: LogUserPlantModel.self
+        ){ response in
+            switch response.result {
+            case .success(let result):
+                // 성공
+                print("****LOG 나의식물 리스트 조회 성공 *****")
+                //print(result)
+                viewController.successGETAPI(result)
+            case .failure(let error):
+                // 실패
+                print("***LOG 나의식물 리스트 조회 실패******")
+                print(error.localizedDescription)
+            }
+        }
+    }
+    
     //put-LogRepotInput
     func LogRepotDataManager(_ assign: String,_ userId: Int,_ myPlantId: Int,_ viewController:MainPageViewController){
         
@@ -29,4 +51,30 @@ class LogDataManager{
             }
         }
     }
+    
+    func logDataManager(_ parameters: LogAssignDataInput, _ viewController: LogPageViewController) {
+        // 데이터 주고받는 함수
+        AF.request(
+            "http://plantity.shop/myplant/plantLog",
+            method: .get,
+            parameters: parameters)
+        .validate()
+        .responseDecodable(
+            of: AssginDataModel.self
+        ) { response in
+            print(response)
+            switch response.result {
+            case .success(let result):
+                // 성공
+                viewController.successGETLOGAPI(result)
+                print(result)
+                print("로그 데이터 전송 성공")
+            case .failure(let error):
+                // 실패
+                print(error.localizedDescription)
+                print("로그 데이터 전송 실패")
+            }
+        }
+    }
+
 }

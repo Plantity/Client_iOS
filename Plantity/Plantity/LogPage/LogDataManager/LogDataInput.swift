@@ -8,6 +8,12 @@
 import Foundation
 
 // 서버에 보내줄 로그 정보
+struct LogAssignDataInput:Encodable{
+    var userIdx:Int?
+    var plantId:Int?
+    var logDate:String?
+}
+
 
 // 분갈이
 struct LogRepotInput:Encodable{
