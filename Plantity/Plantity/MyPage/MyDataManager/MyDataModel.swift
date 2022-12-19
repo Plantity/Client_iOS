@@ -49,25 +49,3 @@ struct MyPlantResponseDtos : Decodable{
     let plantAdaptTime: String?
     let filePath: String?
 }
-
-// view용(변경예정)
-//struct MyModelResult: Decodable {
-//    let myInfo: MyInfo?
-//    let myPlants: [MyPlantModel]? // 이름으로 데이터 찾을거임
-//    let myLikes: [MyPlantModel]?  // 이름으로 데이터 찾을거임
-//}
-//
-//struct MyInfo: Decodable {
-//    let username: String?
-//    let userId: String?
-//    let level: Int?
-//    let progress: Int?
-//}
-//
-//struct MyPlantModel: Decodable {
-//    let imageUrl: String?
-//    let name: String?
-//    let nickname: String?
-//    let adoptDate: Date?
-//    let plantNo: String?    // 식물 상세조회할 때 쓰는 고유번호
-//}

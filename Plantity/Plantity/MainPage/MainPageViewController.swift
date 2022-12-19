@@ -21,8 +21,7 @@ class MainPageViewController: UIViewController {
     @IBOutlet weak var cardCollectionView: UICollectionView!
     
     //dummies
-    var userInfo:[UserInfo]=[
-        UserInfo(username: "고해주", level: 2, progress: 75)]
+    var userInfo:ResponseDto=ResponseDto(nickName: "", rating: "", score: 0)
     
     // 하
     var userPlant:[UserPlant]?{
@@ -70,9 +69,8 @@ class MainPageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //연동
-//        let userinput=UserInfoInput()
-//        MainDataManager().maininfoDataManager(userinput)
+        // 유저정보 가져오기
+        MainDataManager().maininfoManager(1, self)
         
 //        let plantinput=UserPlantInput()
 //        MainDataManager().plantDataManager(plantinput)
@@ -84,8 +82,8 @@ class MainPageViewController: UIViewController {
      
 
         setupCard()
-        let userdata=userInfo[0]
-        setupUserData(name:userdata.username, level: userdata.level, progress: userdata.progress)
+        let userdata = userInfo
+        setupUserData(name:userdata.nickName, level: userdata.rating, progress: userdata.score)
         
 
         NotificationCenter.default.addObserver(self, selector: #selector(didRecieveAssignNotification(_:)), name: Notification.Name("didAssign"), object: nil)
@@ -136,7 +134,7 @@ class MainPageViewController: UIViewController {
         self.present(alert, animated: true, completion: nil)
     }
     
-    func setupUserData(name:String?,level:Int?,progress:Int?){
+    func setupUserData(name:String?,level:String?,progress:Int?){
         
         //이름
         if let nameStr:String=name{
@@ -144,12 +142,12 @@ class MainPageViewController: UIViewController {
         }
         
         //레벨
-        if let levelInt:Int=level{
-            if levelInt==1{
+        if let levelInt:String=level{
+            if levelInt=="rating1"{
                 welcomeLabel.text="안녕하세요 레벨 1 오늘도 민첩한 식물인이 되세요!"
-            }else if levelInt==2{
+            }else if levelInt=="rating2"{
                 welcomeLabel.text="벌써 레벨2까지 왔습니다! 오늘도 민첩한 식물인이 되세요🌳"
-            }else if levelInt==3{
+            }else if levelInt=="rating3"{
                 welcomeLabel.text="안녕하세요 레벨 3 오늘도 민첩한 식물인이 되세요!"
             }else{
                 welcomeLabel.text="안녕하세요 레벨 4 오늘도 민첩한 식물인이 되세요!"
@@ -344,8 +342,9 @@ extension MainPageViewController: UICollectionViewDelegate,UICollectionViewDataS
 
 
 extension MainPageViewController{
-    func successuserAPI(_ result: [UserInfo]){
-        userInfo=result
+    // 유저정보 가져오기 성공
+    func successuserAPI(_ result: MyDataResult){
+        userInfo=result.responseDto
         cardCollectionView.reloadData()
     }
     
