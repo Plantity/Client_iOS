@@ -12,14 +12,20 @@ class MainDataManager{
     // - 이름
     // - 게이지
     //get-userinfo
-    func maininfoDataManager(_ parameters: UserInfoInput, _ viewController:MainPageViewController){
-        AF.request("", method: .get, parameters: parameters ).validate().responseDecodable(of: [UserInfo].self) { response in
-            switch response.result{
-            case.success(let result):
-                print("성공")
-                viewController.successuserAPI(result)
-            case.failure(let error):
-                print(error.localizedDescription)
+    func maininfoManager(_ userId: Int, _ viewController: MainPageViewController) {
+        // 데이터 주고받는 함수
+        AF.request("http://plantity.shop/users/\(userId)", method: .get)
+            .validate()
+            .responseDecodable(of: MyDataModel.self) { response in
+            switch response.result {
+            case .success(let result):
+                // 성공
+                if let resultData: MyDataResult = result.result {
+                    viewController.successuserAPI(resultData)
+                }
+            case .failure(let error):
+                // 실패
+                print(error)
             }
         }
     }

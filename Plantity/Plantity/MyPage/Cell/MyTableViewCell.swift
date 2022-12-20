@@ -13,13 +13,13 @@ class MyTableViewCell: UITableViewCell {
     var isMyPlant: Bool = true
     
     // 임시 Data
-    var data: [MyPlantModel] = []
+    var data: [MyPlantResponseDtos] = []
     // subviews 한번만 호출하기 위한 변수
     var didLayoutSubviews: Bool = false
     
-    public func configure(with plants: [MyPlantModel]?)
+    public func configure(with plants: [MyPlantResponseDtos]?)
     {
-        if let plantData: [MyPlantModel] = plants {
+        if let plantData: [MyPlantResponseDtos] = plants {
             self.data = plantData
             myCollectionView.reloadData()
         }
@@ -75,7 +75,7 @@ extension MyTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource,
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MyCollectionViewCell", for: indexPath) as? MyCollectionViewCell else { return UICollectionViewCell() }
         
-        cell.configure(with: data[indexPath.row].imageUrl)
+        cell.configure(with: data[indexPath.row].filePath)
         
         return cell
     }
