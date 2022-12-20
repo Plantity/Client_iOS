@@ -26,28 +26,15 @@ class MyPageViewController: UIViewController {
     // tmp
     //var plants: [String] = ["몬스테라","몬스테라","몬스테라","몬스테라"]
     
-    //dummies
-    var userInfo:[UserInfo]=[
-        UserInfo(username: "고해주", level: 2, progress: 75)
-    ]
+    // initialize
+    var userInfo:ResponseDto = ResponseDto(nickName: "", rating: "", score: 0)
     
-    var userPlant:[UserPlant]=[
-        UserPlant(myPlantId: 1,
-                  plantName: "필로덴드론",
-                  plantNickName: "필로덴드론",
-                  plantAdaptTime: "11.22",
-                  filePath: "https://www.100ssd.co.kr/news/photo/202009/71614_51734_4048.jpg")
-    ]
-
-    
-    // response 예시
-    // var myData : MyModelResult = MyModelResult(myInfo: MyInfo(username: "", userId: "", level: 0, progress: 0), myPlants: [], myLikes: [])
-    var myData: MyDataResult = MyDataResult(nickName: "", rating: "", score: 0)
+    var userPlant:[MyPlantResponseDtos]=[]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // To Server
-        let input: Int = 221 // 임시 유저아이디
+        let input: Int = 1 // 임시 유저아이디
         MyDataManager().myDataManager(input, self)
         
         // Delegates
@@ -63,18 +50,20 @@ class MyPageViewController: UIViewController {
     
     func successAPI(_ result: MyDataModel) {
         if let responseData : MyDataResult = result.result {
-            myData = responseData
+            print(responseData)
+            userInfo = responseData.responseDto
+            userPlant = responseData.myPlantResponseDtos
         }
-        // myTableView.reloadData()
+        myTableView.reloadData()
         setupData()
     }
     
     private func setupData() {
-        myProgressView.setProgress(Float(myData.score ?? 0) / 100, animated: false)
+        myProgressView.setProgress(Float(userInfo.score) / 100, animated: false)
         
-        myNameLabel.text = myData.nickName
+        myNameLabel.text = userInfo.nickName
         
-        switch myData.rating {
+        switch userInfo.rating {
         case "rating1":
             myMedalImageView.image = UIImage(named: "image_medal_bronze")
             myLevelLabel.text = "비기너"
@@ -107,7 +96,7 @@ class MyPageViewController: UIViewController {
     }
     
     @objc func didRecieveSearchNotification(_ notification: NSNotification) {
-        let plantIdx: Int = notification.object as! Int
+        let _: Int = notification.object as! Int
         
         let storyboard=UIStoryboard(name: "SearchPage", bundle: nil)
         //식물로그 이동하기
@@ -166,7 +155,7 @@ extension MyPageViewController: UITableViewDelegate, UITableViewDataSource {
         
         if indexPath.row == 0 {
             // 첫번째 셀: 나의 식물
-            // cell.configure(with: myData.myPlants)
+            cell.configure(with: userPlant)
             cell.isMyPlant = true
         } else {
             // 두번째 셀: 내가 찜한 식물
