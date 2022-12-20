@@ -51,7 +51,7 @@ class LogDataManager{
             }
         }
     }
-    
+    /*
     func logDataManager(_ parameters: LogAssignDataInput, _ viewController: LogPageViewController) {
         // 데이터 주고받는 함수
         AF.request(
@@ -76,5 +76,6 @@ class LogDataManager{
             }
         }
     }
+    */
 
 }

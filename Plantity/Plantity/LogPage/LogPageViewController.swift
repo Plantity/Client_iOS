@@ -43,6 +43,7 @@ class LogPageViewController: UIViewController, FSCalendarDelegate, FSCalendarDat
 //        LogUserPlant(imageUrl: "https://mule4.dingul.io/api/r?l=aHR0cHM6Ly90aHVtYm5haWw5LmNvdXBhbmdjZG4uY29tL3RodW1ibmFpbHMvcmVtb3RlLzQ5Mng0OTJleC9pbWFnZS92ZW5kb3JfaW52ZW50b3J5L2U1ZWMvNGI5YzQxODdjMjYyZGZiOGY2NzIyMmQzZDIzNWVhODU2YjA1NTViYWI2N2IwMTE4MDk5ZDlmMjI5OGFjLmpwZw", nickname: "쁘뀨보이", type: "허브", plantlevel: 3, plantMemo: "🌳물은 한달에 한번만!")
 //    ]
     
+    /*
     var calendars:[AssignDatas]?{
         didSet{
             self.logCollectionView.reloadData()
@@ -50,15 +51,15 @@ class LogPageViewController: UIViewController, FSCalendarDelegate, FSCalendarDat
             //print(logUserPlant?.count)
             //self.cardcollectionView.reloadData()
         }
-    }
-    /*
+    }*/
+    
     var calendars: [LogCalendar] = [
         LogCalendar(date: ["2022-08-26"], todos: [TodoLog(didwater: false, didsun: false, didlook: false, didsplit: false)]),
         LogCalendar(date: ["2022-08-26"], todos: [TodoLog(didwater: true, didsun: true, didlook: true, didsplit: true)]),
         LogCalendar(date: ["2022-08-26"], todos: [TodoLog(didwater: true, didsun: true, didlook: false, didsplit: false)]),
         LogCalendar(date: ["2022-09-14"], todos: [TodoLog(didwater: true, didsun: true, didlook: false, didsplit: false)]),
     ]
-     */
+     
     
 
     override func viewDidLoad() {
@@ -67,8 +68,9 @@ class LogPageViewController: UIViewController, FSCalendarDelegate, FSCalendarDat
         // 내 식물 목록 가져오기 (서버통신)
         LogDataManager().plantCardDataManager(self)
         
-        let input=LogAssignDataInput(userIdx: 1, plantId: 1, logDate: "2022-09-19")
-        LogDataManager().logDataManager(input, self)
+        // 서버 연결 안됨
+        //let input=LogAssignDataInput(userIdx: 1, plantId: 1, logDate: "2022-09-19")
+        //LogDataManager().logDataManager(input, self)
         
         
         setupCard()
@@ -106,11 +108,13 @@ class LogPageViewController: UIViewController, FSCalendarDelegate, FSCalendarDat
     }
     
     //위
+    /*
     func successGETLOGAPI(_ result: AssginDataModel?){
         self.calendars = result?.result
         //print(result?.result,"9999")
         //print(logUserPlant!.count)
     }
+     */
     
     func setupPageControl() {
         //페이지 컨트롤의 전체 페이지를 images 배열의 전체 개수 값으로 설정
@@ -191,9 +195,9 @@ extension LogPageViewController : UICollectionViewDataSource, UICollectionViewDe
 //            print("아래",logcurrentIndex)
             
             // 캘린더에 데이터 넘기기
-            let data = calendars?[currentPage]
+            let data = calendars[currentPage]
             //***********
-            //calendarCell.setUpEvents(data: data)
+            calendarCell.setUpEvents(data: data)
 //            logCollectionView.scrollToItem(at: IndexPath(item: logcurrentIndex, section: 0), at: .left, animated: true)
             
             return calendarCell
