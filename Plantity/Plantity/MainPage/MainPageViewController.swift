@@ -75,12 +75,8 @@ class MainPageViewController: UIViewController {
         // 내 식물 목록 가져오기 (서버통신)
         MainDataManager().plantCardDataManager(self)
   
-        
-     
-
         setupCard()
         
-
         NotificationCenter.default.addObserver(self, selector: #selector(didRecieveAssignNotification(_:)), name: Notification.Name("didAssign"), object: nil)
     }
     

@@ -105,6 +105,7 @@ class LogPageViewController: UIViewController, FSCalendarDelegate, FSCalendarDat
         self.logUserPlant = result?.result
         //print(result?.result,"9999")
         print(logUserPlant!.count)
+        logCollectionView.reloadData()
     }
     
     //위
@@ -160,7 +161,7 @@ extension LogPageViewController : UICollectionViewDataSource, UICollectionViewDe
     //cell갯수
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         self.cardcollectionView.reloadData()
-        guard var num=logUserPlant?.count else { return 0 }
+        guard let num=logUserPlant?.count else { return 0 }
         return num
     }
 
