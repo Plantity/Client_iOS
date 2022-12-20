@@ -20,8 +20,8 @@ class MainDataManager{
             switch response.result {
             case .success(let result):
                 // 성공
-                if let resultData: MyDataResult = result.result {
-                    viewController.successuserAPI(resultData)
+                if let userData: ResponseDto = result.result?.responseDto {
+                    viewController.successuserAPI(userData)
                 }
             case .failure(let error):
                 // 실패

@@ -178,7 +178,7 @@ extension LogPageViewController : UICollectionViewDataSource, UICollectionViewDe
             customCell.layer.cornerRadius=10
             print("1****")
             print(logUserPlant?.count)
-            let data = logUserPlant?[indexPath.row]
+            let data = logUserPlant?[currentPage]
 
             customCell.setupCardData(filePath: data?.filePath, plantName: data?.plantName, plantNickName: data?.plantNickName, myPlantId: data?.myPlantId, plantadapttime: data?.plantAdaptTime)
             

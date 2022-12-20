@@ -20,9 +20,6 @@ class MainPageViewController: UIViewController {
     //카드뷰
     @IBOutlet weak var cardCollectionView: UICollectionView!
     
-    //dummies
-    var userInfo:ResponseDto=ResponseDto(nickName: "", rating: "", score: 0)
-    
     // 하
     var userPlant:[UserPlant]?{
         didSet{
@@ -82,8 +79,6 @@ class MainPageViewController: UIViewController {
      
 
         setupCard()
-        let userdata = userInfo
-        setupUserData(name:userdata.nickName, level: userdata.rating, progress: userdata.score)
         
 
         NotificationCenter.default.addObserver(self, selector: #selector(didRecieveAssignNotification(_:)), name: Notification.Name("didAssign"), object: nil)
@@ -143,11 +138,11 @@ class MainPageViewController: UIViewController {
         
         //레벨
         if let levelInt:String=level{
-            if levelInt=="rating1"{
+            if levelInt=="비기너"{
                 welcomeLabel.text="안녕하세요 레벨 1 오늘도 민첩한 식물인이 되세요!"
-            }else if levelInt=="rating2"{
+            }else if levelInt=="가드너"{
                 welcomeLabel.text="벌써 레벨2까지 왔습니다! 오늘도 민첩한 식물인이 되세요🌳"
-            }else if levelInt=="rating3"{
+            }else if levelInt=="마스터"{
                 welcomeLabel.text="안녕하세요 레벨 3 오늘도 민첩한 식물인이 되세요!"
             }else{
                 welcomeLabel.text="안녕하세요 레벨 4 오늘도 민첩한 식물인이 되세요!"
@@ -343,9 +338,8 @@ extension MainPageViewController: UICollectionViewDelegate,UICollectionViewDataS
 
 extension MainPageViewController{
     // 유저정보 가져오기 성공
-    func successuserAPI(_ result: MyDataResult){
-        userInfo=result.responseDto
-        cardCollectionView.reloadData()
+    func successuserAPI(_ userData: ResponseDto){
+        setupUserData(name: userData.nickName, level: userData.rating, progress: userData.score)
     }
     
     func successplantAPI(_ result: [UserPlant]){
