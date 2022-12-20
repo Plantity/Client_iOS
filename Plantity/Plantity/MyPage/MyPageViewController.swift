@@ -64,13 +64,13 @@ class MyPageViewController: UIViewController {
         myNameLabel.text = userInfo.nickName
         
         switch userInfo.rating {
-        case "rating1":
+        case "비기너":
             myMedalImageView.image = UIImage(named: "image_medal_bronze")
             myLevelLabel.text = "비기너"
-        case "rating2":
+        case "가드너":
             myMedalImageView.image = UIImage(named: "image_medal_silver")
             myLevelLabel.text = "가드너"
-        case "rating3":
+        case "마스터":
             myMedalImageView.image = UIImage(named: "image_medal_gold")
             myLevelLabel.text = "마스터"
         default:
