@@ -79,6 +79,7 @@ class MainDataManager{
             case .success(let result):
                 /** 정상적으로 reponse를 받은 경우 */
                 print("=======water성공=====")
+                viewController.successtodoAPI()
                 //print(result)
             case .failure(let error):
                 /** 그렇지 않은 경우 */
@@ -101,6 +102,7 @@ class MainDataManager{
             case .success(let result):
                 /** 정상적으로 reponse를 받은 경우 */
                 print("=======look성공=====")
+                viewController.successtodoAPI()
                 //print(result)
             case .failure(let error):
                 /** 그렇지 않은 경우 */
@@ -123,6 +125,7 @@ class MainDataManager{
             case .success(let result):
                 /** 정상적으로 reponse를 받은 경우 */
                 print("=======sun성공=====")
+                viewController.successtodoAPI()
                 //print(result)
             case .failure(let error):
                 /** 그렇지 않은 경우 */
@@ -145,6 +148,7 @@ class MainDataManager{
             case .success(let result):
                 /** 정상적으로 reponse를 받은 경우 */
                 print("=======repot성공=====")
+                viewController.successtodoAPI()
                 //print(result)
             case .failure(let error):
                 /** 그렇지 않은 경우 */

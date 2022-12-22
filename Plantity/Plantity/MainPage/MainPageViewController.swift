@@ -343,8 +343,7 @@ extension MainPageViewController{
         cardCollectionView.reloadData()
     }
     
-//    func successtodoAPI(){
-//        let input= ?
-//        MainDataManager().posts(self, input)
-//    }
+    func successtodoAPI(){
+        MainDataManager().maininfoManager(1, self)
+    }
 }

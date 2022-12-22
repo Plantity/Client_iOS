@@ -209,13 +209,11 @@ extension LogPageViewController : UICollectionViewDataSource, UICollectionViewDe
     func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
         let nextPage = Int(targetContentOffset.pointee.x / cardcollectionView.frame.width) + 1
         if currentPage == nextPage {
-            // 원래 :currentPage = nextPage == 1 ? 0 : logUserPlant?.count - 1
             currentPage = nextPage == 1 ? 0 : logUserPlant!.count - 1
             //currentPage = nextPage == 1 ? 0 : logUserPlant?.count ?? 0 - 1
         } else {
             currentPage = nextPage
         }
-        //print(currentPage)
         
         // 페이징 버튼 변경
         self.pageControl.currentPage = self.currentPage
