@@ -9,7 +9,7 @@
 |[김다연](https://github.com/Haileyyyyyyyy)|[최은형](https://github.com/ilmerry)|
 |------|------|
 |<img src="https://user-images.githubusercontent.com/65955748/208928153-a2523ea8-1757-4cba-bf18-14dbb254b799.png" width="200">|<img src="https://user-images.githubusercontent.com/65955748/208928149-8318d985-9ab4-4f4a-b50c-f02bf7074b3b.png" width="200">|
-
+|메인, 식물로그 페이지 담당|식물검색, 가이드라인, 유저정보 페이지 담당|
 
 <br>
 
